@@ -6,6 +6,7 @@
 	background-size: auto 100%;
 	
 	&-container {
+		position: relative;
 		padding: 30px 0 0;
 		width: 100%;
 	}
@@ -42,25 +43,32 @@
 		}
 	}
 	
-	//TODO: bg
-	//TODO: position
 	&-call {
-		background: url(../images/common/bg-phone--header.png) no-repeat right center;
-		background-size: contain;
+		position: absolute;
+		right: 15px;
+		bottom: -140px;
+		height: 116px;
+		width: 478px;
+		background-image: linear-gradient(#535353, #6e6e6e, #535353);
+		border-radius: 115px 0 0 115px;
+		box-shadow: inset 1px -2px 2px 1px rgba(0, 0, 0, 0.3),
+					inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3),
+					inset -4px 4px 3px -1px rgba(255, 255, 255, 0.3),
+					-14px 9px 43px 0px rgba(0, 0, 0, 0.35);
 		
 		&__handset {
-			display: inline-block;
+			position: absolute;
+			top: 5px;
+			left: 5px;
 			width: 110px;
 			height: 110px;
 			background: url('../images/phone--header.png') no-repeat center;
 			background-size: cover;
-			vertical-align: middle;
 		}
 		
 		&__text {
-			display: inline-block;
-			margin: 0 20px;
-			vertical-align: middle;
+			line-height: 110px;
+			margin-right: 25px;
 			font-size: @font-size__header-call;
 			font-weight: bold;
 			color: @color__header-call;
