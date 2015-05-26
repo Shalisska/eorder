@@ -1,1 +1,83 @@
 footer.footer
+	.container
+		.row
+			.footer-menu.col-xs-2
+				.footer-menu__title Меню
+				.footer-menu__block
+					+nav ([{
+						name: 'Акции!',
+						href: '/'
+					}, {
+						name: 'Продукция',
+						href: '/11'
+					}, {
+						name: 'О нас',
+						href: '/11'
+					}, {
+						name: 'Сервисы',
+						href: '/11'
+					}, {
+						name: 'Оборудование',
+						href: '/11'
+					}, {
+						name: 'Новости',
+						href: '/11'
+					}, {
+						name: 'F.A.Q.',
+						href: '/11'
+					}])
+			form.footer-promo.col-xs-2(action='' method='post')
+				.footer-promo__title Ввести промо код
+				.footer-promo__block
+					p.footer-promo__text
+						| У Вас есть промо код?
+						br
+						| Отлично! Введите его здесь:
+					.footer-promo__form
+						input(type='text' placeholder='Промо код')
+						button(type='submit') Да!
+					p.footer-promo__sub-text Участвуйте в акциях!
+			form.footer-subscription.col-xs-4(action='' method='post')
+				.footer-subscription__title Подписка на новости
+				.footer-subscription__block
+					p.footer-promo__text
+						| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
+					.footer-promo__form
+						input(type='text' placeholdder='Ваше имя')
+						input(type='text' placeholdder='Ваш email')
+						button(type='submit') Да!
+					p.footer-promo__sub-text Мы никогда не отправляем спам!
+			.footer-contacts.col-xs-2
+				.footer-contacts__title Контакты
+				.footer-contacts__block
+					p Телефон: +7 (495) 223-9200
+					p 
+					p
+					p Адрес: Москва, 2-й Котляковский переулок, д.18
+					a.footer-contacts__sub-text Открыть карту
+			.col-xs-2
+				img(alt='' src='')
+		
+		.row
+			.col-xs-4
+				a.footer-logo: img(src="", alt="")
+				a.footer-logo--promo: img(src="", alt="")
+			.col-xs-4
+				p.footer-text
+					| Prepress-Press-Postpress
+					br
+					| 24/7
+			.col-xs-4
+				p.footer-socials
+					span.footer-socials__text Мы в социальных сетях
+					a.footer-socials__links.footer-socials__links--f(href="")
+					a.footer-socials__links.footer-socials__links--in(href="")
+					a.footer-socials__links.footer-socials__links--vk(href="")
+		
+		p.footer-copyright
+			| &#169; 2014
+			span ЗАО "Новые печатные технологии".
+			| Все права защищены.
+	
+	
+	p.footer-signature Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00
