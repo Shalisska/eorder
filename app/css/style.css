@@ -7,6 +7,7 @@ body {
   font-family: 'Myriad Pro', 'Arial', sans-serif;
 }
 .header {
+  margin-bottom: 90px;
   width: 100%;
   background: url('../images/bg-header.png') repeat-x center;
   background-size: auto 100%;
@@ -79,4 +80,68 @@ body {
 }
 .header .nav-item--special a {
   color: #e91212;
+}
+.container--main {
+  width: 1540px;
+  margin: 0 auto;
+  background: #f0efed;
+}
+.action-title {
+  position: relative;
+  height: 259px;
+  background: #c2c0bf;
+}
+.action-title__header {
+  position: absolute;
+  left: -35px;
+  top: -105px;
+}
+.action-title__header-title,
+.action-title__header-text {
+  line-height: 1;
+  text-transform: lowercase;
+}
+.action-title__header-title {
+  font-size: 348px;
+  color: #d50000;
+}
+.action-title__header-text {
+  position: absolute;
+  bottom: -45px;
+  left: 40px;
+  width: 1200px;
+  font-size: 164px;
+  color: #8a8a8a;
+}
+.action-pict {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 616px;
+  height: 299px;
+  background: url(../images/action-rect.png) no-repeat center;
+}
+.action-pict__image {
+  position: absolute;
+  top: -60px;
+  right: 150px;
+}
+.action-pict__percent,
+.action-pict__text {
+  line-height: 1;
+  text-align: center;
+}
+.action-pict__percent {
+  font-size: 307px;
+  color: #ffffff;
+}
+.action-pict__text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -170px;
+  width: 340px;
+  text-transform: lowercase;
+  font-size: 55px;
+  color: #fefefe;
 }

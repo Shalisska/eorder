@@ -1,0 +1,78 @@
+
+.container--main {
+	width: 1540px;
+	margin: 0 auto;
+	background: #f0efed;
+}
+
+.action {
+	//TODO: border-radius
+	&-title {
+		position: relative;
+		height: 259px;
+		background: @bg-color__action-title;
+		
+		&__header {
+			position: absolute;
+			left: -35px;
+			top: -105px;
+			
+			&-title,
+			&-text {
+				line-height: 1;
+				text-transform: lowercase;
+			}
+			
+			&-title {
+				font-size: @font-size__action-header-title;
+				color: @color__action-header-title;
+			}
+			
+			&-text {
+				position: absolute;
+				bottom: -45px;
+				left: 40px;
+				width: 1200px;
+				font-size: @font-size__action-header-text;
+				color: @color__action-header-text;
+			}
+		}
+	}
+	
+	&-pict {
+		position: absolute;
+		top: -20px;
+		right: 0;
+		width: 616px;
+		height: 299px;
+		background: url(../images/action-rect.png) no-repeat center;
+		
+		&__image {
+			position: absolute;
+			top: -60px;
+			right: 150px;
+		}
+		
+		&__percent,
+		&__text {
+			line-height: 1;
+			text-align: center;
+		}
+		
+		&__percent {
+			font-size: @font-size__action-pict-percent;
+			color: @color__action-pict-percent;
+		}
+		
+		&__text {
+			position: absolute;
+			bottom: 15px;
+			left: 50%;
+			margin-left: -170px;
+			width: 340px;
+			text-transform: lowercase;
+			font-size: @font-size__action-pict-text;
+			color: @color__action-pict-text;
+		}
+	}
+}
