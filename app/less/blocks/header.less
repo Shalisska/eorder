@@ -1,0 +1,89 @@
+
+.header {
+	width: 100%;
+	background: url('../images/bg-header.png') repeat-x center;
+	background-size: auto 100%;
+	
+	&-container {
+		padding: 30px 0 0;
+		width: 100%;
+	}
+	
+	&-logo {
+		padding: 0 45px;
+		
+		img {
+			width: 100%;
+		}
+
+		&__slogan {
+			font-size: @font-size__header-slogan;
+			color: @color__header-slogan;
+			text-transform: uppercase;
+		}
+	}
+	&-presentation {
+		padding: 60px 15px 0;
+		font-size: @font-size__header-pres;
+		line-height: @line-height__header-pres;
+		color: @color__header-pres;
+	}
+	
+	&-phone {
+		padding-right: 20px;
+		font-size: @font-size__header-phone;
+		color: @color__header-phone;
+		
+		&--grand {
+			font-size: @font-size__header-phone--grand;
+			font-weight: bold;
+			color: @color__header-phone--grand;
+		}
+	}
+	
+	&-call {
+		background: url(../images/common/bg-phone--header.png) no-repeat right center;
+		background-size: contain;
+		
+		&__handset {
+			display: inline-block;
+			width: 110px;
+			height: 110px;
+			background: url('../images/phone--header.png') no-repeat center;
+			background-size: cover;
+			vertical-align: middle;
+		}
+		
+		&__text {
+			display: inline-block;
+			margin: 0 20px;
+			vertical-align: middle;
+			font-size: @font-size__header-call;
+			font-weight: bold;
+			color: @color__header-call;
+			text-transform: uppercase;
+		}
+	}
+	
+	.nav {
+		background: url(../images/bg-header-menu.png) repeat-x center;
+		background-size: auto 100%;
+		
+		&-item {
+			text-align: center;
+			
+			a {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: @font-size__header-menu;
+				text-transform: uppercase;
+				color: @color__header-menu;
+			}
+			
+			&--special a {
+				color: @color__header-menu-special;
+			}
+		}
+	}
+}
+

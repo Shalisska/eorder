@@ -4,30 +4,34 @@
     <title>start</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css" rel="stylesheet">
     <link href="../css/bootstrap-style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <script src="../scripts/libs/jquery-1.11.3.min.js"></script>
   </head>
   <body>
-    <header class="header container">
+    <header class="header">
       <!--TODO: toolbar-header-->
-      <div class="row">
-        <div class="col-xs-4"><a href="#" class="logo"><img alt="" src=""></a>
-          <p>Prepress-Press-Postpress<br>24/7</p>
-        </div>
-        <div class="col-xs-4">
-          <p class="header-presentation">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
-        </div>
-        <div class="col-xs-4">
-          <p class="header-phone">+7 495<span>223 9200</span></p>
-          <div class="header-call"><a href="#" class="header-call__handset"></a>
-            <p class="header-call__text">Звонок за наш счет</p>
+      <div class="container header-container">
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo--promo.png" alt="e-order"></a>
+              <p class="header-logo__slogan text-center">Prepress-Press-Postpress<br>24/7</p>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
+          </div>
+          <div class="col-xs-4">
+            <p class="header-phone text-right">+7 495 <span class="header-phone--grand">223 9200</span></p>
+            <div class="header-call text-right"><a href="#" class="header-call__handset"></a>
+              <p class="header-call__text">Звонок за наш счет</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <ul class="nav">
-          <li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
+      <nav>
+        <ul class="nav nav-justified">
+          <li class="nav-item nav-item--special"><a href="/" class="nav-item__name">Акции!</a></li>
           <li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
           <li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
           <li class="nav-item"><a href="/11" class="nav-item__name">Как мы работаем</a></li>
@@ -36,7 +40,7 @@
           <li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
           <li class="nav-item"><a href="/11" class="nav-item__name">Контакты</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
     <main>
       <div class="container container--main">
@@ -160,7 +164,7 @@
           <div class="footer-menu col-xs-2">
             <div class="footer-menu__title">Меню</div>
             <div class="footer-menu__block">
-              <ul class="nav">
+              <ul class="nav nav-justified">
                 <li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
                 <li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
                 <li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
