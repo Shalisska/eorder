@@ -46,10 +46,7 @@
       <div class="container--main">
         <div class="action">
           <div class="action-title">
-            <div class="action-title__header">
-              <p class="action-title__header-title">Акция</p>
-              <p class="action-title__header-text">Срочная печать</p>
-            </div>
+            <h1 class="action-title__header"><span class="action-title__header-title">Акция</span><small class="action-title__header-text">Срочная печать</small></h1>
             <div class="action-pict">
               <div class="action-pict__image">
                 <p class="action-pict__percent">%</p>
@@ -57,45 +54,106 @@
               </div>
             </div>
           </div>
-          <div class="action-block">
-            <div class="action-image"><img src="" alt=""></div>
+          <div class="action-block clearfix">
+            <div class="action-image"><img src="../images/action-pict.jpg" alt="sales"></div>
             <div class="action-order">
               <div class="action-order__item">
-                <div class="action-order__item-title">Брошюры</div>
-                <div class="action-order__item-volume">1000 шт.</div>
-                <div class="action-order__item-description">Формат: А4 (210х297мм)<br>Кол-во полос: 8<br>Бумага: глянцевая 150 г/м2<br>Цветность: 4+4</div>
-                <div class="action-order__item-price--old">19600 р.</div>
-                <div class="action-order__item-price--new">12900 р.</div>
+                <h3 class="action-order__item-title">Брошюры <small class="action-order__item-title--small">1000 шт.</small></h3>
+                <p class="action-order__item-description">Формат: А4 (210х297мм)<br>Кол-во полос: 8<br>Бумага: глянцевая 150 г/м2<br>Цветность: 4+4</p>
+                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
               </div>
-              <div class="action-order__controls"></div>
-              <button class="action-order__btn"></button>
+              <div class="action-order__controls"><a class="action-order__controls-item action-order__controls-item--1"></a><a class="action-order__controls-item action-order__controls-item--2"></a><a class="action-order__controls-item action-order__controls-item--3 active"></a></div>
+              <button class="action-order__btn"><span class="action-order__btn--sm-text">Сделать мгновенный заказ</span>Заказать!</button>
             </div>
           </div>
           <div class="action-timer row">
-            <div class="col-xs-3">
+            <div class="col-xs-5">
               <p class="action-timer__text">до конца<span>акции</span></p>
             </div>
             <div class="col-xs-7">
-              <div class="action-timer__counter"></div>
+              <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
             </div>
           </div>
-          <div class="action-controls">
-            <div class="action-controls__item"><img alt="" src="">
-              <p>Брошюры</p>
-            </div>
-          </div>
+          <nav class="action-controls-box clearfix">
+            <ul class="action-controls nav navbar-nav">
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-brochure.png" alt="Брошюры"/></span><span class="action-controls__item--name">Брошюры</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-booklet.png" alt="Буклеты"/></span><span class="action-controls__item--name">Буклеты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-catalog.png" alt="Каталоги"/></span><span class="action-controls__item--name">Каталоги</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-file.png" alt="Папки"/></span><span class="action-controls__item--name">Папки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-notepad.png" alt="Блокноты"/></span><span class="action-controls__item--name">Блокноты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-blank.png" alt="Бланки"/></span><span class="action-controls__item--name">Бланки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-calendar.png" alt="Календари"/></span><span class="action-controls__item--name">Календари</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-envelop.png" alt="Конверты"/></span><span class="action-controls__item--name">Конверты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-card.png" alt="Визитки"/></span><span class="action-controls__item--name">Визитки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-flyer.png" alt="Флаеры"/></span><span class="action-controls__item--name">Флаеры</span></a></li>
+            </ul>
+          </nav>
         </div>
         <div class="popular">
-          <div class="popular-title">Популярная продукция</div>
-          <div class="popular-slider"></div>
+          <h2 class="title-reg popular-title">Популярная продукция</h2>
+          <div class="block-reg popular-block">
+            <div id="carousel-example-generic" data-ride="carousel" data-interval="false" class="popular-slider carousel slide">
+              <!--Wrapper for slides-->
+              <div class="popular-slider__inner carousel-inner">
+                <div class="popular-slider__box item active">
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item">
+                    <p class="popular-slider__item--all">Смотреть<br><span class="popular-slider__item--all-bg">все</span></p>
+                  </div>
+                </div>
+                <div class="popular-slider__box item">
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                  <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                </div>
+              </div>
+              <!--Controls--><a href="#carousel-example-generic" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#carousel-example-generic" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+          </div>
         </div>
         <div class="features">
-          <div class="features-title">Почему выбирают нас</div>
-          <div class="features-block">
-            <div class="features-item">
-              <div class="features-item__title">Реализация идей</div>
-              <div class="features-item__text">Вы рассказываете свою идею, а мы находим решение как реализовать ее, применяя наши</div>
-            </div>
+          <h2 class="title-reg features-title">Почему выбирают нас</h2>
+          <div class="block-reg features-block">
+                    <div class="features-item features-item__realization">
+                      <h4 class="features-item__title">Реализация идей</h4>
+                      <p class="features-item__text">Вы рассказываете свою идею, а мы находим решение как реализовать ее, применяя наши</p>
+                    </div>
+                    <div class="features-item features-item__circulation">
+                      <h4 class="features-item__title">Тиражи</h4>
+                      <p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
+                    </div>
+                    <div class="features-item features-item__color">
+                      <h4 class="features-item__title">Цветопередача</h4>
+                      <p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
+                    </div>
+                    <div class="features-item features-item__new">
+                      <h4 class="features-item__title">Новинки</h4>
+                      <p class="features-item__text">Мы не стоим на месте и регулярно запускаем новые полиграфические и фото продукты</p>
+                    </div>
+                    <div class="features-item features-item__specialists">
+                      <h4 class="features-item__title">Специалисты</h4>
+                      <p class="features-item__text">В нашей типографии работают только высококвалифицированные сотрудники</p>
+                    </div>
+                    <div class="features-item features-item__technology">
+                      <h4 class="features-item__title">Технология печати</h4>
+                      <p class="features-item__text">Для печати Вашей продукции мы используем только технологию HP Indigo</p>
+                    </div>
+                    <div class="features-item features-item__quality">
+                      <h4 class="features-item__title">Гарантия качества</h4>
+                      <p class="features-item__text">Мы не отступаем от технологии производства, что гарантирует высокое качество продукции.</p>
+                    </div>
+                    <div class="features-item features-item__circulation02">
+                      <h4 class="features-item__title">Тиражи</h4>
+                      <p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
+                    </div>
+                    <div class="features-item features-item__color02">
+                      <h4 class="features-item__title">Цветопередача</h4>
+                      <p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
+                    </div>
           </div>
         </div>
         <div class="workmap">

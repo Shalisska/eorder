@@ -1,22 +1,22 @@
 .action
 	.action-title
-		.action-title__header
-			p.action-title__header-title Акция
-			p.action-title__header-text Срочная печать
+		h1.action-title__header
+			span.action-title__header-title Акция
+			small.action-title__header-text Срочная печать
 		.action-pict
 			.action-pict__image
 				p.action-pict__percent %
 				p.action-pict__text Сделать заказ
 			
-	.action-block
+	.action-block.clearfix
 		.action-image
-			img(src="", alt="")
+			img(src="../images/action-pict.jpg", alt="sales")
 		
 		.action-order
 			.action-order__item
-				.action-order__item-title Брошюры
-				.action-order__item-volume 1000 шт.
-				.action-order__item-description
+				h3.action-order__item-title Брошюры 
+					small.action-order__item-title--small 1000 шт.
+				p.action-order__item-description
 					| Формат: А4 (210х297мм)
 					br
 					| Кол-во полос: 8
@@ -24,21 +24,62 @@
 					| Бумага: глянцевая 150 г/м2
 					br
 					|Цветность: 4+4
-				.action-order__item-price--old 19600 р.
-				.action-order__item-price--new 12900 р.
+				p.action-order__item-price
+					span.action-order__item-price--old 19600 р.
+					span.action-order__item-price--new 12900 р.
 			
 			.action-order__controls
+				a.action-order__controls-item.action-order__controls-item--1
+				a.action-order__controls-item.action-order__controls-item--2
+				a.action-order__controls-item.action-order__controls-item--3.active
 			
 			button.action-order__btn
-			
+				span.action-order__btn--sm-text Сделать мгновенный заказ
+				| Заказать!
 	.action-timer.row
-		.col-xs-3
+		.col-xs-5
 			p.action-timer__text до конца
 				span акции
 		.col-xs-7
-			.action-timer__counter
+			.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
 			
-	.action-controls
-		.action-controls__item
-			img(alt='' src='')
-			p Брошюры
+	nav.action-controls-box.clearfix
+		+actionControls([{
+			name: 'Брошюры',
+			src: 'action-brochure.png'
+		}, {
+			name: 'Буклеты',
+			src: 'action-booklet.png'
+			
+		}, {
+			name: 'Каталоги',
+			src: 'action-catalog.png'
+			
+		}, {
+			name: 'Папки',
+			src: 'action-file.png'
+			
+		}, {
+			name: 'Блокноты',
+			src: 'action-notepad.png'
+			
+		}, {
+			name: 'Бланки',
+			src: 'action-blank.png'
+			
+		}, {
+			name: 'Календари',
+			src: 'action-calendar.png'
+			
+		}, {
+			name: 'Конверты',
+			src: 'action-envelop.png'
+			
+		}, {
+			name: 'Визитки',
+			src: 'action-card.png'
+			
+		}, {
+			name: 'Флаеры',
+			src: 'action-flyer.png'
+		}])

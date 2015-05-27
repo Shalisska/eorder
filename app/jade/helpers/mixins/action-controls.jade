@@ -1,0 +1,6 @@
+mixin actionControls(items)
+	ul.action-controls.nav.navbar-nav
+		each item in items
+			li: a.action-controls__item(href="")
+					span.action-controls__item--pict: img(src='../images/sprite/' + item.src, alt=item.name)
+					span.action-controls__item--name=item.name

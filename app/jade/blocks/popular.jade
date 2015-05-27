@@ -1,3 +1,30 @@
 .popular
-	.popular-title Популярная продукция
-	.popular-slider
+	h2.title-reg.popular-title Популярная продукция
+	.block-reg.popular-block
+		.popular-slider.carousel.slide#carousel-example-generic(data-ride="carousel" data-interval="false")
+		
+			//Wrapper for slides
+			.popular-slider__inner.carousel-inner
+				.popular-slider__box.item.active
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item
+						p.popular-slider__item--all
+							| Смотреть
+							br
+							span.popular-slider__item--all-bg все
+				.popular-slider__box.item
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+					.popular-slider__item: img(src="../images/slider-popular01.jpg", alt="")
+				
+				
+			//Controls
+			a.left.carousel-control(href="#carousel-example-generic" data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left
+			a.right.carousel-control(href="#carousel-example-generic" data-slide="next")
+				span.glyphicon.glyphicon-chevron-right
+		
