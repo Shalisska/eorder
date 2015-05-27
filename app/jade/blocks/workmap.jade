@@ -1,6 +1,19 @@
+mixin featuresItem(items)
+	each item in items
+		.features-item(class="features-item__" + item.class)
+			h4.features-item__title=item.title
+			p.features-item__text=item.text
+
+
+
+
+
+
+
+
 .workmap
-	.workmap-title Как мы работаем
-	.workmap-block
+	h2.title-reg.workmap-title Как мы работаем
+	.block-reg.workmap-block
 		figure.workmap-item
 			img(alt='' src='')
 			figcaption Выберете продукт и оставьте заявку. Мы моментально свяжемся с Вами.
