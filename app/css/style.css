@@ -526,23 +526,64 @@ body {
   float: left;
 }
 .contacts-info {
+  padding: 50px 10px 50px 60px;
   width: 50%;
-  background: white;
   font-size: 30px;
   color: #166382;
 }
-.contacts-info:before {
+.contacts-info__item:before {
   content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: blue;
+  display: inline-block;
+  margin-right: 20px;
+  width: 87px;
+  height: 87px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts-info__item--phone:before {
+  background-image: url(../images/sprite/contacts-phone.png);
+}
+.contacts-info__item--mail:before {
+  background-image: url(../images/sprite/contacts-mail.png);
+}
+.contacts-info__item--skype:before {
+  background-image: url(../images/sprite/contacts-skype.png);
+}
+.contacts-info__item--adress:before {
+  background-image: url(../images/sprite/contacts-adress.png);
 }
 .contacts-map {
   width: 40%;
+  height: 300px;
   background: red;
 }
 .contacts-socials {
-  width: 10%;
-  background: green;
+  float: right;
+  margin-top: 80px;
+  width: 56px;
+}
+.contacts-socials__item {
+  display: block;
+  margin-bottom: 3px;
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.contacts-socials__item--twitt {
+  background-image: url('../images/sprite/contacts-twitt.png');
+}
+.contacts-socials__item--vk {
+  background-image: url('../images/sprite/contacts-vk.png');
+}
+.contacts-socials__item--fb {
+  background-image: url('../images/sprite/contacts-fb.png');
+}
+.contacts-socials__item--odnoklassniki {
+  background-image: url('../images/sprite/contacts-odnoklassniki.png');
+}
+.contacts-socials__item--google {
+  background-image: url('../images/sprite/contacts-google.png');
 }

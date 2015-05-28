@@ -1,6 +1,27 @@
 mixin contactsInfo(items)
 	each item in items
-		.contacts-info__item(class='contacts-info__item--' + item.name)=item.text
+		p.contacts-info__item(class='contacts-info__item--' + item.name)=item.text
+
+mixin contactsSocials(items)
+	each item in items
+		a.contacts-socials__item(class='contacts-socials__item--' + item.class href=item.href)
+
+block map
+	.contacts-map
+		.contacts-map__controls
+			.contacts-map__controls-item
+				|от
+				span.contacts-map__icon-metro
+				|Варшавская
+			.contacts-map__controls-item
+				|от
+				span.contacts-map__icon-metro
+				|Каширская
+		
+		.contacts-map__slider
+			.contacts-map__slider-map
+				img(src='', alt='')
+				
 
 
 
@@ -21,7 +42,25 @@ mixin contactsInfo(items)
 				name: 'adress',
 				text: 'г. Москва, Котляковский переулок, д. 18'
 			}])
-			.contacts-info__item +7 (495) 223-92-00
-		.contacts-map
+			
+			
+		
+		block map
+		
 		.contacts-socials
-			.contacts-socials__item
+			+contactsSocials([{
+				class: 'twitt',
+				href: ''
+			}, {
+				class: 'vk',
+				href: ''
+			}, {
+				class: 'fb',
+				href: ''
+			}, {
+				class: 'odnoklassniki',
+				href: ''
+			}, {
+				class: 'google',
+				href: ''
+			}])

@@ -16,3 +16,14 @@
     text-decoration: none;
     color: inherit;
 }
+
+.generate-socials(@n, @i: 1) when (@i =< @n) {
+	@list: twitt, vk;
+	@social: extract(@list, @i);
+
+	&--@{social} {
+		background: red;
+	}
+
+	.generate-socials(@n, (@i + 1));
+}
