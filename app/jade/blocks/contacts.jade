@@ -1,7 +1,26 @@
+mixin contactsInfo(items)
+	each item in items
+		.contacts-info__item(class='contacts-info__item--' + item.name)=item.text
+
+
+
 .contacts
-	.contacts-title Контакты
-	.contacts-block
+	h2.title-reg.contacts-title Контакты
+	.block-reg.contacts-block.clearfix
 		.contacts-info
+			+contactsInfo([{
+				name: 'phone',
+				text: '+7 (495) 223-92-00'
+			}, {
+				name: 'mail',
+				text: 'sale@eorder.ru'
+			}, {
+				name: 'skype',
+				text: 'sale.eorder'
+			}, {
+				name: 'adress',
+				text: 'г. Москва, Котляковский переулок, д. 18'
+			}])
 			.contacts-info__item +7 (495) 223-92-00
 		.contacts-map
 		.contacts-socials

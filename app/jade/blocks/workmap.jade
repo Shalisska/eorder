@@ -1,10 +1,8 @@
-mixin featuresItem(items)
+mixin workmapItem(items)
 	each item in items
-		.features-item(class="features-item__" + item.class)
-			h4.features-item__title=item.title
-			p.features-item__text=item.text
-
-
+		figure.workmap-item
+			.workmap-item__img: img(src="../images/sprite/workmap-" + item.src, alt=item.name)
+			figcaption.workmap-item__text=item.text
 
 
 
@@ -14,6 +12,20 @@ mixin featuresItem(items)
 .workmap
 	h2.title-reg.workmap-title Как мы работаем
 	.block-reg.workmap-block
-		figure.workmap-item
-			img(alt='' src='')
-			figcaption Выберете продукт и оставьте заявку. Мы моментально свяжемся с Вами.
+		+workmapItem([{
+			src: 'choose.png',
+			name: 'Выберете продукт',
+			text: 'Выберете продукт и оставьте заявку. Мы моментально свяжемся с Вами.'
+		}, {
+			src: 'load.png',
+			name: 'Проверьте макет',
+			text: 'Загрузите Ваши файлы бесплатно и проверьте Ваш макет'
+		}, {
+			src: 'pay.png',
+			name: 'Оплатите заказ',
+			text: 'Оплатите заказ любым удобным способом. Мы точно в срок изготовим заказ.'
+		}, {
+			src: 'take.png',
+			name: 'Получите заказ',
+			text: 'Заберите готовый заказ или оформите доставку.'
+		}])

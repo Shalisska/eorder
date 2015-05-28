@@ -1,6 +1,22 @@
-.tools
-	.tools-title
-	.tools-block
+mixin tools(items)
+	each item in items
 		figure.tools-item
-			figcaption.tools-item__title Допечатное
-			img(alt='' src='')
+			figcaption.tools-item__title=item.name
+			.tools-item__img: img(src='../images/tools-' + item.src, alt=item.name)
+
+
+
+
+.tools
+	h2.title-reg.tools-title
+	.block-reg.tools-block.clearfix
+		+tools([{
+			name: 'Допечатное',
+			src: 'prepress.jpg'
+		}, {
+			name: 'Печатное',
+			src: 'press.jpg'
+		}, {
+			name: 'Постпечатное',
+			src: 'postpress.jpg'
+		}])

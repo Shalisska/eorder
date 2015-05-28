@@ -1,13 +1,28 @@
+mixin newsMenu(items)
+	each item in items
+		.news-menu__item
+			.news-menu__item-title: p=item.title
+			.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
+
+
 .news
-	.news-title
-	.news-block
+	h2.title-reg.news-title
+	.block-reg.news-block.clearfix
 		.news-menu
-			.news-menu__item
-				.news-menu__item-title 1 Новость
-				img.news-menu__item-img(alt='' src='')
+			+newsMenu([{
+				title: 'I Новость',
+				src: 'logo.png'
+			}, {
+				title: 'II Новость в несколько...',
+				src: 'newspaper.jpg'
+			}, {
+				title: 'III Новость',
+				src: 'figure.jpg'
+			}])
+				
 		.news-item
-			.news-item__title 1 Новость
+			p.news-item__title I Новость
 			.news-item__text
 				p Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!
 				p Президенты всего мира....
-			a.news-item__link узнать подробнее
+		a.news-item__link(href='') узнать подробнее
