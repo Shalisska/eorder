@@ -1,0 +1,58 @@
+mixin contactsMap(items)
+	each item in items
+		input(id=item.id type='radio' name=item.name value=item.id)
+	
+	.contacts-map__controls
+		each item in items
+			label(for=item.id)=item.id
+	
+	.contacts-map__slider
+		each item in items
+			each path in item.path
+				input(id=path.id type='radio' name=path.name value=path.id)
+		
+		each item in items
+			.contacts-map__controls--path(class='contacts-map__controls--' + item.id)
+				each path in item.path
+					label(for=path.id)=path.id
+		
+		.contacts-map__path
+			each item in items
+				each path in item.path
+					.contacts-map__path-item(class='contacts-map__path-item--'+item.id+' contacts-map__path-item--'+path.id)=path.id
+		
+		.contacts-map__map
+			each item in items
+				each path in item.path
+					.contacts-map__map-item(class='contacts-map__map-item--'+item.id+' contacts-map__map-item--'+path.id)=path.id
+
+
+
+.contacts-map
+	+contactsMap([{
+		id: 'varsh',
+		name: 'metro',
+		path: [{
+			id: 'foot1',
+			name: 'varsh'
+		}, {
+			id: 'car1',
+			name: 'varsh'
+		}, {
+			id: 'bus1',
+			name: 'varsh'
+		}]
+	}, {
+		id: 'kash',
+		name: 'metro',
+		path: [{
+			id: 'foot2',
+			name: 'kash'
+		}, {
+			id: 'car2',
+			name: 'kash'
+		}, {
+			id: 'bus2',
+			name: 'kash'
+		}]
+	}])

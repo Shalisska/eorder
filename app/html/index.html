@@ -269,15 +269,6 @@
             </div><a href="" class="news-item__link">узнать подробнее</a>
           </div>
         </div>
-        <div class="contacts-map">
-          <div class="contacts-map__controls">
-            <div class="contacts-map__controls-item">от<span class="contacts-map__icon-metro"></span>Варшавская</div>
-            <div class="contacts-map__controls-item">от<span class="contacts-map__icon-metro"></span>Каширская</div>
-          </div>
-          <div class="contacts-map__slider">
-            <div class="contacts-map__slider-map"><img src="" alt=""></div>
-          </div>
-        </div>
         <div class="contacts">
           <h2 class="title-reg contacts-title">Контакты</h2>
           <div class="block-reg contacts-block clearfix">
@@ -288,13 +279,46 @@
                       <p class="contacts-info__item contacts-info__item--adress">г. Москва, Котляковский переулок, д. 18</p>
             </div>
             <div class="contacts-map">
-              <div class="contacts-map__controls">
-                <div class="contacts-map__controls-item">от<span class="contacts-map__icon-metro"></span>Варшавская</div>
-                <div class="contacts-map__controls-item">от<span class="contacts-map__icon-metro"></span>Каширская</div>
-              </div>
-              <div class="contacts-map__slider">
-                <div class="contacts-map__slider-map"><img src="" alt=""></div>
-              </div>
+                          <input id="varsh" type="radio" name="metro" value="varsh">
+                          <input id="kash" type="radio" name="metro" value="kash">
+                          <div class="contacts-map__controls">
+                            <label for="varsh">varsh</label>
+                            <label for="kash">kash</label>
+                          </div>
+                          <div class="contacts-map__slider">
+                            <input id="foot1" type="radio" name="varsh" value="foot1">
+                            <input id="car1" type="radio" name="varsh" value="car1">
+                            <input id="bus1" type="radio" name="varsh" value="bus1">
+                            <input id="foot2" type="radio" name="kash" value="foot2">
+                            <input id="car2" type="radio" name="kash" value="car2">
+                            <input id="bus2" type="radio" name="kash" value="bus2">
+                            <div class="contacts-map__controls--path contacts-map__controls--varsh">
+                              <label for="foot1">foot1</label>
+                              <label for="car1">car1</label>
+                              <label for="bus1">bus1</label>
+                            </div>
+                            <div class="contacts-map__controls--path contacts-map__controls--kash">
+                              <label for="foot2">foot2</label>
+                              <label for="car2">car2</label>
+                              <label for="bus2">bus2</label>
+                            </div>
+                            <div class="contacts-map__path">
+                              <div class="contacts-map__path-item contacts-map__path-item--varsh contacts-map__path-item--foot1">foot1</div>
+                              <div class="contacts-map__path-item contacts-map__path-item--varsh contacts-map__path-item--car1">car1</div>
+                              <div class="contacts-map__path-item contacts-map__path-item--varsh contacts-map__path-item--bus1">bus1</div>
+                              <div class="contacts-map__path-item contacts-map__path-item--kash contacts-map__path-item--foot2">foot2</div>
+                              <div class="contacts-map__path-item contacts-map__path-item--kash contacts-map__path-item--car2">car2</div>
+                              <div class="contacts-map__path-item contacts-map__path-item--kash contacts-map__path-item--bus2">bus2</div>
+                            </div>
+                            <div class="contacts-map__map">
+                              <div class="contacts-map__map-item contacts-map__map-item--varsh contacts-map__map-item--foot1">foot1</div>
+                              <div class="contacts-map__map-item contacts-map__map-item--varsh contacts-map__map-item--car1">car1</div>
+                              <div class="contacts-map__map-item contacts-map__map-item--varsh contacts-map__map-item--bus1">bus1</div>
+                              <div class="contacts-map__map-item contacts-map__map-item--kash contacts-map__map-item--foot2">foot2</div>
+                              <div class="contacts-map__map-item contacts-map__map-item--kash contacts-map__map-item--car2">car2</div>
+                              <div class="contacts-map__map-item contacts-map__map-item--kash contacts-map__map-item--bus2">bus2</div>
+                            </div>
+                          </div>
             </div>
             <div class="contacts-socials"><a href="" class="contacts-socials__item contacts-socials__item--twitt"></a><a href="" class="contacts-socials__item contacts-socials__item--vk"></a><a href="" class="contacts-socials__item contacts-socials__item--fb"></a><a href="" class="contacts-socials__item contacts-socials__item--odnoklassniki"></a><a href="" class="contacts-socials__item contacts-socials__item--google"></a>
             </div>

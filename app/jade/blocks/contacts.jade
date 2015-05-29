@@ -6,23 +6,6 @@ mixin contactsSocials(items)
 	each item in items
 		a.contacts-socials__item(class='contacts-socials__item--' + item.class href=item.href)
 
-block map
-	.contacts-map
-		.contacts-map__controls
-			.contacts-map__controls-item
-				|от
-				span.contacts-map__icon-metro
-				|Варшавская
-			.contacts-map__controls-item
-				|от
-				span.contacts-map__icon-metro
-				|Каширская
-		
-		.contacts-map__slider
-			.contacts-map__slider-map
-				img(src='', alt='')
-				
-
 
 
 .contacts
@@ -45,7 +28,7 @@ block map
 			
 			
 		
-		block map
+		include contacts-map
 		
 		.contacts-socials
 			+contactsSocials([{

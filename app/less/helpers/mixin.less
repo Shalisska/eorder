@@ -18,12 +18,84 @@
 }
 
 .generate-socials(@n, @i: 1) when (@i =< @n) {
-	@list: twitt, vk;
-	@social: extract(@list, @i);
+	@socials:
+		twitt,
+		vk,
+		fb,
+		odnoklassniki,
+		google;
+	@social: extract(@socials, @i);
 
 	&--@{social} {
-		background: red;
+		background-image: url('../images/sprite/contacts-@{social}.png');
 	}
 
 	.generate-socials(@n, (@i + 1));
+}
+
+.generate-slider--varsh(@n, @i: 1) when (@i =< @n) {
+	@items:
+		foot1,
+		car1,
+		bus1;
+	
+	@item: extract(@items, @i);
+
+	input#@{item}:checked~&__controls--varsh label[for='@{item}'] {
+		background: white;
+	}
+	
+	input#@{item}:checked~&__path &__path-item--@{item} {
+		display: block;
+	}
+	
+	input#@{item}:checked~&__map &__map-item--@{item} {
+		display: block;
+	}
+
+	.generate-slider--varsh(@n, (@i + 1));
+}
+
+.generate-slider--kash(@n, @i: 1) when (@i =< @n) {
+	@items:
+		foot2,
+		car2,
+		bus2;
+	
+	@item: extract(@items, @i);
+
+	input#@{item}:checked~&__controls--varsh label[for='@{item}'] {
+		background: white;
+	}
+	
+	input#@{item}:checked~&__path &__path-item--@{item} {
+		display: block;
+	}
+	
+	input#@{item}:checked~&__map &__map-item--@{item} {
+		display: block;
+	}
+
+	.generate-slider--kash(@n, (@i + 1));
+}
+
+.generate-metro(@n, @i: 1) when (@i =< @n) {
+	@items:
+		varsh,
+		kash;
+	
+	@item: extract(@items, @i);
+
+	input#@{item}:checked~&__controls label[for='@{item}'] {
+		background: white;
+	}
+	
+	input#@{item}:checked~&__slider &__controls--@{item} {
+		display: block;
+	}
+
+	.generate-slider--varsh(3);
+	.generate-slider--kash(3);
+
+	.generate-metro(@n, (@i + 1));
 }

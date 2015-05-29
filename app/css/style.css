@@ -555,8 +555,153 @@ body {
 }
 .contacts-map {
   width: 40%;
+  font-size: 30px;
+}
+input#varsh:checked ~ .contacts-map__controls label[for='varsh'] {
+  background: white;
+}
+input#varsh:checked ~ .contacts-map__slider .contacts-map__controls--varsh {
+  display: block;
+}
+input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
+  background: white;
+}
+input#foot1:checked ~ .contacts-map__path .contacts-map__path-item--foot1 {
+  display: block;
+}
+input#foot1:checked ~ .contacts-map__map .contacts-map__map-item--foot1 {
+  display: block;
+}
+input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
+  background: white;
+}
+input#car1:checked ~ .contacts-map__path .contacts-map__path-item--car1 {
+  display: block;
+}
+input#car1:checked ~ .contacts-map__map .contacts-map__map-item--car1 {
+  display: block;
+}
+input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
+  background: white;
+}
+input#bus1:checked ~ .contacts-map__path .contacts-map__path-item--bus1 {
+  display: block;
+}
+input#bus1:checked ~ .contacts-map__map .contacts-map__map-item--bus1 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__controls--varsh label[for='foot2'] {
+  background: white;
+}
+input#foot2:checked ~ .contacts-map__path .contacts-map__path-item--foot2 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__map .contacts-map__map-item--foot2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__controls--varsh label[for='car2'] {
+  background: white;
+}
+input#car2:checked ~ .contacts-map__path .contacts-map__path-item--car2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__map .contacts-map__map-item--car2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__controls--varsh label[for='bus2'] {
+  background: white;
+}
+input#bus2:checked ~ .contacts-map__path .contacts-map__path-item--bus2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__map .contacts-map__map-item--bus2 {
+  display: block;
+}
+input#kash:checked ~ .contacts-map__controls label[for='kash'] {
+  background: white;
+}
+input#kash:checked ~ .contacts-map__slider .contacts-map__controls--kash {
+  display: block;
+}
+input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
+  background: white;
+}
+input#foot1:checked ~ .contacts-map__path .contacts-map__path-item--foot1 {
+  display: block;
+}
+input#foot1:checked ~ .contacts-map__map .contacts-map__map-item--foot1 {
+  display: block;
+}
+input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
+  background: white;
+}
+input#car1:checked ~ .contacts-map__path .contacts-map__path-item--car1 {
+  display: block;
+}
+input#car1:checked ~ .contacts-map__map .contacts-map__map-item--car1 {
+  display: block;
+}
+input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
+  background: white;
+}
+input#bus1:checked ~ .contacts-map__path .contacts-map__path-item--bus1 {
+  display: block;
+}
+input#bus1:checked ~ .contacts-map__map .contacts-map__map-item--bus1 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__controls--varsh label[for='foot2'] {
+  background: white;
+}
+input#foot2:checked ~ .contacts-map__path .contacts-map__path-item--foot2 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__map .contacts-map__map-item--foot2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__controls--varsh label[for='car2'] {
+  background: white;
+}
+input#car2:checked ~ .contacts-map__path .contacts-map__path-item--car2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__map .contacts-map__map-item--car2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__controls--varsh label[for='bus2'] {
+  background: white;
+}
+input#bus2:checked ~ .contacts-map__path .contacts-map__path-item--bus2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__map .contacts-map__map-item--bus2 {
+  display: block;
+}
+.contacts-map__controls label {
+  display: inline-block;
+  width: 70px;
+  height: 45px;
+  background: gray;
+}
+.contacts-map__controls--path {
+  display: none;
+}
+.contacts-map__path {
+  width: 250px;
   height: 300px;
-  background: red;
+  background: green;
+}
+.contacts-map__path-item {
+  display: none;
+}
+.contacts-map__map {
+  width: 100%;
+  height: 400px;
+  background: yellow;
+  text-align: right;
+}
+.contacts-map__map-item {
+  display: none;
 }
 .contacts-socials {
   float: right;
