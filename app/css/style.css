@@ -133,12 +133,20 @@ body {
   width: 1540px;
   margin: 0 auto;
   background: #f0efed;
+  border-radius: 30px 30px 0 0;
+}
+.banner {
+  text-align: center;
+  margin-bottom: 50px;
 }
 .action-title {
   position: relative;
   height: 259px;
   margin-bottom: 35px;
   background: #c2c0bf;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  box-shadow: inset 0px 4px 6px 0px rgba(255, 255, 255, 0.8), inset 0px -4px 4px 2px rgba(0, 0, 0, 0.15);
 }
 .action-title__header {
   position: absolute;
@@ -149,6 +157,7 @@ body {
 .action-title__header-text {
   line-height: 1;
   text-transform: lowercase;
+  background-clip: text;
 }
 .action-title__header-title {
   font-size: 348px;
