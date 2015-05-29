@@ -142,3 +142,18 @@
 
 	.generate-metro(@n, (@i + 1));
 }
+
+.generate-footer-socials(@n, @i: 1) when (@i =< @n) {
+	@items:
+		fb,
+		inst,
+		vk;
+	
+	@item: extract(@items, @i);
+	
+	&--@{item} {
+		background-image: url('../images/sprite/footer-@{item}.png');
+	}
+
+	.generate-footer-socials(@n, (@i + 1));
+}

@@ -15,3 +15,9 @@ mixin nav(items)
 				else
 					li.nav-item
 						a.nav-item__name(href=item.href)=item.name
+						
+mixin navFooter(items)
+	ul.nav
+		each item in items
+			li.nav-item
+				a.nav-item__name(href=item.href)=item.name

@@ -1,10 +1,10 @@
 footer.footer
-	.container
-		.row
-			.footer-menu.col-xs-2
-				.footer-menu__title Меню
-				.footer-menu__block
-					+nav ([{
+	.container-fluid
+		.row.container--footer.footer--main
+			.footer-menu.col-xs-3
+				p.title-footer.footer-menu__title Меню
+				.block-footer.footer-menu__block
+					+navFooter ([{
 						name: 'Акции!',
 						href: '/'
 					}, {
@@ -26,9 +26,11 @@ footer.footer
 						name: 'F.A.Q.',
 						href: '/11'
 					}])
-			form.footer-promo.col-xs-2(action='' method='post')
-				.footer-promo__title Ввести промо код
-				.footer-promo__block
+					
+					
+			form.footer-promo.col-xs-5(action='' method='post')
+				p.title-footer.footer-promo__title Ввести промо код
+				.block-footer.footer-promo__block
 					p.footer-promo__text
 						| У Вас есть промо код?
 						br
@@ -36,48 +38,51 @@ footer.footer
 					.footer-promo__form
 						input(type='text' placeholder='Промо код')
 						button(type='submit') Да!
-					p.footer-promo__sub-text Участвуйте в акциях!
-			form.footer-subscription.col-xs-4(action='' method='post')
-				.footer-subscription__title Подписка на новости
-				.footer-subscription__block
-					p.footer-promo__text
+				p.footer-promo__sub-text Участвуйте в акциях!
+					
+					
+			form.footer-signup.col-xs-7(action='' method='post')
+				p.title-footer.footer-signup__title Подписка на новости
+				.block-footer.footer-signup__block
+					p.footer-signup__text
 						| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
-					.footer-promo__form
+					.footer-signup__form
 						input(type='text' placeholdder='Ваше имя')
 						input(type='text' placeholdder='Ваш email')
 						button(type='submit') Да!
-					p.footer-promo__sub-text Мы никогда не отправляем спам!
-			.footer-contacts.col-xs-2
-				.footer-contacts__title Контакты
-				.footer-contacts__block
-					p Телефон: +7 (495) 223-9200
-					p 
-					p
-					p Адрес: Москва, 2-й Котляковский переулок, д.18
-					a.footer-contacts__sub-text Открыть карту
-			.col-xs-2
-				img(alt='' src='')
+				p.footer-signup__sub-text Мы никогда не отправляем спам!
+					
+					
+			.footer-contacts.col-xs-5
+				p.title-footer.footer-contacts__title Контакты
+				.block-footer.footer-contacts__block
+					p.footer-contacts__item Телефон: +7 (495) 223-9200
+					p.footer-contacts__item E-mail: sale@eorder.ru
+					p.footer-contacts__item.footer-contacts__item--skype sale.eorder
+					p.footer-contacts__item Адрес: Москва, 2-й Котляковский переулок, д.18
+				a.footer-contacts__sub-text Открыть карту
+			.col-xs-4
+				.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
 		
-		.row
-			.col-xs-4
-				a.footer-logo: img(src="", alt="")
-				a.footer-logo--promo: img(src="", alt="")
-			.col-xs-4
-				p.footer-text
-					| Prepress-Press-Postpress
-					br
-					| 24/7
-			.col-xs-4
+		.row.container--footer.footer--second
+			.col-xs-8.footer-logo-block
+				a.footer-logo: img(src='../images/sprite/footer-logo.png', alt='Eorder')
+				a.footer-logo--promo: img(src='../images/sprite/footer-logo-promo.png', alt='Eorder promo')
+				
+			.col-xs-8
+				.footer-press: img(src='../images/sprite/footer-press.png', alt='Prepress-Press-Postpress')
+			
+			.col-xs-8
 				p.footer-socials
 					span.footer-socials__text Мы в социальных сетях
-					a.footer-socials__links.footer-socials__links--f(href="")
-					a.footer-socials__links.footer-socials__links--in(href="")
+					a.footer-socials__links.footer-socials__links--fb(href="")
+					a.footer-socials__links.footer-socials__links--inst(href="")
 					a.footer-socials__links.footer-socials__links--vk(href="")
 		
-		p.footer-copyright
-			| &#169; 2014
-			span ЗАО "Новые печатные технологии".
-			| Все права защищены.
+		p.footer-copyright.container--footer
+				| &#169; 2014 
+				span.footer-copyright--name ЗАО "Новые печатные технологии". 
+				| Все права защищены.
 	
 	
-	p.footer-signature Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00
+p.footer-signature Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00

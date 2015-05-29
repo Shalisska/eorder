@@ -1,0 +1,132 @@
+.container--footer {
+	width: 1540px;
+	margin: 0 auto;
+}
+
+.footer {
+	margin-bottom: 10px;
+	padding: 80px 0 0 0;
+	background: @bg-footer;
+	font-size: @font-size__footer;
+	color: @color__footer;
+	
+	&--main {
+		padding-bottom: 25px;
+		border-bottom: 6px solid @border-color;
+	}
+	
+	&--second {
+		padding-top: 25px;
+	}
+	
+	.nav {
+		&-item {
+			&__name {
+				padding: 0;
+				color: @color__footer;
+			}
+		}
+	}
+	
+	&-promo {
+		&__sub-text {
+			font-size: @font-size__footer--small;
+		}
+	}
+	
+	&-signup {
+		&__block {
+			font-size: @font-size__footer--small;
+		}
+	}
+	
+	&-contacts {
+		&__item {
+			margin: 0;
+			
+			&--skype {
+				&:before {
+					content: '';
+					display: inline-block;
+					margin-right: 5px;
+					width: 19px;
+					height: 19px;
+					background: url(../images/sprite/footer-skype.png) no-repeat center;
+					vertical-align: middle;
+				}
+			}
+		}
+		
+		&__sub-text {
+			color: @color__footer;
+			
+			&:before {
+					content: '';
+					display: inline-block;
+					width: 21px;
+					height: 15px;
+					background: url(../images/sprite/footer-marker.png) no-repeat center;
+				}
+		}
+	}
+	
+	&-code {
+		width: 100%;
+		height: auto;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	&-logo {
+		&-block {
+			padding-top: 15px;
+		}
+		
+		margin-left: -55px;
+		margin-right: 35px;
+		
+		&--promo {
+			
+		}
+	}
+	
+	&-socials {
+		padding-top: 10px;
+		text-align: right;
+		font-size: @font-size__footer-socials;
+		color: @color__footer-socials;
+		text-transform: uppercase;
+		
+		&__text {
+			margin-right: 15px;
+		}
+		
+		&__links {
+			display: inline-block;
+			width: 45px;
+			height: 45px;
+			background-repeat: no-repeat;
+			background-position: center;
+			vertical-align: middle;
+			
+			.generate-footer-socials(3);
+		}
+	}
+	
+	&-copyright {
+		color: @color__footer-copyright;
+		
+		&--name {
+		}
+	}
+	
+	&-signature {
+		margin-bottom: 55px;
+		text-align: center;
+		font-size: @font-size__footer-signature;
+		color: @color__footer-signature;
+	}
+}
+
