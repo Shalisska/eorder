@@ -1,15 +1,12 @@
 header.header
 	//TODO: toolbar-header
-	.container.header-container
+	.container-fluid.header-container
 		.row
 			.col-xs-8
 				.header-logo
 					a.header-logo__link(href='#')
 						img(src="../images/logo--promo.png", alt="e-order")
-					p.header-logo__slogan.text-center
-						| Prepress-Press-Postpress
-						br
-						| 24/7
+					.header-logo__slogan: img(src='../images/sprite/header-press.png', alt='Prepress-Press-Postpress')
 			.col-xs-8
 				p.header-presentation.text-center Цифровая и офсетная печать любых тиражей в самые короткие сроки
 			.col-xs-8
@@ -19,7 +16,7 @@ header.header
 					a.header-call__handset(href='#')
 					p.header-call__text Звонок за наш счет
 
-	nav
+	nav.header-menu
 		+nav ([{
 			name: 'Акции!',
 			href: '/',

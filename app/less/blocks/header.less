@@ -2,21 +2,16 @@
 .header {
 	margin-bottom: 90px;
 	width: 100%;
-	background: url('../images/bg-header.png') repeat-x center;
-	background-size: auto 100%;
+	background: @bg-header;
 	
 	&-container {
 		position: relative;
-		padding: 30px 0 0;
-		width: 100%;
+		padding: 30px 0 15px;
 	}
 	
 	&-logo {
 		padding: 0 45px;
-		
-		img {
-			width: 100%;
-		}
+		text-align: center;
 
 		&__slogan {
 			font-size: @font-size__header-slogan;
@@ -25,20 +20,22 @@
 		}
 	}
 	&-presentation {
-		padding: 60px 15px 0;
+		padding: 85px 5% 0;
 		font-size: @font-size__header-pres;
-		line-height: @line-height__header-pres;
+		line-height: 1;
 		color: @color__header-pres;
+		text-shadow: -1px 1px 2px rgba(0, 0, 0, .35);
 	}
 	
 	&-phone {
+		padding-top: 10px;
 		padding-right: 20px;
 		font-size: @font-size__header-phone;
 		color: @color__header-phone;
 		
 		&--grand {
+			font-family: @font-family-bold;
 			font-size: @font-size__header-phone--grand;
-			font-weight: bold;
 			color: @color__header-phone--grand;
 		}
 	}
@@ -46,7 +43,7 @@
 	&-call {
 		position: absolute;
 		right: 15px;
-		bottom: -140px;
+		bottom: -120px;
 		height: 116px;
 		width: 478px;
 		background-image: linear-gradient(#535353, #6e6e6e, #535353);
@@ -55,6 +52,7 @@
 					inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3),
 					inset -4px 4px 3px -1px rgba(255, 255, 255, 0.3),
 					-14px 9px 43px 0px rgba(0, 0, 0, 0.35);
+		z-index: 10;
 		
 		&__handset {
 			position: absolute;
@@ -67,30 +65,37 @@
 		}
 		
 		&__text {
-			line-height: 110px;
+			line-height: 115px;
 			margin-right: 25px;
+			font-family: @font-family-bold;
 			font-size: @font-size__header-call;
-			font-weight: bold;
 			color: @color__header-call;
 			text-transform: uppercase;
 		}
 	}
 	
 	//TODO: menu-item:hover
-	//TODO: gradient
+	//TODO: рассчитать ширину ячеек, с жирным шрифтом съезжает
 	.nav {
-		background: url(../images/bg-header-menu.png) repeat-x center;
-		background-size: auto 100%;
 		
 		&-item {
-			text-align: center;
+			background: @bg-menu;
+			box-shadow:
+				inset 2px 0px 0 0 #383837,
+				inset -1px 0px 0 0 #535352;
 			
 			a {
-				display: inline-block;
-				vertical-align: middle;
+				padding-top: 35px;
+				padding-bottom: 30px;
+				//font-family: @font-family-bold;
 				font-size: @font-size__header-menu;
 				text-transform: uppercase;
 				color: @color__header-menu;
+				text-shadow: 0 2px 4px @shadow-color;
+				
+				&:hover {
+					background: @bg-menu-hover;
+				}
 			}
 			
 			&--special a {

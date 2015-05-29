@@ -50,19 +50,15 @@ body {
 .header {
   margin-bottom: 90px;
   width: 100%;
-  background: url('../images/bg-header.png') repeat-x center;
-  background-size: auto 100%;
+  background: linear-gradient(#424242, #515151, #424242);
 }
 .header-container {
   position: relative;
-  padding: 30px 0 0;
-  width: 100%;
+  padding: 30px 0 15px;
 }
 .header-logo {
   padding: 0 45px;
-}
-.header-logo img {
-  width: 100%;
+  text-align: center;
 }
 .header-logo__slogan {
   font-size: 25px;
@@ -70,30 +66,33 @@ body {
   text-transform: uppercase;
 }
 .header-presentation {
-  padding: 60px 15px 0;
+  padding: 85px 5% 0;
   font-size: 36px;
-  line-height: 30px;
+  line-height: 1;
   color: #bfbfbf;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.35);
 }
 .header-phone {
+  padding-top: 10px;
   padding-right: 20px;
   font-size: 60px;
   color: #818181;
 }
 .header-phone--grand {
+  font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
   font-size: 65px;
-  font-weight: bold;
   color: #ffffff;
 }
 .header-call {
   position: absolute;
   right: 15px;
-  bottom: -140px;
+  bottom: -120px;
   height: 116px;
   width: 478px;
   background-image: linear-gradient(#535353, #6e6e6e, #535353);
   border-radius: 115px 0 0 115px;
   box-shadow: inset 1px -2px 2px 1px rgba(0, 0, 0, 0.3), inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3), inset -4px 4px 3px -1px rgba(255, 255, 255, 0.3), -14px 9px 43px 0px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 }
 .header-call__handset {
   position: absolute;
@@ -105,26 +104,27 @@ body {
   background-size: cover;
 }
 .header-call__text {
-  line-height: 110px;
+  line-height: 115px;
   margin-right: 25px;
+  font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
   font-size: 30px;
-  font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
 }
-.header .nav {
-  background: url(../images/bg-header-menu.png) repeat-x center;
-  background-size: auto 100%;
-}
 .header .nav-item {
-  text-align: center;
+  background: linear-gradient(#444443, #323231);
+  box-shadow: inset 2px 0px 0 0 #383837, inset -1px 0px 0 0 #535352;
 }
 .header .nav-item a {
-  display: inline-block;
-  vertical-align: middle;
+  padding-top: 35px;
+  padding-bottom: 30px;
   font-size: 27px;
   text-transform: uppercase;
   color: #ffffff;
+  text-shadow: 0 2px 4px rgba(35, 31, 32, 0.35);
+}
+.header .nav-item a:hover {
+  background: linear-gradient(#91918f, #7f7f7d);
 }
 .header .nav-item--special a {
   color: #e91212;

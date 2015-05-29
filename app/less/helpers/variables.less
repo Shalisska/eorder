@@ -15,6 +15,10 @@
 @bg-block: #f0efed;
 
 //-----header-----
+@bg-header--extreme: #424242;
+@bg-header--middle: #515151;
+@bg-header: linear-gradient(@bg-header--extreme, @bg-header--middle, @bg-header--extreme);
+
 
 //presentation
 @font-size__header-pres: 36px;
@@ -37,10 +41,20 @@
 @color__header-call: white;
 
 //menu
+@bg-menu--top: #444443;
+@bg-menu--bottom: #323231;
+@bg-menu: linear-gradient(@bg-menu--top, @bg-menu--bottom);
+
+@bg-menu--top-hover: lighten(#444443, 30%);
+@bg-menu--bottom-hover: lighten(#323231, 30%);
+@bg-menu-hover: linear-gradient(@bg-menu--top-hover, @bg-menu--bottom-hover);
+
 @font-size__header-menu: 27px;
 @line-height__header-menu: 105px;
 @color__header-menu: white;
 @color__header-menu-special: #e91212;
+
+@shadow-color: rgba(35, 31, 32, .35);
 
 //---------main-------
 @bg-color: #f0efed;
