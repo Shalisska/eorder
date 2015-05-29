@@ -110,6 +110,7 @@ body {
   font-size: 30px;
   color: #ffffff;
   text-transform: uppercase;
+  text-shadow: -1px 2px 4px rgba(35, 31, 32, 0.35);
 }
 .header .nav-item {
   background: linear-gradient(#444443, #323231);

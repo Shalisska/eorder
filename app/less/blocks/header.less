@@ -24,7 +24,7 @@
 		font-size: @font-size__header-pres;
 		line-height: 1;
 		color: @color__header-pres;
-		text-shadow: -1px 1px 2px rgba(0, 0, 0, .35);
+		text-shadow: @text-shadow__header-presentation;
 	}
 	
 	&-phone {
@@ -46,12 +46,9 @@
 		bottom: -120px;
 		height: 116px;
 		width: 478px;
-		background-image: linear-gradient(#535353, #6e6e6e, #535353);
+		background-image: @bg__header-phone;
 		border-radius: 115px 0 0 115px;
-		box-shadow: inset 1px -2px 2px 1px rgba(0, 0, 0, 0.3),
-					inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3),
-					inset -4px 4px 3px -1px rgba(255, 255, 255, 0.3),
-					-14px 9px 43px 0px rgba(0, 0, 0, 0.35);
+		box-shadow: @box-shadow__header-call;
 		z-index: 10;
 		
 		&__handset {
@@ -71,6 +68,7 @@
 			font-size: @font-size__header-call;
 			color: @color__header-call;
 			text-transform: uppercase;
+			text-shadow: @text-shadow__header-call;
 		}
 	}
 	
@@ -80,9 +78,7 @@
 		
 		&-item {
 			background: @bg-menu;
-			box-shadow:
-				inset 2px 0px 0 0 #383837,
-				inset -1px 0px 0 0 #535352;
+			box-shadow: @box-shadow__nav-item;
 			
 			a {
 				padding-top: 35px;
@@ -91,7 +87,7 @@
 				font-size: @font-size__header-menu;
 				text-transform: uppercase;
 				color: @color__header-menu;
-				text-shadow: 0 2px 4px @shadow-color;
+				text-shadow: @text-shadow__nav-item;
 				
 				&:hover {
 					background: @bg-menu-hover;

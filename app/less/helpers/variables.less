@@ -35,6 +35,9 @@
 @font-size__header-phone--grand: 65px;
 @color__header-phone: #818181;
 @color__header-phone--grand: white;
+@bg__header-phone-extreme: #535353;
+@bg__header-phone-middle:#6e6e6e;
+@bg__header-phone: linear-gradient(@bg__header-phone-extreme, @bg__header-phone-middle, @bg__header-phone-extreme);
 
 //call
 @font-size__header-call: 30px;
@@ -54,14 +57,8 @@
 @color__header-menu: white;
 @color__header-menu-special: #e91212;
 
-@shadow-color: rgba(35, 31, 32, .35);
-
 //---------main-------
 @bg-color: #f0efed;
-
-//----------action----------
-
-@box-shadow__action: 0px 1px 4px 0 rgba(35, 31, 32, .5);
 
 //order
 
@@ -186,3 +183,25 @@
 //signature
 @font-size__footer-signature: 12px;
 @color__footer-signature: #a8a8a8;
+
+//----shadows----
+//---header----
+//presentation
+@text-shadow__header-presentation: -1px 1px 2px rgba(0, 0, 0, .35);
+@text-shadow__nav-item: 0 2px 4px rgba(35, 31, 32, .35);
+@text-shadow__header-call: -1px 2px 4px rgba(35, 31, 32, .35);
+
+@box-shadow__header-call:
+	inset 1px -2px 2px 1px rgba(0, 0, 0, 0.3),
+	inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3),
+	inset -4px 4px 3px -1px rgba(255, 255, 255, 0.3),
+	-14px 9px 43px 0px rgba(0, 0, 0, 0.35);
+@box-shadow__nav-item:
+	inset 2px 0px 0 0 #383837,
+	inset -1px 0px 0 0 #535352;
+
+
+
+//--main--
+//--action--
+@box-shadow__action: 0px 1px 4px 0 rgba(35, 31, 32, .5);
