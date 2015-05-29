@@ -1,111 +1,42 @@
 .container--main {
 	width: 1540px;
-	margin: 0 auto;
+	padding: 0;
 	background: #f0efed;
 	border-radius: 30px 30px 0 0;
+	box-shadow: 0px 10px 13px 0px rgba(35, 31, 32, .26);
 }
 
-.banner {
-	text-align: center;
-	margin-bottom: 50px;
-}
+
 
 .action {
-	//TODO: border-radius
 	&-title {
-		position: relative;
-		height: 259px;
+		width: 100%;
 		margin-bottom: 35px;
-		background: @bg-color__action-title;
-		border-radius: 30px 30px 0 0;
-		overflow: hidden;
-		box-shadow:
-			inset 0px 4px 6px 0px rgba(255, 255, 255, 0.8),
-			inset 0px -4px 4px 2px rgba(0, 0, 0, 0.15);
 		
-		&__header {
-			position: absolute;
-			left: -35px;
-			top: -105px;
-			
-			&-title,
-			&-text {
-				line-height: 1;
-				text-transform: lowercase;
-				-webkit-background-clip: text;
-				-moz-background-clip: text;
-				background-clip: text;
-			}
-			
-			&-title {
-				font-size: @font-size__action-header-title;
-				color: @color__action-header-title;
-			}
-			
-			&-text {
-				position: absolute;
-				bottom: -45px;
-				left: 40px;
-				width: 1200px;
-				font-size: @font-size__action-header-text;
-				color: @color__action-header-text;
-			}
+		img {
+			width: 100%;
 		}
 	}
-	
-	&-pict {
-		position: absolute;
-		top: -20px;
-		right: 0;
-		width: 616px;
-		height: 299px;
-		background: url(../images/action-rect.png) no-repeat center;
-		
-		&__image {
-			position: absolute;
-			top: -60px;
-			right: 150px;
-		}
-		
-		&__percent,
-		&__text {
-			line-height: 1;
-			text-align: center;
-		}
-		
-		&__percent {
-			font-size: @font-size__action-pict-percent;
-			color: @color__action-pict-percent;
-		}
-		
-		&__text {
-			position: absolute;
-			bottom: 15px;
-			left: 50%;
-			margin-left: -170px;
-			width: 340px;
-			text-transform: lowercase;
-			font-size: @font-size__action-pict-text;
-			color: @color__action-pict-text;
-		}
-	}
-	
+
 	&-block {
 		padding: 0 95px 25px;
 	}
 	
 	&-image {
-		float: left;
-		width: 53%;
+		max-width: 706px;
+		box-shadow: @box-shadow__action;
+		
+		img {
+			width: 100%;
+		}
 	}
 	
 	&-order {
-		float: right;
-		width: 45%;
-		
 		&__item {
 			padding: 1px 25px;
 			background: @bg__action-order-item;
+			border: 3px solid @border__action-order-item;
+			box-shadow: @box-shadow__action;
 			
 			&-title {
 				color: @color__action-order-title;
