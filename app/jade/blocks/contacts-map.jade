@@ -8,23 +8,21 @@ mixin contactsMap(items)
 	
 	.contacts-map__slider
 		each item in items
-			each path in item.path
-				input(id=path.id type='radio' name=path.name value=path.id)
-		
-		each item in items
-			.contacts-map__controls--path(class='contacts-map__controls--' + item.id)
+			.contacts-map__slider-item(class='contacts-map__slider-item--'+item.id)
 				each path in item.path
-					label(for=path.id)=path.id
+					input(id=path.id type='radio' name=path.name value=path.id)
+				
+				.contacts-map__controls--path(class='contacts-map__controls--' + item.id)
+					each path in item.path
+						label(for=path.id)=path.id
+
+				.contacts-map__path(class='contacts-map__path--'+item.id)
+					each path in item.path
+						.contacts-map__path-item(class='contacts-map__path-item--'+path.id)=path.id
 		
-		.contacts-map__path
-			each item in items
-				each path in item.path
-					.contacts-map__path-item(class='contacts-map__path-item--'+item.id+' contacts-map__path-item--'+path.id)=path.id
-		
-		.contacts-map__map
-			each item in items
-				each path in item.path
-					.contacts-map__map-item(class='contacts-map__map-item--'+item.id+' contacts-map__map-item--'+path.id)=path.id
+				.contacts-map__map(class='contacts-map__map--'+item.id)
+					each path in item.path
+						.contacts-map__map-item(class='contacts-map__map-item--'+path.id)=path.id
 
 
 

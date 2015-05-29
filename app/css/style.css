@@ -566,56 +566,11 @@ input#varsh:checked ~ .contacts-map__slider .contacts-map__controls--varsh {
 input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
   background: white;
 }
-input#foot1:checked ~ .contacts-map__path .contacts-map__path-item--foot1 {
-  display: block;
-}
-input#foot1:checked ~ .contacts-map__map .contacts-map__map-item--foot1 {
-  display: block;
-}
 input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
   background: white;
 }
-input#car1:checked ~ .contacts-map__path .contacts-map__path-item--car1 {
-  display: block;
-}
-input#car1:checked ~ .contacts-map__map .contacts-map__map-item--car1 {
-  display: block;
-}
 input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
   background: white;
-}
-input#bus1:checked ~ .contacts-map__path .contacts-map__path-item--bus1 {
-  display: block;
-}
-input#bus1:checked ~ .contacts-map__map .contacts-map__map-item--bus1 {
-  display: block;
-}
-input#foot2:checked ~ .contacts-map__controls--varsh label[for='foot2'] {
-  background: white;
-}
-input#foot2:checked ~ .contacts-map__path .contacts-map__path-item--foot2 {
-  display: block;
-}
-input#foot2:checked ~ .contacts-map__map .contacts-map__map-item--foot2 {
-  display: block;
-}
-input#car2:checked ~ .contacts-map__controls--varsh label[for='car2'] {
-  background: white;
-}
-input#car2:checked ~ .contacts-map__path .contacts-map__path-item--car2 {
-  display: block;
-}
-input#car2:checked ~ .contacts-map__map .contacts-map__map-item--car2 {
-  display: block;
-}
-input#bus2:checked ~ .contacts-map__controls--varsh label[for='bus2'] {
-  background: white;
-}
-input#bus2:checked ~ .contacts-map__path .contacts-map__path-item--bus2 {
-  display: block;
-}
-input#bus2:checked ~ .contacts-map__map .contacts-map__map-item--bus2 {
-  display: block;
 }
 input#kash:checked ~ .contacts-map__controls label[for='kash'] {
   background: white;
@@ -626,56 +581,11 @@ input#kash:checked ~ .contacts-map__slider .contacts-map__controls--kash {
 input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
   background: white;
 }
-input#foot1:checked ~ .contacts-map__path .contacts-map__path-item--foot1 {
-  display: block;
-}
-input#foot1:checked ~ .contacts-map__map .contacts-map__map-item--foot1 {
-  display: block;
-}
 input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
   background: white;
 }
-input#car1:checked ~ .contacts-map__path .contacts-map__path-item--car1 {
-  display: block;
-}
-input#car1:checked ~ .contacts-map__map .contacts-map__map-item--car1 {
-  display: block;
-}
 input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
   background: white;
-}
-input#bus1:checked ~ .contacts-map__path .contacts-map__path-item--bus1 {
-  display: block;
-}
-input#bus1:checked ~ .contacts-map__map .contacts-map__map-item--bus1 {
-  display: block;
-}
-input#foot2:checked ~ .contacts-map__controls--varsh label[for='foot2'] {
-  background: white;
-}
-input#foot2:checked ~ .contacts-map__path .contacts-map__path-item--foot2 {
-  display: block;
-}
-input#foot2:checked ~ .contacts-map__map .contacts-map__map-item--foot2 {
-  display: block;
-}
-input#car2:checked ~ .contacts-map__controls--varsh label[for='car2'] {
-  background: white;
-}
-input#car2:checked ~ .contacts-map__path .contacts-map__path-item--car2 {
-  display: block;
-}
-input#car2:checked ~ .contacts-map__map .contacts-map__map-item--car2 {
-  display: block;
-}
-input#bus2:checked ~ .contacts-map__controls--varsh label[for='bus2'] {
-  background: white;
-}
-input#bus2:checked ~ .contacts-map__path .contacts-map__path-item--bus2 {
-  display: block;
-}
-input#bus2:checked ~ .contacts-map__map .contacts-map__map-item--bus2 {
-  display: block;
 }
 .contacts-map__controls label {
   display: inline-block;

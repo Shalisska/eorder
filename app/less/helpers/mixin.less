@@ -9,7 +9,7 @@
 .reset-ul (@list-style: none; @li-padding: 0; @li-margin: 0) {
     list-style: @list-style;
     margin: @li-margin;
-    padding: @li-padding;    
+    padding: @li-padding;
 }
 
 .reset-a () {
@@ -45,13 +45,13 @@
 		background: white;
 	}
 	
-	input#@{item}:checked~&__path &__path-item--@{item} {
-		display: block;
-	}
-	
-	input#@{item}:checked~&__map &__map-item--@{item} {
-		display: block;
-	}
+//	input#@{item}:checked~&__path &__path-item--@{item} {
+//		display: block;
+//	}
+//	
+//	input#@{item}:checked~&__map &__map-item--@{item} {
+//		display: block;
+//	}
 
 	.generate-slider--varsh(@n, (@i + 1));
 }
@@ -95,7 +95,7 @@
 	}
 
 	.generate-slider--varsh(3);
-	.generate-slider--kash(3);
+	//.generate-slider--kash(3);
 
 	.generate-metro(@n, (@i + 1));
 }
