@@ -527,7 +527,7 @@ body {
 }
 .contacts-info {
   padding: 50px 10px 50px 60px;
-  width: 50%;
+  width: 45%;
   font-size: 30px;
   color: #166382;
 }
@@ -554,68 +554,174 @@ body {
   background-image: url(../images/sprite/contacts-adress.png);
 }
 .contacts-map {
-  width: 40%;
-  font-size: 30px;
+  width: 45%;
+}
+.contacts-map input[type='radio'] {
+  display: none;
 }
 input#varsh:checked ~ .contacts-map__controls label[for='varsh'] {
-  background: white;
+  opacity: 1;
 }
 input#varsh:checked ~ .contacts-map__slider .contacts-map__controls--varsh {
   display: block;
 }
-input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
-  background: white;
-}
-input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
-  background: white;
-}
-input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
-  background: white;
+input#varsh:checked ~ .contacts-map__slider .contacts-map__map--varsh {
+  display: block;
 }
 input#kash:checked ~ .contacts-map__controls label[for='kash'] {
-  background: white;
+  opacity: 1;
 }
 input#kash:checked ~ .contacts-map__slider .contacts-map__controls--kash {
   display: block;
 }
+input#kash:checked ~ .contacts-map__slider .contacts-map__map--kash {
+  display: block;
+}
 input#foot1:checked ~ .contacts-map__controls--varsh label[for='foot1'] {
-  background: white;
+  opacity: 1;
+}
+input#foot1:checked ~ .contacts-map__path .contacts-map__path-item--foot1 {
+  display: block;
+}
+input#foot1:checked ~ .contacts-map__map .contacts-map__map-item--foot1 {
+  display: block;
 }
 input#car1:checked ~ .contacts-map__controls--varsh label[for='car1'] {
-  background: white;
+  opacity: 1;
+}
+input#car1:checked ~ .contacts-map__path .contacts-map__path-item--car1 {
+  display: block;
+}
+input#car1:checked ~ .contacts-map__map .contacts-map__map-item--car1 {
+  display: block;
 }
 input#bus1:checked ~ .contacts-map__controls--varsh label[for='bus1'] {
-  background: white;
+  opacity: 1;
+}
+input#bus1:checked ~ .contacts-map__path .contacts-map__path-item--bus1 {
+  display: block;
+}
+input#bus1:checked ~ .contacts-map__map .contacts-map__map-item--bus1 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__controls--kash label[for='foot2'] {
+  opacity: 1;
+}
+input#foot2:checked ~ .contacts-map__path .contacts-map__path-item--foot2 {
+  display: block;
+}
+input#foot2:checked ~ .contacts-map__map .contacts-map__map-item--foot2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__controls--kash label[for='car2'] {
+  opacity: 1;
+}
+input#car2:checked ~ .contacts-map__path .contacts-map__path-item--car2 {
+  display: block;
+}
+input#car2:checked ~ .contacts-map__map .contacts-map__map-item--car2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__controls--kash label[for='bus2'] {
+  opacity: 1;
+}
+input#bus2:checked ~ .contacts-map__path .contacts-map__path-item--bus2 {
+  display: block;
+}
+input#bus2:checked ~ .contacts-map__map .contacts-map__map-item--bus2 {
+  display: block;
+}
+.contacts-map__controls {
+  width: 96%;
+  margin-left: 2%;
+  text-align: center;
+}
+.contacts-map__controls--metro {
+  display: inline-block;
+  width: 35px;
+  height: 26px;
+  margin: 0 10px;
+  background: url(../images/sprite/contacts-map-metro.png) no-repeat center;
 }
 .contacts-map__controls label {
-  display: inline-block;
-  width: 70px;
-  height: 45px;
-  background: gray;
+  float: left;
+  width: 50%;
+  background: white;
+  opacity: .6;
+  font-size: 41px;
 }
 .contacts-map__controls--path {
+  position: absolute;
   display: none;
+  top: 5px;
+  left: 5px;
+}
+.contacts-map__controls--path label {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .6;
+}
+.contacts-map__controls--foot {
+  background-image: url('../images/sprite/contacts-map-foot.png');
+}
+.contacts-map__controls--car {
+  background-image: url('../images/sprite/contacts-map-car.png');
+}
+.contacts-map__controls--bus {
+  background-image: url('../images/sprite/contacts-map-bus.png');
+}
+.contacts-map__slider {
+  position: relative;
 }
 .contacts-map__path {
-  width: 250px;
-  height: 300px;
-  background: green;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 185px;
+  height: 305px;
+  background: rgba(255, 255, 255, 0.6);
 }
 .contacts-map__path-item {
   display: none;
 }
 .contacts-map__map {
+  display: none;
   width: 100%;
-  height: 400px;
-  background: yellow;
-  text-align: right;
+  height: 380px;
+}
+.contacts-map__map--varsh .contacts-map__map-item--foot {
+  background-image: url('../images/map/varsh-foot.jpg');
+}
+.contacts-map__map--varsh .contacts-map__map-item--car {
+  background-image: url('../images/map/varsh-car.jpg');
+}
+.contacts-map__map--varsh .contacts-map__map-item--bus {
+  background-image: url('../images/map/varsh-bus.jpg');
+}
+.contacts-map__map--kash .contacts-map__map-item--foot {
+  background-image: url('../images/map/kash-foot.jpg');
+}
+.contacts-map__map--kash .contacts-map__map-item--car {
+  background-image: url('../images/map/kash-car.jpg');
+}
+.contacts-map__map--kash .contacts-map__map-item--bus {
+  background-image: url('../images/map/kash-bus.jpg');
 }
 .contacts-map__map-item {
   display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .contacts-socials {
   float: right;
   margin-top: 80px;
+  margin-right: 15px;
   width: 56px;
 }
 .contacts-socials__item {

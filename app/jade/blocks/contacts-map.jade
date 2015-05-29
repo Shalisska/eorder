@@ -1,28 +1,37 @@
 mixin contactsMap(items)
-	each item in items
-		input(id=item.id type='radio' name=item.name value=item.id)
+	each item, i in items
+		if i === 0
+			input(id=item.id type='radio' name=item.name value=item.id checked)
+		else
+			input(id=item.id type='radio' name=item.name value=item.id)
 	
-	.contacts-map__controls
+	.contacts-map__controls.clearfix
 		each item in items
-			label(for=item.id)=item.id
+			label(for=item.id)
+				| от
+				span.contacts-map__controls--metro
+				| #{item.title}
 	
 	.contacts-map__slider
 		each item in items
 			.contacts-map__slider-item(class='contacts-map__slider-item--'+item.id)
-				each path in item.path
-					input(id=path.id type='radio' name=path.name value=path.id)
+				each path, j in item.path
+					if j === 0
+						input(id=path.id type='radio' name=path.name value=path.id checked)
+					else
+						input(id=path.id type='radio' name=path.name value=path.id)
 				
 				.contacts-map__controls--path(class='contacts-map__controls--' + item.id)
 					each path in item.path
-						label(for=path.id)=path.id
+						label(class='contacts-map__controls--'+path.type for=path.id)
 
 				.contacts-map__path(class='contacts-map__path--'+item.id)
 					each path in item.path
-						.contacts-map__path-item(class='contacts-map__path-item--'+path.id)=path.id
+						.contacts-map__path-item(class='contacts-map__path-item--'+path.type)=path.id
 		
 				.contacts-map__map(class='contacts-map__map--'+item.id)
 					each path in item.path
-						.contacts-map__map-item(class='contacts-map__map-item--'+path.id)=path.id
+						.contacts-map__map-item(class='contacts-map__map-item--'+path.id+' contacts-map__map-item--'+path.type)
 
 
 
@@ -30,27 +39,35 @@ mixin contactsMap(items)
 	+contactsMap([{
 		id: 'varsh',
 		name: 'metro',
+		title: 'Варшавкая',
 		path: [{
 			id: 'foot1',
+			type: 'foot',
 			name: 'varsh'
 		}, {
 			id: 'car1',
+			type: 'car',
 			name: 'varsh'
 		}, {
 			id: 'bus1',
+			type: 'bus',
 			name: 'varsh'
 		}]
 	}, {
 		id: 'kash',
 		name: 'metro',
+		title: 'Каширская',
 		path: [{
 			id: 'foot2',
+			type: 'foot',
 			name: 'kash'
 		}, {
 			id: 'car2',
+			type: 'car',
 			name: 'kash'
 		}, {
 			id: 'bus2',
+			type: 'bus',
 			name: 'kash'
 		}]
 	}])

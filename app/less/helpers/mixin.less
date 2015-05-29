@@ -33,6 +33,48 @@
 	.generate-socials(@n, (@i + 1));
 }
 
+.generate-path(@n, @i: 1) when (@i =< @n) {
+	@list:
+		foot,
+		car,
+		bus;
+	@item: extract(@list, @i);
+
+	&--@{item} {
+		background-image: url('../images/sprite/contacts-map-@{item}.png');
+	}
+
+	.generate-path(@n, (@i + 1));
+}
+
+.generate-map-varsh(@n, @i: 1) when (@i =< @n) {
+	@list:
+		foot,
+		car,
+		bus;
+	@item: extract(@list, @i);
+
+	&--varsh &-item--@{item} {
+		background-image: url('../images/map/varsh-@{item}.jpg');
+	}
+
+	.generate-map-varsh(@n, (@i + 1));
+}
+
+.generate-map-kash(@n, @i: 1) when (@i =< @n) {
+	@list:
+		foot,
+		car,
+		bus;
+	@item: extract(@list, @i);
+
+	&--kash &-item--@{item} {
+		background-image: url('../images/map/kash-@{item}.jpg');
+	}
+
+	.generate-map-kash(@n, (@i + 1));
+}
+
 .generate-slider--varsh(@n, @i: 1) when (@i =< @n) {
 	@items:
 		foot1,
@@ -42,16 +84,16 @@
 	@item: extract(@items, @i);
 
 	input#@{item}:checked~&__controls--varsh label[for='@{item}'] {
-		background: white;
+		opacity: 1;
 	}
 	
-//	input#@{item}:checked~&__path &__path-item--@{item} {
-//		display: block;
-//	}
-//	
-//	input#@{item}:checked~&__map &__map-item--@{item} {
-//		display: block;
-//	}
+	input#@{item}:checked~&__path &__path-item--@{item} {
+		display: block;
+	}
+	
+	input#@{item}:checked~&__map &__map-item--@{item} {
+		display: block;
+	}
 
 	.generate-slider--varsh(@n, (@i + 1));
 }
@@ -64,8 +106,8 @@
 	
 	@item: extract(@items, @i);
 
-	input#@{item}:checked~&__controls--varsh label[for='@{item}'] {
-		background: white;
+	input#@{item}:checked~&__controls--kash label[for='@{item}'] {
+		opacity: 1;
 	}
 	
 	input#@{item}:checked~&__path &__path-item--@{item} {
@@ -87,15 +129,16 @@
 	@item: extract(@items, @i);
 
 	input#@{item}:checked~&__controls label[for='@{item}'] {
-		background: white;
+		opacity: 1;
 	}
 	
 	input#@{item}:checked~&__slider &__controls--@{item} {
 		display: block;
 	}
-
-	.generate-slider--varsh(3);
-	//.generate-slider--kash(3);
+	
+	input#@{item}:checked~&__slider &__map--@{item} {
+		display: block;
+	}
 
 	.generate-metro(@n, (@i + 1));
 }
