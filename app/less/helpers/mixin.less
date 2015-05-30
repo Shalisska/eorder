@@ -33,94 +33,6 @@
 	.generate-socials(@n, (@i + 1));
 }
 
-.generate-path(@n, @i: 1) when (@i =< @n) {
-	@list:
-		foot,
-		car,
-		bus;
-	@item: extract(@list, @i);
-
-	&--@{item} {
-		background-image: url('../images/sprite/contacts-map-@{item}.png');
-	}
-
-	.generate-path(@n, (@i + 1));
-}
-
-.generate-map-varsh(@n, @i: 1) when (@i =< @n) {
-	@list:
-		foot,
-		car,
-		bus;
-	@item: extract(@list, @i);
-
-	&--varsh &-item--@{item} {
-		background-image: url('../images/map/varsh-@{item}.jpg');
-	}
-
-	.generate-map-varsh(@n, (@i + 1));
-}
-
-.generate-map-kash(@n, @i: 1) when (@i =< @n) {
-	@list:
-		foot,
-		car,
-		bus;
-	@item: extract(@list, @i);
-
-	&--kash &-item--@{item} {
-		background-image: url('../images/map/kash-@{item}.jpg');
-	}
-
-	.generate-map-kash(@n, (@i + 1));
-}
-
-.generate-slider--varsh(@n, @i: 1) when (@i =< @n) {
-	@items:
-		foot1,
-		car1,
-		bus1;
-	
-	@item: extract(@items, @i);
-
-	input#@{item}:checked~&__controls--varsh label[for='@{item}'] {
-		opacity: 1;
-	}
-	
-	input#@{item}:checked~&__path &__path-item--@{item} {
-		display: block;
-	}
-	
-	input#@{item}:checked~&__map &__map-item--@{item} {
-		display: block;
-	}
-
-	.generate-slider--varsh(@n, (@i + 1));
-}
-
-.generate-slider--kash(@n, @i: 1) when (@i =< @n) {
-	@items:
-		foot2,
-		car2,
-		bus2;
-	
-	@item: extract(@items, @i);
-
-	input#@{item}:checked~&__controls--kash label[for='@{item}'] {
-		opacity: 1;
-	}
-	
-	input#@{item}:checked~&__path &__path-item--@{item} {
-		display: block;
-	}
-	
-	input#@{item}:checked~&__map &__map-item--@{item} {
-		display: block;
-	}
-
-	.generate-slider--kash(@n, (@i + 1));
-}
-
 .generate-metro(@n, @i: 1) when (@i =< @n) {
 	@items:
 		varsh,
@@ -131,17 +43,74 @@
 	input#@{item}:checked~&__controls label[for='@{item}'] {
 		opacity: 1;
 	}
-	
-	input#@{item}:checked~&__slider &__controls--@{item} {
-		display: block;
-	}
-	
-	input#@{item}:checked~&__slider &__map--@{item} {
-		display: block;
-	}
 
 	.generate-metro(@n, (@i + 1));
 }
+
+.generate-map-slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		foot,
+		car,
+		bus;
+	
+	@item: extract(@items, @i);
+
+	input#@{item}:checked~&__path label[for='@{item}'] {
+		opacity: 1;
+	}
+	
+	input#varsh:checked~&__slider input#@{item}:checked~&__path &__path-slider-item--varsh-@{item} {
+		display: block;
+	}
+	input#kash:checked~&__slider input#@{item}:checked~&__path &__path-slider-item--kash-@{item} {
+		display: block;
+	}
+	
+	input#varsh:checked~&__slider input#@{item}:checked~&__map &__map-item--varsh-@{item} {
+		display: block;
+	}
+	input#kash:checked~&__slider input#@{item}:checked~&__map &__map-item--kash-@{item} {
+		display: block;
+	}
+
+	.generate-map-slider(@n, (@i + 1));
+}
+
+.generate-map(@n, @i: 1) when (@i =< @n) {
+	@items:
+		foot,
+		car,
+		bus;
+	
+	@item: extract(@items, @i);
+
+	&--varsh-@{item} {
+		background-image: url('../images/map/varsh-@{item}.jpg');
+	}
+		&--kash-@{item} {
+		background-image: url('../images/map/kash-@{item}.jpg');
+	}
+
+	.generate-map(@n, (@i + 1));
+}
+
+.generate-path(@n, @i: 1) when (@i =< @n) {
+	@items:
+		foot,
+		car,
+		bus;
+	
+	@item: extract(@items, @i);
+
+	label[for=@{item}] {
+		background-image: url('../images/sprite/contacts-map-@{item}.png');
+	}
+
+	.generate-path(@n, (@i + 1));
+}
+
+
+
 
 .generate-footer-socials(@n, @i: 1) when (@i =< @n) {
 	@items:
