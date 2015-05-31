@@ -159,12 +159,13 @@ body {
   background: #f9f9f9;
   border: 3px solid #e1e1e1;
   box-shadow: 0px 1px 4px 0 rgba(35, 31, 32, 0.5);
+  z-index: 10;
 }
 .action-order__item-title {
   color: #8a8a8a;
   font-size: 79px;
 }
-.action-order__item-title--small {
+.action-order__item-title--value {
   display: block;
   font-size: 79px;
   color: #d50000;
@@ -189,19 +190,22 @@ body {
   font-size: 91px;
   color: #d50000;
 }
-.action-order__controls-item {
-  display: inline-block;
+.action-order__controls li {
   width: 33.33333333%;
+}
+.action-order__controls li.active a {
+  height: 120px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+.action-order__controls-item {
   height: 105px;
   background-color: #e0e0e0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90% auto;
   vertical-align: top;
-}
-.action-order__controls-item.active {
-  height: 120px;
-  background-color: #ffffff;
+  box-shadow: inset 0px 0px 10px 1px rgba(204, 204, 204, 0.5);
 }
 .action-order__controls-item--1 {
   background-image: url(../images/sprite/action-order__controls--1.png);

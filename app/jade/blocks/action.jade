@@ -9,30 +9,8 @@
 					img(src="../images/action-pict.jpg", alt="sales")
 		
 			.col-xs-11
-				.action-order
-					.action-order__item
-						h3.action-order__item-title Брошюры 
-							small.action-order__item-title--small 1000 шт.
-						p.action-order__item-description
-							| Формат: А4 (210х297мм)
-							br
-							| Кол-во полос: 8
-							br
-							| Бумага: глянцевая 150 г/м2
-							br
-							|Цветность: 4+4
-						p.action-order__item-price
-							span.action-order__item-price--old 19600 р.
-							span.action-order__item-price--new 12900 р.
-
-					.action-order__controls
-						a.action-order__controls-item.action-order__controls-item--1
-						a.action-order__controls-item.action-order__controls-item--2
-						a.action-order__controls-item.action-order__controls-item--3.active
-
-					button.action-order__btn
-						span.action-order__btn--sm-text Сделать мгновенный заказ
-						| Заказать!
+				include action_order
+				
 	.action-timer.row
 		.col-xs-5
 			p.action-timer__text до конца

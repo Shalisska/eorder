@@ -37,12 +37,13 @@
 			background: @bg__action-order-item;
 			border: 3px solid @border__action-order-item;
 			box-shadow: @box-shadow__action;
+			z-index: 10;
 			
 			&-title {
 				color: @color__action-order-title;
 				font-size: @font-size__action-order-title;
 				
-				&--small {
+				&--value {
 					display: block;
 					font-size: @font-size__action-order-title--small;
 					color: @color__action-order-title--small;
@@ -77,20 +78,24 @@
 		}
 		
 		&__controls {
-			&-item {
-				display: inline-block;
+			li {
 				width: (100% / 3);
+				
+				&.active a {
+					height: 120px;
+					background-color: @bg__action-order-controls--active;
+					border: @boder__action-order-controls--active;
+				}
+			}
+			
+			&-item {
 				height: 105px;
 				background-color: darken(@bg__action-order-item, 10%);
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 90% auto;
 				vertical-align: top;
-				
-				&.active {
-					height: 120px;
-					background-color: @bg__action-order-controls--active;
-				}
+				box-shadow: @box-shadow__action-order-controls;
 				
 				&--1 {
 					background-image: url(../images/sprite/action-order__controls--1.png);
