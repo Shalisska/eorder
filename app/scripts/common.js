@@ -1,10 +1,6 @@
-(function () {
-
-	'use strict';
-
-
-
+$(document).ready(function(){ 
+	$("#action-order_item a").click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+	});
 });
-
-var a = document.querySelectorAll('.contacts-map__slider-item');
-console.log(a);

@@ -35,7 +35,7 @@ mixin orderItemDesc03ObjB(item)
 -var orderItemDesc02 = orderItemDesc02Obj
 -var orderItemDesc03 = orderItemDesc03Obj
 
--var orderItemDescBr = [orderItemDesc03]
+-var orderItemDescBr = [orderItemDesc01, orderItemDesc02, orderItemDesc03]
 
 -var orderItemBr = {}
 mixin orderItemBrObj(item)
@@ -43,22 +43,32 @@ mixin orderItemBrObj(item)
 	-item['desc'] = orderItemDescBr
 +orderItemBrObj(orderItemBr)
 
-mixin orderDesc(items)
+mixin orderItemActive(items)
 	each item in items
-		each desc in item.desc
-			h3.action-order__item-title=item.title
-				small.action-order__item-title--value=desc.value
-			p.action-order__item-description
-				-var arr = []
-				-arr.push('Формат: '+desc.format)
-				-arr.push('Кол-во полос: '+desc.quantity)
-				-arr.push('Бумага: '+desc.paper)
-				-arr.push('Цветность: '+desc.colority)
-				+textRow(arr)
-			p.action-order__item-price
-				span.action-order__item-price--old=desc.price_old
-				span.action-order__item-price--new=desc.price_new
+		each desc, i in item.desc
+			-var ident = (i + 1)
+			if i === 2
+				.action-order__item(class='tab-pane fade in active' id='action-order_item0' + ident)
+					block orderDesc
+						h3.action-order__item-title=item.title
+							small.action-order__item-title--value=desc.value
+						p.action-order__item-description
+							-var arr = []
+							-arr.push('Формат: '+desc.format)
+							-arr.push('Кол-во полос: '+desc.quantity)
+							-arr.push('Бумага: '+desc.paper)
+							-arr.push('Цветность: '+desc.colority)
+							+textRow(arr)
+						p.action-order__item-price
+							span.action-order__item-price--old=desc.price_old
+							span.action-order__item-price--new=desc.price_new
+			else
+				.action-order__item(class='tab-pane fade' id='action-order_item0' + ident)
+					block orderDesc
 
 
-+orderDesc([orderItemBr])
 
+
+
+
++orderItemActive([orderItemBr])

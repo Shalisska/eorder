@@ -4441,9 +4441,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
-.nav-tabs {
-  border-bottom: 1px solid #dddddd;
-}
 .nav-tabs > li {
   float: left;
 }
@@ -4459,7 +4456,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #555555;
   background-color: #ffffff;
   border: 1px solid #dddddd;
-  border-bottom-color: transparent;
   cursor: default;
 }
 .nav-tabs.nav-justified {

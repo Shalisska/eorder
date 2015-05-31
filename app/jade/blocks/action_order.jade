@@ -1,15 +1,14 @@
 .action-order
-	.action-order__item
+	.tab-content
 		include action_order-item
 
 
 
-	ul.action-order__controls.nav.nav-tabs
-		li: a.action-order__controls-item.action-order__controls-item--1(href='')
-		li: a.action-order__controls-item.action-order__controls-item--2(href='')
-		li.active: a.action-order__controls-item.action-order__controls-item--3(href='')
+	ul.action-order__controls.nav.nav-tabs#action-order_item
+		li: a.action-order__controls-item.action-order__controls-item--1(href='#action-order_item01')
+		li: a.action-order__controls-item.action-order__controls-item--2(href='#action-order_item02')
+		li.active: a.action-order__controls-item.action-order__controls-item--3(href='#action-order_item03')
 
 
 	button.action-order__btn
-		span.action-order__btn--sm-text Сделать мгновенный заказ
-		| Заказать!
+		span.action-order__btn--text Сделать мгновенный заказ

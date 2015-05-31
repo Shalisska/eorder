@@ -53,18 +53,32 @@
               </div>
               <div class="col-xs-11">
                 <div class="action-order">
-                  <div class="action-order__item">
-                                        <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                        <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                        </p>
-                                        <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                  <div class="tab-content">
+                                        <div id="action-order_item01" class="action-order__item tab-pane fade">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                        </div>
+                                        <div id="action-order_item02" class="action-order__item tab-pane fade">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                        </div>
+                                        <div id="action-order_item03" class="action-order__item tab-pane fade in active">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                        </div>
                   </div>
-                  <ul class="action-order__controls nav nav-tabs">
-                    <li><a href="" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                    <li><a href="" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                    <li class="active"><a href="" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                  <ul id="action-order_item" class="action-order__controls nav nav-tabs">
+                    <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
+                    <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
+                    <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
                   </ul>
-                  <button class="action-order__btn"><span class="action-order__btn--sm-text">Сделать мгновенный заказ</span>Заказать!</button>
+                  <button class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></button>
                 </div>
               </div>
             </div>
