@@ -82,15 +82,15 @@
 				width: (100% / 3);
 				
 				&.active a {
-					height: 120px;
+					height: 125px;
 					background-color: @bg__action-order-controls--active;
 					border: @boder__action-order-controls--active;
 				}
 			}
 			
 			&-item {
-				height: 105px;
-				background-color: darken(@bg__action-order-item, 10%);
+				height: 110px;
+				background-color: @bg__action-order-controls;
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: 90% auto;
@@ -107,6 +107,10 @@
 				
 				&--3 {
 					background-image: url(../images/sprite/action-order__controls--3.png);
+				}
+				
+				&:hover {
+					background-color: @bg__action-order-controls--hover;
 				}
 			}
 		}

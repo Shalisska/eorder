@@ -194,18 +194,18 @@ body {
   width: 33.33333333%;
 }
 .action-order__controls li.active a {
-  height: 120px;
+  height: 125px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
 .action-order__controls-item {
-  height: 105px;
-  background-color: #e0e0e0;
+  height: 110px;
+  background-color: rgba(230, 230, 230, 0.3);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90% auto;
   vertical-align: top;
-  box-shadow: inset 0px 0px 10px 1px rgba(204, 204, 204, 0.5);
+  box-shadow: inset 0px 0px 10px 1px rgba(204, 204, 204, 0.7);
 }
 .action-order__controls-item--1 {
   background-image: url(../images/sprite/action-order__controls--1.png);
@@ -215,6 +215,9 @@ body {
 }
 .action-order__controls-item--3 {
   background-image: url(../images/sprite/action-order__controls--3.png);
+}
+.action-order__controls-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .action-order__btn {
   position: relative;
