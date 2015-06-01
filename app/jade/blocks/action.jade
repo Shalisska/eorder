@@ -2,8 +2,8 @@
 	.action-title
 		img(src='../images/common/banner.png')
 
-	.row
-		.action-block
+	.action-block
+		.row
 			.col-xs-13
 				.action-image
 					img(src="../images/action-pict.jpg", alt="sales")
@@ -11,14 +11,14 @@
 			.col-xs-11
 				include action_order
 				
-	.action-timer.row
-		.col-xs-5
-			p.action-timer__text до конца
-				span акции
-		.col-xs-7
-			.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
+	.action-timer
+		.row
+			.col-xs-10
+				.action-timer__text
+			.col-xs-14
+				.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
 			
-	nav.action-controls-box.clearfix
+	nav.action-controls-box
 		+actionControls([{
 			name: 'Брошюры',
 			src: 'action-brochure.png'
