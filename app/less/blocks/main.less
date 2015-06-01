@@ -8,6 +8,8 @@
 
 
 .action {
+	margin-bottom: 80px;
+	
 	&-title {
 		width: 100%;
 		margin-bottom: 35px;
@@ -206,6 +208,7 @@
 			}
 			
 			&--name {
+				color: @color__action-controls--active;
 				border-image-source: @bg__action-controls-grad--active-border;
 			}
 			
@@ -243,27 +246,46 @@
 }
 
 .popular {
+	margin-bottom: 140px;
+	
 	&-block {
 	}
 	&-slider {
+		
 		&__inner {
 			width: 97%;
 			margin: 0 auto;
 		}
 		
-		&__item {
+		&__box {
 			text-align: center;
+		}
+		
+		&__item {
+			line-height: 345px;
+			vertical-align: middle;
 			display: inline-block;
 			width: 465px;
 			height: 345px;
 			margin: 1%;
+			box-shadow: @box-shadow__popular-item;
+			
+			img {
+				width: 100%;
+				height: 100%;
+			}
 			
 			&--all {
+				margin-top: 5%;
+				display: inline-block;
 				vertical-align: middle;
 				font-size: @font-size__action-slider;
 				color: @color__action-slider;
+				line-height: 1;
 				
 				&-bg {
+					margin-top: -35px;
+					display: inline-block;
 					font-size: @font-size__action-slider--big;
 				}
 			}
@@ -272,70 +294,35 @@
 }
 
 .features {
+	margin-bottom: 75px;
+	
 	&-block {
 		padding: 50px 80px 10px;
 	}
 	
 	&-item {
-		vertical-align: top;
 		position: relative;
-		display: inline-block;
 		margin-bottom: 30px;
 		padding-left: 140px;
-		width: 30%;
 		font-size: @font-size__features;
 		
 		&:before {
 			content: '';
 			position: absolute;
 			left: 0;
-			top: 50%;
-			margin-top: -65px;
 			width: 130px;
 			height: 130px;
 			border-radius: 50%;
-			background-color: @color__features-title--middle;
+			border: @border__features-pict;
+			background-image: @bg__features-pict;
 			background-repeat: no-repeat;
 			background-position: center;
 		}
 		
-		&__realization:before {
-			background-image: url(../images/sprite/features-realization.png);
-		}
-		
-		&__circulation:before {
-			background-image: url(../images/sprite/features-circulation.png);
-		}
-		
-		&__color:before {
-			background-image: url(../images/sprite/features-color.png);
-		}
-		
-		&__new:before {
-			background-image: url(../images/sprite/features-new.png);
-		}
-		
-		&__specialists:before {
-			background-image: url(../images/sprite/features-specialists.png);
-		}
-		
-		&__technology:before {
-			background-image: url(../images/sprite/features-technology.png);
-		}
-		
-		&__quality:before {
-			background-image: url(../images/sprite/features-quality.png);
-		}
-		
-		&__circulation02:before {
-			background-image: url(../images/sprite/features-circulation02.png);
-		}
-		
-		&__color02:before {
-			background-image: url(../images/sprite/features-color02.png);
-		}
+		.generate-features-pict(9);
 		
 		&__title {
+			font-family: @font-family-bold;
 			text-transform: uppercase;
 			color: @color__features-title--middle;
 			font-weight: bold;
@@ -365,16 +352,47 @@
 }
 
 .workmap {
+	margin-bottom: 120px;
+	
 	&-block {
-		padding: 0 50px;
+		padding: 20px 50px;
 	}
 	
 	&-item {
-		display: inline-block;
-		width: (99% / 4);
-		vertical-align: top;
+		&__box:last-of-type {
+			.workmap-item__img:after {
+				display: none;
+			}
+		}
 		
-		&__img {}
+		&__img {
+			position: relative;
+			margin: 0 auto 20px;
+			width: 275px;
+			height: 275px;
+			line-height: 275px;
+			text-align: center;
+			background: @bg__workmap-img;
+			border: @border__workmap-img;
+			border-radius: 50%;
+			box-shadow: @box-shadow__workmap-img;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				width: 33px;
+				height: 48px;
+				top: 50%;
+				margin-top: -24px;
+				right: -70px;
+				background: url(../images/common/workmap-arrow.png) no-repeat center center;
+			}
+			
+			img {
+				vertical-align: middle;
+			}
+		}
+		
 		&__text {
 			padding: 0 5px;
 			text-align: center;

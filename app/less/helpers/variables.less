@@ -10,6 +10,7 @@
 @bg-title: linear-gradient(@bg-color--top, @bg-color--bottom);
 @color-title: #8b8987;
 @font-size-title: 36px;
+@border-title: 1px solid #d1d1d1;
 
 //block
 @bg-block: #f0efed;
@@ -107,6 +108,7 @@
 //controls
 @font-size__action-controls: 21px;
 @color__action-controls: #818181;
+@color__action-controls--active: #24526d;
 @border__action-controls: 3px solid #c9c7c6;
 @border__action-controls--active: #eeeae7;
 @bg__action-controls-grad-0: linear-gradient(to top, rgba(148, 148, 148, 0.5), rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(148, 148, 148, 0.5));
@@ -137,10 +139,17 @@
 @color__features-title--middle: #1b82ab;
 @color__features-title--dark: #186b8c;
 @color__features-text: #acacac;
+@bg__features-pict-01: #1e7ea5;
+@bg__features-pict-02: #2092bf;
+@bg__features-pict: radial-gradient(circle, @bg__features-pict-02, @bg__features-pict-01);
+@border__features-pict: 3px solid #f9f9f9;
+
 
 //----------workmap------
 @color__workmap: #186b8c;
 @font-size__workmap: 33px;
+@bg__workmap-img: @bg__features-pict;
+@border__workmap-img: @border__features-pict;
 
 //------------services--------
 @font-size__services-title: 33px;
@@ -230,3 +239,14 @@
 @box-shadow__action: 0px 1px 4px 0 rgba(35, 31, 32, .5);
 @box-shadow__action--bottom: 0px 10px 15px 0px rgba(0, 0, 0, .25);
 @box-shadow__action-order-controls: inset 0px 0px 10px 1px rgba(204, 204, 204, 0.7);
+
+@box-shadow__popular: 0px 10px 59px 0 rgba(35, 31, 32, .23);
+@box-shadow__popular-item: @box-shadow__action;
+
+@box-shadow__features-pict: @box-shadow__popular;
+
+@box-shadow__workmap-img: @box-shadow__popular;
+
+
+
+

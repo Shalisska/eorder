@@ -126,3 +126,25 @@
 
 	.generate-footer-socials(@n, (@i + 1));
 }
+
+.generate-features-pict(@n, @i: 1) when (@i =< @n) {
+	@items:
+		realization,
+		circulation,
+		color,
+		new,
+		specialists,
+		technology,
+		quality,
+		circulation02,
+		color02;
+	
+	@item: extract(@items, @i);
+	
+	&__@{item}:before {
+		background-image: url('../images/sprite/features-@{item}.png'), @bg__features-pict;
+	}
+
+	.generate-features-pict(@n, (@i + 1));
+}
+
