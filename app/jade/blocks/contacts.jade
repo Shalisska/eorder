@@ -10,40 +10,42 @@ mixin contactsSocials(items)
 
 .contacts
 	h2.title-reg.contacts-title Контакты
-	.block-reg.contacts-block.clearfix
-		.contacts-info
-			+contactsInfo([{
-				name: 'phone',
-				text: '+7 (495) 223-92-00'
-			}, {
-				name: 'mail',
-				text: 'sale@eorder.ru'
-			}, {
-				name: 'skype',
-				text: 'sale.eorder'
-			}, {
-				name: 'adress',
-				text: 'г. Москва, Котляковский переулок, д. 18'
-			}])
+	.block-reg.contacts-block
+		.row
+			.col-xs-12
+				.contacts-info
+					+contactsInfo([{
+						name: 'phone',
+						text: '+7 (495) 223-92-00'
+					}, {
+						name: 'mail',
+						text: 'sale@eorder.ru'
+					}, {
+						name: 'skype',
+						text: 'sale.eorder'
+					}, {
+						name: 'adress',
+						text: 'г. Москва, Котляковский переулок, д. 18'
+					}])
 			
-			
+			.col-xs-10
+				include contacts-map
 		
-		include contacts-map
-		
-		.contacts-socials
-			+contactsSocials([{
-				class: 'twitt',
-				href: ''
-			}, {
-				class: 'vk',
-				href: ''
-			}, {
-				class: 'fb',
-				href: ''
-			}, {
-				class: 'odnoklassniki',
-				href: ''
-			}, {
-				class: 'google',
-				href: ''
-			}])
+			.col-xs-2
+				.contacts-socials
+					+contactsSocials([{
+						class: 'twitt',
+						href: ''
+					}, {
+						class: 'vk',
+						href: ''
+					}, {
+						class: 'fb',
+						href: ''
+					}, {
+						class: 'odnoklassniki',
+						href: ''
+					}, {
+						class: 'google',
+						href: ''
+					}])

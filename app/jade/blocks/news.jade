@@ -1,28 +1,36 @@
 mixin newsMenu(items)
 	each item in items
-		.news-menu__item
-			.news-menu__item-title: p=item.title
-			.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
+		.col-xs-8
+			.news-menu__item
+				.news-menu__item-title: p=item.title
+				.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
 
 
 .news
 	h2.title-reg.news-title Новости
 	.block-reg.news-block.clearfix
-		.news-menu
-			+newsMenu([{
-				title: 'I Новость',
-				src: 'logo.png'
-			}, {
-				title: 'II Новость в несколько...',
-				src: 'newspaper.jpg'
-			}, {
-				title: 'III Новость',
-				src: 'figure.jpg'
-			}])
-				
-		.news-item
-			p.news-item__title I Новость
-			.news-item__text
-				p Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!
-				p Президенты всего мира....
+		.row
+			.col-xs-15
+				.news-menu
+					.row
+						+newsMenu([{
+							title: 'I Новость',
+							src: 'logo.png'
+						}, {
+							title: 'II Новость в несколько...',
+							src: 'newspaper.jpg'
+						}, {
+							title: 'III Новость',
+							src: 'figure.jpg'
+						}])
+					.news-menu__controls-box
+						a.news-menu__controls.news-menu__controls--left(href='')
+						a.news-menu__controls.news-menu__controls--right(href='')
+			
+			.col-xs-9
+				.news-item
+					p.news-item__title I Новость
+					.news-item__text
+						p Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!
+						p Президенты всего мира....
 		a.news-item__link(href='') узнать подробнее
