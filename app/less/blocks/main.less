@@ -284,6 +284,7 @@
 					font-size: @font-size__action-slider;
 					color: @color__action-slider;
 					line-height: 1;
+					text-decoration: none;
 				}
 				
 				&-bg {
@@ -490,7 +491,8 @@
 
 .tools {
 	&-block {
-		padding: 25px 40px 30px;
+		margin-bottom: 60px;
+		padding: 60px 50px 30px;
 	}
 	
 	&-item {
@@ -498,14 +500,28 @@
 		text-transform: uppercase;
 		
 		&__title {
+			margin-bottom: 30px;
 			font-size: @font-size__tools;
 			color: @color__tools;
+			text-shadow: @text-shadow__tools;
+		}
+		
+		&__img {
+			max-width: 466px;
+			box-shadow: @box-shadow__tools;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 }
 
 .clients {
 	&-block {
+		margin-bottom: 65px;
+		background: #f3f3f3;
 		text-align: center;
 	}
 	&-item {
@@ -581,6 +597,7 @@
 		width: 40%;
 		margin-bottom: 65px;
 		padding: 15px;
+		font-family: @font-family-cond;
 		
 		&__title {
 			margin: 0;
