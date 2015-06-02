@@ -42,6 +42,7 @@
 
 	input#@{item}:checked~&__controls label[for='@{item}'] {
 		opacity: 1;
+		box-shadow: @box-shadow__contacts--active;
 	}
 
 	.generate-metro(@n, (@i + 1));
@@ -57,6 +58,7 @@
 
 	input#@{item}:checked~&__path label[for='@{item}'] {
 		opacity: 1;
+		box-shadow: @box-shadow__contacts--active;
 	}
 	
 	input#varsh:checked~&__slider input#@{item}:checked~&__path &__path-slider-item--varsh-@{item} {

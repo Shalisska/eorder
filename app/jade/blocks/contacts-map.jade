@@ -22,16 +22,16 @@ mixin contactsMap(items, itemsPath)
 		.contacts-map__path
 			.contacts-map__controls--path
 				each itemPath in itemsPath
-					label(for=itemPath.id)=itemPath.id
+					label(for=itemPath.id)
 			.contacts-map__path-slider
 				each item in items
 					each itemPath in itemsPath
-						.contacts-map__path-slider-item(class='contacts-map__path-slider-item--'+item.id+'-'+itemPath.id)=item.id+itemPath.id
+						.contacts-map__path-slider-item(class='contacts-map__path-slider-item--'+item.id+'-'+itemPath.id)=123
 		
 		.contacts-map__map
 			each item in items
 				each itemPath in itemsPath
-					.contacts-map__map-item(class='contacts-map__map-item--'+item.id+'-'+itemPath.id)=item.id+itemPath.id
+					.contacts-map__map-item(class='contacts-map__map-item--'+item.id+'-'+itemPath.id)
 
 
 

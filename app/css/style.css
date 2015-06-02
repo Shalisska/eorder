@@ -669,14 +669,8 @@ body {
   text-decoration: underline;
   font-style: italic;
 }
-.contacts-info,
-.contacts-map,
-.contacts-socials {
-  float: left;
-}
 .contacts-info {
   padding: 50px 10px 50px 60px;
-  width: 45%;
   font-size: 30px;
   color: #166382;
 }
@@ -703,19 +697,23 @@ body {
   background-image: url(../images/sprite/contacts-adress.png);
 }
 .contacts-map {
-  width: 45%;
+  padding-top: 20px;
+  font-family: 'MyriadPro-Cond', 'Arial', sans-serif;
 }
 .contacts-map input[type='radio'] {
   display: none;
 }
 input#varsh:checked ~ .contacts-map__controls label[for='varsh'] {
   opacity: 1;
+  box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 input#kash:checked ~ .contacts-map__controls label[for='kash'] {
   opacity: 1;
+  box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 input#foot:checked ~ .contacts-map__path label[for='foot'] {
   opacity: 1;
+  box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 input#varsh:checked ~ .contacts-map__slider input#foot:checked ~ .contacts-map__path .contacts-map__path-slider-item--varsh-foot {
   display: block;
@@ -731,6 +729,7 @@ input#kash:checked ~ .contacts-map__slider input#foot:checked ~ .contacts-map__m
 }
 input#car:checked ~ .contacts-map__path label[for='car'] {
   opacity: 1;
+  box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 input#varsh:checked ~ .contacts-map__slider input#car:checked ~ .contacts-map__path .contacts-map__path-slider-item--varsh-car {
   display: block;
@@ -746,6 +745,7 @@ input#kash:checked ~ .contacts-map__slider input#car:checked ~ .contacts-map__ma
 }
 input#bus:checked ~ .contacts-map__path label[for='bus'] {
   opacity: 1;
+  box-shadow: inset 0px 1px 3px 0px rgba(255, 255, 255, 0.8), inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 input#varsh:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__path .contacts-map__path-slider-item--varsh-bus {
   display: block;
@@ -777,14 +777,28 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   background: white;
   opacity: .6;
   font-size: 41px;
+  box-shadow: inset 0px -2px 3px 0px rgba(255, 255, 255, 0.8), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+.contacts-map__controls label[for='varsh'] {
+  border-radius: 59px 0px 0px 59px;
+}
+.contacts-map__controls label[for='kash'] {
+  border-radius: 0px 59px 59px 0px;
+}
+.contacts-map__controls--path {
+  margin-bottom: 5px;
+  height: 60px;
 }
 .contacts-map__controls--path label {
+  margin-bottom: 0;
   width: 60px;
   height: 60px;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   opacity: .6;
+  border-radius: 5px;
+  box-shadow: inset 0px -2px 3px 0px rgba(255, 255, 255, 0.8), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
 }
 .contacts-map__controls--path label[for=foot] {
   background-image: url('../images/sprite/contacts-map-foot.png');
@@ -802,9 +816,12 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   position: absolute;
   left: 5px;
   top: 5px;
-  width: 185px;
-  height: 305px;
+}
+.contacts-map__path-slider {
+  height: 303px;
   background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
 }
 .contacts-map__path-slider-item {
   display: none;
@@ -812,6 +829,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .contacts-map__map {
   width: 100%;
   height: 380px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
 }
 .contacts-map__map-item {
   display: none;
@@ -820,6 +838,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
 }
 .contacts-map__map-item--varsh-foot {
   background-image: url('../images/map/varsh-foot.jpg');
