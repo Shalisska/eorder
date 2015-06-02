@@ -44,7 +44,7 @@
 		&__controls {
 			position: absolute;
 			top: 50%;
-			margin-top: -50px;
+			margin-top: -75px;
 			border-top: 75px solid transparent;
 			border-bottom: 75px solid transparent;
 			
@@ -56,6 +56,20 @@
 			&--right {
 				right: 5px;
 				border-left: @news__controls;
+			}
+			
+			&:hover,
+			&:active {
+				border-left-color: darken(#f0efed, 10%);
+				border-right-color: darken(#f0efed, 10%);
+			}
+			
+			&:hover {
+				transform: scale(1.2);
+			}
+			
+			&:active {
+				transform: scale(.9);
 			}
 		}
 	}

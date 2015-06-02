@@ -588,7 +588,6 @@ body {
 .equipment-item__img img {
   width: 100%;
   height: auto;
-  border: 3px solid #e1e1e1;
 }
 .clients-block {
   margin-bottom: 65px;
@@ -645,7 +644,7 @@ body {
 .news-menu__controls {
   position: absolute;
   top: 50%;
-  margin-top: -50px;
+  margin-top: -75px;
   border-top: 75px solid transparent;
   border-bottom: 75px solid transparent;
 }
@@ -656,6 +655,19 @@ body {
 .news-menu__controls--right {
   right: 5px;
   border-left: 27px solid #f0efed;
+}
+.news-menu__controls:hover,
+.news-menu__controls:active {
+  border-left-color: #d9d6d1;
+  border-right-color: #d9d6d1;
+}
+.news-menu__controls:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.news-menu__controls:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 .news-item {
   margin-bottom: 65px;
@@ -899,31 +911,31 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   background-image: url('../images/sprite/contacts-twitt.png');
 }
 .contacts-socials__item--twitt:hover {
-  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.6)), url('../images/sprite/contacts-twitt.png');
+  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-twitt.png');
 }
 .contacts-socials__item--vk {
   background-image: url('../images/sprite/contacts-vk.png');
 }
 .contacts-socials__item--vk:hover {
-  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.6)), url('../images/sprite/contacts-vk.png');
+  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-vk.png');
 }
 .contacts-socials__item--fb {
   background-image: url('../images/sprite/contacts-fb.png');
 }
 .contacts-socials__item--fb:hover {
-  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.6)), url('../images/sprite/contacts-fb.png');
+  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-fb.png');
 }
 .contacts-socials__item--odnoklassniki {
   background-image: url('../images/sprite/contacts-odnoklassniki.png');
 }
 .contacts-socials__item--odnoklassniki:hover {
-  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.6)), url('../images/sprite/contacts-odnoklassniki.png');
+  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-odnoklassniki.png');
 }
 .contacts-socials__item--google {
   background-image: url('../images/sprite/contacts-google.png');
 }
 .contacts-socials__item--google:hover {
-  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.6)), url('../images/sprite/contacts-google.png');
+  background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-google.png');
 }
 .container--footer {
   width: 1540px;
