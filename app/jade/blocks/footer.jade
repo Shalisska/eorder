@@ -27,30 +27,29 @@ footer.footer
 						href: '/11'
 					}])
 					
+			.col-xs-5
+				form.footer-promo.form-promo(action='' method='post' role="form")
+					p.title-footer.form-promo__title Ввести промо код
+					.block-footer.form-promo__block
+						p.form-promo__text
+							| У Вас есть промо код?
+							br
+							| Отлично! Введите его здесь:
+						input.form-promo__input.form-control(type='text' placeholder='Промо код')
+						button.form-promo__btn.btn(type='submit') Да!
+					p.form-promo__sub-text Участвуйте в акциях!
 					
-			form.footer-promo.col-xs-5(action='' method='post')
-				p.title-footer.footer-promo__title Ввести промо код
-				.block-footer.footer-promo__block
-					p.footer-promo__text
-						| У Вас есть промо код?
-						br
-						| Отлично! Введите его здесь:
-					.footer-promo__form
-						input(type='text' placeholder='Промо код')
-						button(type='submit') Да!
-				p.footer-promo__sub-text Участвуйте в акциях!
 					
-					
-			form.footer-signup.col-xs-7(action='' method='post')
-				p.title-footer.footer-signup__title Подписка на новости
-				.block-footer.footer-signup__block
-					p.footer-signup__text
-						| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
-					.footer-signup__form
-						input(type='text' placeholdder='Ваше имя')
-						input(type='text' placeholdder='Ваш email')
-						button(type='submit') Да!
-				p.footer-signup__sub-text Мы никогда не отправляем спам!
+			.col-xs-7
+				form.footer-signup.form-signup(action='' method='post' role="form")
+					p.title-footer.form-signup__title Подписка на новости
+					.block-footer.form-signup__block
+						p.form-signup__text
+							| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
+						input.form-signup__input.form-control(type='text' placeholder='Ваше имя')
+						input.form-signup__input.form-control(type='text' placeholder='Ваш email')
+						button.form-signup__btn.btn(type='submit') Да!
+					p.form-signup__sub-text Мы никогда не отправляем спам!
 					
 					
 			.footer-contacts.col-xs-5

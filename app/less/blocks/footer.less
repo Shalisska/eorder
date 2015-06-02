@@ -9,6 +9,7 @@
 	background: @bg-footer;
 	font-size: @font-size__footer;
 	color: @color__footer;
+	box-shadow: @box-shadow__footer;
 	
 	&--main {
 		padding-bottom: 25px;
@@ -25,18 +26,6 @@
 				padding: 0;
 				color: @color__footer;
 			}
-		}
-	}
-	
-	&-promo {
-		&__sub-text {
-			font-size: @font-size__footer--small;
-		}
-	}
-	
-	&-signup {
-		&__block {
-			font-size: @font-size__footer--small;
 		}
 	}
 	
@@ -59,14 +48,23 @@
 		
 		&__sub-text {
 			color: @color__footer;
+			font-size: @font-size__footer--small;
 			
 			&:before {
-					content: '';
-					display: inline-block;
-					width: 21px;
-					height: 15px;
-					background: url(../images/sprite/footer-marker.png) no-repeat center;
+				content: '';
+				display: inline-block;
+				width: 21px;
+				height: 15px;
+				background: url(../images/sprite/footer-marker.png) no-repeat center;
+			}
+			
+			&:hover {
+				color: inherit;
+				
+				&:before {
+					transform: scale(1.2);
 				}
+			}
 		}
 	}
 	
@@ -113,6 +111,7 @@
 		color: @color__footer-copyright;
 		
 		&--name {
+			font-family: @font-family-bold;
 		}
 	}
 	

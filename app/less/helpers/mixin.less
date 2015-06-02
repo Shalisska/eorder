@@ -28,7 +28,15 @@
 
 	&--@{social} {
 		background-image: url('../images/sprite/contacts-@{social}.png');
+		
+		&:hover {
+		background-image:
+			@color_contacts-grad,
+			url('../images/sprite/contacts-@{social}.png');
+		}
 	}
+	
+	
 
 	.generate-socials(@n, (@i + 1));
 }

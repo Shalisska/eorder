@@ -1,0 +1,147 @@
+mixin pathDesc(items)
+	each item in items
+		p.contacts-map__path-desc=item.text
+			span.contacts-map__path-desc--sub=item.subtext
+
+
+mixin contactsMap(items, itemsPath)
+	each item, i in items
+		if i === 0
+			input(id=item.id type='radio' name=item.name value=item.id checked)
+		else
+			input(id=item.id type='radio' name=item.name value=item.id)
+	
+	.contacts-map__controls.clearfix
+		each item in items
+			label(for=item.id)
+				| от
+				span.contacts-map__controls--metro
+				| #{item.title}
+	
+	.contacts-map__slider
+		each itemPath, j in itemsPath
+			if j === 0
+				input(id=itemPath.id type='radio' name=itemPath.name value=itemPath.id checked)
+			else
+				input(id=itemPath.id type='radio' name=itemPath.name value=itemPath.id)
+		
+		.contacts-map__path
+			.contacts-map__controls--path
+				each itemPath in itemsPath
+					label(for=itemPath.id)
+			.contacts-map__path-slider
+				each item in items
+					each itemPath in itemsPath
+						each elem in item.path
+							if (elem.id === itemPath.id)
+								.contacts-map__path-slider-item(class='contacts-map__path-slider-item--'+item.id+'-'+itemPath.id)
+									+pathDesc(elem.desc)
+		
+		.contacts-map__map
+			each item in items
+				each itemPath in itemsPath
+					.contacts-map__map-item(class='contacts-map__map-item--'+item.id+'-'+itemPath.id)
+
+
+
+
+
+
+.contacts-map
+	+contactsMap([{
+		id: 'varsh',
+		name: 'metro',
+		title: 'Варшавкая',
+		path: [{
+			id: 'foot',
+			name: 'path',
+			desc: [{
+				text: 'на юг 600 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 450 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 590 м',
+				subtext: '2-й Котляковский переулок'
+			}]
+		}, {
+			id: 'car',
+			name: 'path',
+			desc: [{
+				text: 'прямо 660 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 430 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 580 м',
+				subtext: '2-й Котляковский переулок'
+			}]
+		}, {
+			id: 'bus',
+			name: 'path',
+			desc: [{
+				text: 'на юг 600 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 450 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 590 м',
+				subtext: '2-й Котляковский переулок'
+			}]
+		}]
+	}, {
+		id: 'kash',
+		name: 'metro',
+		title: 'Каширская',
+		path: [{
+			id: 'foot',
+			name: 'path',
+			desc: [{
+				text: 'на юг 600 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 450 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 590 м',
+				subtext: '2-й Котляковский переулок'
+		}]
+			}, {
+			id: 'car',
+			name: 'path',
+			desc: [{
+				text: 'на юг 600 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 450 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 590 м',
+				subtext: '2-й Котляковский переулок'
+		}]
+		}, {
+			id: 'bus',
+			name: 'path',
+			desc: [{
+				text: 'на юг 600 м',
+				subtext: 'Каширский проезд'
+			}, {
+				text: 'прямо 450 м',
+				subtext: '1-й Варшавский проезд'
+			}, {
+				text: 'прямо 590 м',
+				subtext: '2-й Котляковский переулок'
+		}]
+	}]}], [{
+		id: 'foot',
+		name: 'path'
+	}, {
+		id: 'car',
+		name: 'path'
+	}, {
+		id: 'bus',
+		name: 'path'
+	}])

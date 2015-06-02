@@ -1,0 +1,24 @@
+mixin equipment(items)
+	each item in items
+		.col-xs-8
+			.equipment-item
+				p.equipment-item__title=item.name
+				a.equipment-item__img(href=''): img(src='../images/equipment-' + item.src, alt=item.name)
+
+
+
+
+.equipment
+	h2.title-reg.equipment-title Оборудование
+	.block-reg.equipment-block.clearfix
+		.row
+			+equipment([{
+				name: 'Допечатное',
+				src: 'prepress.jpg'
+			}, {
+				name: 'Печатное',
+				src: 'press.jpg'
+			}, {
+				name: 'Постпечатное',
+				src: 'postpress.jpg'
+			}])
