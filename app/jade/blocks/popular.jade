@@ -2,10 +2,14 @@ mixin popularSlider(items)
 	while (items.length > 0)
 		.popular-slider__box
 			.row
-				each item in items.splice(0, 5)
-					.col-xs-8.popular-slider__row
+				each item, i in items.splice(0, 5)
+					.col-xs-8
 						.popular-slider__item: img(src=item.src, alt=item.alt)
-				.col-xs-8.popular-slider__row
+					-var j = i+1
+						if (j - (parseInt(j / 3)*3) === 0)
+							if (j != items.length)
+								.clearfix.popular-slider__row
+				.col-xs-8
 					.popular-slider__item.popular-slider__item--all
 						a(href='')
 							| Смотреть

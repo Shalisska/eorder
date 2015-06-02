@@ -1,0 +1,50 @@
+.workmap {
+	margin-bottom: 120px;
+	
+	&-block {
+		padding: 20px 50px;
+	}
+	
+	&-item {
+		&__box:last-of-type {
+			.workmap-item__img:after {
+				display: none;
+			}
+		}
+		
+		&__img {
+			position: relative;
+			margin: 0 auto 20px;
+			width: 275px;
+			height: 275px;
+			line-height: 275px;
+			text-align: center;
+			background: @bg__workmap-img;
+			border: @border__workmap-img;
+			border-radius: 50%;
+			box-shadow: @box-shadow__workmap-img;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				width: 33px;
+				height: 48px;
+				top: 50%;
+				margin-top: -24px;
+				right: -70px;
+				background: url(../images/common/workmap-arrow.png) no-repeat center center;
+			}
+			
+			img {
+				vertical-align: middle;
+			}
+		}
+		
+		&__text {
+			padding: 0 5px;
+			text-align: center;
+			font-size: @font-size__workmap;
+			color: @color__workmap;
+		}
+	}
+}

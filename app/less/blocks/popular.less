@@ -1,0 +1,88 @@
+.popular {
+	margin-bottom: 140px;
+	
+	&-block {
+		padding: 30px 55px;
+	}
+	
+	&-slider {
+		position: relative;
+		
+		&__row {
+			margin-bottom: 75px;
+		}
+		
+		&__item {
+			width: 465px;
+			text-align: center;
+			box-shadow: @box-shadow__popular-item;
+			overflow: hidden;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+			
+			&--all {
+				line-height: 345px;
+				
+				a {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: @font-size__action-slider;
+					color: @color__action-slider;
+					line-height: 1;
+					text-decoration: none;
+				}
+				
+				&-bg {
+					margin-top: -35px;
+					display: inline-block;
+					font-size: @font-size__action-slider--big;
+				}
+			}
+		}
+		
+		&__controls {
+			position: absolute;
+			width: 58px;
+			height: 284px;
+			top: 50%;
+			margin-top: -(284px / 2);
+			
+			&:hover {
+				transform: scale(1.05);
+			}
+			
+			&:active {
+				transform: scale(.98);
+			}
+			
+			&--left {
+				left: -57px;
+				background: url('../images/common/popular-control--left.png') no-repeat left center;
+				
+				&:hover {
+					left: -56px;
+				}
+				
+				&:active {
+					left: -58px;
+				}
+			}
+			
+			&--right {
+				right: -56px;
+				background: url('../images/common/popular-control--right.png') no-repeat right center;
+				
+				&:hover {
+					right: -55px;
+				}
+				
+				&:active {
+					right: -57px;
+				}
+			}
+		}
+	}
+}
