@@ -4,17 +4,18 @@ mixin popularSlider(items)
 			.row
 				each item, i in items.splice(0, 5)
 					.col-xs-8
-						.popular-slider__item: img(src=item.src, alt=item.alt)
+						a.popular-slider__item(href='')
+							img(src=item.src, alt=item.alt)
+							span.popular-slider__item-title=item.alt
 					-var j = i+1
 						if (j - (parseInt(j / 3)*3) === 0)
 							if (j != items.length)
 								.clearfix.popular-slider__row
 				.col-xs-8
-					.popular-slider__item.popular-slider__item--all
-						a(href='')
-							| Смотреть
-							br
-							span.popular-slider__item--all-bg все
+					a.popular-slider__item.popular-slider__item--all(href='')
+						| Смотреть
+						br
+						span.popular-slider__item--all-bg все
 
 
 
@@ -25,7 +26,7 @@ mixin popularSlider(items)
 		.popular-slider
 			+popularSlider([{
 				src: '../images/slider-popular01.jpg',
-				alt: ''
+				alt: 'Листовка'
 			}, {
 				src: '../images/slider-popular01.jpg',
 				alt: ''
