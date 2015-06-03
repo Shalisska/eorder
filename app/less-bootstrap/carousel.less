@@ -136,18 +136,18 @@
   .icon-prev,
   .glyphicon-chevron-left {
     left: 50%;
-    margin-left: -10px;
+    margin-left: -(10px*@zoom);
   }
   .icon-next,
   .glyphicon-chevron-right {
     right: 50%;
-    margin-right: -10px;
+    margin-right: -(10px*@zoom);
   }
   .icon-prev,
   .icon-next {
-    width:  20px;
-    height: 20px;
-    margin-top: -10px;
+    width:  (20px*@zoom);
+    height: (20px*@zoom);
+    margin-top: -(10px*@zoom);
     line-height: 1;
     font-family: serif;
   }
@@ -172,7 +172,7 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: (10px*@zoom);
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -183,12 +183,12 @@
 
   li {
     display: inline-block;
-    width:  10px;
-    height: 10px;
-    margin: 1px;
-    text-indent: -999px;
-    border: 1px solid @carousel-indicator-border-color;
-    border-radius: 10px;
+    width:  (10px*@zoom);
+    height: (10px*@zoom);
+    margin: (1px*@zoom);
+    text-indent: -(999px*@zoom);
+    border: (1px*@zoom) solid @carousel-indicator-border-color;
+    border-radius: (10px*@zoom);
     cursor: pointer;
 
     // IE8-9 hack for event handling
@@ -205,8 +205,8 @@
   }
   .active {
     margin: 0;
-    width:  12px;
-    height: 12px;
+    width:  (12px*@zoom);
+    height: (12px*@zoom);
     background-color: @carousel-indicator-active-bg;
   }
 }
@@ -218,10 +218,10 @@
   position: absolute;
   left: 15%;
   right: 15%;
-  bottom: 20px;
+  bottom: (20px*@zoom);
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: (20px*@zoom);
+  padding-bottom: (20px*@zoom);
   color: @carousel-caption-color;
   text-align: center;
   text-shadow: @carousel-text-shadow;
@@ -240,18 +240,18 @@
     .glyphicon-chevron-right,
     .icon-prev,
     .icon-next {
-      width: 30px;
-      height: 30px;
-      margin-top: -15px;
-      font-size: 30px;
+      width: (30px*@zoom);
+      height: (30px*@zoom);
+      margin-top: -(15px*@zoom);
+      font-size: (30px*@zoom);
     }
     .glyphicon-chevron-left,
     .icon-prev {
-      margin-left: -15px;
+      margin-left: -(15px*@zoom);
     }
     .glyphicon-chevron-right,
     .icon-next {
-      margin-right: -15px;
+      margin-right: -(15px*@zoom);
     }
   }
 
@@ -259,11 +259,11 @@
   .carousel-caption {
     left: 20%;
     right: 20%;
-    padding-bottom: 30px;
+    padding-bottom: (30px*@zoom);
   }
 
   // Move up the indicators
   .carousel-indicators {
-    bottom: 20px;
+    bottom: (20px*@zoom);
   }
 }
