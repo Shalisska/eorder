@@ -1,9 +1,9 @@
 .action {
-	margin-bottom: 80px;
+	margin-bottom: (80px*@zoom);
 	
 	&-title {
 		width: 100%;
-		margin-bottom: 35px;
+		margin-bottom: (35px*@zoom);
 		
 		img {
 			width: 100%;
@@ -11,12 +11,12 @@
 	}
 
 	&-block {
-		padding: 0 95px 27px;
+		padding: 0 (95px*@zoom) (27px*@zoom);
 		box-shadow: @box-shadow__action--bottom;
 	}
 	
 	&-image {
-		max-width: 706px;
+		max-width: (706px*@zoom);
 		box-shadow: @box-shadow__action;
 		overflow: hidden;
 		
@@ -29,11 +29,11 @@
 	
 	&-order {
 		position: relative;
-		padding-bottom: 135px;
+		padding-bottom: (135px*@zoom);
 		
 		&__item {
 			position: relative;
-			padding: 1px 25px;
+			padding: (1px*@zoom) (25px*@zoom);
 			background: @bg__action-order-item;
 			line-height: 1;
 			border: @border__action-order-item;
@@ -41,7 +41,7 @@
 			z-index: 10;
 			
 			&-title {
-				margin-top: 10px;
+				margin-top: (10px*@zoom);
 				color: @color__action-order-title;
 				font-size: @font-size__action-order-title;
 				
@@ -84,14 +84,14 @@
 				width: (100% / 3);
 				
 				&.active a {
-					height: 125px;
+					height: (125px*@zoom);
 					background-color: @bg__action-order-controls--active;
 					border: @boder__action-order-controls--active;
 				}
 			}
 			
 			&-item {
-				height: 110px;
+				height: (110px*@zoom);
 				background-color: @bg__action-order-controls;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -121,7 +121,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			height: 118px;
+			height: (118px*@zoom);
 			text-align: center;
 			line-height: 1;
 			background: @bg__action-order-btn url(../images/common/action_order_btn.png) no-repeat center center;
@@ -129,11 +129,11 @@
 			box-shadow: @box-shadow__action;
 			
 			&:hover {
-				box-shadow: 0px 2px 6px 0px rgba(35, 31, 32, 0.5);
+				box-shadow: (0px*@zoom) (2px*@zoom) (6px*@zoom) (0px*@zoom) rgba(35, 31, 32, 0.5);
 				transform: scale(1.02);
 			}
 			&:active {
-				box-shadow: inset 0 0 15px 1px rgba(225, 225, 225, .5), 0px 1px 4px 1px rgba(35, 31, 32, 0.5);
+				box-shadow: inset 0 0 (15px*@zoom) (1px*@zoom) rgba(225, 225, 225, .5), (0px*@zoom) (1px*@zoom) (4px*@zoom) (1px*@zoom) rgba(35, 31, 32, 0.5);
 				transform: scale(.97);
 			}
 			
@@ -153,11 +153,11 @@
 	&-timer {
 		position: relative;
 		z-index: 5;
-		padding: 25px 0;
+		padding: (25px*@zoom) 0;
 		box-shadow: @box-shadow__action--bottom;
 		
 		&__text {
-			height: 160px;
+			height: (160px*@zoom);
 			background: url(../images/common/action_timer--text.png) no-repeat 70% center;
 //			text-align: center;
 //			font-size: @font-size__action-timer;
@@ -173,14 +173,14 @@
 	
 	&-controls {
 		width: 100%;
-		padding: 0 12px;
+		padding: 0 (12px*@zoom);
 		font-size: @font-size__action-controls;
 		color: @color__action-controls;
 		
 		
 		li {
 			width: (100% / 10);
-			padding: 0 1px;
+			padding: 0 (1px*@zoom);
 		}
 		
 		& > li &__item {
@@ -225,14 +225,14 @@
 			
 			&--pict {
 				display: block;
-				height: 145px;
-				line-height: 145px;
+				height: (145px*@zoom);
+				line-height: (145px*@zoom);
 				border-bottom: none;
 			}
 			&--name {
 				display: block;
-				height: 70px;
-				padding: 20px 0;
+				height: (70px*@zoom);
+				padding: (20px*@zoom) 0;
 				background: @bg__action-controls-grad;
 				font-size: @font-size__action-controls;
 				color: @color__action-controls;

@@ -1,7 +1,7 @@
 .equipment {
 	&-block {
-		margin-bottom: 60px;
-		padding: 60px 50px 30px;
+		margin-bottom: (60px*@zoom);
+		padding: (60px*@zoom) (50px*@zoom) (30px*@zoom);
 	}
 	
 	&-item {
@@ -9,7 +9,7 @@
 		text-transform: uppercase;
 		
 		&__title {
-			margin-bottom: 30px;
+			margin-bottom: (30px*@zoom);
 			font-size: @font-size__equipment;
 			color: @color__equipment;
 			text-shadow: @text-shadow__equipment;
@@ -18,16 +18,16 @@
 		&__img {
 			overflow: hidden;
 			display: block;
-			max-width: 466px;
+			max-width: (466px*@zoom);
 			box-shadow: @box-shadow__equipment;
 			
 			&:hover {
-				box-shadow: 0px 0px 16px 5px rgba(0, 0, 1, .30);
+				box-shadow: (0px*@zoom) (0px*@zoom) (16px*@zoom) (5px*@zoom) rgba(0, 0, 1, .30);
 				transform: scale(1.02);
 				text-decoration: none;
 			}
 			&:active {
-				box-shadow: inset 0 0 15px 1px rgba(225, 225, 225, .5), 0px 0px 16px 0 rgba(0, 0, 1, .30);
+				box-shadow: inset 0 0 (15px*@zoom) (1px*@zoom) rgba(225, 225, 225, .5), (0px*@zoom) (0px*@zoom) (16px*@zoom) 0 rgba(0, 0, 1, .30);
 				transform: scale(.97);
 			}
 			

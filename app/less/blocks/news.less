@@ -1,12 +1,12 @@
 .news {
 	&-block {
 		position: relative;
-		margin-bottom: 55px;
+		margin-bottom: (55px*@zoom);
 	}
 
 	&-menu {
 		position: relative;
-		padding: 15px 45px;
+		padding: (15px*@zoom) (45px*@zoom);
 		text-align: center;
 		background: @bg__news-menu;
 		
@@ -18,9 +18,9 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: 65px;
+				height: (65px*@zoom);
 				background: @bg__news-menu--title;
-				line-height: 65px;
+				line-height: (65px*@zoom);
 				vertical-align: middle;
 				font-size: @font-size__news-menu;
 				color: @color__news-menu;
@@ -32,7 +32,7 @@
 				}
 			}
 			&-img {
-				height: 294px;
+				height: (294px*@zoom);
 				
 				img {
 					width: 100%;
@@ -44,17 +44,17 @@
 		&__controls {
 			position: absolute;
 			top: 50%;
-			margin-top: -75px;
-			border-top: 75px solid transparent;
-			border-bottom: 75px solid transparent;
+			margin-top: -(75px*@zoom);
+			border-top: (75px*@zoom) solid transparent;
+			border-bottom: (75px*@zoom) solid transparent;
 			
 			&--left {
-				left: 5px;
+				left: (5px*@zoom);
 				border-right: @news__controls;
 			}
 			
 			&--right {
-				right: 5px;
+				right: (5px*@zoom);
 				border-left: @news__controls;
 			}
 			
@@ -75,8 +75,8 @@
 	}
 	
 	&-item {
-		margin-bottom: 65px;
-		padding: 15px 30px 15px 0px;
+		margin-bottom: (65px*@zoom);
+		padding: (15px*@zoom) (30px*@zoom) (15px*@zoom) (0px*@zoom);
 		
 		&__title {
 			margin: 0;
@@ -100,7 +100,7 @@
 		&__link {
 			position: absolute;
 			bottom: 0;
-			right: 15px;
+			right: (15px*@zoom);
 			text-align: right;
 			font-family: @font-family-cond;
 			font-size: @font-size__news-item--link;

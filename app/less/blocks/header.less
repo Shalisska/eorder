@@ -1,16 +1,16 @@
 //TODO: gradient-bg
 .header {
-	margin-bottom: 90px;
+	margin-bottom: (90px*@zoom);
 	width: 100%;
 	background: @bg-header;
 	
 	&-container {
 		position: relative;
-		padding: 30px 0 15px;
+		padding: (30px*@zoom) 0 (15px*@zoom);
 	}
 	
 	&-logo {
-		padding: 0 45px;
+		padding: 0 (45px*@zoom);
 		text-align: center;
 
 		&__slogan {
@@ -20,7 +20,7 @@
 		}
 	}
 	&-presentation {
-		padding: 85px 5% 0;
+		padding: (85px*@zoom) 5% 0;
 		font-size: @font-size__header-pres;
 		line-height: 1;
 		color: @color__header-pres;
@@ -28,8 +28,8 @@
 	}
 	
 	&-phone {
-		padding-top: 10px;
-		padding-right: 20px;
+		padding-top: (10px*@zoom);
+		padding-right: (20px*@zoom);
 		font-size: @font-size__header-phone;
 		color: @color__header-phone;
 		
@@ -42,28 +42,28 @@
 	
 	&-call {
 		position: absolute;
-		right: 15px;
-		bottom: -120px;
-		height: 116px;
-		width: 478px;
+		right: (15px*@zoom);
+		bottom: -(120px*@zoom);
+		height: (116px*@zoom);
+		width: (478px*@zoom);
 		background-image: @bg__header-phone;
-		border-radius: 115px 0 0 115px;
+		border-radius: (115px*@zoom) 0 0 (115px*@zoom);
 		box-shadow: @box-shadow__header-call;
 		z-index: 10;
 		
 		&__handset {
 			position: absolute;
-			top: 5px;
-			left: 5px;
-			width: 110px;
-			height: 110px;
+			top: (5px*@zoom);
+			left: (5px*@zoom);
+			width: (110px*@zoom);
+			height: (110px*@zoom);
 			background: url('../images/phone--header.png') no-repeat center;
 			background-size: cover;
 		}
 		
 		&__text {
-			line-height: 115px;
-			margin-right: 25px;
+			line-height: (115px*@zoom);
+			margin-right: (25px*@zoom);
 			font-family: @font-family-bold;
 			font-size: @font-size__header-call;
 			color: @color__header-call;
@@ -81,8 +81,8 @@
 			box-shadow: @box-shadow__nav-item;
 			
 			a {
-				padding-top: 35px;
-				padding-bottom: 30px;
+				padding-top: (35px*@zoom);
+				padding-bottom: (30px*@zoom);
 				//font-family: @font-family-bold;
 				font-size: @font-size__header-menu;
 				text-transform: uppercase;

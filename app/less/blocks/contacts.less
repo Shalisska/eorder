@@ -1,10 +1,10 @@
 .contacts {
 	&-block {
-		margin-bottom: 60px;
+		margin-bottom: (60px*@zoom);
 	}
 	
 	&-info {
-		padding: 50px 10px 50px 60px;
+		padding: (50px*@zoom) (10px*@zoom) (50px*@zoom) (60px*@zoom);
 		font-size: @font-size__contacts-info;
 		color: @color__contacts-info;
 		
@@ -13,9 +13,9 @@
 			&:before {
 				content: '';
 				display: inline-block;
-				margin-right: 20px;
-				width: 87px;
-				height: 87px;
+				margin-right: (20px*@zoom);
+				width: (87px*@zoom);
+				height: (87px*@zoom);
 				vertical-align: middle;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -41,7 +41,7 @@
 	}
 	
 	&-map {
-		padding-top: 20px;
+		padding-top: (20px*@zoom);
 		font-family: @font-family-cond;
 		
 		input[type='radio'] {
@@ -58,9 +58,9 @@
 			
 			&--metro {
 				display: inline-block;
-				width: 35px;
-				height: 26px;
-				margin: 0 10px;
+				width: (35px*@zoom);
+				height: (26px*@zoom);
+				margin: 0 (10px*@zoom);
 				background: url(../images/sprite/contacts-map-metro.png) no-repeat center;
 			}
 			
@@ -73,27 +73,27 @@
 				box-shadow: @box-shadow__contacts;
 				
 				&[for='varsh'] {
-					border-radius: 59px 0px 0px 59px;
+					border-radius: (59px*@zoom) (0px*@zoom) (0px*@zoom) (59px*@zoom);
 				}
 				
 				&[for='kash'] {
-					border-radius: 0px 59px 59px 0px;
+					border-radius: (0px*@zoom) (59px*@zoom) (59px*@zoom) (0px*@zoom);
 				}
 			}
 			
 			&--path {
-				margin-bottom: 5px;
-				height: 60px;
+				margin-bottom: (5px*@zoom);
+				height: (60px*@zoom);
 				
 				label {
 					margin-bottom: 0;
-					width: 60px;
-					height: 60px;
+					width: (60px*@zoom);
+					height: (60px*@zoom);
 					background-color: white;
 					background-repeat: no-repeat;
 					background-position: center;
 					opacity: .6;
-					border-radius: 5px;
+					border-radius: (5px*@zoom);
 					box-shadow: @box-shadow__contacts;
 				}
 				
@@ -107,13 +107,13 @@
 		
 		&__path {
 			position: absolute;
-			left: 5px;
-			top: 5px;
+			left: (5px*@zoom);
+			top: (5px*@zoom);
 			
 			&-slider {
-				height: 303px;
+				height: (303px*@zoom);
 				background: rgba(255, 255, 255, .6);
-				border-radius: 5px;
+				border-radius: (5px*@zoom);
 				box-shadow: @box-shadow__contacts-map;
 				
 				&-item {
@@ -124,7 +124,7 @@
 		
 		&__map {
 			width: 100%;
-			height: 380px;
+			height: (380px*@zoom);
 			box-shadow: @box-shadow__contacts-map;
 			
 			&-item {
@@ -134,7 +134,7 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;
-				border-radius: 10px;
+				border-radius: (10px*@zoom);
 				
 				.generate-map(3);
 			}
@@ -143,15 +143,15 @@
 	
 	&-socials {
 		float: right;
-		margin-top: 80px;
-		margin-right: 15px;
-		width: 56px;
+		margin-top: (80px*@zoom);
+		margin-right: (15px*@zoom);
+		width: (56px*@zoom);
 		
 		&__item {
 			display: block;
-			margin-bottom: 3px;
-			width: 56px;
-			height: 56px;
+			margin-bottom: (3px*@zoom);
+			width: (56px*@zoom);
+			height: (56px*@zoom);
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;

@@ -1,4 +1,4 @@
-.box-size (@width: auto; @margin-bottom: 10px; @padding: (@font-size * (20px / 14px)) 20px) {
+.box-size (@width: auto; @margin-bottom: (10px*@zoom); @padding: (@font-size * ((20px*@zoom) / (14px*@zoom))) (20px*@zoom)) {
     display: block;
     box-sizing: border-box;
     width: @width;

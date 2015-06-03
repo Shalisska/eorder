@@ -1,22 +1,22 @@
 form {
 	input[type='text'] {
-		height: 38px;
+		height: (38px*@zoom);
 		background: @bg__form-input;
 		font-size: @font-size__form;
 		box-shadow: @box-shadow__form-input;
-		border-radius: 7px;
+		border-radius: (7px*@zoom);
 		border: none;
 	}
 	
 	button,
 	input[type='submit'],
 	.btn {
-		padding: 4px 12px;
+		padding: (4px*@zoom) (12px*@zoom);
 		background: @bg__form-btn;
 		color: @color__form-btn;
 		font-size: @font-size__form;
 		font-family: @font-family-bold;
-		border-radius: 7px;
+		border-radius: (7px*@zoom);
 		outline: none;
 		
 		&:hover {
@@ -40,7 +40,7 @@ form {
 	
 	&__input {
 		width: 70%;
-		margin-right: 10px;
+		margin-right: (10px*@zoom);
 	}
 	
 	&__sub-text {
@@ -55,7 +55,7 @@ form {
 	}
 	
 	&__text {
-		margin-bottom: 17px;
+		margin-bottom: (17px*@zoom);
 	}
 	
 	&__input,
@@ -67,7 +67,7 @@ form {
 		width: 40%;
 		
 		&:last-of-type {
-			margin-right: 10px;
+			margin-right: (10px*@zoom);
 		}
 	}
 }

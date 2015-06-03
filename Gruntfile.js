@@ -104,7 +104,7 @@ module.exports = function (grunt) {
 			build_html: {
 				files: [{
 					expand: true,
-					cwd: 'html/',
+					cwd: 'app/html/',
 					src:['*.html'],
 					dest: 'build'
 				}]
@@ -183,6 +183,19 @@ module.exports = function (grunt) {
 					expand: true,
 					flattern: true,
 					src: ['build/*.html']
+				}]
+			},
+			zoomscale: {
+				options: {
+					patterns: [{
+						match: /(\d+px)/g,
+						replacement: '($1*@zoom)'
+					}]
+				},
+				files: [{
+					expand: true,
+					flattern: true,
+					src: ['app/less-bootstrap/**/*.less']
 				}]
 			}
 		}
