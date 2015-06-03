@@ -1,7 +1,25 @@
 mixin pathDesc(items)
 	each item in items
-		p.contacts-map__path-desc=item.text
-			span.contacts-map__path-desc--sub=item.subtext
+		p.contacts-map__path-desc
+			span.contacts-map__desc.contacts-map__desc--main=item.text
+			span.contacts-map__desc=item.subtext
+			
+-var metroVarsh = ['Метро Варшавская', 'Рыбокомбинат','Молочный комбинат', 'Опытный завод №1']
+-var descVarsh = [{metro: metroVarsh, onair: [{ transport: 'Автобус', num: '607'}, {transport: 'Маршрутка', num: '607м'}]}]
+
+-var metroKash = ['Метро Каширская', 'Улица Москворечье','Управление механизации', 'Опытный завод №1']
+-var descKash = [{metro: metroKash, onair: [{ transport: 'Автобус', num: '607'}, {transport: 'Маршрутка', num: '607м'}]}]
+
+mixin pathDescBus(items)
+	each item in items
+		.contacts-map__path-desc.contacts-map__path-desc--metro
+			each elem in item.metro
+				span.contacts-map__desc.contacts-map__desc--metro=elem
+		.contacts-map__path-desc.contacts-map__path-desc--transport
+			each part in item.onair
+				span.contacts-map__desc.contacts-map__desc--transport=part.transport
+				span.contacts-map__desc.contacts-map__desc--main.contacts-map__desc--transport=part.num
+
 
 
 mixin contactsMap(items, itemsPath)
@@ -35,7 +53,13 @@ mixin contactsMap(items, itemsPath)
 						each elem in item.path
 							if (elem.id === itemPath.id)
 								.contacts-map__path-slider-item(class='contacts-map__path-slider-item--'+item.id+'-'+itemPath.id)
-									+pathDesc(elem.desc)
+									if (elem.id === 'bus')
+										if (item.id === 'varsh')
+											+pathDescBus(descVarsh)
+										else
+											+pathDescBus(descKash)
+									else
+										+pathDesc(elem.desc)
 		
 		.contacts-map__map
 			each item in items
@@ -81,16 +105,7 @@ mixin contactsMap(items, itemsPath)
 		}, {
 			id: 'bus',
 			name: 'path',
-			desc: [{
-				text: 'на юг 600 м',
-				subtext: 'Каширский проезд'
-			}, {
-				text: 'прямо 450 м',
-				subtext: '1-й Варшавский проезд'
-			}, {
-				text: 'прямо 590 м',
-				subtext: '2-й Котляковский переулок'
-			}]
+			desc: desc
 		}]
 	}, {
 		id: 'kash',
@@ -100,26 +115,29 @@ mixin contactsMap(items, itemsPath)
 			id: 'foot',
 			name: 'path',
 			desc: [{
-				text: 'на юг 600 м',
+				text: 'прямо 660 м',
 				subtext: 'Каширский проезд'
 			}, {
-				text: 'прямо 450 м',
+				text: 'прямо 430 м',
 				subtext: '1-й Варшавский проезд'
 			}, {
-				text: 'прямо 590 м',
+				text: 'прямо 580 м',
 				subtext: '2-й Котляковский переулок'
 		}]
 			}, {
 			id: 'car',
 			name: 'path',
 			desc: [{
-				text: 'на юг 600 м',
-				subtext: 'Каширский проезд'
+				text: 'прямо 440 м',
+				subtext: 'улица Маршала Шестопалова'
 			}, {
-				text: 'прямо 450 м',
-				subtext: '1-й Варшавский проезд'
+				text: 'налево 670 м',
+				subtext: 'улица Москворечье'
 			}, {
-				text: 'прямо 590 м',
+				text: 'направо 860 м',
+				subtext: 'Котляковская улица'
+		}, {
+				text: 'направо 97 м',
 				subtext: '2-й Котляковский переулок'
 		}]
 		}, {
