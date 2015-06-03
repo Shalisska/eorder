@@ -1,6 +1,6 @@
 mixin contactsInfo(items)
 	each item in items
-		p.contacts-info__item(class='contacts-info__item--' + item.name)=item.text
+		a.contacts-info__item(class='contacts-info__item--' + item.name href=item.href)=item.text
 
 mixin contactsSocials(items)
 	each item in items
@@ -8,7 +8,7 @@ mixin contactsSocials(items)
 
 
 
-.contacts
+.contacts#contacts
 	h2.title-reg.contacts-title Контакты
 	.block-reg.contacts-block
 		.row
@@ -16,16 +16,20 @@ mixin contactsSocials(items)
 				.contacts-info
 					+contactsInfo([{
 						name: 'phone',
-						text: '+7 (495) 223-92-00'
+						text: '+7 (495) 223-92-00',
+						href: 'tel:+74952239200'
 					}, {
 						name: 'mail',
-						text: 'sale@eorder.ru'
+						text: 'sale@eorder.ru',
+						href: 'mailto:sale@eorder.ru?subject=Письмо с сайта Eorder'
 					}, {
 						name: 'skype',
-						text: 'sale.eorder'
+						text: 'sale.eorder',
+						href: 'skype:sale.eorder?call'
 					}, {
 						name: 'adress',
-						text: 'г. Москва, Котляковский переулок, д. 18'
+						text: 'г. Москва, Котляковский переулок, д. 18',
+						href:'/'
 					}])
 			
 			.col-xs-10
