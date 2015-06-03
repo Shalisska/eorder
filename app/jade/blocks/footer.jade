@@ -1,83 +1,84 @@
 footer.footer
 	.container-fluid
-		.row.container--footer.footer--main
-			.footer-menu.col-xs-3
-				p.title-footer.footer-menu__title Меню
-				.block-footer.footer-menu__block
-					+navFooter ([{
-						name: 'Акции!',
-						href: '/'
-					}, {
-						name: 'Продукция',
-						href: '/11'
-					}, {
-						name: 'О нас',
-						href: '/11'
-					}, {
-						name: 'Сервисы',
-						href: '/11'
-					}, {
-						name: 'Оборудование',
-						href: '/11'
-					}, {
-						name: 'Новости',
-						href: '/11'
-					}, {
-						name: 'F.A.Q.',
-						href: '/11'
-					}])
-					
-			.col-xs-5
-				form.footer-promo.form-promo(action='' method='post' role="form")
-					p.title-footer.form-promo__title Ввести промо код
-					.block-footer.form-promo__block
-						p.form-promo__text
-							| У Вас есть промо код?
-							br
-							| Отлично! Введите его здесь:
-						input.form-promo__input.form-control(type='text' placeholder='Промо код')
-						button.form-promo__btn.btn(type='submit') Да!
-					p.form-promo__sub-text Участвуйте в акциях!
-					
-					
-			.col-xs-7
-				form.footer-signup.form-signup(action='' method='post' role="form")
-					p.title-footer.form-signup__title Подписка на новости
-					.block-footer.form-signup__block
-						p.form-signup__text
-							| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
-						input.form-signup__input.form-control(type='text' placeholder='Ваше имя')
-						input.form-signup__input.form-control(type='text' placeholder='Ваш email')
-						button.form-signup__btn.btn(type='submit') Да!
-					p.form-signup__sub-text Мы никогда не отправляем спам!
-					
-					
-			.footer-contacts.col-xs-5
-				p.title-footer.footer-contacts__title Контакты
-				.block-footer.footer-contacts__block
-					p.footer-contacts__item Телефон: +7 (495) 223-9200
-					p.footer-contacts__item E-mail: sale@eorder.ru
-					p.footer-contacts__item.footer-contacts__item--skype sale.eorder
-					p.footer-contacts__item Адрес: Москва, 2-й Котляковский переулок, д.18
-				a.footer-contacts__sub-text Открыть карту
-			.col-xs-4
-				.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
-		
-		.row.container--footer.footer--second
-			.col-xs-8.footer-logo-block
-				a.footer-logo(href='#'): img(src='../images/sprite/footer-logo-promo.png', alt='Eorder promo')
-				
-			.col-xs-8
-				.footer-press: img(src='../images/sprite/footer-press.png', alt='Prepress-Press-Postpress')
-			
-			.col-xs-8
-				p.footer-socials
-					span.footer-socials__text Мы в социальных сетях
-					a.footer-socials__links.footer-socials__links--fb(href="")
-					a.footer-socials__links.footer-socials__links--inst(href="")
-					a.footer-socials__links.footer-socials__links--vk(href="")
-		
-		p.footer-copyright.container--footer
+		.container
+			.row.footer--main
+				.footer-menu.col-xs-3
+					p.title-footer.footer-menu__title Меню
+					.block-footer.footer-menu__block
+						+navFooter ([{
+							name: 'Акции!',
+							href: '/'
+						}, {
+							name: 'Продукция',
+							href: '/11'
+						}, {
+							name: 'О нас',
+							href: '/11'
+						}, {
+							name: 'Сервисы',
+							href: '/11'
+						}, {
+							name: 'Оборудование',
+							href: '/11'
+						}, {
+							name: 'Новости',
+							href: '/11'
+						}, {
+							name: 'F.A.Q.',
+							href: '/11'
+						}])
+
+				.col-xs-5
+					form.footer-promo.form-promo(action='' method='post' role="form")
+						p.title-footer.form-promo__title Ввести промо код
+						.block-footer.form-promo__block
+							p.form-promo__text
+								| У Вас есть промо код?
+								br
+								| Отлично! Введите его здесь:
+							input.form-promo__input.form-control(type='text' placeholder='Промо код')
+							button.form-promo__btn.btn(type='submit') Да!
+						p.form-promo__sub-text Участвуйте в акциях!
+
+
+				.col-xs-7
+					form.footer-signup.form-signup(action='' method='post' role="form")
+						p.title-footer.form-signup__title Подписка на новости
+						.block-footer.form-signup__block
+							p.form-signup__text
+								| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
+							input.form-signup__input.form-control(type='text' placeholder='Ваше имя')
+							input.form-signup__input.form-control(type='text' placeholder='Ваш email')
+							button.form-signup__btn.btn(type='submit') Да!
+						p.form-signup__sub-text Мы никогда не отправляем спам!
+
+
+				.footer-contacts.col-xs-5
+					p.title-footer.footer-contacts__title Контакты
+					.block-footer.footer-contacts__block
+						p.footer-contacts__item Телефон: +7 (495) 223-9200
+						p.footer-contacts__item E-mail: sale@eorder.ru
+						p.footer-contacts__item.footer-contacts__item--skype sale.eorder
+						p.footer-contacts__item Адрес: Москва, 2-й Котляковский переулок, д.18
+					a.footer-contacts__sub-text Открыть карту
+				.col-xs-4
+					.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
+
+			.row.footer--second
+				.col-xs-8.footer-logo-block
+					a.footer-logo(href='#'): img(src='../images/sprite/footer-logo-promo.png', alt='Eorder promo')
+
+				.col-xs-8
+					.footer-press: img(src='../images/sprite/footer-press.png', alt='Prepress-Press-Postpress')
+
+				.col-xs-8
+					p.footer-socials
+						span.footer-socials__text Мы в социальных сетях
+						a.footer-socials__links.footer-socials__links--fb(href="")
+						a.footer-socials__links.footer-socials__links--inst(href="")
+						a.footer-socials__links.footer-socials__links--vk(href="")
+
+			p.footer-copyright
 				| &#169; 2014 
 				span.footer-copyright--name ЗАО "Новые печатные технологии". 
 				| Все права защищены.

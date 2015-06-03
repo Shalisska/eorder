@@ -7,20 +7,40 @@
 	&-container {
 		position: relative;
 		padding: (30px*@zoom) 0 (15px*@zoom);
+		
+		@media(max-width: 1200px) {
+			padding-top: 10px;
+		}
 	}
 	
 	&-logo {
 		padding: 0 (45px*@zoom);
 		text-align: center;
+		
+		img {
+			
+			@media (max-width: 1200px) {
+				width: 100%;
+				height: auto;
+			}
+		}
 
 		&__slogan {
 			font-size: @font-size__header-slogan;
 			color: @color__header-slogan;
 			text-transform: uppercase;
+			
+			img {
+				@media (max-width: 1200px) {
+				width: 90%;
+				height: auto;
+			}
+			}
 		}
 	}
+	
 	&-presentation {
-		padding: (85px*@zoom) 5% 0;
+		padding: 5% 5% 0;
 		font-size: @font-size__header-pres;
 		line-height: 1;
 		color: @color__header-pres;
@@ -33,10 +53,20 @@
 		font-size: @font-size__header-phone;
 		color: @color__header-phone;
 		
+		@media (max-width: 1200px) {
+			margin-bottom: 0;
+			padding-top: 0;
+			font-size: 39px;
+		}
+		
 		&--grand {
 			font-family: @font-family-bold;
 			font-size: @font-size__header-phone--grand;
 			color: @color__header-phone--grand;
+			
+			@media (max-width: 1200px) {
+				font-size: 41px;
+			}
 		}
 	}
 	
@@ -51,6 +81,11 @@
 		box-shadow: @box-shadow__header-call;
 		z-index: 10;
 		
+		@media (max-width: 1200px) {
+			width: 315px;
+			height: 80px;
+		}
+		
 		&__handset {
 			position: absolute;
 			top: (5px*@zoom);
@@ -58,7 +93,14 @@
 			width: (110px*@zoom);
 			height: (110px*@zoom);
 			background: url('../images/phone--header.png') no-repeat center;
-			background-size: cover;
+			background-size: contain;
+			
+			@media (max-width: 1200px) {
+				top: 2px;
+				left: 2px;
+				width: 78px;
+				height: 78px;
+			}
 		}
 		
 		&__text {
@@ -69,6 +111,11 @@
 			color: @color__header-call;
 			text-transform: uppercase;
 			text-shadow: @text-shadow__header-call;
+			
+			@media (max-width: 1200px) {
+				line-height: 80px;
+				font-size: 20px;
+			}
 		}
 	}
 	
@@ -83,11 +130,16 @@
 			a {
 				padding-top: (35px*@zoom);
 				padding-bottom: (30px*@zoom);
-				//font-family: @font-family-bold;
+				font-family: @font-family-bold;
 				font-size: @font-size__header-menu;
 				text-transform: uppercase;
 				color: @color__header-menu;
+				white-space: nowrap;
 				text-shadow: @text-shadow__nav-item;
+				
+				@media (max-width: 1200px) {
+					font-size: 18px;
+				}
 				
 				&:hover {
 					background: @bg-menu-hover;

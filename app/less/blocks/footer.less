@@ -1,8 +1,3 @@
-.container--footer {
-	width: (1540px*@zoom);
-	margin: 0 auto;
-}
-
 .footer {
 	margin-bottom: (10px*@zoom);
 	padding: (80px*@zoom) 0 0 0;
@@ -86,6 +81,17 @@
 			}
 		}
 		
+	}
+	
+	&-press {
+		text-align: center;
+		
+		img {
+			@media (max-width: 1200px) {
+				width: 85%;
+				height: auto;
+			}
+		}
 	}
 	
 	&-socials {
