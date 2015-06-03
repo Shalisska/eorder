@@ -8,7 +8,7 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: (2px*@zoom);
+  margin-left: 2px;
   vertical-align: middle;
   border-top:   @caret-width-base dashed;
   border-right: @caret-width-base solid transparent;
@@ -34,17 +34,17 @@
   z-index: @zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: (160px*@zoom);
-  padding: (5px*@zoom) 0;
-  margin: (2px*@zoom) 0 0; // override default ul
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: @dropdown-bg;
-  border: (1px*@zoom) solid @dropdown-fallback-border; // IE8 fallback
-  border: (1px*@zoom) solid @dropdown-border;
+  border: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-border;
   border-radius: @border-radius-base;
-  .box-shadow(0 (6px*@zoom) (12px*@zoom) rgba(0,0,0,.175));
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -63,7 +63,7 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: (3px*@zoom) (20px*@zoom);
+    padding: 3px 20px;
     clear: both;
     font-weight: normal;
     line-height: @line-height-base;
@@ -151,7 +151,7 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: (3px*@zoom) (20px*@zoom);
+  padding: 3px 20px;
   font-size: @font-size-small;
   line-height: @line-height-base;
   color: @dropdown-header-color;
@@ -191,7 +191,7 @@
   .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: (2px*@zoom);
+    margin-bottom: 2px;
   }
 }
 
