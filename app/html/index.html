@@ -1,533 +1,495 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<title>start</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="../css/bootstrap-style.css" rel="stylesheet">
-		<link href="../css/style.css" rel="stylesheet">
-		<script src="../scripts/libs/jquery-1.11.3.min.js"></script>
-	</head>
-	<body>
-		<header class="header">
-			<!--TODO: toolbar-header-->
-			<div class="container-fluid header-container">
-				<div class="row">
-					<div class="col-xs-8">
-						<div class="header-logo">
-							<a href="#" class="header-logo__link"><img src="../images/logo--promo.png" alt="e-order"></a>
-							<div class="header-logo__slogan"><img src="../images/sprite/header-press.png" alt="Prepress-Press-Postpress"></div>
-						</div>
-					</div>
-					<div class="col-xs-8">
-						<p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
-					</div>
-					<div class="col-xs-8">
-						<p class="header-phone text-right">+7 495 <span class="header-phone--grand">223 9200</span></p>
-						<div class="header-call text-right">
-							<a href="#" class="header-call__handset"></a>
-							<p class="header-call__text">Звонок за наш счет</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<nav class="header-menu">
-				<ul class="nav nav-justified">
-					<li class="nav-item nav-item--special"><a href="/" class="nav-item__name">Акции!</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Как мы работаем</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
-					<li class="nav-item"><a href="/11" class="nav-item__name">Контакты</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<div class="container container--main">
-				<div class="action">
-					<div class="action-title"><img src="../images/common/banner.png"></div>
-					<div class="action-block">
-						<div class="row">
-							<div class="col-xs-13">
-								<div class="action-image"><img src="../images/action-pict.jpg" alt="sales"></div>
-							</div>
-							<div class="col-xs-11">
-								<div class="action-order">
-									<div class="tab-content">
-										<div id="action-order_item01" class="action-order__item tab-pane fade">
-											<h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-											<p class="action-order__item-description">Формат: А4qqqq
-												<br/>Кол-во полос: 3
-												<br/>Бумага: глянцевая
-												<br/>Цветность: 4+4
-											</p>
-											<p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-										</div>
-										<div id="action-order_item02" class="action-order__item tab-pane fade">
-											<h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-											<p class="action-order__item-description">Формат: А4
-												<br/>Кол-во полос: 5
-												<br/>Бумага: глянцевая
-												<br/>Цветность: 4+4
-											</p>
-											<p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-										</div>
-										<div id="action-order_item03" class="action-order__item tab-pane fade in active">
-											<h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-											<p class="action-order__item-description">Формат: А4 (210х297мм)
-												<br/>Кол-во полос: 8
-												<br/>Бумага: глянцевая 150 г/м2
-												<br/>Цветность: 4+4
-											</p>
-											<p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-										</div>
-									</div>
-									<ul id="action-order_item" class="action-order__controls nav nav-tabs">
-										<li>
-											<a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a>
-										</li>
-										<li>
-											<a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a>
-										</li>
-										<li class="active">
-											<a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a>
-										</li>
-									</ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="action-timer">
-						<div class="row">
-							<div class="col-xs-10">
-								<div class="action-timer__text"></div>
-							</div>
-							<div class="col-xs-14">
-								<div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-							</div>
-						</div>
-					</div>
-					<nav class="action-controls-box">
-						<ul class="action-controls nav nav-tabs">
-							<li class="active"><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-brochure.png" alt="Брошюры"/></span><span class="action-controls__item--name">Брошюры</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-booklet.png" alt="Буклеты"/></span><span class="action-controls__item--name">Буклеты</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-catalog.png" alt="Каталоги"/></span><span class="action-controls__item--name">Каталоги</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-file.png" alt="Папки"/></span><span class="action-controls__item--name">Папки</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-notepad.png" alt="Блокноты"/></span><span class="action-controls__item--name">Блокноты</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-blank.png" alt="Бланки"/></span><span class="action-controls__item--name">Бланки</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-calendar.png" alt="Календари"/></span><span class="action-controls__item--name">Календари</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-envelop.png" alt="Конверты"/></span><span class="action-controls__item--name">Конверты</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-card.png" alt="Визитки"/></span><span class="action-controls__item--name">Визитки</span></a></li>
-							<li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-flyer.png" alt="Флаеры"/></span><span class="action-controls__item--name">Флаеры</span></a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="popular">
-					<h2 class="title-reg popular-title">Популярная продукция</h2>
-					<div class="block-reg popular-block">
-						<div class="popular-slider">
-							<div class="popular-slider__box">
-								<div class="row">
-									<div class="col-xs-8">
-										<div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
-									</div>
-									<div class="col-xs-8">
-										<div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
-									</div>
-									<div class="col-xs-8">
-										<div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
-									</div>
-									<div class="clearfix popular-slider__row"></div>
-									<div class="col-xs-8">
-										<div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
-									</div>
-									<div class="col-xs-8">
-										<div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
-									</div>
-									<div class="col-xs-8">
-										<div class="popular-slider__item popular-slider__item--all"><a href="">Смотреть<br><span class="popular-slider__item--all-bg">все</span></a></div>
-									</div>
-								</div>
-							</div>
-							<div class="popular-slider__controls-box">
-								<a href="" class="popular-slider__controls popular-slider__controls--left"></a>
-								<a href="" class="popular-slider__controls popular-slider__controls--right"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="features">
-					<h2 class="title-reg features-title">Почему выбирают нас</h2>
-					<div class="block-reg features-block">
-						<div class="row">
-							<div class="col-xs-8">
-								<div class="features-item features-item__realization">
-									<h4 class="features-item__title">Реализация идей</h4>
-									<p class="features-item__text">Вы рассказываете свою идею, а мы находим решение как реализовать ее, применяя наши</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__circulation">
-									<h4 class="features-item__title">Тиражи</h4>
-									<p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__color">
-									<h4 class="features-item__title">Цветопередача</h4>
-									<p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__new">
-									<h4 class="features-item__title">Новинки</h4>
-									<p class="features-item__text">Мы не стоим на месте и регулярно запускаем новые полиграфические и фото продукты</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__specialists">
-									<h4 class="features-item__title">Специалисты</h4>
-									<p class="features-item__text">В нашей типографии работают только высококвалифицированные сотрудники</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__technology">
-									<h4 class="features-item__title">Технология печати</h4>
-									<p class="features-item__text">Для печати Вашей продукции мы используем только технологию HP Indigo</p>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__quality">
-									<h4 class="features-item__title">Гарантия качества</h4>
-									<p class="features-item__text">Мы не отступаем от технологии производства, что гарантирует высокое качество продукции.</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__circulation02">
-									<h4 class="features-item__title">Тиражи</h4>
-									<p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="features-item features-item__color02">
-									<h4 class="features-item__title">Цветопередача</h4>
-									<p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="workmap">
-					<h2 class="title-reg workmap-title">Как мы работаем</h2>
-					<div class="block-reg workmap-block">
-						<div class="row">
-							<div class="workmap-item__box col-xs-6">
-								<figure class="workmap-item">
-									<div class="workmap-item__img"><img src="../images/sprite/workmap-choose.png" alt="Выберете продукт"></div>
-									<figcaption class="workmap-item__text">Выберете продукт и оставьте заявку. Мы моментально свяжемся с Вами.</figcaption>
-								</figure>
-							</div>
-							<div class="workmap-item__box col-xs-6">
-								<figure class="workmap-item">
-									<div class="workmap-item__img"><img src="../images/sprite/workmap-load.png" alt="Проверьте макет"></div>
-									<figcaption class="workmap-item__text">Загрузите Ваши файлы бесплатно и проверьте Ваш макет</figcaption>
-								</figure>
-							</div>
-							<div class="workmap-item__box col-xs-6">
-								<figure class="workmap-item">
-									<div class="workmap-item__img"><img src="../images/sprite/workmap-pay.png" alt="Оплатите заказ"></div>
-									<figcaption class="workmap-item__text">Оплатите заказ любым удобным способом. Мы точно в срок изготовим заказ.</figcaption>
-								</figure>
-							</div>
-							<div class="workmap-item__box col-xs-6">
-								<figure class="workmap-item">
-									<div class="workmap-item__img"><img src="../images/sprite/workmap-take.png" alt="Получите заказ"></div>
-									<figcaption class="workmap-item__text">Заберите готовый заказ или оформите доставку.</figcaption>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="services">
-					<h2 class="title-reg services-title">Специальные сервисы</h2>
-					<div class="block-reg services-block">
-						<div class="row">
-							<div class="col-xs-8"><a href="" class="services-item servises-item--calc"><span class="services-item__title">Калькулятор заказа</span><img src="../images/sprite/servises-calc.png" alt="Калькулятор заказа" class="services-item__img">
+  <head>
+    <title>start</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap-style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../scripts/libs/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!--TODO: toolbar-header-->
+      <div class="container-fluid header-container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo-promo.png" alt="e-order"></a>
+              <div class="header-logo__slogan"><img src="../images/sprite/header-press.png" alt="Prepress-Press-Postpress"></div>
+            </div>
+          </div>
+          <div class="col-xs-8">
+            <p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
+          </div>
+          <div class="col-xs-8">
+            <p class="header-phone text-right">+7 495 <span class="header-phone--grand">223 9200</span></p>
+            <div class="header-call text-right"><a href="#" class="header-call__handset"></a>
+              <p class="header-call__text">Звонок за наш счет</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="header-menu">
+        <ul class="nav nav-justified">
+          <li class="nav-item nav-item--special"><a href="/" class="nav-item__name">Акции!</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Как мы работаем</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
+          <li class="nav-item"><a href="/11" class="nav-item__name">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container container--main">
+        <div class="action">
+          <div class="action-title"><img src="../images/common/banner.png"></div>
+          <div class="action-block">
+            <div class="row">
+              <div class="col-xs-13">
+                <div class="action-image"><img src="../images/action-pict.jpg" alt="sales"></div>
+              </div>
+              <div class="col-xs-11">
+                <div class="action-order">
+                  <div class="tab-content">
+                                        <div id="action-order_item01" class="action-order__item tab-pane fade">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                        </div>
+                                        <div id="action-order_item02" class="action-order__item tab-pane fade">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                        </div>
+                                        <div id="action-order_item03" class="action-order__item tab-pane fade in active">
+                                          <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                          <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                          </p>
+                                          <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                        </div>
+                  </div>
+                  <ul id="action-order_item" class="action-order__controls nav nav-tabs">
+                    <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
+                    <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
+                    <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                  </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action-timer">
+            <div class="row">
+              <div class="col-xs-10">
+                <div class="action-timer__text"></div>
+              </div>
+              <div class="col-xs-14">
+                <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <nav class="action-controls-box">
+            <ul class="action-controls nav nav-tabs">
+              <li class="active"><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-brochure.png" alt="Брошюры"/></span><span class="action-controls__item--name">Брошюры</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-booklet.png" alt="Буклеты"/></span><span class="action-controls__item--name">Буклеты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-catalog.png" alt="Каталоги"/></span><span class="action-controls__item--name">Каталоги</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-file.png" alt="Папки"/></span><span class="action-controls__item--name">Папки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-notepad.png" alt="Блокноты"/></span><span class="action-controls__item--name">Блокноты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-blank.png" alt="Бланки"/></span><span class="action-controls__item--name">Бланки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-calendar.png" alt="Календари"/></span><span class="action-controls__item--name">Календари</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-envelop.png" alt="Конверты"/></span><span class="action-controls__item--name">Конверты</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-card.png" alt="Визитки"/></span><span class="action-controls__item--name">Визитки</span></a></li>
+              <li><a href="" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/sprite/action-flyer.png" alt="Флаеры"/></span><span class="action-controls__item--name">Флаеры</span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="popular">
+          <h2 class="title-reg popular-title">Популярная продукция</h2>
+          <div class="block-reg popular-block">
+            <div class="popular-slider">
+                      <div class="popular-slider__box">
+                        <div class="row">
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                          </div>
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                          </div>
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                          </div>
+                          <div class="clearfix popular-slider__row"></div>
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                          </div>
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt=""></div>
+                          </div>
+                          <div class="col-xs-8">
+                            <div class="popular-slider__item popular-slider__item--all"><a href="">Смотреть<br><span class="popular-slider__item--all-bg">все</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+              <div class="popular-slider__controls-box"><a href="" class="popular-slider__controls popular-slider__controls--left"></a><a href="" class="popular-slider__controls popular-slider__controls--right"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="features">
+          <h2 class="title-reg features-title">Почему выбирают нас</h2>
+          <div class="block-reg features-block">
+            <div class="row">
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__realization">
+                          <h4 class="features-item__title">Реализация идей</h4>
+                          <p class="features-item__text">Вы рассказываете свою идею, а мы находим решение как реализовать ее, применяя наши</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__circulation">
+                          <h4 class="features-item__title">Тиражи</h4>
+                          <p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__color">
+                          <h4 class="features-item__title">Цветопередача</h4>
+                          <p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__new">
+                          <h4 class="features-item__title">Новинки</h4>
+                          <p class="features-item__text">Мы не стоим на месте и регулярно запускаем новые полиграфические и фото продукты</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__specialists">
+                          <h4 class="features-item__title">Специалисты</h4>
+                          <p class="features-item__text">В нашей типографии работают только высококвалифицированные сотрудники</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__technology">
+                          <h4 class="features-item__title">Технология печати</h4>
+                          <p class="features-item__text">Для печати Вашей продукции мы используем только технологию HP Indigo</p>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__quality">
+                          <h4 class="features-item__title">Гарантия качества</h4>
+                          <p class="features-item__text">Мы не отступаем от технологии производства, что гарантирует высокое качество продукции.</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__circulation02">
+                          <h4 class="features-item__title">Тиражи</h4>
+                          <p class="features-item__text">Мы производим продукцию от 1 экземпляра, малыми и средними тиражами</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="features-item features-item__color02">
+                          <h4 class="features-item__title">Цветопередача</h4>
+                          <p class="features-item__text">Мы всегда изготавливаем один бесплатный контрольный оттиск для согласования</p>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+        <div class="workmap">
+          <h2 class="title-reg workmap-title">Как мы работаем</h2>
+          <div class="block-reg workmap-block">
+            <div class="row">
+                      <div class="workmap-item__box col-xs-6">
+                        <figure class="workmap-item">
+                          <div class="workmap-item__img"><img src="../images/sprite/workmap-choose.png" alt="Выберете продукт"></div>
+                          <figcaption class="workmap-item__text">Выберете продукт и оставьте заявку. Мы моментально свяжемся с Вами.</figcaption>
+                        </figure>
+                      </div>
+                      <div class="workmap-item__box col-xs-6">
+                        <figure class="workmap-item">
+                          <div class="workmap-item__img"><img src="../images/sprite/workmap-load.png" alt="Проверьте макет"></div>
+                          <figcaption class="workmap-item__text">Загрузите Ваши файлы бесплатно и проверьте Ваш макет</figcaption>
+                        </figure>
+                      </div>
+                      <div class="workmap-item__box col-xs-6">
+                        <figure class="workmap-item">
+                          <div class="workmap-item__img"><img src="../images/sprite/workmap-pay.png" alt="Оплатите заказ"></div>
+                          <figcaption class="workmap-item__text">Оплатите заказ любым удобным способом. Мы точно в срок изготовим заказ.</figcaption>
+                        </figure>
+                      </div>
+                      <div class="workmap-item__box col-xs-6">
+                        <figure class="workmap-item">
+                          <div class="workmap-item__img"><img src="../images/sprite/workmap-take.png" alt="Получите заказ"></div>
+                          <figcaption class="workmap-item__text">Заберите готовый заказ или оформите доставку.</figcaption>
+                        </figure>
+                      </div>
+            </div>
+          </div>
+        </div>
+        <div class="services">
+          <h2 class="title-reg services-title">Специальные сервисы</h2>
+          <div class="block-reg services-block">
+            <div class="row">
+                      <div class="col-xs-8"><a href="" class="services-item servises-item--calc"><span class="services-item__title">Калькулятор заказа</span><img src="../images/sprite/servises-calc.png" alt="Калькулятор заказа" class="services-item__img">
                           <div class="services-item__text"><img src="../images/sprite/servises-calc-text.png" alt="Посчитать!"></div></a></div>
-							<div class="col-xs-8"><a href="" class="services-item servises-item--maket"><span class="services-item__title">Проверка макета</span><img src="../images/sprite/servises-maket.png" alt="Проверка макета" class="services-item__img">
+                      <div class="col-xs-8"><a href="" class="services-item servises-item--maket"><span class="services-item__title">Проверка макета</span><img src="../images/sprite/servises-maket.png" alt="Проверка макета" class="services-item__img">
                           <div class="services-item__text"><img src="../images/sprite/servises-maket-text.png" alt="Загрузить!"></div></a></div>
-							<div class="col-xs-8"><a href="" class="services-item servises-item--deliver"><span class="services-item__title">Срочная доставка</span><img src="../images/sprite/servises-deliver.png" alt="Срочная доставка" class="services-item__img">
+                      <div class="col-xs-8"><a href="" class="services-item servises-item--deliver"><span class="services-item__title">Срочная доставка</span><img src="../images/sprite/servises-deliver.png" alt="Срочная доставка" class="services-item__img">
                           <div class="services-item__text"><img src="../images/sprite/servises-deliver-text.png" alt="Заказать!"></div></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="equipment">
-					<h2 class="title-reg equipment-title">Оборудование</h2>
-					<div class="block-reg equipment-block clearfix">
-						<div class="row">
-							<div class="col-xs-8">
-								<div class="equipment-item">
-									<p class="equipment-item__title">Допечатное</p>
-									<a href="" class="equipment-item__img"><img src="../images/equipment/equipment-prepress.jpg" alt="Допечатное"></a>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="equipment-item">
-									<p class="equipment-item__title">Печатное</p>
-									<a href="" class="equipment-item__img"><img src="../images/equipment/equipment-press.jpg" alt="Печатное"></a>
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="equipment-item">
-									<p class="equipment-item__title">Постпечатное</p>
-									<a href="" class="equipment-item__img"><img src="../images/equipment/equipment-postpress.jpg" alt="Постпечатное"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clients">
-					<h2 class="title-reg clients-title">Клиенты</h2>
-					<div class="block-reg clients-block">
-						<div class="clients-item"><img src="../images/sprite/clients-champion.png" alt="Champion"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-ashan.png" alt="Ашан"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-rosmolod.png" alt="Росмолодежь"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-absolute-bank.png" alt="Абсолют Банк"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-mos-jevel.png" alt="Московский ювелирный завод"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-svyaznoy.png" alt="Связной"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-pioneer.png" alt="Pioneer"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-skolkovo.png" alt="Сколково"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-ros-avto-dor.png" alt="Росавтодор"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-english-first.png" alt="English First"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-infopotok.png" alt="Инфопток"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-ves-mir.png" alt="Весь мир"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-wacom.png" alt="Wacom"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-miel.png" alt="Миэль"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-econom-newspaper.png" alt="Экономическая газета"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-yandex.png" alt="Яндекс"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-nalog-vestnik.png" alt="Налоговый вестник"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-bose.png" alt="Bose"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-gazprom.png" alt="Газпром"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-mdm-bank.png" alt="МДМ Банк"></div>
-						<div class="clients-item"><img src="../images/sprite/clients-rzhd.png" alt="РЖД"></div>
-					</div>
-				</div>
-				<div class="news">
-					<h2 class="title-reg news-title">Новости</h2>
-					<div class="block-reg news-block clearfix">
-						<div class="row">
-							<div class="col-xs-15">
-								<div class="news-menu">
-									<div class="row">
-										<div class="col-xs-8">
-											<div class="news-menu__item">
-												<div class="news-menu__item-title">
-													<p>I Новость</p>
-												</div>
-												<div class="news-menu__item-img"><img src="../images/news-logo.png" alt="I Новость"></div>
-											</div>
-										</div>
-										<div class="col-xs-8">
-											<div class="news-menu__item">
-												<div class="news-menu__item-title">
-													<p>II Новость в несколько...</p>
-												</div>
-												<div class="news-menu__item-img"><img src="../images/news-newspaper.jpg" alt="II Новость в несколько..."></div>
-											</div>
-										</div>
-										<div class="col-xs-8">
-											<div class="news-menu__item">
-												<div class="news-menu__item-title">
-													<p>III Новость</p>
-												</div>
-												<div class="news-menu__item-img"><img src="../images/news-figure.jpg" alt="III Новость"></div>
-											</div>
-										</div>
-									</div>
-									<div class="news-menu__controls-box">
-										<a href="" class="news-menu__controls news-menu__controls--left"></a>
-										<a href="" class="news-menu__controls news-menu__controls--right"></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-9">
-								<div class="news-item">
-									<p class="news-item__title">I Новость</p>
-									<div class="news-item__text">
-										<p>Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!</p>
-										<p>Президенты всего мира....</p>
-									</div>
-								</div>
-							</div>
-						</div><a href="" class="news-item__link">узнать подробнее</a>
-					</div>
-				</div>
-				<div class="contacts">
-					<h2 class="title-reg contacts-title">Контакты</h2>
-					<div class="block-reg contacts-block">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="contacts-info">
-									<p class="contacts-info__item contacts-info__item--phone">+7 (495) 223-92-00</p>
-									<p class="contacts-info__item contacts-info__item--mail">sale@eorder.ru</p>
-									<p class="contacts-info__item contacts-info__item--skype">sale.eorder</p>
-									<p class="contacts-info__item contacts-info__item--adress">г. Москва, Котляковский переулок, д. 18</p>
-								</div>
-							</div>
-							<div class="col-xs-10">
-								<div class="contacts-map">
-									<input id="varsh" type="radio" name="metro" value="varsh" checked>
-									<input id="kash" type="radio" name="metro" value="kash">
-									<div class="contacts-map__controls clearfix">
-										<label for="varsh">от<span class="contacts-map__controls--metro"></span>Варшавкая</label>
-										<label for="kash">от<span class="contacts-map__controls--metro"></span>Каширская</label>
-									</div>
-									<div class="contacts-map__slider">
-										<input id="foot" type="radio" name="path" value="foot" checked>
-										<input id="car" type="radio" name="path" value="car">
-										<input id="bus" type="radio" name="path" value="bus">
-										<div class="contacts-map__path">
-											<div class="contacts-map__controls--path">
-												<label for="foot"></label>
-												<label for="car"></label>
-												<label for="bus"></label>
-											</div>
-											<div class="contacts-map__path-slider">
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-foot">
-													<p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-car">
-													<p class="contacts-map__path-desc">прямо 660 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 430 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 580 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-bus">
-													<p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-foot">
-													<p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-car">
-													<p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-												<div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-bus">
-													<p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
-													<p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
-												</div>
-											</div>
-										</div>
-										<div class="contacts-map__map">
-											<div class="contacts-map__map-item contacts-map__map-item--varsh-foot"></div>
-											<div class="contacts-map__map-item contacts-map__map-item--varsh-car"></div>
-											<div class="contacts-map__map-item contacts-map__map-item--varsh-bus"></div>
-											<div class="contacts-map__map-item contacts-map__map-item--kash-foot"></div>
-											<div class="contacts-map__map-item contacts-map__map-item--kash-car"></div>
-											<div class="contacts-map__map-item contacts-map__map-item--kash-bus"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-2">
-								<div class="contacts-socials">
-									<a href="" class="contacts-socials__item contacts-socials__item--twitt"></a>
-									<a href="" class="contacts-socials__item contacts-socials__item--vk"></a>
-									<a href="" class="contacts-socials__item contacts-socials__item--fb"></a>
-									<a href="" class="contacts-socials__item contacts-socials__item--odnoklassniki"></a>
-									<a href="" class="contacts-socials__item contacts-socials__item--google"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="container-fluid">
-				<div class="row container--footer footer--main">
-					<div class="footer-menu col-xs-3">
-						<p class="title-footer footer-menu__title">Меню</p>
-						<div class="block-footer footer-menu__block">
-							<ul class="nav">
-								<li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
-								<li class="nav-item"><a href="/11" class="nav-item__name">F.A.Q.</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xs-5">
-						<form action="" method="post" role="form" class="footer-promo form-promo">
-							<p class="title-footer form-promo__title">Ввести промо код</p>
-							<div class="block-footer form-promo__block">
-								<p class="form-promo__text">У Вас есть промо код?
-									<br>Отлично! Введите его здесь:</p>
-								<input type="text" placeholder="Промо код" class="form-promo__input form-control">
-								<button type="submit" class="form-promo__btn btn">Да!</button>
-							</div>
-							<p class="form-promo__sub-text">Участвуйте в акциях!</p>
-						</form>
-					</div>
-					<div class="col-xs-7">
-						<form action="" method="post" role="form" class="footer-signup form-signup">
-							<p class="title-footer form-signup__title">Подписка на новости</p>
-							<div class="block-footer form-signup__block">
-								<p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
-								<input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
-								<input type="text" placeholder="Ваш email" class="form-signup__input form-control">
-								<button type="submit" class="form-signup__btn btn">Да!</button>
-							</div>
-							<p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
-						</form>
-					</div>
-					<div class="footer-contacts col-xs-5">
-						<p class="title-footer footer-contacts__title">Контакты</p>
-						<div class="block-footer footer-contacts__block">
-							<p class="footer-contacts__item">Телефон: +7 (495) 223-9200</p>
-							<p class="footer-contacts__item">E-mail: sale@eorder.ru</p>
-							<p class="footer-contacts__item footer-contacts__item--skype">sale.eorder</p>
-							<p class="footer-contacts__item">Адрес: Москва, 2-й Котляковский переулок, д.18</p>
-						</div><a class="footer-contacts__sub-text">Открыть карту</a>
-					</div>
-					<div class="col-xs-4">
-						<div class="footer-code"><img src="../images/footer-code.jpg" alt="Штрихкод"></div>
-					</div>
-				</div>
-				<div class="row container--footer footer--second">
-					<div class="col-xs-8 footer-logo-block">
-						<a class="footer-logo"><img src="../images/sprite/footer-logo-promo.png" alt="Eorder promo"></a>
-					</div>
-					<div class="col-xs-8">
-						<div class="footer-press"><img src="../images/sprite/footer-press.png" alt="Prepress-Press-Postpress"></div>
-					</div>
-					<div class="col-xs-8">
-						<p class="footer-socials"><span class="footer-socials__text">Мы в социальных сетях</span>
-							<a href="" class="footer-socials__links footer-socials__links--fb"></a>
-							<a href="" class="footer-socials__links footer-socials__links--inst"></a>
-							<a href="" class="footer-socials__links footer-socials__links--vk"></a>
-						</p>
-					</div>
-				</div>
-				<p class="footer-copyright container--footer">&#169; 2014 <span class="footer-copyright--name">ЗАО "Новые печатные технологии". </span>Все права защищены.</p>
-			</div>
-		</footer>
-		<p class="footer-signature">Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00</p>
-	</body>
-	<script src="../scripts/libs/bootstrap.js"></script>
-	<script src="../scripts/common.js"></script>
+            </div>
+          </div>
+        </div>
+        <div class="equipment">
+          <h2 class="title-reg equipment-title">Оборудование</h2>
+          <div class="block-reg equipment-block clearfix">
+            <div class="row">
+                      <div class="col-xs-8">
+                        <div class="equipment-item">
+                          <p class="equipment-item__title">Допечатное</p><a href="" class="equipment-item__img"><img src="../images/equipment/equipment-prepress.jpg" alt="Допечатное"></a>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="equipment-item">
+                          <p class="equipment-item__title">Печатное</p><a href="" class="equipment-item__img"><img src="../images/equipment/equipment-press.jpg" alt="Печатное"></a>
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="equipment-item">
+                          <p class="equipment-item__title">Постпечатное</p><a href="" class="equipment-item__img"><img src="../images/equipment/equipment-postpress.jpg" alt="Постпечатное"></a>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+        <div class="clients">
+          <h2 class="title-reg clients-title">Клиенты</h2>
+          <div class="block-reg clients-block">
+                    <div class="clients-item"><img src="../images/sprite/clients-champion.png" alt="Champion"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-ashan.png" alt="Ашан"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-rosmolod.png" alt="Росмолодежь"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-absolute-bank.png" alt="Абсолют Банк"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-mos-jevel.png" alt="Московский ювелирный завод"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-svyaznoy.png" alt="Связной"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-pioneer.png" alt="Pioneer"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-skolkovo.png" alt="Сколково"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-ros-avto-dor.png" alt="Росавтодор"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-english-first.png" alt="English First"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-infopotok.png" alt="Инфопток"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-ves-mir.png" alt="Весь мир"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-wacom.png" alt="Wacom"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-miel.png" alt="Миэль"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-econom-newspaper.png" alt="Экономическая газета"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-yandex.png" alt="Яндекс"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-nalog-vestnik.png" alt="Налоговый вестник"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-bose.png" alt="Bose"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-gazprom.png" alt="Газпром"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-mdm-bank.png" alt="МДМ Банк"></div>
+                    <div class="clients-item"><img src="../images/sprite/clients-rzhd.png" alt="РЖД"></div>
+          </div>
+        </div>
+        <div class="news">
+          <h2 class="title-reg news-title">Новости</h2>
+          <div class="block-reg news-block clearfix">
+            <div class="row">
+              <div class="col-xs-15">
+                <div class="news-menu">
+                  <div class="row">
+                            <div class="col-xs-8">
+                              <div class="news-menu__item">
+                                <div class="news-menu__item-title">
+                                  <p>I Новость</p>
+                                </div>
+                                <div class="news-menu__item-img"><img src="../images/news-logo.png" alt="I Новость"></div>
+                              </div>
+                            </div>
+                            <div class="col-xs-8">
+                              <div class="news-menu__item">
+                                <div class="news-menu__item-title">
+                                  <p>II Новость в несколько...</p>
+                                </div>
+                                <div class="news-menu__item-img"><img src="../images/news-newspaper.jpg" alt="II Новость в несколько..."></div>
+                              </div>
+                            </div>
+                            <div class="col-xs-8">
+                              <div class="news-menu__item">
+                                <div class="news-menu__item-title">
+                                  <p>III Новость</p>
+                                </div>
+                                <div class="news-menu__item-img"><img src="../images/news-figure.jpg" alt="III Новость"></div>
+                              </div>
+                            </div>
+                  </div>
+                  <div class="news-menu__controls-box"><a href="" class="news-menu__controls news-menu__controls--left"></a><a href="" class="news-menu__controls news-menu__controls--right"></a></div>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <div class="news-item">
+                  <p class="news-item__title">I Новость</p>
+                  <div class="news-item__text">
+                    <p>Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!</p>
+                    <p>Президенты всего мира....</p>
+                  </div>
+                </div>
+              </div>
+            </div><a href="" class="news-item__link">узнать подробнее</a>
+          </div>
+        </div>
+        <div class="contacts">
+          <h2 class="title-reg contacts-title">Контакты</h2>
+          <div class="block-reg contacts-block">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="contacts-info">
+                          <p class="contacts-info__item contacts-info__item--phone">+7 (495) 223-92-00</p>
+                          <p class="contacts-info__item contacts-info__item--mail">sale@eorder.ru</p>
+                          <p class="contacts-info__item contacts-info__item--skype">sale.eorder</p>
+                          <p class="contacts-info__item contacts-info__item--adress">г. Москва, Котляковский переулок, д. 18</p>
+                </div>
+              </div>
+              <div class="col-xs-10">
+                <div class="contacts-map">
+                                  <input id="varsh" type="radio" name="metro" value="varsh" checked>
+                                  <input id="kash" type="radio" name="metro" value="kash">
+                                  <div class="contacts-map__controls clearfix">
+                                    <label for="varsh">от<span class="contacts-map__controls--metro"></span>Варшавкая</label>
+                                    <label for="kash">от<span class="contacts-map__controls--metro"></span>Каширская</label>
+                                  </div>
+                                  <div class="contacts-map__slider">
+                                    <input id="foot" type="radio" name="path" value="foot" checked>
+                                    <input id="car" type="radio" name="path" value="car">
+                                    <input id="bus" type="radio" name="path" value="bus">
+                                    <div class="contacts-map__path">
+                                      <div class="contacts-map__controls--path">
+                                        <label for="foot"></label>
+                                        <label for="car"></label>
+                                        <label for="bus"></label>
+                                      </div>
+                                      <div class="contacts-map__path-slider">
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-foot">
+                                                          <p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-car">
+                                                          <p class="contacts-map__path-desc">прямо 660 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 430 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 580 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--varsh-bus">
+                                                          <p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-foot">
+                                                          <p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-car">
+                                                          <p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                        <div class="contacts-map__path-slider-item contacts-map__path-slider-item--kash-bus">
+                                                          <p class="contacts-map__path-desc">на юг 600 м<span class="contacts-map__path-desc--sub">Каширский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 450 м<span class="contacts-map__path-desc--sub">1-й Варшавский проезд</span></p>
+                                                          <p class="contacts-map__path-desc">прямо 590 м<span class="contacts-map__path-desc--sub">2-й Котляковский переулок</span></p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="contacts-map__map">
+                                      <div class="contacts-map__map-item contacts-map__map-item--varsh-foot"></div>
+                                      <div class="contacts-map__map-item contacts-map__map-item--varsh-car"></div>
+                                      <div class="contacts-map__map-item contacts-map__map-item--varsh-bus"></div>
+                                      <div class="contacts-map__map-item contacts-map__map-item--kash-foot"></div>
+                                      <div class="contacts-map__map-item contacts-map__map-item--kash-car"></div>
+                                      <div class="contacts-map__map-item contacts-map__map-item--kash-bus"></div>
+                                    </div>
+                                  </div>
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <div class="contacts-socials"><a href="" class="contacts-socials__item contacts-socials__item--twitt"></a><a href="" class="contacts-socials__item contacts-socials__item--vk"></a><a href="" class="contacts-socials__item contacts-socials__item--fb"></a><a href="" class="contacts-socials__item contacts-socials__item--odnoklassniki"></a><a href="" class="contacts-socials__item contacts-socials__item--google"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row container--footer footer--main">
+          <div class="footer-menu col-xs-3">
+            <p class="title-footer footer-menu__title">Меню</p>
+            <div class="block-footer footer-menu__block">
+              <ul class="nav">
+                <li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
+                <li class="nav-item"><a href="/11" class="nav-item__name">F.A.Q.</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <form action="" method="post" role="form" class="footer-promo form-promo">
+              <p class="title-footer form-promo__title">Ввести промо код</p>
+              <div class="block-footer form-promo__block">
+                <p class="form-promo__text">У Вас есть промо код?<br>Отлично! Введите его здесь:</p>
+                <input type="text" placeholder="Промо код" class="form-promo__input form-control">
+                <button type="submit" class="form-promo__btn btn">Да!</button>
+              </div>
+              <p class="form-promo__sub-text">Участвуйте в акциях!</p>
+            </form>
+          </div>
+          <div class="col-xs-7">
+            <form action="" method="post" role="form" class="footer-signup form-signup">
+              <p class="title-footer form-signup__title">Подписка на новости</p>
+              <div class="block-footer form-signup__block">
+                <p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
+                <input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
+                <input type="text" placeholder="Ваш email" class="form-signup__input form-control">
+                <button type="submit" class="form-signup__btn btn">Да!</button>
+              </div>
+              <p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
+            </form>
+          </div>
+          <div class="footer-contacts col-xs-5">
+            <p class="title-footer footer-contacts__title">Контакты</p>
+            <div class="block-footer footer-contacts__block">
+              <p class="footer-contacts__item">Телефон: +7 (495) 223-9200</p>
+              <p class="footer-contacts__item">E-mail: sale@eorder.ru</p>
+              <p class="footer-contacts__item footer-contacts__item--skype">sale.eorder</p>
+              <p class="footer-contacts__item">Адрес: Москва, 2-й Котляковский переулок, д.18</p>
+            </div><a class="footer-contacts__sub-text">Открыть карту</a>
+          </div>
+          <div class="col-xs-4">
+            <div class="footer-code"><img src="../images/footer-code.jpg" alt="Штрихкод"></div>
+          </div>
+        </div>
+        <div class="row container--footer footer--second">
+          <div class="col-xs-8 footer-logo-block"><a class="footer-logo"><img src="../images/sprite/footer-logo-promo.png" alt="Eorder promo"></a></div>
+          <div class="col-xs-8">
+            <div class="footer-press"><img src="../images/sprite/footer-press.png" alt="Prepress-Press-Postpress"></div>
+          </div>
+          <div class="col-xs-8">
+            <p class="footer-socials"><span class="footer-socials__text">Мы в социальных сетях</span><a href="" class="footer-socials__links footer-socials__links--fb"></a><a href="" class="footer-socials__links footer-socials__links--inst"></a><a href="" class="footer-socials__links footer-socials__links--vk"></a></p>
+          </div>
+        </div>
+        <p class="footer-copyright container--footer">&#169; 2014 <span class="footer-copyright--name">ЗАО "Новые печатные технологии". </span>Все права защищены.</p>
+      </div>
+    </footer>
+    <p class="footer-signature">Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00</p>
+  </body>
+  <script src="../scripts/libs/bootstrap.js"></script>
+  <script src="../scripts/common.js"></script>
 </html>
