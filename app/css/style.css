@@ -268,6 +268,11 @@ body {
     font-size: 53.325px;
   }
 }
+@media (max-width: 992px) {
+  .action-order__item-title {
+    font-size: 41.475px;
+  }
+}
 .action-order__item-title--value {
   display: block;
   font-size: 59.25px;
@@ -278,6 +283,11 @@ body {
     font-size: 53.325px;
   }
 }
+@media (max-width: 992px) {
+  .action-order__item-title--value {
+    font-size: 41.475px;
+  }
+}
 .action-order__item-description {
   font-size: 22.5px;
   color: #8a8a8a;
@@ -285,6 +295,11 @@ body {
 @media (max-width: 1200px) {
   .action-order__item-description {
     font-size: 20.25px;
+  }
+}
+@media (max-width: 992px) {
+  .action-order__item-description {
+    font-size: 15.75px;
   }
 }
 .action-order__item-price--old,
@@ -303,6 +318,11 @@ body {
     font-size: 41.175px;
   }
 }
+@media (max-width: 992px) {
+  .action-order__item-price--old {
+    font-size: 32.025px;
+  }
+}
 .action-order__item-price--new {
   font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
   font-size: 68.25px;
@@ -313,6 +333,11 @@ body {
     font-size: 61.425px;
   }
 }
+@media (max-width: 992px) {
+  .action-order__item-price--new {
+    font-size: 47.775px;
+  }
+}
 .action-order__controls li {
   width: 33.33333333%;
 }
@@ -320,6 +345,11 @@ body {
   height: 93.75px;
   background-color: #ffffff;
   border: 0.75px solid #cccccc;
+}
+@media (max-width: 992px) {
+  .action-order__controls li.active a {
+    height: 55px;
+  }
 }
 .action-order__controls-item {
   height: 82.5px;
@@ -329,6 +359,11 @@ body {
   background-size: 90% auto;
   vertical-align: top;
   box-shadow: inset 0px 0px 7.5px 0.75px rgba(204, 204, 204, 0.7);
+}
+@media (max-width: 992px) {
+  .action-order__controls-item {
+    height: 50px;
+  }
 }
 .action-order__controls-item--1 {
   background-image: url(../images/sprite/action-order__controls--1.png);
@@ -384,6 +419,11 @@ body {
 @media (max-width: 1200px) {
   .action-order__btn--text {
     font-size: 20.25px;
+  }
+}
+@media (max-width: 992px) {
+  .action-order__btn--text {
+    font-size: 15.75px;
   }
 }
 .action-timer {

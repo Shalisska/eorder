@@ -58,6 +58,10 @@
 					font-size: @font-size__action-order-title*@zoom1200;
 				}
 				
+				@media (max-width: 992px) {
+					font-size: @font-size__action-order-title*@zoom992;
+				}
+				
 				&--value {
 					display: block;
 					font-size: @font-size__action-order-title--small;
@@ -65,6 +69,10 @@
 					
 					@media (max-width: 1200px) {
 						font-size: @font-size__action-order-title--small*@zoom1200;
+					}
+					
+					@media (max-width: 992px) {
+						font-size: @font-size__action-order-title--small*@zoom992;
 					}
 				}
 			}
@@ -74,8 +82,12 @@
 				color: @color__action-order-description;
 				
 				@media (max-width: 1200px) {
-						font-size: @font-size__action-order-description*@zoom1200;
-					}
+					font-size: @font-size__action-order-description*@zoom1200;
+				}
+				
+				@media (max-width: 992px) {
+					font-size: @font-size__action-order-description*@zoom992;
+				}
 			}
 			
 			&-price {
@@ -94,6 +106,10 @@
 					@media (max-width: 1200px) {
 						font-size: @font-size__action-order-price*@zoom1200;
 					}
+					
+					@media (max-width: 992px) {
+						font-size: @font-size__action-order-price*@zoom992;
+					}
 				}
 				
 				&--new {
@@ -103,6 +119,10 @@
 					
 					@media (max-width: 1200px) {
 						font-size: @font-size__action-order-price--new*@zoom1200;
+					}
+					
+					@media (max-width: 992px) {
+						font-size: @font-size__action-order-price--new*@zoom992;
 					}
 				}
 			}
@@ -116,6 +136,10 @@
 					height: (125px*@zoom);
 					background-color: @bg__action-order-controls--active;
 					border: @boder__action-order-controls--active;
+					
+					@media (max-width: 992px) {
+						height: 55px;
+					}
 				}
 			}
 			
@@ -127,6 +151,10 @@
 				background-size: 90% auto;
 				vertical-align: top;
 				box-shadow: @box-shadow__action-order-controls;
+				
+				@media (max-width: 992px) {
+					height: 50px;
+				}
 				
 				&--1 {
 					background-image: url(../images/sprite/action-order__controls--1.png);
@@ -164,6 +192,8 @@
 				background-size: 85% auto;
 			}
 			
+			
+			
 			&:hover {
 				box-shadow: (0px*@zoom) (2px*@zoom) (6px*@zoom) (0px*@zoom) rgba(35, 31, 32, 0.5);
 				transform: scale(1.02);
@@ -185,6 +215,10 @@
 				
 				@media(max-width: 1200px) {
 					font-size: @font-size__action-order-btn--small*@zoom1200;
+				}
+				
+				@media(max-width: 992px) {
+					font-size: @font-size__action-order-btn--small*@zoom992;
 				}
 			}
 		}
