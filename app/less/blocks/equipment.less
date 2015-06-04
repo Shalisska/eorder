@@ -13,6 +13,11 @@
 			font-size: @font-size__equipment;
 			color: @color__equipment;
 			text-shadow: @text-shadow__equipment;
+			
+			@media (max-width: 992px) {
+				margin-bottom: 10px;
+				font-size: @font-size__equipment*@zoom992;
+			}
 		}
 		
 		&__img {
@@ -20,6 +25,10 @@
 			display: block;
 			max-width: (466px*@zoom);
 			box-shadow: @box-shadow__equipment;
+			
+			@media (max-width: 992px) {
+				margin: 0 -10px;
+			}
 			
 			&:hover {
 				box-shadow: (0px*@zoom) (0px*@zoom) (16px*@zoom) (5px*@zoom) rgba(0, 0, 1, .30);

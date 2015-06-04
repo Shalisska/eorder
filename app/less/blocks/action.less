@@ -25,6 +25,11 @@
 		box-shadow: @box-shadow__action;
 		overflow: hidden;
 		
+		@media (max-width: 992px) {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		
 		img {
 			width: 100%;
 			height: auto;
@@ -38,6 +43,12 @@
 		
 		@media (max-width: 1200px) {
 			padding-bottom: 80px;
+		}
+		
+		@media (max-width: 992px) {
+			margin-left: -5px;
+			margin-right: -5px;
+			padding-bottom: 65px;
 		}
 		
 		&__item {
@@ -192,7 +203,9 @@
 				background-size: 85% auto;
 			}
 			
-			
+			@media (max-width: 992px) {
+				height: 60px;
+			}
 			
 			&:hover {
 				box-shadow: (0px*@zoom) (2px*@zoom) (6px*@zoom) (0px*@zoom) rgba(35, 31, 32, 0.5);
@@ -300,9 +313,18 @@
 			&--pict {
 				display: block;
 				height: (145px*@zoom);
-				line-height: (145px*@zoom);
 				border-bottom: none;
+				
+				@media (max-width: 992px) {
+					height: 70px;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
 			}
+			
 			&--name {
 				display: block;
 				height: (70px*@zoom);
@@ -312,6 +334,12 @@
 				color: @color__action-controls;
 				text-transform: uppercase;
 				border-image: @bg__action-controls-grad 1;
+				
+				@media (max-width: 992px) {
+					padding: 10px 0;
+					height: auto;
+					font-size: @font-size__action-controls*@zoom992;
+				}
 			}
 		}
 	}

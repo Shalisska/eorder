@@ -10,6 +10,10 @@
 		text-transform: uppercase;
 		box-shadow: @box-shadow__services;
 		
+		@media (max-width: 992px) {
+			margin: 0 -10px;
+		}
+		
 		&:hover {
 			box-shadow: (0px*@zoom) (0px*@zoom) (16px*@zoom) (5px*@zoom) rgba(0, 0, 1, .30);
 			transform: scale(1.02);
@@ -27,14 +31,31 @@
 			font-size: @font-size__services-title;
 			color: @color__services-title;
 			text-shadow: @text-shadow__services;
+			
+			@media (max-width: 992px) {
+				font-size: @font-size__services-title*@zoom992;
+			}
 		}
 		
-		&__img {}
+		&__img {
+			height: auto;
+			
+			@media (max-width: 992px) {
+				width: 45%;
+			}
+		}
 		
 		&__text {
 			margin-top: -(15px*@zoom);
 			padding: (15px*@zoom) 0;
+			height: auto;
 			background: @bg__services-text;
+			
+			img {
+				@media (max-width: 992px) {
+					width: 50%;
+				}
+			}
 		}
 	}
 }

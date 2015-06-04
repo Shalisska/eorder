@@ -32,6 +32,12 @@
 				line-height: 190px;
 			}
 			
+			@media (max-width: 992px) {
+				width: 130px;
+				height: 130px;
+				line-height: 130px;
+			}
+			
 			&:after {
 				content: '';
 				position: absolute;
@@ -59,6 +65,10 @@
 			text-align: center;
 			font-size: @font-size__workmap;
 			color: @color__workmap;
+			
+			@media (max-width: 992px) {
+				font-size: @font-size__workmap*@zoom992;
+			}
 		}
 	}
 }
