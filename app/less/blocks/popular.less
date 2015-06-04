@@ -9,13 +9,18 @@
 		position: relative;
 		
 		&__row {
-			margin-bottom: (75px*@zoom);
+			margin-bottom: 5%;
+		}
+		
+		&__leveler {
+			position: relative;
 		}
 		
 		&__item {
 			position: relative;
 			display: block;
-			width: (465px*@zoom);
+			max-width: 345px;
+			width: 100%;
 			text-align: center;
 			box-shadow: @box-shadow__popular-item;
 			overflow: hidden;
@@ -45,7 +50,7 @@
 			}
 			
 			&--all {
-				height: 258px;
+				height: 100%;
 				display: inline-block;
 				padding-top: 45px;
 				vertical-align: middle;
@@ -53,6 +58,13 @@
 				color: @color__action-slider;
 				line-height: 1;
 				text-decoration: none;
+				
+				&-leveler {
+					position: absolute;
+					top: 55%;
+					bottom: 0;
+					right: 0;
+				}
 				
 				&-bg {
 					margin-top: -(35px*@zoom);
@@ -62,7 +74,8 @@
 				
 				&:hover {
 					text-decoration: none;
-					color: @color__action-slider;
+					color: @color__action-slider--hover;
+					text-shadow: @text-shadow__popular-all;
 				}
 			}
 		}

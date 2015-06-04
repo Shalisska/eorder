@@ -1,17 +1,17 @@
 mixin popularSlider(items)
 	while (items.length > 0)
 		.popular-slider__box
-			.row.popular-slider__leveler
-				each item, i in items.splice(0, 5)
-					.col-xs-8
-						a.popular-slider__item(href='')
-							img(src=item.src, alt=item.alt)
-							span.popular-slider__item-title=item.alt
-					-var j = i+1
-						if (j - (parseInt(j / 3)*3) === 0)
-							if (j != items.length)
-								.clearfix.popular-slider__row
-				.col-xs-8.popular-slider__item--all-leveler
+			.popular-slider__row
+				each item, i in items.splice(0, 3)
+					block slider_item
+						.popular-slider__col
+							a.popular-slider__item(href='')
+								img(src=item.src, alt=item.alt)
+								span.popular-slider__item-title=item.alt
+			.popular-slider__row
+				each item, i in items.splice(0, 2)
+					block slider_item
+				popular-slider__col
 					a.popular-slider__item.popular-slider__item--all(href='')
 						| Смотреть
 						br
