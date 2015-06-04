@@ -1,20 +1,25 @@
 .contacts {
 	&-block {
 		margin-bottom: (60px*@zoom);
-		padding-bottom: 25px;
+		padding-bottom: 35px;
 	}
 	
 	&-info {
-		padding: (50px*@zoom) (10px*@zoom) (50px*@zoom) (60px*@zoom);
+		padding: 35px (10px*@zoom) 0 (60px*@zoom);
 		font-size: @font-size__contacts-info;
 		
 		&__item {
-				display: block;
-				color: @color__contacts-info;
-			
-				&:hover {
-					text-decoration: none;
-				}
+			display: block;
+			margin-bottom: 20px;
+			color: @color__contacts-info;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
 			
 			&:before {
 				content: '';

@@ -1,4 +1,3 @@
-//TODO: gradient-bg
 .header {
 	margin-bottom: (90px*@zoom);
 	width: 100%;
@@ -6,11 +5,9 @@
 	
 	&-container {
 		position: relative;
-		padding: (30px*@zoom) 0 (15px*@zoom);
+		padding: 2% 0 (15px*@zoom);
 		
-		@media(max-width: 1200px) {
-			padding-top: 10px;
-		}
+		
 	}
 	
 	&-logo {
@@ -18,11 +15,9 @@
 		text-align: center;
 		
 		img {
-			
-			@media (max-width: 1200px) {
-				width: 100%;
-				height: auto;
-			}
+			max-width: 378px;
+			width: 100%;
+			height: auto;
 		}
 
 		&__slogan {
@@ -32,9 +27,10 @@
 			
 			img {
 				@media (max-width: 1200px) {
-				width: 90%;
-				height: auto;
-			}
+					padding-top: 3%;
+					width: 90%;
+					height: auto;
+				}
 			}
 		}
 	}
@@ -45,18 +41,27 @@
 		line-height: 1;
 		color: @color__header-pres;
 		text-shadow: @text-shadow__header-presentation;
+		
+		@media (max-width: 1200px) {
+			font-size: @font-size__header-pres*@zoom1200;
+		}
 	}
 	
+	&-calling {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			text-align: right;
+		}
+	
 	&-phone {
-		padding-top: (10px*@zoom);
-		padding-right: (20px*@zoom);
+		padding-top: 5%;
 		font-size: @font-size__header-phone;
 		color: @color__header-phone;
 		
 		@media (max-width: 1200px) {
-			margin-bottom: 0;
-			padding-top: 0;
-			font-size: 39px;
+			font-size: @font-size__header-phone_1200;
 		}
 		
 		&--grand {
@@ -65,42 +70,45 @@
 			color: @color__header-phone--grand;
 			
 			@media (max-width: 1200px) {
-				font-size: 41px;
+				font-size: @font-size__header-phone_1200--grand;
 			}
 		}
 	}
 	
 	&-call {
 		position: absolute;
-		right: (15px*@zoom);
-		bottom: -(120px*@zoom);
-		height: (116px*@zoom);
-		width: (478px*@zoom);
+		right: 0;
+		bottom: -5px;
+		max-height: 87px;
+		height: 46%;
+		max-width: 358px;
+		width: 90%;
 		background-image: @bg__header-phone;
 		border-radius: (115px*@zoom) 0 0 (115px*@zoom);
 		box-shadow: @box-shadow__header-call;
 		z-index: 10;
 		
-		@media (max-width: 1200px) {
-			width: 315px;
-			height: 80px;
-		}
+//		@media (max-width: 1200px) {
+//			width: 315px;
+//			height: 80px;
+//		}
 		
 		&__handset {
 			position: absolute;
-			top: (5px*@zoom);
-			left: (5px*@zoom);
-			width: (110px*@zoom);
-			height: (110px*@zoom);
-			background: url('../images/phone--header.png') no-repeat center;
+			top: 2px;
+			bottom: 2px;
+			left: 2px;
+			width: 27%;
+			height: 95%;
+			background: url('../images/phone--header.png') no-repeat left center;
 			background-size: contain;
 			
-			@media (max-width: 1200px) {
-				top: 2px;
-				left: 2px;
-				width: 78px;
-				height: 78px;
-			}
+//			@media (max-width: 1200px) {
+//				top: 2px;
+//				left: 2px;
+//				width: 78px;
+//				height: 78px;
+//			}
 		}
 		
 		&__text {
@@ -113,16 +121,14 @@
 			text-shadow: @text-shadow__header-call;
 			
 			@media (max-width: 1200px) {
-				line-height: 80px;
-				font-size: 20px;
+				line-height: 65px;
+				font-size: @font-size__header-call*@zoom1200;
 			}
 		}
 	}
 	
-	//TODO: menu-item:hover
-	//TODO: рассчитать ширину ячеек, с жирным шрифтом съезжает
+
 	.nav {
-		
 		&-item {
 			background: @bg-menu;
 			box-shadow: @box-shadow__nav-item;
@@ -138,7 +144,7 @@
 				text-shadow: @text-shadow__nav-item;
 				
 				@media (max-width: 1200px) {
-					font-size: 18px;
+					font-size: @font-size__header-menu*@zoom1200;
 				}
 				
 				&:hover {
