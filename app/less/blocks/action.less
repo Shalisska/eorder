@@ -13,6 +13,11 @@
 	&-block {
 		padding: 0 (95px*@zoom) (27px*@zoom);
 		box-shadow: @box-shadow__action--bottom;
+		
+		@media (max-width: 1200px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	
 	&-image {
@@ -31,6 +36,10 @@
 		position: relative;
 		padding-bottom: (135px*@zoom);
 		
+		@media (max-width: 1200px) {
+			padding-bottom: 80px;
+		}
+		
 		&__item {
 			position: relative;
 			padding: (1px*@zoom) (25px*@zoom);
@@ -45,16 +54,28 @@
 				color: @color__action-order-title;
 				font-size: @font-size__action-order-title;
 				
+				@media (max-width: 1200px) {
+					font-size: @font-size__action-order-title*@zoom1200;
+				}
+				
 				&--value {
 					display: block;
 					font-size: @font-size__action-order-title--small;
 					color: @color__action-order-title--small;
+					
+					@media (max-width: 1200px) {
+						font-size: @font-size__action-order-title--small*@zoom1200;
+					}
 				}
 			}
 			
 			&-description {
 				font-size: @font-size__action-order-description;
 				color: @color__action-order-description;
+				
+				@media (max-width: 1200px) {
+						font-size: @font-size__action-order-description*@zoom1200;
+					}
 			}
 			
 			&-price {
@@ -69,12 +90,20 @@
 					font-size: @font-size__action-order-price;
 					color: @color__action-order-price;
 					text-decoration: line-through;
+					
+					@media (max-width: 1200px) {
+						font-size: @font-size__action-order-price*@zoom1200;
+					}
 				}
 				
 				&--new {
 					font-family: @font-family-bold;
 					font-size: @font-size__action-order-price--new;
 					color: @color__action-order-price--new;
+					
+					@media (max-width: 1200px) {
+						font-size: @font-size__action-order-price--new*@zoom1200;
+					}
 				}
 			}
 		}
@@ -125,8 +154,15 @@
 			text-align: center;
 			line-height: 1;
 			background: @bg__action-order-btn url(../images/common/action_order_btn.png) no-repeat center center;
+			background-size: 90% auto;
 			border: @border__action-order-btn;
 			box-shadow: @box-shadow__action;
+			
+			@media (max-width: 1200px) {
+				height: 70px;
+				background-position: center 90%;
+				background-size: 85% auto;
+			}
 			
 			&:hover {
 				box-shadow: (0px*@zoom) (2px*@zoom) (6px*@zoom) (0px*@zoom) rgba(35, 31, 32, 0.5);
@@ -146,6 +182,10 @@
 				font-family: @font-family-bold;
 				font-size: @font-size__action-order-btn--small;
 				color: @color__action-order-btn--small;
+				
+				@media(max-width: 1200px) {
+					font-size: @font-size__action-order-btn--small*@zoom1200;
+				}
 			}
 		}
 	}

@@ -6,6 +6,11 @@ form {
 		box-shadow: @box-shadow__form-input;
 		border-radius: (7px*@zoom);
 		border: none;
+		
+		@media (max-width: 1200px) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 	}
 	
 	button,
@@ -18,6 +23,10 @@ form {
 		font-family: @font-family-bold;
 		border-radius: (7px*@zoom);
 		outline: none;
+		
+		@media (max-width: 1200px) {
+			width: 100%;
+		}
 		
 		&:hover {
 			color: @color__form-btn;

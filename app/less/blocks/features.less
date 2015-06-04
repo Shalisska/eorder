@@ -11,6 +11,10 @@
 		padding-left: (140px*@zoom);
 		font-size: @font-size__features;
 		
+		@media (max-width: 1200px) {
+			padding-left: 80px;
+		}
+		
 		&:before {
 			content: '';
 			position: absolute;
@@ -21,7 +25,13 @@
 			border: @border__features-pict;
 			background-repeat: no-repeat;
 			background-position: center;
+			background-size: 100%, 100%;
 			box-shadow: @box-shadow__features-pict;
+			
+			@media (max-width: 1200px) {
+				width: 70px;
+				height: 70px;
+			}
 		}
 		
 		.generate-features-pict(9);

@@ -1,6 +1,6 @@
 mixin contactsInfo(items)
 	each item in items
-		a.contacts-info__item(class='contacts-info__item--' + item.name href=item.href)=item.text
+		a.contacts-info__item(class='contacts-info__item--' + item.name href=item.href): span=item.text
 
 mixin contactsSocials(items)
 	each item in items
@@ -12,7 +12,7 @@ mixin contactsSocials(items)
 	h2.title-reg.contacts-title Контакты
 	.block-reg.contacts-block
 		.row
-			.col-xs-12
+			.col-lg-12.col-xs-11
 				.contacts-info
 					+contactsInfo([{
 						name: 'phone',
@@ -32,7 +32,7 @@ mixin contactsSocials(items)
 						href:'/'
 					}])
 			
-			.col-xs-10
+			.col-lg-10.col-xs-11
 				include contacts-map-1
 		
 			.col-xs-2

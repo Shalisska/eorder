@@ -59,6 +59,11 @@
 				line-height: 1;
 				text-decoration: none;
 				
+				@media (max-width: 1200px) {
+					padding-top: 35px;
+					font-size: @font-size__action-slider*@zoom1200;
+				}
+				
 				&-leveler {
 					position: absolute;
 					top: 55%;
@@ -70,6 +75,10 @@
 					margin-top: -(35px*@zoom);
 					display: inline-block;
 					font-size: @font-size__action-slider--big;
+					
+					@media (max-width: 1200px) {
+						font-size: @font-size__action-slider--big*@zoom1200;
+					}
 				}
 				
 				&:hover {

@@ -26,6 +26,12 @@
 			border-radius: 50%;
 			box-shadow: @box-shadow__workmap-img;
 			
+			@media (max-width: 1200px) {
+				width: 190px;
+				height: 190px;
+				line-height: 190px;
+			}
+			
 			&:after {
 				content: '';
 				position: absolute;
@@ -35,9 +41,15 @@
 				margin-top: -(24px*@zoom);
 				right: -(70px*@zoom);
 				background: url(../images/common/workmap-arrow.png) no-repeat center center;
+				
+				@media (max-width:1200px) {
+					right: -38px;
+				}
 			}
 			
 			img {
+				width: 100%;
+				height: auto;
 				vertical-align: middle;
 			}
 		}
