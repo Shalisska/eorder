@@ -1,0 +1,67 @@
+-var orderItemDesc01Obj = {}
+mixin orderItemDesc01ObjB(item)
+	-item['value'] = '10 шт.'
+	-item['format'] = 'А4qqqq'
+	-item['quantity'] = '3'
+	-item['paper'] = 'глянцевая'
+	-item['colority'] = '4+4'
+	-item['price_old'] = '13000 р.'
+	-item['price_new'] = '19600 р.'
++orderItemDesc01ObjB(orderItemDesc01Obj)
+
+-var orderItemDesc02Obj = {}
+mixin orderItemDesc02ObjB(item)
+	-item['value'] = '100 шт.'
+	-item['format'] = 'А4'
+	-item['quantity'] = '5'
+	-item['paper'] = 'глянцевая'
+	-item['colority'] = '4+4'
+	-item['price_old'] = '19600 р.'
+	-item['price_new'] = '19600 р.'
++orderItemDesc02ObjB(orderItemDesc02Obj)
+
+-var orderItemDesc03Obj = {}
+mixin orderItemDesc03ObjB(item)
+	-item['value'] = '1000 шт.'
+	-item['format'] = 'А4 (210х297мм)'
+	-item['quantity'] = '8'
+	-item['paper'] = 'глянцевая 150 г/м2'
+	-item['colority'] = '4+4'
+	-item['price_old'] = '19600 р.'
+	-item['price_new'] = '12900 р.'
++orderItemDesc03ObjB(orderItemDesc03Obj)
+
+-var orderItemDesc01 = orderItemDesc01Obj
+-var orderItemDesc02 = orderItemDesc02Obj
+-var orderItemDesc03 = orderItemDesc03Obj
+
+-var orderItemDescBr = [orderItemDesc01, orderItemDesc02, orderItemDesc03]
+
+-var orderItemBr = {}
+mixin orderItemBrObj(item)
+	-item['title'] = 'Бланк'
+	-item['desc'] = orderItemDescBr
++orderItemBrObj(orderItemBr)
+
+mixin orderItemActive(items)
+	each item in items
+		each desc, i in item.desc
+			-var ident = (i + 1)
+			if i === 2
+				.action-order__item(class='tab-pane fade in active' id='action-order_item0' + ident)
+					block orderDesc
+						h3.action-order__item-title=item.title
+							small.action-order__item-title--value=desc.value
+						p.action-order__item-description
+							-var arr = []
+							-arr.push('Формат: '+desc.format)
+							-arr.push('Кол-во полос: '+desc.quantity)
+							-arr.push('Бумага: '+desc.paper)
+							-arr.push('Цветность: '+desc.colority)
+							+textRow(arr)
+						p.action-order__item-price
+							span.action-order__item-price--old=desc.price_old
+							span.action-order__item-price--new=desc.price_new
+			else
+				.action-order__item(class='tab-pane fade' id='action-order_item0' + ident)
+					block orderDesc

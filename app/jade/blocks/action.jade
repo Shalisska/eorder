@@ -3,20 +3,21 @@
 		img(src='../images/common/banner.png')
 
 	.action-block
-		.row
-			.col-xs-13
-				.action-image
-					img(src="../images/action-pict.jpg", alt="sales")
-		
-			.col-xs-11
-				include action_order
-				
-	.action-timer
-		.row
-			.col-xs-10
-				.action-timer__text
-			.col-xs-14
-				.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
+		.action-slider
+			.row
+				.col-xs-13
+					.action-image
+						img(src="../images/action-pict.jpg", alt="sales")
+
+				.col-xs-11
+					include action_order
+
+		.action-timer
+			.row
+				.col-xs-10
+					.action-timer__text
+				.col-xs-14
+					.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
 			
 	nav.action-controls-box
 		+actionControls([{

@@ -1,0 +1,49 @@
+.action#action
+	.action-title
+		img(src='../images/common/banner.png')
+
+	
+		.tab-content
+			include action-block
+			
+			
+	nav.action-controls-box
+		+actionControls([{
+			name: 'Брошюры',
+			id: 'brochure'
+		}, {
+			name: 'Буклеты',
+			id: 'booklet'
+
+		}, {
+			name: 'Каталоги',
+			id: 'catalog'
+
+		}, {
+			name: 'Папки',
+			id: 'file'
+
+		}, {
+			name: 'Блокноты',
+			id: 'notepad'
+
+		}, {
+			name: 'Бланки',
+			id: 'blank'
+
+		}, {
+			name: 'Календари',
+			id: 'calendar'
+
+		}, {
+			name: 'Конверты',
+			id: 'envelop'
+
+		}, {
+			name: 'Визитки',
+			id: 'card'
+
+		}, {
+			name: 'Флаеры',
+			id: 'flyer'
+		}])
