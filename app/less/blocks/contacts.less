@@ -8,10 +8,18 @@
 		padding: 35px (10px*@zoom) 0 (60px*@zoom);
 		font-size: @font-size__contacts-info;
 		
+		@media (max-width: 992px) {
+			padding-left: 10%;
+		}
+		
 		&__item {
 			display: block;
 			margin-bottom: 20px;
 			color: @color__contacts-info;
+			
+			@media (max-width: 992px) {
+				margin-bottom: 10px;
+			}
 
 			&:last-of-type {
 				margin-bottom: 0;
@@ -64,6 +72,11 @@
 	&-map {
 		padding-top: (20px*@zoom);
 		font-family: @font-family-cond;
+		
+		@media (max-width: 992px) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
 		
 		input[type='radio'] {
 			display: none;

@@ -6,13 +6,15 @@
 	&-container {
 		position: relative;
 		padding: 2% 0 (15px*@zoom);
-		
-		
 	}
 	
 	&-logo {
 		padding: 0 (45px*@zoom);
 		text-align: center;
+		
+		@media (max-width: 767px) {
+			padding: 0 1%;
+		}
 		
 		img {
 			max-width: 378px;
@@ -45,6 +47,21 @@
 		@media (max-width: 1200px) {
 			font-size: @font-size__header-pres*@zoom1200;
 		}
+		
+		@media (max-width: 992px) {
+			font-size: @font-size__header-pres_992;
+		}
+		
+		@media (max-width: 900px) {
+			padding-left: 0;
+			padding-right: 0;
+			font-size: @font-size__header-pres_900;
+		}
+		
+		@media (max-width: 767px) {
+			font-size: 13px;
+			padding: 0;
+		}
 	}
 	
 	&-calling {
@@ -68,6 +85,15 @@
 			font-size: @font-size__header-phone*@zoom1050--nav;
 		}
 		
+		@media (max-width: 920px) {
+			font-size: @font-size__header-phone_992;
+		}
+		
+		@media (max-width: 767px) {
+			font-size: 12px;
+			margin-right: 20%;
+		}
+		
 		&--grand {
 			font-family: @font-family-bold;
 			font-size: @font-size__header-phone--grand;
@@ -78,8 +104,16 @@
 			}
 			
 			@media (max-width: 1050px) {
-			font-size: @font-size__header-phone--grand*@zoom1050--nav;
-		}
+				font-size: @font-size__header-phone--grand*@zoom1050--nav;
+			}
+			
+			@media (max-width: 920px) {
+				font-size: @font-size__header-phone_992--grand;
+			}
+			
+			@media (max-width: 767px) {
+				font-size: 14px;
+			}
 		}
 	}
 	
@@ -89,12 +123,33 @@
 		bottom: -5px;
 		max-height: 87px;
 		height: 46%;
+		line-height: 87px;
 		max-width: 358px;
 		width: 90%;
 		background-image: @bg__header-phone;
 		border-radius: (115px*@zoom) 0 0 (115px*@zoom);
 		box-shadow: @box-shadow__header-call;
 		z-index: 10;
+		
+		@media (max-width: 992px) {
+			max-height: 70px;
+		}
+		
+		@media (max-width: 900px) {
+			max-height: 65px;
+		}
+		
+		@media (max-width: 810px) {
+			width: 100%;
+		}
+		
+		@media (max-width: 767px) {
+			top: 0;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			right: -80%;
+		}
 		
 		&__handset {
 			position: absolute;
@@ -105,6 +160,10 @@
 			height: 95%;
 			background: url('../images/phone--header.png') no-repeat left center;
 			background-size: contain;
+			
+			@media (max-width: 767px) {
+				width: 100%;
+			}
 		}
 		
 		&__text {
@@ -125,10 +184,38 @@
 				margin-right: 5%;
 				padding-top: 7%;
 			}
+			
+			@media (max-width: 992px) {
+				font-size: @font-size__header-call_992;
+			}
+			
+			@media (max-width: 900px) {
+				font-size: @font-size__header-call_900;
+			}
+			
+			@media (max-width: 810px) {
+				margin-right: 8%;
+			}
+			
+			@media (max-width: 767px) {
+				font-size: 10px;
+				margin-right: 0;
+				padding-left: 15%;
+			}
 		}
 	}
 	
 
+	#header-menu {
+		padding: 0;
+	}
+	
+	.icon-bar {
+		width: 30px;
+		height: 2px;
+		background: rgba(255, 255, 255, .5);
+	}
+	
 	.nav {
 		&-item {
 			background: @bg-menu;
@@ -150,6 +237,18 @@
 				
 				@media (max-width: 1050px) {
 					font-size: @font-size__header-menu*@zoom1050--nav;
+				}
+				
+				@media (max-width: 992px) {
+					font-size: @font-size__header-menu_992;
+				}
+				
+				@media (max-width: 920px) {
+					padding: 20px 10px 15px;
+				}
+				
+				@media (max-width: 835px) {
+					font-size: @font-size__header-menu_992n;
 				}
 				
 				&:hover {

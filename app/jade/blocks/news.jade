@@ -1,6 +1,6 @@
 mixin newsMenu(items)
 	each item in items
-		.col-xs-8
+		.col-md-8.col-sm-12
 			.news-menu__item
 				.news-menu__item-title: p=item.title
 				.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
@@ -11,18 +11,19 @@ mixin newsMenu(items)
 	.block-reg.news-block.clearfix
 		.row
 			.col-xs-15
-				.news-menu
-					.row
-						+newsMenu([{
-							title: 'I Новость',
-							src: 'logo.png'
-						}, {
-							title: 'II Новость в несколько...',
-							src: 'newspaper.jpg'
-						}, {
-							title: 'III Новость',
-							src: 'figure.jpg'
-						}])
+				.news-menu__inner
+					.news-menu
+						.row
+							+newsMenu([{
+								title: 'I Новость',
+								src: 'logo.png'
+							}, {
+								title: 'II Новость в несколько...',
+								src: 'newspaper.jpg'
+							}, {
+								title: 'III Новость',
+								src: 'figure.jpg'
+							}])
 					.news-menu__controls-box
 						a.news-menu__controls.news-menu__controls--left(href='')
 						a.news-menu__controls.news-menu__controls--right(href='')

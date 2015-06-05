@@ -12,7 +12,7 @@ mixin contactsSocials(items)
 	h2.title-reg.contacts-title Контакты
 	.block-reg.contacts-block
 		.row
-			.col-lg-12.col-xs-11
+			.col-lg-12.col-md-11.col-xs-22
 				.contacts-info
 					+contactsInfo([{
 						name: 'phone',
@@ -32,10 +32,7 @@ mixin contactsSocials(items)
 						href:'/'
 					}])
 			
-			.col-lg-10.col-xs-11
-				include contacts-map-1
-		
-			.col-xs-2
+			.col-xs-2.col-lg-push-10.col-md-push-11
 				.contacts-socials
 					+contactsSocials([{
 						class: 'twitt',
@@ -53,3 +50,8 @@ mixin contactsSocials(items)
 						class: 'google',
 						href: ''
 					}])
+			
+			.col-lg-10.col-md-11.col-xs-24
+				include contacts-map-1
+		
+			

@@ -6,6 +6,12 @@
 	color: @color__footer;
 	box-shadow: @box-shadow__footer;
 	
+	&-container {
+		@media (max-width: 992px) {
+			width: 100%;
+		}
+	}
+	
 	&--main {
 		padding-bottom: (25px*@zoom);
 		border-bottom: (6px*@zoom) solid @border-color;

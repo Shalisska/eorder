@@ -21,3 +21,31 @@ mixin navFooter(items)
 		each item in items
 			li.nav-item
 				a.nav-item__name(href=item.href)=item.name
+				
+				
+mixin nav01(items)
+	nav.header-menu
+		.navbar-header
+			button.navbar-toggle(type='button', data-toggle='collapse' data-target='#header-menu')
+				span.sr-only Menu
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+				
+		.collapse.navbar-collapse#header-menu
+			ul.nav.nav-justified(role='navigation')
+				each item, i in items
+					if item.special === 1
+						if i === pageID
+							li.nav-item.nav-item--special.nav-item--active
+								a.nav-item__name.nav-item__name--active=item.name
+						else
+							li.nav-item.nav-item--special
+								a.nav-item__name(href=item.href)=item.name
+					else
+						if i === pageID
+							li.nav-item.nav-item--active
+								a.nav-item__name.nav-item__name--active=item.name
+						else
+							li.nav-item
+								a.nav-item__name(href=item.href)=item.name
