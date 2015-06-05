@@ -1,0 +1,73 @@
+-var brochure = {}
+mixin brochureObj(item)
+	-item['name'] = 'Брошюры'
+	-item['id'] = 'brochure'
++brochureObj(brochure)
+
+-var booklet = {}
+mixin bookletObj(item)
+	-item['name'] = 'Буклеты'
+	-item['id'] = 'booklet'
++bookletObj(booklet)
+
+-var catalog = {}
+mixin catalogObj(item)
+	-item['name'] = 'Каталоги'
+	-item['id'] = 'catalog'
++catalogObj(catalog)
+
+-var file = {}
+mixin catalogObj(item)
+	-item['name'] = 'Папки'
+	-item['id'] = 'file'
++fileObj(file)
+
+-var notepad = {}
+mixin notepadObj(item)
+	-item['name'] = 'Блокноты'
+	-item['id'] = 'notepad'
++notepadObj(notepad)
+
+-var blank = {}
+mixin blankObj(item)
+	-item['name'] = 'Бланки'
+	-item['id'] = 'blank'
++blankObj(blank)
+
+-var calendar = {}
+mixin calendarObj(item)
+	-item['name'] = 'Календари'
+	-item['id'] = 'calendar'
++calendarObj(calendar)
+
+-var envelop = {}
+mixin envelopObj(item)
+	-item['name'] = 'Конверты'
+	-item['id'] = 'envelop'
++envelopObj(envelop)
+
+-var card = {}
+mixin cardObj(item)
+	-item['name'] = 'Визитки'
+	-item['id'] = 'card'
++cardObj(card)
+
+-var flyer = {}
+mixin flyerObj(item)
+	-item['name'] = 'Флаеры'
+	-item['id'] = 'flyer'
++flyerObj(flyer)
+
+-var actionSlider = []
+mixin actionSliderArr(item)
+	-item.push('brochure')
+	-item.push('booklet')
+	-item.push('catalog')
+	-item.push('file')
+	-item.push('notepad')
+	-item.push('blank')
+	-item.push('calendar')
+	-item.push('envelop')
+	-item.push('card')
+	-item.push('flyer')
++actionSliderArr(actionSlider)
