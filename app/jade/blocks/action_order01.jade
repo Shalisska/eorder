@@ -1,10 +1,17 @@
-mixin order(name, items)
-	each item in items
-		input(type='radio' id='action_order-'+name+item)
-			
-	include action_order-item
-		
-	.action-order__controls.nav.nav-tabs
-		label.action-order__controls-item(class='action-order__controls-item--'+item for='action_order-'+name+item)
+include action_order-item
 
-+order('brochure', ['1', '2', '3'])
+mixin order(name, id, items)
+	each item,i in items
+		if i === 2
+			input(type='radio' id='action_order-'+id+item name=id+'_item' checked)
+		else
+			input(type='radio' id='action_order-'+id+item name=id+'_item')
+
+	+orderItemActive(name, items, actionOrderArr)
+
+	ul.action-order__controls.nav.nav-tabs
+		each item in items
+			li: label.action-order__controls-item(class='action-order__controls-item--'+item for='action_order-'+id+item)
+
+	a.action-order__btn(href='')
+		span.action-order__btn--text Сделать мгновенный заказ

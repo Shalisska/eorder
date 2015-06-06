@@ -52,504 +52,603 @@
     <main>
       <div class="container container--main">
         <div id="action" class="action">
-          <div class="action-title"><img src="../images/common/banner.png">
-            <div class="tab-content">
-                            <div id="action_item-brochure" class="action-slider tab-pane fade in active">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-brochure.jpg" alt="Брошюры"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+          <div class="action-title"><img src="../images/common/banner.png"></div>
+                  <input type="radio" id="action-brochure" name="action_item" checked>
+                  <input type="radio" id="action-booklet" name="action_item">
+                  <input type="radio" id="action-catalog" name="action_item">
+                  <input type="radio" id="action-file" name="action_item">
+                  <input type="radio" id="action-notepad" name="action_item">
+                  <input type="radio" id="action-blank" name="action_item">
+                  <input type="radio" id="action-calendar" name="action_item">
+                  <input type="radio" id="action-envelop" name="action_item">
+                  <input type="radio" id="action-card" name="action_item">
+                  <input type="radio" id="action-flyer" name="action_item">
+                  <div class="action-slider">
+                    <div class="action-slider__item action-slider__item--brochure">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-brochure.jpg" alt="Брошюры"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-brochure1" name="brochure_item">
+                                      <input type="radio" id="action_order-brochure2" name="brochure_item">
+                                      <input type="radio" id="action_order-brochure3" name="brochure_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-brochure1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-brochure2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-brochure3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-booklet" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-booklet.jpg" alt="Буклеты"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--booklet">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-booklet.jpg" alt="Буклеты"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-booklet1" name="booklet_item">
+                                      <input type="radio" id="action_order-booklet2" name="booklet_item">
+                                      <input type="radio" id="action_order-booklet3" name="booklet_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Буклеты<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А5<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Буклеты<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Буклеты<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-booklet1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-booklet2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-booklet3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-catalog" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-catalog.jpg" alt="Каталоги"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--catalog">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-catalog.jpg" alt="Каталоги"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-catalog1" name="catalog_item">
+                                      <input type="radio" id="action_order-catalog2" name="catalog_item">
+                                      <input type="radio" id="action_order-catalog3" name="catalog_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Каталоги<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Каталоги<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Каталоги<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-catalog1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-catalog2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-catalog3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-file" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-file.jpg" alt="Папки"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--file">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-file.jpg" alt="Папки"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-file1" name="file_item">
+                                      <input type="radio" id="action_order-file2" name="file_item">
+                                      <input type="radio" id="action_order-file3" name="file_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Папки<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Папки<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Папки<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-file1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-file2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-file3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-notepad" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-notepad.jpg" alt="Блокноты"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--notepad">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-notepad.jpg" alt="Блокноты"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-notepad1" name="notepad_item">
+                                      <input type="radio" id="action_order-notepad2" name="notepad_item">
+                                      <input type="radio" id="action_order-notepad3" name="notepad_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Блокноты<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Блокноты<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Блокноты<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-notepad1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-notepad2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-notepad3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-blank" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-blank.jpg" alt="Бланки"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--blank">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-blank.jpg" alt="Бланки"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-blank1" name="blank_item">
+                                      <input type="radio" id="action_order-blank2" name="blank_item">
+                                      <input type="radio" id="action_order-blank3" name="blank_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Бланки<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Бланки<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Бланки<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-blank1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-blank2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-blank3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-calendar" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-calendar.jpg" alt="Календари"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--calendar">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-calendar.jpg" alt="Календари"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-calendar1" name="calendar_item">
+                                      <input type="radio" id="action_order-calendar2" name="calendar_item">
+                                      <input type="radio" id="action_order-calendar3" name="calendar_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Календари<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Календари<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Календари<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-calendar1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-calendar2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-calendar3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-envelop" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-envelop.jpg" alt="Конверты"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--envelop">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-envelop.jpg" alt="Конверты"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-envelop1" name="envelop_item">
+                                      <input type="radio" id="action_order-envelop2" name="envelop_item">
+                                      <input type="radio" id="action_order-envelop3" name="envelop_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Конверты<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Конверты<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Конверты<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-envelop1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-envelop2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-envelop3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-card" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-card.jpg" alt="Визитки"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--card">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-card.jpg" alt="Визитки"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-card1" name="card_item">
+                                      <input type="radio" id="action_order-card2" name="card_item">
+                                      <input type="radio" id="action_order-card3" name="card_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Визитки<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Визитки<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Визитки<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-card1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-card2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-card3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div id="action_item-flyer" class="action-slider tab-pane fade">
-                              <div class="action-block">
-                                <div class="row">
-                                  <div class="col-xs-13">
-                                    <div class="action-image"><img src="../images/action/slider/action-pict-flyer.jpg" alt="Флаеры"></div>
-                                  </div>
-                                  <div class="col-xs-11">
-                                    <div class="action-order">
-                                      <div class="tab-content">
-                                                                  <div id="action-order_item01" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">10 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item02" class="action-order__item tab-pane fade">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">100 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
-                                                                  </div>
-                                                                  <div id="action-order_item03" class="action-order__item tab-pane fade in active">
-                                                                    <h3 class="action-order__item-title">Брошюры<small class="action-order__item-title--value">1000 шт.</small></h3>
-                                                                    <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
-                                                                    </p>
-                                                                    <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
-                                                                  </div>
-                                      </div>
-                                      <ul id="action-order_item" class="action-order__controls nav nav-tabs">
-                                        <li><a href="#action-order_item01" class="action-order__controls-item action-order__controls-item--1"></a></li>
-                                        <li><a href="#action-order_item02" class="action-order__controls-item action-order__controls-item--2"></a></li>
-                                        <li class="active"><a href="#action-order_item03" class="action-order__controls-item action-order__controls-item--3"></a></li>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-slider__item action-slider__item--flyer">
+                      <div class="action-block">
+                        <div class="row">
+                          <div class="col-xs-13">
+                            <div class="action-image"><img src="../images/action/slider/action-pict-flyer.jpg" alt="Флаеры"></div>
+                          </div>
+                          <div class="col-xs-11">
+                            <div class="action-order">
+                                      <input type="radio" id="action_order-flyer1" name="flyer_item">
+                                      <input type="radio" id="action_order-flyer2" name="flyer_item">
+                                      <input type="radio" id="action_order-flyer3" name="flyer_item" checked>
+                                              <div class="action-order__item action-order__item--1">
+                                                <h3 class="action-order__item-title">Флаеры<small class="action-order__item-title--value">10 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4qqqq<br/>Кол-во полос: 3<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">13000 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--2">
+                                                <h3 class="action-order__item-title">Флаеры<small class="action-order__item-title--value">100 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4<br/>Кол-во полос: 5<br/>Бумага: глянцевая<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">19600 р.</span></p>
+                                              </div>
+                                              <div class="action-order__item action-order__item--3">
+                                                <h3 class="action-order__item-title">Флаеры<small class="action-order__item-title--value">1000 шт.</small></h3>
+                                                <p class="action-order__item-description">Формат: А4 (210х297мм)<br/>Кол-во полос: 8<br/>Бумага: глянцевая 150 г/м2<br/>Цветность: 4+4
+                                                </p>
+                                                <p class="action-order__item-price"><span class="action-order__item-price--old">19600 р.</span><span class="action-order__item-price--new">12900 р.</span></p>
+                                              </div>
+                                      <ul class="action-order__controls nav nav-tabs">
+                                        <li>
+                                          <label for="action_order-flyer1" class="action-order__controls-item action-order__controls-item--1"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-flyer2" class="action-order__controls-item action-order__controls-item--2"></label>
+                                        </li>
+                                        <li>
+                                          <label for="action_order-flyer3" class="action-order__controls-item action-order__controls-item--3"></label>
+                                        </li>
                                       </ul><a href="" class="action-order__btn"><span class="action-order__btn--text">Сделать мгновенный заказ</span></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="action-timer">
-                                <div class="row">
-                                  <div class="col-xs-10">
-                                    <div class="action-timer__text"></div>
-                                  </div>
-                                  <div class="col-xs-14">
-                                    <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-            </div>
-          </div>
-          <nav class="action-controls-box">
-            <ul id="action_item" class="action-controls nav nav-tabs">
-              <li class="active"><a href="#action_item-brochure" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-brochure.png" alt="Брошюры"/></span><span class="action-controls__item--name">Брошюры</span></a></li>
-              <li><a href="#action_item-booklet" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-booklet.png" alt="Буклеты"/></span><span class="action-controls__item--name">Буклеты</span></a></li>
-              <li><a href="#action_item-catalog" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-catalog.png" alt="Каталоги"/></span><span class="action-controls__item--name">Каталоги</span></a></li>
-              <li><a href="#action_item-file" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-file.png" alt="Папки"/></span><span class="action-controls__item--name">Папки</span></a></li>
-              <li><a href="#action_item-notepad" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-notepad.png" alt="Блокноты"/></span><span class="action-controls__item--name">Блокноты</span></a></li>
-              <li><a href="#action_item-blank" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-blank.png" alt="Бланки"/></span><span class="action-controls__item--name">Бланки</span></a></li>
-              <li><a href="#action_item-calendar" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-calendar.png" alt="Календари"/></span><span class="action-controls__item--name">Календари</span></a></li>
-              <li><a href="#action_item-envelop" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-envelop.png" alt="Конверты"/></span><span class="action-controls__item--name">Конверты</span></a></li>
-              <li><a href="#action_item-card" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-card.png" alt="Визитки"/></span><span class="action-controls__item--name">Визитки</span></a></li>
-              <li><a href="#action_item-flyer" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-flyer.png" alt="Флаеры"/></span><span class="action-controls__item--name">Флаеры</span></a></li>
-            </ul>
-          </nav>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="action-timer">
+                        <div class="row">
+                          <div class="col-xs-10">
+                            <div class="action-timer__text"></div>
+                          </div>
+                          <div class="col-xs-14">
+                            <div class="action-timer__counter"><img src="../images/common/action-timer.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <nav class="action-controls-box">
+                    <ul class="action-controls nav nav-tabs">
+                      <li>
+                        <label for="action-brochure" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-brochure.png" alt="Брошюры"></span><span class="action-controls__item--name">Брошюры</span></label>
+                      </li>
+                      <li>
+                        <label for="action-booklet" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-booklet.png" alt="Буклеты"></span><span class="action-controls__item--name">Буклеты</span></label>
+                      </li>
+                      <li>
+                        <label for="action-catalog" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-catalog.png" alt="Каталоги"></span><span class="action-controls__item--name">Каталоги</span></label>
+                      </li>
+                      <li>
+                        <label for="action-file" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-file.png" alt="Папки"></span><span class="action-controls__item--name">Папки</span></label>
+                      </li>
+                      <li>
+                        <label for="action-notepad" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-notepad.png" alt="Блокноты"></span><span class="action-controls__item--name">Блокноты</span></label>
+                      </li>
+                      <li>
+                        <label for="action-blank" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-blank.png" alt="Бланки"></span><span class="action-controls__item--name">Бланки</span></label>
+                      </li>
+                      <li>
+                        <label for="action-calendar" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-calendar.png" alt="Календари"></span><span class="action-controls__item--name">Календари</span></label>
+                      </li>
+                      <li>
+                        <label for="action-envelop" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-envelop.png" alt="Конверты"></span><span class="action-controls__item--name">Конверты</span></label>
+                      </li>
+                      <li>
+                        <label for="action-card" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-card.png" alt="Визитки"></span><span class="action-controls__item--name">Визитки</span></label>
+                      </li>
+                      <li>
+                        <label for="action-flyer" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-flyer.png" alt="Флаеры"></span><span class="action-controls__item--name">Флаеры</span></label>
+                      </li>
+                    </ul>
+                  </nav>
         </div>
         <div id="popular" class="popular">
           <h2 class="title-reg popular-title">Популярная продукция</h2>
@@ -786,7 +885,7 @@
                 <div class="contacts-socials"><a href="" class="contacts-socials__item contacts-socials__item--twitt"></a><a href="" class="contacts-socials__item contacts-socials__item--vk"></a><a href="" class="contacts-socials__item contacts-socials__item--fb"></a><a href="" class="contacts-socials__item contacts-socials__item--odnoklassniki"></a><a href="" class="contacts-socials__item contacts-socials__item--google"></a>
                 </div>
               </div>
-              <div class="col-lg-10 col-md-11 col-xs-24">
+              <div class="col-lg-10 col-md-11 col-md-pull-2 col-xs-24">
                 <div class="contacts-map">
                                   <input id="varsh" type="radio" name="metro" value="varsh" checked>
                                   <input id="kash" type="radio" name="metro" value="kash">
