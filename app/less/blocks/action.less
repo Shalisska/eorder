@@ -9,6 +9,12 @@
 			width: 100%;
 		}
 	}
+	
+	&-slider {
+		&__item {
+			display: none;
+		}
+	}
 
 	&-block {
 		padding: 20px (95px*@zoom) (27px*@zoom);
@@ -53,6 +59,7 @@
 		
 		&__item {
 			position: relative;
+			display: none;
 			padding: (1px*@zoom) (25px*@zoom);
 			background: @bg__action-order-item;
 			line-height: 1;
@@ -143,18 +150,21 @@
 			li {
 				width: (100% / 3);
 				
-				&.active a {
-					height: (125px*@zoom);
-					background-color: @bg__action-order-controls--active;
-					border: @boder__action-order-controls--active;
-					
-					@media (max-width: 991px) {
-						height: 55px;
-					}
-				}
+//				&.active a {
+//					height: (125px*@zoom);
+//					background-color: @bg__action-order-controls--active;
+//					border: @boder__action-order-controls--active;
+//					
+//					@media (max-width: 991px) {
+//						height: 55px;
+//					}
+//				}
 			}
 			
 			&-item {
+				display: block;
+				margin-bottom: 0;
+				width: 100%;
 				height: (110px*@zoom);
 				background-color: @bg__action-order-controls;
 				background-repeat: no-repeat;
@@ -192,15 +202,13 @@
 			height: (118px*@zoom);
 			text-align: center;
 			line-height: 1;
-			background: @bg__action-order-btn url(../images/common/action_order_btn.png) no-repeat center center;
-			background-size: 90% auto;
+//			background: @bg__action-order-btn url(../images/common/action_order_btn.png) no-repeat center center;
+//			background-size: 90% auto;
 			border: @border__action-order-btn;
 			box-shadow: @box-shadow__action;
 			
 			@media (max-width: 1199px) {
 				height: 70px;
-				background-position: center 90%;
-				background-size: 85% auto;
 			}
 			
 			@media (max-width: 991px) {
@@ -210,6 +218,7 @@
 			&:hover {
 				box-shadow: (0px*@zoom) (2px*@zoom) (6px*@zoom) (0px*@zoom) rgba(35, 31, 32, 0.5);
 				transform: scale(1.02);
+				text-decoration: none;
 			}
 			&:active {
 				box-shadow: inset 0 0 (15px*@zoom) (1px*@zoom) rgba(225, 225, 225, .5), (0px*@zoom) (1px*@zoom) (4px*@zoom) (1px*@zoom) rgba(35, 31, 32, 0.5);
@@ -233,8 +242,24 @@
 				@media(max-width: 991px) {
 					font-size: @font-size__action-order-btn--small*@zoom992;
 				}
+				
+				&-bg {
+					font-size: 110px*@zoom;
+					font-family: @font-family-bold;
+					background-color: black;
+					color: transparent;
+					text-shadow:
+						rgba(255, 0, 0, .5) 0px -1px 0px,
+						rgba(255, 130, 100, .6) -2px -2px 1px ,
+						rgba(0, 0, 0, 0.5) 0px -2px 0px,
+						rgba(0, 0, 0, .2) 1px 3px 3px;
+					
+					
+				}
 			}
 		}
+		
+		.generate-action-order(10);
 	}
 	
 	&-timer {
@@ -244,17 +269,24 @@
 		box-shadow: @box-shadow__action--bottom;
 		
 		&__text {
-			height: (160px*@zoom);
-			background: url(../images/common/action_timer--text.png) no-repeat 70% center;
-//			text-align: center;
-//			font-size: @font-size__action-timer;
-//			color: @color__action-timer;
-//			line-height: 1;
-//
-//			span {
-//				display: block;
-//				text-transform: uppercase;
-//			}
+//			height: (160px*@zoom);
+//			background: url(../images/common/action_timer--text.png) no-repeat 70% center;
+			
+			
+			text-align: center;
+			font-size: @font-size__action-timer;
+			background-color: rgba(0, 0, 0, 0.8);
+			line-height: 1;
+			color: transparent;
+			text-shadow:
+				rgba(255,255,255,0.2) 3px 1px 0px,
+				rgba(255,255,255,0.5) 1px 3px 1px;
+
+			span {
+				display: block;
+				text-transform: uppercase;
+			}
+			
 		}
 	}
 	
@@ -270,8 +302,8 @@
 			padding: 0 (1px*@zoom);
 		}
 		
-		& > li &__item {
-			padding: 0; //for bootstrap
+		&__item {
+			padding: 0;
 			
 			&:hover {
 				border: none;
@@ -281,24 +313,6 @@
 			
 			&:active {
 				box-shadow: @box-shadow__action--active;
-			}
-		}
-		
-		& > li.active &__item {
-			border: none;
-			
-			&--pict,
-			&--name {
-				border-color: @border__action-controls--active;
-			}
-			
-			&--name {
-				color: @color__action-controls--active;
-				border-image-source: @bg__action-controls-grad--active-border;
-			}
-			
-			&:hover {
-				border: none;
 			}
 		}
 		
@@ -343,4 +357,6 @@
 			}
 		}
 	}
+	
+	.generate-action-slider(10);
 }

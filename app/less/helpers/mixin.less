@@ -158,3 +158,100 @@
 	.generate-features-pict(@n, (@i + 1));
 }
 
+.generate-action-order(@n, @i: 1) when (@i =< @n) {
+	@items:
+		brochure,
+		booklet,
+		catalog,
+		file,
+		notepad,
+		blank,
+		calendar,
+		envelop,
+		card,
+		flyer;
+	
+	@item: extract(@items, @i);
+	
+	input[id='action_order-@{item}1'],
+	input[id='action_order-@{item}2'],
+	input[id='action_order-@{item}3'] {display: none;}
+	
+	input[id='action_order-@{item}1']:checked~&__controls label[for='action_order-@{item}1'] {
+		height: (125px*@zoom);
+		background-color: @bg__action-order-controls--active;
+		border: @boder__action-order-controls--active;
+
+		@media (max-width: 991px) {
+			height: 55px;
+		}
+	}
+	
+	input[id='action_order-@{item}2']:checked~&__controls label[for='action_order-@{item}2'] {
+		height: (125px*@zoom);
+		background-color: @bg__action-order-controls--active;
+		border: @boder__action-order-controls--active;
+
+		@media (max-width: 991px) {
+			height: 55px;
+		}
+	}
+	
+	input[id='action_order-@{item}3']:checked~&__controls label[for='action_order-@{item}3'] {
+		height: (125px*@zoom);
+		background-color: @bg__action-order-controls--active;
+		border: @boder__action-order-controls--active;
+
+		@media (max-width: 991px) {
+			height: 55px;
+		}
+	}
+	
+	input[id='action_order-@{item}1']:checked~&__item--1 {display: block;}
+	
+	input[id='action_order-@{item}2']:checked~&__item--2 {display: block;}
+	
+	input[id='action_order-@{item}3']:checked~&__item--3 {display: block;}
+
+	.generate-action-order(@n, (@i + 1));
+}
+
+.generate-action-slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		brochure,
+		booklet,
+		catalog,
+		file,
+		notepad,
+		blank,
+		calendar,
+		envelop,
+		card,
+		flyer;
+	
+	@item: extract(@items, @i);
+	
+	input[id='action-@{item}'] {display: none;}
+	
+	input[id='action-@{item}']:checked~&-controls-box label[for='action-@{item}'] {
+		background: white;
+
+		.action-controls__item--pict,
+		.action-controls__item--name {
+			border-color: @border__action-controls--active;
+		}
+
+		.action-controls__item--name {
+			color: @color__action-controls--active;
+			border-image-source: @bg__action-controls-grad--active-border;
+		}
+	}
+	
+
+	
+	input[id='action-@{item}']:checked~&-slider &-slider__item--@{item} {display: block;}
+
+
+	.generate-action-slider(@n, (@i + 1));
+}
+

@@ -1,61 +1,10 @@
+include action_vars
+include action-block
+include action_order
+include action_order-item
+
 .action#action
 	.action-title
 		img(src='../images/common/banner.png')
-
-	.action-block
-		.action-slider
-			.row
-				.col-xs-13
-					.action-image
-						img(src="../images/action-pict.jpg", alt="sales")
-
-				.col-xs-11
-					include action_order
-
-		.action-timer
-			.row
-				.col-xs-10
-					.action-timer__text
-				.col-xs-14
-					.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
-			
-	nav.action-controls-box
-		+actionControls([{
-			name: 'Брошюры',
-			src: 'action-brochure.png'
-		}, {
-			name: 'Буклеты',
-			src: 'action-booklet.png'
-			
-		}, {
-			name: 'Каталоги',
-			src: 'action-catalog.png'
-			
-		}, {
-			name: 'Папки',
-			src: 'action-file.png'
-			
-		}, {
-			name: 'Блокноты',
-			src: 'action-notepad.png'
-			
-		}, {
-			name: 'Бланки',
-			src: 'action-blank.png'
-			
-		}, {
-			name: 'Календари',
-			src: 'action-calendar.png'
-			
-		}, {
-			name: 'Конверты',
-			src: 'action-envelop.png'
-			
-		}, {
-			name: 'Визитки',
-			src: 'action-card.png'
-			
-		}, {
-			name: 'Флаеры',
-			src: 'action-flyer.png'
-		}])
+	
+	+actionItem(actionArr)

@@ -1,0 +1,6 @@
+.action-order__btn--text-bg,
+.action-timer__text {
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+}

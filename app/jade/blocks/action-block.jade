@@ -1,64 +1,36 @@
 mixin actionItem(items)
 	each item, i in items
 		if i === 0
-			.action-slider(class='tab-pane fade in active' id='action_item-'+item.id)
-				block action_item
-					.action-block
-						.row
-							.col-xs-13
-								.action-image: img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)
-							.col-xs-11
-								include action_order
-					.action-timer
-						.row
-							.col-xs-10
-								.action-timer__text
-							.col-xs-14
-								.action-timer__counter: img(src="../images/common/action-timer.png", alt="")
-
+			input(type='radio' id='action-'+item.id name='action_item' checked)
 		else
-			.action-slider(class='tab-pane fade' id='action_item-'+item.id)
-				block action_item
+			input(type='radio' id='action-'+item.id name='action_item')
+	
+	.action-slider
+		each item in items
+			.action-slider__item(class='action-slider__item--'+item.id)
+				.action-block
+					.row
+						.col-xs-13
+							.action-image: img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)
 
-						
+						.col-xs-11
+							.action-order
+								-var nameItem = item.name
+								+order(nameItem, item.id, ['1', '2', '3'])
+
+				.action-timer
+					.row
+						.col-xs-10
+							.action-timer__text до конца
+								span акции
+						.col-xs-14
+							.action-timer__counter: img(src='../images/common/action-timer.png', alt='')
+
+	nav.action-controls-box
+		ul.action-controls.nav.nav-tabs
+			each item in items
+				li: label.action-controls__item(for='action-'+item.id)
+					span.action-controls__item--pict: img(src='../images/action/action-' + item.id+'.png', alt=item.name)
+					span.action-controls__item--name=item.name
 
 
-+actionItem([{
-	name: 'Брошюры',
-	id: 'brochure'
-}, {
-	name: 'Буклеты',
-	id: 'booklet'
-
-}, {
-	name: 'Каталоги',
-	id: 'catalog'
-
-}, {
-	name: 'Папки',
-	id: 'file'
-
-}, {
-	name: 'Блокноты',
-	id: 'notepad'
-
-}, {
-	name: 'Бланки',
-	id: 'blank'
-
-}, {
-	name: 'Календари',
-	id: 'calendar'
-
-}, {
-	name: 'Конверты',
-	id: 'envelop'
-
-}, {
-	name: 'Визитки',
-	id: 'card'
-
-}, {
-	name: 'Флаеры',
-	id: 'flyer'
-}])
