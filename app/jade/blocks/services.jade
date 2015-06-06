@@ -4,7 +4,9 @@ mixin services(items)
 			a.services-item(href='' class='servises-item--' + item.class)
 				span.services-item__title=item.name
 				img.services-item__img(src='../images/sprite/servises-' + item.src+'.png', alt=item.name)
-				.services-item__text: img(src='../images/sprite/servises-'+item.src+'-text.png', alt=item.text)
+				.services-item__text
+					span=item.text
+					//img(src='../images/sprite/servises-'+item.src+'-text.png', alt=item.text)
 
 
 

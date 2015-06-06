@@ -202,8 +202,6 @@
 			height: (118px*@zoom);
 			text-align: center;
 			line-height: 1;
-//			background: @bg__action-order-btn url(../images/common/action_order_btn.png) no-repeat center center;
-//			background-size: 90% auto;
 			border: @border__action-order-btn;
 			box-shadow: @box-shadow__action;
 			
@@ -236,7 +234,7 @@
 				color: @color__action-order-btn--small;
 				
 				@media(max-width: 1199px) {
-					font-size: @font-size__action-order-btn--small*@zoom1200;
+					font-size: 19px;
 				}
 				
 				@media(max-width: 991px) {
@@ -246,7 +244,7 @@
 				&-bg {
 					font-size: 110px*@zoom;
 					font-family: @font-family-bold;
-					background-color: black;
+					background-color: rgb(60, 0, 0);
 					color: transparent;
 					text-shadow:
 						rgba(255, 0, 0, .5) 0px -1px 0px,
@@ -254,7 +252,13 @@
 						rgba(0, 0, 0, 0.5) 0px -2px 0px,
 						rgba(0, 0, 0, .2) 1px 3px 3px;
 					
+					@media(max-width: 1199px) {
+						font-size: 70px;
+					}
 					
+					@media(max-width: 991px) {
+						font-size: 60px;
+					}
 				}
 			}
 		}

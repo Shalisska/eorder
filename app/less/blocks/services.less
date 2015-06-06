@@ -10,7 +10,7 @@
 		text-transform: uppercase;
 		box-shadow: @box-shadow__services;
 		
-		@media (max-width: 992px) {
+		@media (max-width: 991px) {
 			margin: 0 -10px;
 		}
 		
@@ -32,7 +32,7 @@
 			color: @color__services-title;
 			text-shadow: @text-shadow__services;
 			
-			@media (max-width: 992px) {
+			@media (max-width: 991px) {
 				font-size: @font-size__services-title*@zoom992;
 			}
 		}
@@ -40,7 +40,7 @@
 		&__img {
 			height: auto;
 			
-			@media (max-width: 992px) {
+			@media (max-width: 991px) {
 				width: 45%;
 			}
 		}
@@ -51,10 +51,14 @@
 			height: auto;
 			background: @bg__services-text;
 			
-			img {
-				@media (max-width: 992px) {
-					width: 50%;
-				}
+			span {
+				font-size: 29px;
+				background-color: #0C3B4D;
+				color: transparent;
+				font-weight: bold;
+				text-shadow:
+					-1px -1px 0px rgba(17, 140, 189, 0.2),
+					-2px -2px 1px rgba(255, 255, 255, 0.5);
 			}
 		}
 	}
