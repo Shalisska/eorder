@@ -1,3 +1,47 @@
+@-webkit-keyframes jumping {
+  5% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+            transform: translate(0, 0) scale(1, 1);
+  }
+  25% {
+    -webkit-transform: translate(0, -10%) scale(0.9, 1.05);
+            transform: translate(0, -10%) scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform: translate(0, -20%) scale(1.05, 0.9);
+            transform: translate(0, -20%) scale(1.05, 0.9);
+  }
+  75% {
+    -webkit-transform: translate(0, -10%) scale(0.9, 1.05);
+            transform: translate(0, -10%) scale(0.9, 1.05);
+  }
+  95% {
+    -webkit-transform: translate(0, 10%) scale(1.05, 0.9);
+            transform: translate(0, 10%) scale(1.05, 0.9);
+  }
+}
+@keyframes jumping {
+  5% {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+            transform: translate(0, 0) scale(1, 1);
+  }
+  25% {
+    -webkit-transform: translate(0, -10%) scale(0.9, 1.05);
+            transform: translate(0, -10%) scale(0.9, 1.05);
+  }
+  50% {
+    -webkit-transform: translate(0, -20%) scale(1.05, 0.9);
+            transform: translate(0, -20%) scale(1.05, 0.9);
+  }
+  75% {
+    -webkit-transform: translate(0, -10%) scale(0.9, 1.05);
+            transform: translate(0, -10%) scale(0.9, 1.05);
+  }
+  95% {
+    -webkit-transform: translate(0, 10%) scale(1.05, 0.9);
+            transform: translate(0, 10%) scale(1.05, 0.9);
+  }
+}
 @font-face {
   font-family: 'MyriadPro';
   src: url('../fonts/MyriadPro/MyriadPro-Regular.otf');
@@ -226,6 +270,16 @@ body {
   .header-call__handset {
     width: 100%;
   }
+}
+.header-call__handset:hover {
+  -webkit-animation: jumping;
+          animation: jumping;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .header-call__text {
   width: 100%;
@@ -1025,6 +1079,46 @@ input[id='action_order-flyer3']:checked ~ .action-order__item--3 {
 .action-timer__text span {
   display: block;
   text-transform: uppercase;
+}
+.action-timer__counter {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #c8c8c8;
+  text-align: center;
+  line-height: 1;
+}
+.action-timer__counter img {
+  display: block;
+}
+.action-timer__counter li {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  padding-top: 20px;
+}
+.action-timer__counter li canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.action-timer__counter--time,
+.action-timer__counter--text {
+  display: block;
+}
+.action-timer__counter--time {
+  font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
+  font-size: 50px;
+}
+.action-timer__counter--text {
+  font-size: 15px;
+}
+.action-timer__counter #stop {
+  color: white;
+  font-size: 16px;
+  margin: 15px 10px 10px 25px;
+  position: absolute;
 }
 .action-controls {
   width: 100%;

@@ -1,14 +1,12 @@
-$(document).ready(function(){ 
-	$("#action-order_item a").click(function(e){
-		e.preventDefault();
-		$(this).tab('show');
+$(document).ready(function () {
+$(function() {
+	$('.chart').easyPieChart({
+		scaleColor: false,
+		trackColor: '#e5e5e5',
+		barColor: '#3da8d0',
+		lineWidth: 6,
+		lineCap: 'butt',
+		size: 110
 	});
 });
-
-
-$(document).ready(function(){ 
-	$("#action_item a").click(function(e){
-		e.preventDefault();
-		$(this).tab('show');
-	});
 });

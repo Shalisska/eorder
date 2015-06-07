@@ -1,0 +1,11 @@
+-var timer = [{time: 'day', text: 'дней'}, {time: 'hour', text: 'часов'}, {time: 'min', text: 'минут'}, {time: 'sec', text: 'секунд'}]
+
+
+ul.action-timer__counter#timer
+	img(src='../images/common/action-timer.png', alt='')
+	each item in timer
+		li.chart(id=item.time data-percent=8)
+			span.action-timer__counter--time
+				span(id=item.time+'0') 1
+				span(id=item.time+'1') 2
+			span.action-timer__counter--text=item.text

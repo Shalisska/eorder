@@ -292,6 +292,50 @@
 			}
 			
 		}
+		
+		&__counter {
+			.reset-ul();
+			color: #c8c8c8;
+			text-align: center;
+			line-height: 1;
+			
+			img {display: block;}
+			
+			li {
+				position: relative;
+				display: inline-block;
+				width: 110px;
+				height: 110px;
+				padding-top: 20px;
+				
+				canvas{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+			
+			&--time,
+			&--text {
+				display: block;
+			}
+			
+			&--time {
+				font-family: @font-family-bold;
+				font-size: 50px;
+			}
+			
+			&--text {
+				font-size: 15px;
+			}
+			
+			#stop {
+				color:white;
+				font-size:16px;
+				margin:15px 10px 10px 25px;
+				position:absolute;
+			}
+		}
 	}
 	
 	&-controls {
