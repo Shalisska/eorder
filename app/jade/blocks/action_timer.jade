@@ -4,7 +4,8 @@
 ul.action-timer__counter#timer
 	img(src='../images/common/action-timer.png', alt='')
 	each item in timer
-		li.chart(id=item.time data-percent=8)
+		li.chart(id=item.time class='chart_'+item.time)
+			canvas
 			span.action-timer__counter--time
 				span(id=item.time+'0') 1
 				span(id=item.time+'1') 2

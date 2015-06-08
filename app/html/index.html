@@ -18,19 +18,19 @@
     <header class="header">
       <div class="container-fluid header-container">
         <div class="row">
-          <div class="col-md-8 col-sm-9 col-xs-8">
+          <div class="col-md-8 col-sm-9 header-logo-box">
             <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo-promo.png" alt="e-order"></a>
               <div class="header-logo__slogan"><img src="../images/sprite/header-press.png" alt="Prepress-Press-Postpress"></div>
             </div>
           </div>
-          <div class="col-md-8 col-sm-7 col-xs-8">
+          <div class="col-md-8 col-sm-7 header-presentation-box">
             <p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
           </div>
-          <div class="col-xs-8 header-calling">
-            <p class="header-phone">+7 495 <span class="header-phone--grand">223 9200</span></p><a href="tel:+74952239200" class="header-call"><span class="header-call__text">Звонок за наш счет</span><span class="header-call__handset"></span></a>
-            <div class="navbar-header">
-              <button type="button" data-toggle="collapse" data-target="#header-menu" class="navbar-toggle"><span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-            </div>
+          <div class="col-sm-8 header-calling">
+            <p class="header-phone">+7 495 <span class="header-phone--grand">223 9200</span></p><a href="tel:+74952239200" class="header-call"><span class="header-call__handset"></span><span class="header-call__text">Звонок за наш счет</span><span class="header-call__text header-call__text--tel">+7 495 223 9200</span></a>
+          </div>
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#header-menu" class="navbar-toggle"><span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           </div>
         </div>
       </div>
@@ -116,10 +116,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -176,10 +184,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -236,10 +252,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -296,10 +320,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -356,10 +388,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -416,10 +456,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -476,10 +524,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -536,10 +592,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -596,10 +660,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -656,10 +728,18 @@
                           </div>
                           <div class="col-xs-14">
                             <ul id="timer" class="action-timer__counter"><img src="../images/common/action-timer.png" alt="">
-                              <li id="day" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span></li>
-                              <li id="hour" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span></li>
-                              <li id="min" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span></li>
-                              <li id="sec" data-percent='8' class="chart"><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span></li>
+                              <li id="day" class="chart chart_day">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="day0">1</span><span id="day1">2</span></span><span class="action-timer__counter--text">дней</span>
+                              </li>
+                              <li id="hour" class="chart chart_hour">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="hour0">1</span><span id="hour1">2</span></span><span class="action-timer__counter--text">часов</span>
+                              </li>
+                              <li id="min" class="chart chart_min">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="min0">1</span><span id="min1">2</span></span><span class="action-timer__counter--text">минут</span>
+                              </li>
+                              <li id="sec" class="chart chart_sec">
+                                <canvas></canvas><span class="action-timer__counter--time"><span id="sec0">1</span><span id="sec1">2</span></span><span class="action-timer__counter--text">секунд</span>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -707,13 +787,15 @@
             <div class="popular-slider">
                       <div class="popular-slider__box">
                         <div class="row popular-slider__leveler">
-                          <div class="col-xs-8"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
-                          <div class="col-xs-8"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
-                          <div class="col-xs-8"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
-                          <div class="clearfix popular-slider__row"></div>
-                          <div class="col-xs-8"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
-                          <div class="col-xs-8"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
-                          <div class="col-xs-8 popular-slider__item--all-leveler"><a href="" class="popular-slider__item popular-slider__item--all">Смотреть<br><span class="popular-slider__item--all-bg">все</span></a></div>
+                          <div class="col-md-8 col-xs-12"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
+                          <div class="col-md-8 col-xs-12"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
+                          <div class="clearfix visible-xs visible-sm popular-slider__row"></div>
+                          <div class="col-md-8 col-xs-12"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
+                          <div class="clearfix visible-md popular-slider__row"></div>
+                          <div class="col-md-8 col-xs-12"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
+                          <div class="clearfix visible-xs visible-sm popular-slider__row"></div>
+                          <div class="col-md-8 col-xs-12"><a href="" class="popular-slider__item"><img src="../images/slider-popular01.jpg" alt="Листовка"><span class="popular-slider__item-title">Листовка</span></a></div>
+                          <div class="col-md-8 col-xs-12 popular-slider__item--all-leveler"><a href="" class="popular-slider__item popular-slider__item--all">Смотреть<br><span class="popular-slider__item--all-bg">все</span></a></div>
                         </div>
                       </div>
               <div class="popular-slider__controls-box"><a href="" class="popular-slider__controls popular-slider__controls--left"></a><a href="" class="popular-slider__controls popular-slider__controls--right"></a></div>
@@ -1042,30 +1124,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xs-5">
-              <form action="" method="post" role="form" class="footer-promo form-promo">
-                <p class="title-footer form-promo__title">Ввести промо код</p>
-                <div class="block-footer form-promo__block">
-                  <p class="form-promo__text">У Вас есть промо код?<br>Отлично! Введите его здесь:</p>
-                  <input type="text" placeholder="Промо код" class="form-promo__input form-control">
-                  <button type="submit" class="form-promo__btn btn">Да!</button>
-                </div>
-                <p class="form-promo__sub-text">Участвуйте в акциях!</p>
-              </form>
-            </div>
-            <div class="col-xs-7">
-              <form action="" method="post" role="form" class="footer-signup form-signup">
-                <p class="title-footer form-signup__title">Подписка на новости</p>
-                <div class="block-footer form-signup__block">
-                  <p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
-                  <input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
-                  <input type="text" placeholder="Ваш email" class="form-signup__input form-control">
-                  <button type="submit" class="form-signup__btn btn">Да!</button>
-                </div>
-                <p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
-              </form>
-            </div>
-            <div class="footer-contacts col-xs-5">
+            <div class="footer-contacts col-xs-5 col-sm-push-12">
               <p class="title-footer footer-contacts__title">Контакты</p>
               <div class="block-footer footer-contacts__block">
                 <p class="footer-contacts__item">Телефон: +7 (495) 223-9200</p>
@@ -1074,8 +1133,35 @@
                 <p class="footer-contacts__item">Адрес: Москва, 2-й Котляковский переулок, д.18</p>
               </div><a class="footer-contacts__sub-text">Открыть карту</a>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-4 col-sm-push-12">
               <div class="footer-code"><img src="../images/footer-code.jpg" alt="Штрихкод"></div>
+            </div>
+            <div class="col-sm-12 col-sm-pull-9">
+              <div class="row">
+                <div class="col-sm-10">
+                  <form action="" method="post" role="form" class="footer-promo form-promo">
+                    <p class="title-footer form-promo__title">Ввести промо код</p>
+                    <div class="block-footer form-promo__block">
+                      <p class="form-promo__text">У Вас есть промо код?<br>Отлично! Введите его здесь:</p>
+                      <input type="text" placeholder="Промо код" class="form-promo__input form-control">
+                      <button type="submit" class="form-promo__btn btn">Да!</button>
+                    </div>
+                    <p class="form-promo__sub-text">Участвуйте в акциях!</p>
+                  </form>
+                </div>
+                <div class="col-sm-14">
+                  <form action="" method="post" role="form" class="footer-signup form-signup">
+                    <p class="title-footer form-signup__title">Подписка на новости</p>
+                    <div class="block-footer form-signup__block">
+                      <p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
+                      <input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
+                      <input type="text" placeholder="Ваш email" class="form-signup__input form-control">
+                      <button type="submit" class="form-signup__btn btn">Да!</button>
+                    </div>
+                    <p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row footer--second">

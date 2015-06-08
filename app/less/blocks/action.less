@@ -242,13 +242,14 @@
 				}
 				
 				&-bg {
+					display: block;
 					font-size: 110px*@zoom;
 					font-family: @font-family-bold;
 					background-color: rgb(60, 0, 0);
 					color: transparent;
 					text-shadow:
 						rgba(255, 0, 0, .5) 0px -1px 0px,
-						rgba(255, 130, 100, .6) -2px -2px 1px ,
+						rgba(255, 255, 255, .55) -2px -2px 1px ,
 						rgba(0, 0, 0, 0.5) 0px -2px 0px,
 						rgba(0, 0, 0, .2) 1px 3px 3px;
 					
@@ -257,6 +258,8 @@
 					}
 					
 					@media(max-width: 991px) {
+						
+						padding-top: 5px;
 						font-size: 60px;
 					}
 				}

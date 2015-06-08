@@ -43,6 +43,10 @@ form {
 }
 
 .form-promo {
+	@media (max-width: 991px) {
+		padding-left: 10px;
+	}
+	
 	&__input,
 	&__btn {
 		display: inline-block;
@@ -55,6 +59,10 @@ form {
 	
 	&__sub-text {
 		font-size: @font-size__footer--small;
+		
+		@media (max-width: 991px) {
+			font-size: 11px;
+		}
 	}
 }
 
@@ -62,6 +70,12 @@ form {
 	&__block,
 	&__sub-text {
 		font-size: @font-size__footer--small;
+	}
+	
+	&__sub-text {
+		@media (max-width: 991px) {
+			font-size: 11px;
+		}
 	}
 	
 	&__text {

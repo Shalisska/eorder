@@ -6,6 +6,10 @@
 	color: @color__footer;
 	box-shadow: @box-shadow__footer;
 	
+	@media (max-width: 991px) {
+		font-size: 13px;
+	}
+	
 	&-container {
 		@media (max-width: 991px) {
 			width: 100%;
@@ -50,6 +54,10 @@
 		&__sub-text {
 			color: @color__footer;
 			font-size: @font-size__footer--small;
+			
+			@media (max-width: 991px) {
+				font-size: 11px;
+			}
 			
 			&:before {
 				content: '';
@@ -107,8 +115,19 @@
 		color: @color__footer-socials;
 		text-transform: uppercase;
 		
+		@media(max-width: 911px) {
+			font-size: inherit;
+			text-align: center;
+		}
+		
 		&__text {
 			margin-right: (15px*@zoom);
+			
+			@media(max-width: 911px) {
+				display: inline-block;
+				width: 100%;
+				margin-right: 0;
+			}
 		}
 		
 		&__links {

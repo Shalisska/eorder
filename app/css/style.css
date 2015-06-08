@@ -105,6 +105,16 @@ body {
   position: relative;
   padding: 2% 0 11.25px;
 }
+@media (max-width: 767px) {
+  .header-container {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 580px) {
+  .header-container {
+    padding-bottom: 10px;
+  }
+}
 .header-logo {
   padding: 0 33.75px;
   text-align: center;
@@ -112,6 +122,12 @@ body {
 @media (max-width: 767px) {
   .header-logo {
     padding: 0 1%;
+  }
+}
+@media (max-width: 767px) {
+  .header-logo-box {
+    margin-left: 15px;
+    width: 150px;
   }
 }
 .header-logo img {
@@ -157,8 +173,27 @@ body {
 }
 @media (max-width: 767px) {
   .header-presentation {
+    font-size: 16px;
+    padding: 2% 11% 0;
+  }
+}
+@media (max-width: 580px) {
+  .header-presentation {
     font-size: 13px;
-    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .header-presentation-box {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    padding: 0 165px 0 180px;
+  }
+}
+@media (max-width: 580px) {
+  .header-presentation-box {
+    padding-left: 150px;
+    padding-right: 110px;
   }
 }
 .header-calling {
@@ -167,6 +202,16 @@ body {
   bottom: 0;
   right: 0;
   text-align: right;
+}
+@media (max-width: 767px) {
+  .header-calling {
+    width: 150px;
+  }
+}
+@media (max-width: 580px) {
+  .header-calling {
+    width: 120px;
+  }
 }
 .header-phone {
   padding-top: 5%;
@@ -190,8 +235,12 @@ body {
 }
 @media (max-width: 767px) {
   .header-phone {
-    font-size: 12px;
-    margin-right: 20%;
+    font-size: 13px;
+  }
+}
+@media (max-width: 580px) {
+  .header-phone {
+    font-size: 10px;
   }
 }
 .header-phone--grand {
@@ -216,7 +265,7 @@ body {
 }
 @media (max-width: 767px) {
   .header-phone--grand {
-    font-size: 14px;
+    font-size: inherit;
   }
 }
 .header-call {
@@ -250,10 +299,16 @@ body {
 }
 @media (max-width: 767px) {
   .header-call {
-    top: 0;
-    height: 30px;
-    line-height: 30px;
-    right: -80%;
+    top: 25px;
+    width: 90%;
+    line-height: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 580px) {
+  .header-call {
+    top: 20px;
+    width: 100%;
   }
 }
 .header-call__handset {
@@ -268,7 +323,10 @@ body {
 }
 @media (max-width: 767px) {
   .header-call__handset {
-    width: 100%;
+    width: 24px;
+    height: 24px;
+    top: 1px;
+    left: 1px;
   }
 }
 .header-call__handset:hover {
@@ -315,8 +373,27 @@ body {
 }
 @media (max-width: 767px) {
   .header-call__text {
-    font-size: 10px;
+    position: static;
+    font-size: 9px;
+    padding-left: 20px;
   }
+}
+@media (max-width: 580px) {
+  .header-call__text {
+    position: static;
+    font-size: 8px;
+  }
+}
+.header-call__text--tel {
+  display: none;
+}
+.header .navbar-header {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header .navbar-header button {
+  margin: 0;
 }
 .header #header-menu {
   padding: 0;
@@ -331,6 +408,7 @@ body {
   box-shadow: inset 1.5px 0px 0 0 #383837, inset -0.75px 0px 0 0 #535352;
 }
 .header .nav-item a {
+  margin-bottom: 0;
   padding-top: 26.25px;
   padding-bottom: 22.5px;
   font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
@@ -606,11 +684,12 @@ body {
   }
 }
 .action-order__btn--text-bg {
+  display: block;
   font-size: 82.5px;
   font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
   background-color: #3c0000;
   color: transparent;
-  text-shadow: rgba(255, 0, 0, 0.5) 0px -1px 0px, rgba(255, 130, 100, 0.6) -2px -2px 1px, rgba(0, 0, 0, 0.5) 0px -2px 0px, rgba(0, 0, 0, 0.2) 1px 3px 3px;
+  text-shadow: rgba(255, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.55) -2px -2px 1px, rgba(0, 0, 0, 0.5) 0px -2px 0px, rgba(0, 0, 0, 0.2) 1px 3px 3px;
 }
 @media (max-width: 1199px) {
   .action-order__btn--text-bg {
@@ -619,6 +698,7 @@ body {
 }
 @media (max-width: 991px) {
   .action-order__btn--text-bg {
+    padding-top: 5px;
     font-size: 60px;
   }
 }
@@ -1414,6 +1494,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   bottom: 0;
   right: 0;
 }
+@media (max-width: 991px) {
+  .popular-slider__item--all-leveler {
+    top: 69.8%;
+  }
+}
 .popular-slider__item--all-bg {
   margin-top: -26.25px;
   display: inline-block;
@@ -1698,6 +1783,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   color: transparent;
   font-weight: bold;
   text-shadow: -1px -1px 0px rgba(17, 140, 189, 0.2), -2px -2px 1px rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 991px) {
+  .services-item__text span {
+    font-size: 20.3px;
+  }
 }
 .equipment-block {
   margin-bottom: 45px;
@@ -2384,6 +2474,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   box-shadow: 0px 0px 75px 0px rgba(109, 102, 106, 0.8);
 }
 @media (max-width: 991px) {
+  .footer {
+    font-size: 13px;
+  }
+}
+@media (max-width: 991px) {
   .footer-container {
     width: 100%;
   }
@@ -2414,6 +2509,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .footer-contacts__sub-text {
   color: #e4e1dc;
   font-size: 12.75px;
+}
+@media (max-width: 991px) {
+  .footer-contacts__sub-text {
+    font-size: 11px;
+  }
 }
 .footer-contacts__sub-text:before {
   content: '';
@@ -2458,8 +2558,21 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   color: #8d8d8d;
   text-transform: uppercase;
 }
+@media (max-width: 911px) {
+  .footer-socials {
+    font-size: inherit;
+    text-align: center;
+  }
+}
 .footer-socials__text {
   margin-right: 11.25px;
+}
+@media (max-width: 911px) {
+  .footer-socials__text {
+    display: inline-block;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .footer-socials__links {
   display: inline-block;
@@ -2539,6 +2652,11 @@ form .btn:active:focus {
   color: #ffffff;
   outline: none;
 }
+@media (max-width: 991px) {
+  .form-promo {
+    padding-left: 10px;
+  }
+}
 .form-promo__input,
 .form-promo__btn {
   display: inline-block;
@@ -2550,9 +2668,19 @@ form .btn:active:focus {
 .form-promo__sub-text {
   font-size: 12.75px;
 }
+@media (max-width: 991px) {
+  .form-promo__sub-text {
+    font-size: 11px;
+  }
+}
 .form-signup__block,
 .form-signup__sub-text {
   font-size: 12.75px;
+}
+@media (max-width: 991px) {
+  .form-signup__sub-text {
+    font-size: 11px;
+  }
 }
 .form-signup__text {
   margin-bottom: 12.75px;

@@ -28,32 +28,7 @@ footer.footer
 							href: '/11'
 						}])
 
-				.col-xs-5
-					form.footer-promo.form-promo(action='' method='post' role="form")
-						p.title-footer.form-promo__title Ввести промо код
-						.block-footer.form-promo__block
-							p.form-promo__text
-								| У Вас есть промо код?
-								br
-								| Отлично! Введите его здесь:
-							input.form-promo__input.form-control(type='text' placeholder='Промо код')
-							button.form-promo__btn.btn(type='submit') Да!
-						p.form-promo__sub-text Участвуйте в акциях!
-
-
-				.col-xs-7
-					form.footer-signup.form-signup(action='' method='post' role="form")
-						p.title-footer.form-signup__title Подписка на новости
-						.block-footer.form-signup__block
-							p.form-signup__text
-								| Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?
-							input.form-signup__input.form-control(type='text' placeholder='Ваше имя')
-							input.form-signup__input.form-control(type='text' placeholder='Ваш email')
-							button.form-signup__btn.btn(type='submit') Да!
-						p.form-signup__sub-text Мы никогда не отправляем спам!
-
-
-				.footer-contacts.col-xs-5
+				.footer-contacts.col-xs-5.col-sm-push-12
 					p.title-footer.footer-contacts__title Контакты
 					.block-footer.footer-contacts__block
 						p.footer-contacts__item Телефон: +7 (495) 223-9200
@@ -61,8 +36,15 @@ footer.footer
 						p.footer-contacts__item.footer-contacts__item--skype sale.eorder
 						p.footer-contacts__item Адрес: Москва, 2-й Котляковский переулок, д.18
 					a.footer-contacts__sub-text Открыть карту
-				.col-xs-4
+				
+				
+				.col-xs-4.col-sm-push-12
 					.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
+				
+				
+				.col-sm-12.col-sm-pull-9
+					.row
+						include footer-forms
 
 			.row.footer--second
 				.col-xs-8.footer-logo-block
