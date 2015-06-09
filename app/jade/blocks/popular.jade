@@ -3,19 +3,15 @@ mixin popularSlider(items)
 		.popular-slider__box
 			.row.popular-slider__leveler
 				each item, i in items.splice(0, 5)
-					.col-md-8.col-xs-12
+					.col-xs-8
 						a.popular-slider__item(href='')
 							img(src=item.src, alt=item.alt)
 							span.popular-slider__item-title=item.alt
 					-var j = i+1
-						if (j - (parseInt(j / 2)*2) === 0)
-							if (j != items.length)
-								.clearfix.visible-xs.visible-sm.popular-slider__row
-					-var j = i+1
 						if (j - (parseInt(j / 3)*3) === 0)
 							if (j != items.length)
-								.clearfix.visible-md.popular-slider__row
-				.col-md-8.col-xs-12.popular-slider__item--all-leveler
+								.clearfix.popular-slider__row
+				.col-xs-8.popular-slider__item--all-leveler
 					a.popular-slider__item.popular-slider__item--all(href='')
 						| Смотреть
 						br

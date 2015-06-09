@@ -172,6 +172,6 @@ function get_timer() {
   }
   
   //Вызываем функцию на исполнение
-get_timer();
+//get_timer();
 
 });

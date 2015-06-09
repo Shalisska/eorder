@@ -11,6 +11,12 @@ form {
 			width: 100%;
 			margin-bottom: 10px;
 		}
+		
+		@media (max-width: 575px) {
+			font-size: 10px;
+			height: 23px;
+			
+		}
 	}
 	
 	button,
@@ -28,10 +34,18 @@ form {
 			width: 100%;
 		}
 		
+		@media (max-width: 575px) {
+			font-size: 10px;
+		}
+		
 		&:hover {
 			color: @color__form-btn;
 			box-shadow: @box-shadow__form-btn--hover;
 			transform: scale(1.1);
+			
+			@media (max-width: 1199px) {
+				transform: none;
+			}
 		}
 		
 		&:focus,
@@ -42,9 +56,26 @@ form {
 	}
 }
 
+.form-promo,
+.form-signup {
+	@media (max-width: 575px) {
+		font-size: 10px;
+	}
+}
+
 .form-promo {
 	@media (max-width: 991px) {
 		padding-left: 10px;
+	}
+	
+	@media (max-width: 767px) {
+		padding-left: 0;
+	}
+	
+	&__text {
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 	
 	&__input,
@@ -63,6 +94,10 @@ form {
 		@media (max-width: 991px) {
 			font-size: 11px;
 		}
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 }
 
@@ -76,10 +111,18 @@ form {
 		@media (max-width: 991px) {
 			font-size: 11px;
 		}
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 	
 	&__text {
 		margin-bottom: (17px*@zoom);
+		
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 	
 	&__input,
@@ -90,8 +133,17 @@ form {
 	&__input {
 		width: 40%;
 		
+		@media (max-width: 767px) {
+			width: 48% !important;
+		}
+		
 		&:last-of-type {
 			margin-right: (10px*@zoom);
+			
+			@media (max-width: 767px) {
+				margin-right: 0;
+				margin-left: 3%;
+			}
 		}
 	}
 }

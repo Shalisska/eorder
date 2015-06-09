@@ -90,4 +90,4 @@ function clock(){
   
 };
 
-clock();
+//clock();

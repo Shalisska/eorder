@@ -25,6 +25,10 @@
 			font-size: @font-size__features--922;
 		}
 		
+		@media (max-width: 767px) {
+			padding-left: 70px;
+		}
+		
 		&:before {
 			content: '';
 			position: absolute;
@@ -46,6 +50,11 @@
 			@media (max-width: 991px) {
 				width: 50px;
 				height: 50px;
+			}
+			
+			@media (max-width: 767px) {
+				top: 50%;
+				margin-top: -25px;
 			}
 		}
 		

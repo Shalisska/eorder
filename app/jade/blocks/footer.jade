@@ -2,7 +2,7 @@ footer.footer
 	.container-fluid
 		.container.footer-container
 			.row.footer--main
-				.footer-menu.col-xs-3
+				.footer-menu.col-sm-3.col-xs-7
 					p.title-footer.footer-menu__title Меню
 					.block-footer.footer-menu__block
 						+navFooter ([{
@@ -28,7 +28,7 @@ footer.footer
 							href: '/11'
 						}])
 
-				.footer-contacts.col-xs-5.col-sm-push-12
+				.footer-contacts.col-sm-5.col-xs-11.col-sm-push-12
 					p.title-footer.footer-contacts__title Контакты
 					.block-footer.footer-contacts__block
 						p.footer-contacts__item Телефон: +7 (495) 223-9200
@@ -38,22 +38,22 @@ footer.footer
 					a.footer-contacts__sub-text Открыть карту
 				
 				
-				.col-xs-4.col-sm-push-12
+				.col-sm-4.col-xs-6.col-sm-push-12
 					.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
 				
 				
-				.col-sm-12.col-sm-pull-9
+				.col-sm-12.col-sm-pull-9.col-xs-24
 					.row
 						include footer-forms
 
 			.row.footer--second
-				.col-xs-8.footer-logo-block
+				.col-sm-8.col-xs-7.footer-logo-block
 					a.footer-logo(href='#'): img(src='../images/sprite/footer-logo-promo.png', alt='Eorder promo')
 
-				.col-xs-8
+				.col-sm-8.col-xs-10
 					.footer-press: img(src='../images/sprite/footer-press.png', alt='Prepress-Press-Postpress')
 
-				.col-xs-8
+				.col-sm-8.col-xs-7
 					p.footer-socials
 						span.footer-socials__text Мы в социальных сетях
 						a.footer-socials__links.footer-socials__links--fb(href="")

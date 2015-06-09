@@ -10,20 +10,20 @@ mixin actionItem(items)
 			.action-slider__item(class='action-slider__item--'+item.id)
 				.action-block
 					.row
-						.col-xs-13
+						.col-sm-13.action-image-box
 							.action-image: img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)
 
-						.col-xs-11
+						.col-sm-11.action-order-box
 							.action-order
 								-var nameItem = item.name
 								+order(nameItem, item.id, ['1', '2', '3'])
 
 				.action-timer
 					.row
-						.col-xs-10
-							.action-timer__text до конца
+						.col-sm-10
+							.action-timer__text до конца 
 								span акции
-						.col-xs-14
+						.col-sm-14
 							include action_timer
 
 	nav.action-controls-box
