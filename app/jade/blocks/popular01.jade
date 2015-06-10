@@ -1,27 +1,31 @@
 mixin popularSlider(items)
-	.popular-slider__box
-		.row.popular-slider__leveler
-			each item, i in items
-				.col-md-8.col-sm-12
-					a.popular-slider__item(href='')
-						//img(src=item.src, alt=item.alt)
-						span=i
-						span.popular-slider__item-title=item.alt
-				-var j = i+1
-					if (j - (parseInt(j / 3)*3) === 0)||(j - (parseInt(j / 5)*5) === 0)
-						.col-md-8.col-sm-12
-					
-					if (j - (parseInt(j / 2)*2) === 0)
-						.clearfix.visible-sm.popular-slider__row
-					if (j - (parseInt(j / 3)*3) === 0)
-						.clearfix.visible-md.popular-slider__row
-						
-						
-			.col-md-8.col-sm-12.popular-slider__item--all-leveler
-				a.popular-slider__item.popular-slider__item--all(href='')
-					| Смотреть
-					br
-					span.popular-slider__item--all-bg все
+	-var arr = []
+	while (items.length > 0)
+		-arr.push(items.splice(0, 5))
+		
+	each elem, i in arr
+		if (i === 0)
+			.popular-slider__box
+				block popularSliderInner
+					.row.popular-slider__leveler
+						each el, i in elem
+							.col-xs-8
+								a.popular-slider__item(href='')
+									img(src=el.src, alt=el.alt)
+									span.popular-slider__item-title=el.alt
+							-var j = i+1
+								if (j - (parseInt(j / 3)*3) === 0)
+									if (j != el.length)
+										.clearfix.popular-slider__row
+						.col-xs-8.popular-slider__item--all-leveler
+							a.popular-slider__item.popular-slider__item--all(href='')
+								| Смотреть
+								br
+								span.popular-slider__item--all-bg все
+		else
+			.popular-slider__box
+				block popularSliderInner
+
 
 
 
@@ -30,37 +34,53 @@ mixin popularSlider(items)
 	h2.title-reg.popular-title Популярная продукция
 	.block-reg.popular-block
 		.popular-slider
-			+popularSlider([{
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}, {
-				src: '../images/slider-popular01.jpg',
-				alt: 'Листовка'
-			}])
+			.popular-slider-inner
+				+popularSlider([{
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}, {
+					src: '../images/slider-popular01.jpg',
+					alt: 'Листовка'
+				}])
 			.popular-slider__controls-box
 				a.popular-slider__controls.popular-slider__controls--left(href='')
 				a.popular-slider__controls.popular-slider__controls--right(href='')

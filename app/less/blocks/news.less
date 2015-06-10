@@ -1,7 +1,7 @@
 .news {
 	&-block {
 		position: relative;
-		margin-bottom: (55px*@zoom);
+		margin-bottom: 40px;
 	}
 
 	&-menu {
@@ -9,8 +9,8 @@
 		
 		&__inner {
 			position: relative;
-			height: 294px*@zoom;
-			padding: (15px*@zoom) (45px*@zoom);
+			height: 230px;
+			padding: 10px 45px;
 			background: @bg__news-menu;
 			overflow: hidden;
 			
@@ -26,22 +26,19 @@
 		
 		&__item {
 			position: relative;
-			margin-bottom: 100%;
-			
-			@media (max-width: 991px) {
-				margin-left: -10px;
-				margin-right: -10px;
-			}
+			margin: 0 -10px 100%;
 			
 			&-title {
+				@h: 53px;
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: (65px*@zoom);
+				height: @h;
+				padding: 2px 5px;
 				overflow: hidden;
 				background: @bg__news-menu--title;
-				line-height: (65px*@zoom);
+				line-height: @h;
 				vertical-align: middle;
 				font-size: @font-size__news-menu;
 				color: @color__news-menu;
@@ -57,35 +54,39 @@
 				}
 			}
 			&-img {
-				height: (294px*@zoom);
-				line-height: (294px*@zoom);
+				@h: 210px;
+				height: @h;
+				line-height: @h;
 				
 				@media (max-width: 1199px) {
-					height: 180px;
-					line-height: 180px;
+					@h: 180px;
+					height: @h;
+					line-height: @h;
 				}
 				
 				img {
 					width: 100%;
 					height: auto;
+					vertical-align: bottom;
 				}
 			}
 		}
 		
 		&__controls {
+			@border: 55px;
 			position: absolute;
 			top: 50%;
-			margin-top: -(75px*@zoom);
-			border-top: (75px*@zoom) solid transparent;
-			border-bottom: (75px*@zoom) solid transparent;
+			margin-top: -@border;
+			border-top: @border solid transparent;
+			border-bottom: @border solid transparent;
 			
 			&--left {
-				left: (5px*@zoom);
+				left: 5px;
 				border-right: @news__controls;
 			}
 			
 			&--right {
-				right: (5px*@zoom);
+				right: 5px;
 				border-left: @news__controls;
 			}
 			
@@ -106,8 +107,8 @@
 	}
 	
 	&-item {
-		margin-bottom: (65px*@zoom);
-		padding: (15px*@zoom) (30px*@zoom) (15px*@zoom) (0px*@zoom);
+		margin-bottom: 30px;
+		padding: 10px 20px 10px 0px;
 		
 		&__title {
 			margin: 0;
@@ -125,6 +126,8 @@
 		}
 		
 		&__text {
+			max-height: 110px;
+			overflow: hidden;
 			text-align: justify;
 			font-family: @font-family-cond;
 			font-size: @font-size__news-item;
@@ -146,11 +149,12 @@
 		
 		&__link {
 			position: absolute;
-			bottom: 0;
-			right: (15px*@zoom);
+			bottom: 10px;
+			right: 20px;
 			text-align: right;
 			font-family: @font-family-cond;
 			font-size: @font-size__news-item--link;
+			line-height: 1;
 			color: @color__menu-item--link;
 			text-decoration: underline;
 			font-style: italic;

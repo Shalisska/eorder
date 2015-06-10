@@ -42,6 +42,22 @@
             transform: translate(0, 10%) scale(1.05, 0.9);
   }
 }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: 'MyriadPro';
   src: url('../fonts/MyriadPro/MyriadPro-Regular.otf');
@@ -108,6 +124,10 @@ body {
 }
 .block-footer {
   margin-bottom: 11.25px;
+}
+.popular-show {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 .header {
   margin-bottom: 67.5px;
@@ -780,6 +800,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 88.5px;
+  padding-top: 2%;
   text-align: center;
   line-height: 1;
   border: 2.25px solid #e1e1e1;
@@ -1664,6 +1685,13 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .popular-slider {
   position: relative;
 }
+.popular-slider__box {
+  display: none;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: -webkit-transform 1s ease 0.5s;
+  transition: transform 1s ease 0.5s;
+}
 .popular-slider__row {
   margin-bottom: 5%;
 }
@@ -2151,15 +2179,15 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .news-block {
   position: relative;
-  margin-bottom: 41.25px;
+  margin-bottom: 40px;
 }
 .news-menu {
   text-align: center;
 }
 .news-menu__inner {
   position: relative;
-  height: 220.5px;
-  padding: 11.25px 33.75px;
+  height: 230px;
+  padding: 10px 45px;
   background: #f7f7f5;
   overflow: hidden;
 }
@@ -2176,23 +2204,18 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .news-menu__item {
   position: relative;
-  margin-bottom: 100%;
-}
-@media (max-width: 991px) {
-  .news-menu__item {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
+  margin: 0 -10px 100%;
 }
 .news-menu__item-title {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 48.75px;
+  height: 53px;
+  padding: 2px 5px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.85);
-  line-height: 48.75px;
+  line-height: 53px;
   vertical-align: middle;
   font-size: 27px;
   color: #5e5e5d;
@@ -2208,8 +2231,8 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   line-height: 1;
 }
 .news-menu__item-img {
-  height: 220.5px;
-  line-height: 220.5px;
+  height: 210px;
+  line-height: 210px;
 }
 @media (max-width: 1199px) {
   .news-menu__item-img {
@@ -2220,21 +2243,22 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .news-menu__item-img img {
   width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 .news-menu__controls {
   position: absolute;
   top: 50%;
-  margin-top: -56.25px;
-  border-top: 56.25px solid transparent;
-  border-bottom: 56.25px solid transparent;
+  margin-top: -55px;
+  border-top: 55px solid transparent;
+  border-bottom: 55px solid transparent;
 }
 .news-menu__controls--left {
-  left: 3.75px;
-  border-right: 20.25px solid #f0efed;
+  left: 5px;
+  border-right: 20px solid #f0efed;
 }
 .news-menu__controls--right {
-  right: 3.75px;
-  border-left: 20.25px solid #f0efed;
+  right: 5px;
+  border-left: 20px solid #f0efed;
 }
 .news-menu__controls:hover,
 .news-menu__controls:active {
@@ -2250,26 +2274,28 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
           transform: scale(0.9);
 }
 .news-item {
-  margin-bottom: 48.75px;
-  padding: 11.25px 22.5px 11.25px 0px;
+  margin-bottom: 30px;
+  padding: 10px 20px 10px 0px;
 }
 .news-item__title {
   margin: 0;
-  font-size: 54.75px;
+  font-size: 54px;
   color: #000000;
   line-height: 1;
 }
 @media (max-width: 1199px) {
   .news-item__title {
-    font-size: 49.275px;
+    font-size: 48.6px;
   }
 }
 @media (max-width: 991px) {
   .news-item__title {
-    font-size: 38.325px;
+    font-size: 37.8px;
   }
 }
 .news-item__text {
+  max-height: 110px;
+  overflow: hidden;
   text-align: justify;
   font-family: 'MyriadPro-Cond', 'Arial', sans-serif;
   font-size: 27px;
@@ -2291,11 +2317,12 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .news-item__link {
   position: absolute;
-  bottom: 0;
-  right: 11.25px;
+  bottom: 10px;
+  right: 20px;
   text-align: right;
   font-family: 'MyriadPro-Cond', 'Arial', sans-serif;
   font-size: 27px;
+  line-height: 1;
   color: #247eb2;
   text-decoration: underline;
   font-style: italic;
