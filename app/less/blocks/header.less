@@ -14,6 +14,10 @@
 		@media (max-width: 580px) {
 			padding-bottom: 10px;
 		}
+		
+		@media (max-width: 479px) {
+			width: 480px;
+		}
 	}
 	
 	&-logo {
@@ -224,6 +228,10 @@
 				animation-duration: .5s;
 				animation-iteration-count: infinite;
 				animation-fill-mode: forwards;
+				
+				@media (max-width: 767px) {
+					animation: none;
+				}
 			}
 		}
 		
@@ -326,6 +334,10 @@
 				
 				@media (max-width: 835px) {
 					font-size: @font-size__header-menu_992n;
+				}
+				
+				@media (max-width: 767px) {
+					padding: 10px;
 				}
 				
 				&:hover {

@@ -20,6 +20,10 @@
 			@media (max-width: 991px) {
 				margin-bottom: 10px;
 			}
+			
+			@media (max-width: 600px) {
+				font-size: 16px;
+			}
 
 			&:last-of-type {
 				margin-bottom: 0;
@@ -30,7 +34,7 @@
 				width: 80%;
 				vertical-align: middle;
 				
-				@media (max-width:1200px) {
+				@media (max-width:1199px) {
 					width: 75%;
 				}
 			}
@@ -48,6 +52,12 @@
 				vertical-align: middle;
 				background-repeat: no-repeat;
 				background-position: center;
+				background-size: contain;
+				
+				@media (max-width: 600px) {
+					width: 40px;
+					height: 40px;
+				}
 			}
 			
 			&--phone:before {
@@ -266,6 +276,10 @@
 		margin-top: (80px*@zoom);
 		margin-right: (15px*@zoom);
 		width: (56px*@zoom);
+		
+		@media (max-width: 600px) {
+			margin-top: 15px;
+		}
 		
 		&__item {
 			display: block;

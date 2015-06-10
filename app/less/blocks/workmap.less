@@ -8,7 +8,33 @@
 	&-item {
 		overflow: visible;
 		
+		@media (max-width: 767px) {
+			position: relative;
+			margin-bottom: 35px;
+			padding: 3%;
+			background-color: rgba(0, 0, 0, 0.05);
+			box-shadow: inset 0px -2px 1px 1px rgba(255, 255, 255, 0.9), inset 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+		}
+		
+		&:after {
+			@media (max-width: 767px) {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				margin-left: -16px;
+				border-top: 20px solid gray;
+				border-left: 20px solid transparent;
+				transform: rotate(136deg);
+				box-shadow: 4px -2px 2px -2px black;
+			}
+		}
+		
 		&__box:last-of-type {
+			.workmap-item:after {
+				display: none;
+			}
+			
 			.workmap-item__img:after {
 				display: none;
 			}
@@ -38,6 +64,12 @@
 				line-height: 130px;
 			}
 			
+			@media (max-width: 767px) {
+				width: 90px;
+				height: 90px;
+				line-height: 90px;
+			}
+			
 			&:after {
 				content: '';
 				position: absolute;
@@ -50,6 +82,10 @@
 				
 				@media (max-width:1199px) {
 					right: -38px;
+				}
+				
+				@media (max-width: 767px) {
+					display: none;
 				}
 			}
 			

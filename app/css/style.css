@@ -74,6 +74,13 @@ body {
 body {
   font-family: 'MyriadPro', 'Arial', sans-serif;
 }
+@media (max-width: 479px) {
+  header,
+  main,
+  footer {
+    overflow: visible;
+  }
+}
 .title-reg {
   margin-bottom: 0;
   padding: 15px 5% 15px;
@@ -119,6 +126,11 @@ body {
 @media (max-width: 580px) {
   .header-container {
     padding-bottom: 10px;
+  }
+}
+@media (max-width: 479px) {
+  .header-container {
+    width: 480px;
   }
 }
 .header-logo {
@@ -346,6 +358,12 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+@media (max-width: 767px) {
+  .header-call__handset:hover {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 .header-call__text {
   width: 100%;
   position: absolute;
@@ -450,6 +468,11 @@ body {
     font-size: 13px;
   }
 }
+@media (max-width: 767px) {
+  .header .nav-item a {
+    padding: 10px;
+  }
+}
 .header .nav-item a:hover {
   background: linear-gradient(#91918f, #7f7f7d);
 }
@@ -462,6 +485,11 @@ body {
   background: #f0efed;
   border-radius: 22.5px;
   box-shadow: 0px 7.5px 9.75px 0px rgba(35, 31, 32, 0.26);
+}
+@media (max-width: 479px) {
+  .container--main {
+    width: 480px;
+  }
 }
 .action {
   margin-bottom: 60px;
@@ -1868,6 +1896,32 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .workmap-item {
   overflow: visible;
 }
+@media (max-width: 767px) {
+  .workmap-item {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px -2px 1px 1px rgba(255, 255, 255, 0.9), inset 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+@media (max-width: 767px) {
+  .workmap-item:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -16px;
+    border-top: 20px solid gray;
+    border-left: 20px solid transparent;
+    -webkit-transform: rotate(136deg);
+            transform: rotate(136deg);
+    box-shadow: 4px -2px 2px -2px #000000;
+  }
+}
+.workmap-item__box:last-of-type .workmap-item:after {
+  display: none;
+}
 .workmap-item__box:last-of-type .workmap-item__img:after {
   display: none;
 }
@@ -1897,6 +1951,13 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     line-height: 130px;
   }
 }
+@media (max-width: 767px) {
+  .workmap-item__img {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+  }
+}
 .workmap-item__img:after {
   content: '';
   position: absolute;
@@ -1910,6 +1971,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 1199px) {
   .workmap-item__img:after {
     right: -38px;
+  }
+}
+@media (max-width: 767px) {
+  .workmap-item__img:after {
+    display: none;
   }
 }
 .workmap-item__img img {
@@ -1967,6 +2033,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     font-size: 17.325px;
   }
 }
+@media (max-width: 620px) {
+  .services-item__title {
+    font-size: 12px;
+  }
+}
 .services-item__img {
   height: auto;
 }
@@ -1975,11 +2046,22 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     width: 45%;
   }
 }
+@media (max-width: 620px) {
+  .services-item__img {
+    width: 30%;
+  }
+}
 .services-item__text {
   margin-top: -11.25px;
   padding: 11.25px 0;
   height: auto;
   background: #f8f7f6;
+}
+@media (max-width: 620px) {
+  .services-item__text {
+    margin-top: 5px;
+    padding: 5px 0;
+  }
 }
 .services-item__text span {
   font-size: 29px;
@@ -1991,6 +2073,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 991px) {
   .services-item__text span {
     font-size: 20.3px;
+  }
+}
+@media (max-width: 620px) {
+  .services-item__text span {
+    font-size: 15px;
   }
 }
 .equipment-block {
@@ -2246,6 +2333,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     margin-bottom: 10px;
   }
 }
+@media (max-width: 600px) {
+  .contacts-info__item {
+    font-size: 16px;
+  }
+}
 .contacts-info__item:last-of-type {
   margin-bottom: 0;
 }
@@ -2254,7 +2346,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   width: 80%;
   vertical-align: middle;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .contacts-info__item span {
     width: 75%;
   }
@@ -2271,6 +2363,13 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+}
+@media (max-width: 600px) {
+  .contacts-info__item:before {
+    width: 40px;
+    height: 40px;
+  }
 }
 .contacts-info__item--phone:before {
   background-image: url(../images/sprite/contacts-phone.png);
@@ -2532,6 +2631,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   margin-right: 11.25px;
   width: 42px;
 }
+@media (max-width: 600px) {
+  .contacts-socials {
+    margin-top: 15px;
+  }
+}
 .contacts-socials__item {
   display: block;
   margin-bottom: 2.25px;
@@ -2686,6 +2790,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 @media (max-width: 991px) {
   .footer-container {
     width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .footer-container {
+    width: 480px;
   }
 }
 .footer--main {
@@ -2870,6 +2979,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 @media (max-width: 767px) {
   .footer-signature {
     font-size: 6px;
+  }
+}
+@media (max-width: 479px) {
+  .footer-signature {
+    width: 480px;
   }
 }
 form input[type='text'] {
