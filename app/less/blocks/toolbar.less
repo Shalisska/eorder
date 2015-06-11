@@ -1,5 +1,4 @@
 .toolbar {
-	//display: none;
 	position: fixed;
 	z-index: 50;
 	background-repeat: no-repeat;
@@ -16,11 +15,29 @@
 		
 		&--right {
 			bottom: 0;
-			width: 80px;
+			width: 10px;
+			transition: width 1s ease;
 			
-			&:hover .toolbar--right{
-				//display: block;
-				transform: translate(0, 0);
+			&:hover {
+				width: 80px;
+				
+				.toolbar--right{
+					transform: translate(0, 0);
+				}
+			}
+		}
+		
+		&--top {
+			left: 0;
+			height: 10px;
+			transition: height 1s ease;
+			
+			&:hover {
+				height: 80px;
+				
+				.toolbar--top{
+					transform: translate(0, 0);
+				}
 			}
 		}
 	}
@@ -101,6 +118,7 @@
 		height: 111px;
 		background: url('../images/toolbar/toolbar-top.png');
 		text-align: center;
+		transform: translate(0, -100%);
 		
 		.toolbar__item {
 			width: 35%;

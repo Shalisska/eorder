@@ -3,7 +3,6 @@
 	
 	&-title {
 		width: 100%;
-		margin-bottom: (35px*@zoom);
 		
 		img {
 			width: 100%;
@@ -11,6 +10,12 @@
 	}
 	
 	&-slider {
+		position: relative;
+		z-index: 10;
+		padding-top: (35px*@zoom);
+		overflow: hidden;
+		box-shadow: @box-shadow__action--bottom;
+		
 		&__item {
 			display: none;
 		}
@@ -83,9 +88,6 @@
 			padding-bottom: 65px;
 		}
 		
-		@media (max-width: 767px) {}
-		@media (max-width: 700px) {}
-		@media (max-width: 600px) {}
 		@media (max-width: 550px) {
 			padding-bottom: 0;
 		}
@@ -120,7 +122,7 @@
 			@media (max-width: 700px) {
 				padding: 10px 3% 5px;
 			}
-			@media (max-width: 600px) {}
+			
 			@media (max-width: 550px) {
 				
 			}
@@ -138,16 +140,11 @@
 					font-size: @font-size__action-order-title*@zoom992;
 				}
 				
-				@media (max-width: 767px) {
-				}
 				@media (max-width: 700px) {
 					margin-top: 0;
 				}
 				@media (max-width: 600px) {
 					font-size: 30px;
-				}
-				@media (max-width: 550px) {
-					
 				}
 				
 				&--value {
@@ -189,14 +186,8 @@
 			}
 			
 			&-price {
-				@media (max-width: 767px) {
-				}
 				@media (max-width: 700px) {
 					margin-bottom: 0;
-				}
-				@media (max-width: 600px) {}
-				@media (max-width: 550px) {
-					
 				}
 				
 				&--old,
@@ -219,16 +210,8 @@
 						font-size: @font-size__action-order-price*@zoom992;
 					}
 					
-					@media (max-width: 767px) {
-					}
 					@media (max-width: 700px) {
 						font-size: 20px;
-					}
-					@media (max-width: 600px) {
-						
-					}
-					@media (max-width: 550px) {
-						
 					}
 				}
 				
@@ -245,17 +228,11 @@
 						font-size: @font-size__action-order-price--new*@zoom992;
 					}
 					
-					@media (max-width: 767px) {
-					}
 					@media (max-width: 700px) {
 						font-size: 30px;
 					}
 					@media (max-width: 600px) {
 						font-size: 25px;
-						
-					}
-					@media (max-width: 550px) {
-						
 					}
 				}
 			}
@@ -415,10 +392,6 @@
 		box-shadow: @box-shadow__action--bottom;
 		
 		&__text {
-//			height: (160px*@zoom);
-//			background: url(../images/common/action_timer--text.png) no-repeat 70% center;
-			
-			
 			text-align: center;
 			font-size: @font-size__action-timer;
 			background-color: rgba(0, 0, 0, 0.8);
@@ -504,7 +477,6 @@
 		@media(max-width:700px) {
 			padding: 0;
 		}
-		
 		
 		li {
 			width: (100% / 10);

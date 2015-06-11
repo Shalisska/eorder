@@ -177,26 +177,8 @@
 	input[id='action_order-@{item}2'],
 	input[id='action_order-@{item}3'] {display: none;}
 	
-	input[id='action_order-@{item}1']:checked~&__controls label[for='action_order-@{item}1'] {
-		height: (125px*@zoom);
-		background-color: @bg__action-order-controls--active;
-		border: @boder__action-order-controls--active;
-
-		@media (max-width: 991px) {
-			height: 55px;
-		}
-	}
-	
-	input[id='action_order-@{item}2']:checked~&__controls label[for='action_order-@{item}2'] {
-		height: (125px*@zoom);
-		background-color: @bg__action-order-controls--active;
-		border: @boder__action-order-controls--active;
-
-		@media (max-width: 991px) {
-			height: 55px;
-		}
-	}
-	
+	input[id='action_order-@{item}1']:checked~&__controls label[for='action_order-@{item}1'],
+	input[id='action_order-@{item}2']:checked~&__controls label[for='action_order-@{item}2'],
 	input[id='action_order-@{item}3']:checked~&__controls label[for='action_order-@{item}3'] {
 		height: (125px*@zoom);
 		background-color: @bg__action-order-controls--active;
@@ -207,11 +189,14 @@
 		}
 	}
 	
-	input[id='action_order-@{item}1']:checked~&__item--1 {display: block;}
-	
-	input[id='action_order-@{item}2']:checked~&__item--2 {display: block;}
-	
-	input[id='action_order-@{item}3']:checked~&__item--3 {display: block;}
+	input[id='action_order-@{item}1']:checked~&__item--1,
+	input[id='action_order-@{item}2']:checked~&__item--2,
+	input[id='action_order-@{item}3']:checked~&__item--3 {
+		display: block;
+		animation: show .9s;
+		animation-fill-mode: forwards;
+	}
+
 
 	.generate-action-order(@n, (@i + 1));
 }
@@ -249,7 +234,11 @@
 	
 
 	
-	input[id='action-@{item}']:checked~&-slider &-slider__item--@{item} {display: block;}
+	input[id='action-@{item}']:checked~&-slider &-slider__item--@{item} {
+		display: block;
+		animation: show 1s;
+		animation-fill-mode: forwards;
+	}
 
 
 	.generate-action-slider(@n, (@i + 1));
