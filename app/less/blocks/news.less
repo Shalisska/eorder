@@ -1,9 +1,10 @@
 .news {
 	&-block {
-		position: relative;
 		margin-bottom: 40px;
 	}
 
+	.generate-news-slider(3);
+	
 	&-menu {
 		text-align: center;
 		
@@ -26,7 +27,10 @@
 		
 		&__item {
 			position: relative;
+			display: block;
+			max-width: none;
 			margin: 0 -10px 100%;
+			cursor: pointer;
 			
 			&-title {
 				@h: 53px;
@@ -36,20 +40,20 @@
 				width: 100%;
 				height: @h;
 				padding: 2px 5px;
-				overflow: hidden;
 				background: @bg__news-menu--title;
 				line-height: @h;
 				vertical-align: middle;
 				font-size: @font-size__news-menu;
 				color: @color__news-menu;
 				
-				@media (max-width: 992px) {
-					font-size: @font-size__news-menu*@zoom992;
+				@media (max-width: 991px) {
+//					font-size: @font-size__news-menu*@zoom992;
 				}
 				
 				p {
 					display: inline-block;
 					margin: 0;
+					height: 110%;
 					line-height: 1;
 				}
 			}
@@ -80,14 +84,29 @@
 			border-top: @border solid transparent;
 			border-bottom: @border solid transparent;
 			
+			@media (max-width: 1199px) {
+				@border: 45px;
+				margin-top: -@border;
+				border-top-width: @border;
+				border-bottom-width: @border;
+			}
+			
 			&--left {
-				left: 5px;
+				left: 3px;
 				border-right: @news__controls;
+				
+				@media (max-width: 1199px) {
+					border-right-width: @news__controls--1199;
+				}
 			}
 			
 			&--right {
-				right: 5px;
+				right: 3px;
 				border-left: @news__controls;
+				
+				@media (max-width: 1199px) {
+					border-left-width: @news__controls--1199;
+				}
 			}
 			
 			&:hover,
@@ -109,6 +128,16 @@
 	&-item {
 		margin-bottom: 30px;
 		padding: 10px 20px 10px 0px;
+		display: none;
+		
+		&__box {
+			position: relative;
+			height: 230px;
+			
+			@media (max-width: 1199px) {
+				height: 200px;
+			}
+		}
 		
 		&__title {
 			margin: 0;
@@ -121,7 +150,7 @@
 			}
 			
 			@media (max-width: 991px) {
-				font-size: @font-size__news-item--title*@zoom992;
+//				font-size: @font-size__news-item--title*@zoom992;
 			}
 		}
 		
@@ -139,7 +168,7 @@
 			}
 			
 			@media (max-width: 991px) {
-				font-size: @font-size__news-item*@zoom992;
+//				font-size: @font-size__news-item*@zoom992;
 			}
 			
 			p {
@@ -164,7 +193,7 @@
 			}
 			
 			@media (max-width: 991px) {
-				font-size: @font-size__news-item--link*@zoom992;
+//				font-size: @font-size__news-item--link*@zoom992;
 			}
 		}
 	}

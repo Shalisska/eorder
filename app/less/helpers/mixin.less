@@ -255,3 +255,19 @@
 	.generate-action-slider(@n, (@i + 1));
 }
 
+.generate-news-slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		news1,
+		news2,
+		news3;
+	
+	@item: extract(@items, @i);
+	
+	input#@{item} {display: none;}
+	
+	input#@{item}:checked~.row .news-item--@{item} {display: block;}
+
+
+	.generate-news-slider(@n, (@i + 1));
+}
+

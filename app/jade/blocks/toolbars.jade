@@ -1,7 +1,3 @@
-mixin toolbarRight(items)
-	.toolbar.toolbar--right
-		each item in items
-			a.toolbar__item(class='toolbar__item--'+item.name href=item.href): img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)
 
 
 mixin toolbarTop(items)
@@ -11,19 +7,6 @@ mixin toolbarTop(items)
 
 
 
-+toolbarRight([{
-	name: 'search',
-	href: '#',
-	alt: 'Поиск'
-}, {
-	name: 'cart',
-	href: '#',
-	alt: 'Корзина'
-}, {
-	name: 'profile',
-	href: '#',
-	alt: 'Личный кабинет'
-}])
 
 +toolbarTop([{
 	name: 'search',

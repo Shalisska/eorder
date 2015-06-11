@@ -1,10 +1,29 @@
 .toolbar {
-	display: none;
+	//display: none;
 	position: fixed;
 	z-index: 50;
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
+	transition: transform 1s ease;
+	
+	&__box {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		overflow: hidden;
+		
+		&--right {
+			bottom: 0;
+			width: 80px;
+			
+			&:hover .toolbar--right{
+				//display: block;
+				transform: translate(0, 0);
+			}
+		}
+	}
 	
 	&__item {
 		display: inline-block;
@@ -38,6 +57,7 @@
 		height: 465px;
 		background-image: url(../images/toolbar/toolbar-right.png);
 		text-align: right;
+		transform: translate(100%, 0);
 		
 		.toolbar__item {
 			width: 92%;

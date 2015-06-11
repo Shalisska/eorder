@@ -90,6 +90,9 @@ body {
 body {
   font-family: 'MyriadPro', 'Arial', sans-serif;
 }
+main {
+  position: relative;
+}
 @media (max-width: 479px) {
   header,
   main,
@@ -124,10 +127,6 @@ body {
 }
 .block-footer {
   margin-bottom: 11.25px;
-}
-.popular-show {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
 }
 .header {
   margin-bottom: 67.5px;
@@ -772,6 +771,7 @@ body {
   background-size: 90% auto;
   vertical-align: top;
   box-shadow: inset 0px 0px 7.5px 0.75px rgba(204, 204, 204, 0.7);
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   .action-order__controls-item {
@@ -1438,6 +1438,7 @@ input[id='action_order-flyer3']:checked ~ .action-order__item--3 {
 }
 .action-controls__item {
   padding: 0;
+  cursor: pointer;
 }
 .action-controls__item:hover {
   border: none;
@@ -1686,26 +1687,38 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   position: relative;
 }
 .popular-slider__box {
-  display: none;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  transition: -webkit-transform 1s ease 0.5s;
-  transition: transform 1s ease 0.5s;
+  height: 562px;
+}
+@media (max-width: 1199px) {
+  .popular-slider__box {
+    height: 455px;
+  }
+}
+@media (max-width: 991px) {
+  .popular-slider__box {
+    height: 513px;
+  }
 }
 .popular-slider__row {
-  margin-bottom: 5%;
+  height: 100%;
 }
-.popular-slider__leveler {
-  position: relative;
+.popular-slider__col {
+  display: none;
 }
 .popular-slider__item {
   position: relative;
   display: block;
   max-width: 345px;
   width: 100%;
+  margin-bottom: 16%;
   text-align: center;
   box-shadow: 0px 0.75px 3px 0 rgba(35, 31, 32, 0.5);
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .popular-slider__item {
+    margin-bottom: 10%;
+  }
 }
 .popular-slider__item img {
   width: 100%;
@@ -1735,6 +1748,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   color: #8b8987;
   line-height: 1;
   text-decoration: none;
+  opacity: 1;
 }
 @media (max-width: 1199px) {
   .popular-slider__item--all {
@@ -1743,10 +1757,12 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   }
 }
 .popular-slider__item--all-leveler {
-  position: absolute;
-  top: 55%;
-  bottom: 0;
-  right: 0;
+  height: 45%;
+}
+@media (max-width: 991px) {
+  .popular-slider__item--all-leveler {
+    height: 46%;
+  }
 }
 .popular-slider__item--all-bg {
   margin-top: -26.25px;
@@ -1797,6 +1813,24 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .popular-slider__controls--right:active {
   right: -42px;
+}
+@media (min-width: 992px) {
+  .popular-show {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .popular-show-sm {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
 }
 .features {
   margin-bottom: 56.25px;
@@ -2178,8 +2212,25 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   max-width: 95%;
 }
 .news-block {
-  position: relative;
   margin-bottom: 40px;
+}
+.news input#news1 {
+  display: none;
+}
+.news input#news1:checked ~ .row .news-item--news1 {
+  display: block;
+}
+.news input#news2 {
+  display: none;
+}
+.news input#news2:checked ~ .row .news-item--news2 {
+  display: block;
+}
+.news input#news3 {
+  display: none;
+}
+.news input#news3:checked ~ .row .news-item--news3 {
+  display: block;
 }
 .news-menu {
   text-align: center;
@@ -2204,7 +2255,10 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .news-menu__item {
   position: relative;
+  display: block;
+  max-width: none;
   margin: 0 -10px 100%;
+  cursor: pointer;
 }
 .news-menu__item-title {
   position: absolute;
@@ -2213,21 +2267,16 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   width: 100%;
   height: 53px;
   padding: 2px 5px;
-  overflow: hidden;
   background: rgba(255, 255, 255, 0.85);
   line-height: 53px;
   vertical-align: middle;
   font-size: 27px;
   color: #5e5e5d;
 }
-@media (max-width: 992px) {
-  .news-menu__item-title {
-    font-size: 18.9px;
-  }
-}
 .news-menu__item-title p {
   display: inline-block;
   margin: 0;
+  height: 110%;
   line-height: 1;
 }
 .news-menu__item-img {
@@ -2252,13 +2301,30 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   border-top: 55px solid transparent;
   border-bottom: 55px solid transparent;
 }
+@media (max-width: 1199px) {
+  .news-menu__controls {
+    margin-top: -45px;
+    border-top-width: 45px;
+    border-bottom-width: 45px;
+  }
+}
 .news-menu__controls--left {
-  left: 5px;
+  left: 3px;
   border-right: 20px solid #f0efed;
 }
+@media (max-width: 1199px) {
+  .news-menu__controls--left {
+    border-right-width: 15px;
+  }
+}
 .news-menu__controls--right {
-  right: 5px;
+  right: 3px;
   border-left: 20px solid #f0efed;
+}
+@media (max-width: 1199px) {
+  .news-menu__controls--right {
+    border-left-width: 15px;
+  }
 }
 .news-menu__controls:hover,
 .news-menu__controls:active {
@@ -2276,6 +2342,16 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .news-item {
   margin-bottom: 30px;
   padding: 10px 20px 10px 0px;
+  display: none;
+}
+.news-item__box {
+  position: relative;
+  height: 230px;
+}
+@media (max-width: 1199px) {
+  .news-item__box {
+    height: 200px;
+  }
 }
 .news-item__title {
   margin: 0;
@@ -2286,11 +2362,6 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 1199px) {
   .news-item__title {
     font-size: 48.6px;
-  }
-}
-@media (max-width: 991px) {
-  .news-item__title {
-    font-size: 37.8px;
   }
 }
 .news-item__text {
@@ -2305,11 +2376,6 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 1199px) {
   .news-item__text {
     font-size: 24.3px;
-  }
-}
-@media (max-width: 991px) {
-  .news-item__text {
-    font-size: 18.9px;
   }
 }
 .news-item__text p {
@@ -2330,11 +2396,6 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 1199px) {
   .news-item__link {
     font-size: 24.3px;
-  }
-}
-@media (max-width: 991px) {
-  .news-item__link {
-    font-size: 18.9px;
   }
 }
 .contacts-block {
@@ -2498,6 +2559,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   opacity: .6;
   font-size: 30.75px;
   box-shadow: inset 0px -1.5px 2.25px 0px rgba(255, 255, 255, 0.8), inset 0px 1.5px 2.25px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .contacts-map__controls label[for='varsh'] {
   border-radius: 44.25px 0px 0px 44.25px;
@@ -2520,6 +2582,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   opacity: .6;
   border-radius: 3.75px;
   box-shadow: inset 0px -1.5px 2.25px 0px rgba(255, 255, 255, 0.8), inset 0px 1.5px 2.25px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .contacts-map__controls--path label[for=foot] {
   background-image: url('../images/sprite/contacts-map-foot.png');
@@ -2703,12 +2766,28 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   background-image: radial-gradient(rgba(237, 237, 237, 0.2), rgba(69, 69, 69, 0.5)), url('../images/sprite/contacts-google.png');
 }
 .toolbar {
-  display: none;
   position: fixed;
   z-index: 50;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+}
+.toolbar__box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+.toolbar__box--right {
+  bottom: 0;
+  width: 80px;
+}
+.toolbar__box--right:hover .toolbar--right {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 .toolbar__item {
   display: inline-block;
@@ -2739,6 +2818,8 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   height: 465px;
   background-image: url(../images/toolbar/toolbar-right.png);
   text-align: right;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
 }
 .toolbar--right .toolbar__item {
   width: 92%;

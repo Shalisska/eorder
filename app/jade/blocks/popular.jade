@@ -1,21 +1,29 @@
 mixin popularSlider(items)
-	while (items.length > 0)
-		.popular-slider__box
-			.row.popular-slider__leveler
-				each item, i in items.splice(0, 5)
-					.col-xs-8
-						a.popular-slider__item(href='')
-							img(src=item.src, alt=item.alt)
-							span.popular-slider__item-title=item.alt
-					-var j = i+1
-						if (j - (parseInt(j / 3)*3) === 0)
-							if (j != items.length)
-								.clearfix.popular-slider__row
-				.col-xs-8.popular-slider__item--all-leveler
-					a.popular-slider__item.popular-slider__item--all(href='')
-						| Смотреть
-						br
-						span.popular-slider__item--all-bg все
+	.popular-slider__box
+		.row.popular-slider__row
+			each item, i in items
+				-var j = i+1
+				if (i < 5)
+					if (i < 3)
+						.col-md-8.col-sm-12.popular-show.popular-show-sm.popular-slider__col
+							block popularItem
+								a.popular-slider__item(href='' class=i)
+									img(src=item.src, alt=item.alt)
+									span.popular-slider__item-title=item.alt
+					else
+						.col-md-8.col-sm-12.popular-show.popular-slider__col
+							block popularItem
+
+				else
+					.col-md-8.col-sm-12.popular-slider__col
+						block popularItem
+							
+			.col-md-8.col-sm-12.popular-slider__item--all-leveler
+				a.popular-slider__item.popular-slider__item--all(href='')
+					| Смотреть
+					br
+					span.popular-slider__item--all-bg все
+
 
 
 
@@ -25,6 +33,33 @@ mixin popularSlider(items)
 	.block-reg.popular-block
 		.popular-slider
 			+popularSlider([{
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
+				src: '../images/slider-popular01.jpg',
+				alt: 'Листовка'
+			}, {
 				src: '../images/slider-popular01.jpg',
 				alt: 'Листовка'
 			}, {

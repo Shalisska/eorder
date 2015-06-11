@@ -1,22 +1,28 @@
 mixin newsMenu(items)
-	each item in items
+	each item, i in items
 		.col-md-8.col-sm-12
-			.news-menu__item
+			label.news-menu__item(for='news' + (i+1))
 				.news-menu__item-title: p=item.title
 				.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
 				
 
 mixin newsItem(items)
 	each item, i in items
-		.news-item
+		.news-item(class='news-item--news' + (i + 1))
 			p.news-item__title=item.title
 			.news-item__text
 				each el in item.text
 					p=el
+			a.news-item__link(href='') узнать подробнее
 
 .news#news
 	h2.title-reg.news-title Новости
 	.block-reg.news-block.clearfix
+		each item, i in ['1', '2', '3']
+			if (i === 0)
+				input.news-menu__controls--inp(id='news' + item type='radio' name='news-controls' checked)
+			else
+				input.news-menu__controls--inp(id='news' + item type='radio' name='news-controls')
 		.row
 			.col-sm-15.col-xs-12
 				.news-menu__inner
@@ -37,14 +43,14 @@ mixin newsItem(items)
 						a.news-menu__controls.news-menu__controls--right(href='')
 			
 			.col-sm-9.col-xs-12
-				+newsItem([{
-					title: 'I Новость',
-					text: ['Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!', 'Президенты всего мира.... много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста']
-				}, {
-					title: 'II Новость',
-					text: ['']
-				}, {
-					title: 'III Новость',
-					text: ['']
-				}])
-		a.news-item__link(href='') узнать подробнее
+				.news-item__box
+					+newsItem([{
+						title: 'I Новость',
+						text: ['Наша компания достигла оборота, равного ВНП маленькой страны! Даже те, кто печатаются у нас!', 'Президенты всего мира.... много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста']
+					}, {
+						title: 'II Новость',
+						text: ['']
+					}, {
+						title: 'III Новость',
+						text: ['']
+					}])
