@@ -1,11 +1,11 @@
 .contacts {
 	&-block {
-		margin-bottom: (60px*@zoom);
+		margin-bottom: 45px;
 		padding-bottom: 35px;
 	}
 	
 	&-info {
-		padding: 35px (10px*@zoom) 0 (60px*@zoom);
+		padding: 35px 7px 0 45px;
 		font-size: @font-size__contacts-info;
 		
 		@media (max-width: 991px) {
@@ -44,11 +44,12 @@
 			}
 			
 			&:before {
+				@w: 65px;
 				content: '';
 				display: inline-block;
 				margin-right: (20px*@zoom);
-				width: (87px*@zoom);
-				height: (87px*@zoom);
+				width: @w;
+				height: @w;
 				vertical-align: middle;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -80,7 +81,7 @@
 	}
 	
 	&-map {
-		padding-top: (20px*@zoom);
+		padding-top: 15px;
 		font-family: @font-family-cond;
 		
 		@media (max-width: 991px) {
@@ -102,10 +103,11 @@
 			
 			&--metro {
 				display: inline-block;
-				width: (35px*@zoom);
-				height: (26px*@zoom);
-				margin: 0 (10px*@zoom);
+				width: 26px;
+				height: 19px;
+				margin: 0 7px;
 				background: url(../images/sprite/contacts-map-metro.png) no-repeat center;
+				background-size: contain;
 			}
 			
 			label {
@@ -118,28 +120,29 @@
 				cursor: pointer;
 				
 				&[for='varsh'] {
-					border-radius: (59px*@zoom) (0px*@zoom) (0px*@zoom) (59px*@zoom);
+					border-radius: 44px 0 0 44px;
 				}
 				
 				&[for='kash'] {
-					border-radius: (0px*@zoom) (59px*@zoom) (59px*@zoom) (0px*@zoom);
+					border-radius: 0 44px 44px 0;
 				}
 			}
 			
 			&--path {
-				margin-bottom: (5px*@zoom);
-				height: (60px*@zoom);
+				margin-bottom: 3px;
+				height: 45px;
 				text-align: center;
 				
 				label {
+					@w: 45px;
 					margin-bottom: 0;
-					width: (60px*@zoom);
-					height: (60px*@zoom);
+					width: @w;
+					height: @w;
 					background-color: white;
 					background-repeat: no-repeat;
 					background-position: center;
 					opacity: .6;
-					border-radius: (5px*@zoom);
+					border-radius: 3px;
 					box-shadow: @box-shadow__contacts;
 					cursor: pointer;
 				}
@@ -154,14 +157,14 @@
 		
 		&__path {
 			position: absolute;
-			left: (5px*@zoom);
-			top: (5px*@zoom);
+			left: 3px;
+			top: 3px;
 			width: 140px;
 			
 			&-slider {
-				height: (303px*@zoom);
+				height: 229px;
 				background: rgba(255, 255, 255, .6);
-				border-radius: (5px*@zoom);
+				border-radius: 3px;
 				box-shadow: @box-shadow__contacts-map;
 				
 				&-item {
@@ -209,20 +212,21 @@
 			
 			&--metro {
 				position: relative;
-				margin-bottom: (15px*@zoom);
+				margin-bottom: 11px;
 				text-align: left;
 				padding-left: 26px;
 				color: #575656;
 				
 				&:before {
+					@w: 9px;
 					content: '';
 					position: absolute;
 					left: 8px;
 					top: 50%;
 					margin-top: -5px;
-					width: (12px*@zoom);
-					height: (12px*@zoom);
-					border: (3px*@zoom) solid #575656;
+					width: @w;
+					height: @w;
+					border: 2px solid #575656;
 					border-radius: 50%;
 					background: white;
 					z-index: 5;
@@ -256,9 +260,9 @@
 		&__map {
 			overflow: hidden;
 			width: 100%;
-			height: (380px*@zoom);
+			height: 285px;
 			box-shadow: @box-shadow__contacts-map;
-			border-radius: (10px*@zoom);
+			border-radius: 7px;
 			
 			&-item {
 				display: none;
@@ -275,19 +279,20 @@
 	
 	&-socials {
 		float: right;
-		margin-top: (80px*@zoom);
-		margin-right: (15px*@zoom);
-		width: (56px*@zoom);
+		margin-top: 60px;
+		margin-right: 11px;
+		width: 42px;
 		
 		@media (max-width: 600px) {
 			margin-top: 15px;
 		}
 		
 		&__item {
+			@w: 42px;
 			display: block;
-			margin-bottom: (3px*@zoom);
-			width: (56px*@zoom);
-			height: (56px*@zoom);
+			margin-bottom: 3px;
+			width: @w;
+			height: @w;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;

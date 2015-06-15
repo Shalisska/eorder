@@ -1,15 +1,16 @@
 .clients {
 	&-block {
-		margin-bottom: (65px*@zoom);
+		margin-bottom: 48px;
 		background: #f3f3f3;
 		text-align: center;
 	}
 	&-item {
+		@h: 86px;
 		display: inline-block;
-		max-width: (238px*@zoom);
-		min-width: (200px*@zoom);
-		height: (115px*@zoom);
-		line-height: (115px*@zoom);
+		max-width: 178px;
+		min-width: 150px;
+		height: @h;
+		line-height: @h;
 		
 		@media (max-width: 991px) {
 			max-width: 100px;

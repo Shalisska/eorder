@@ -1,5 +1,5 @@
 .action {
-	margin-bottom: (80px*@zoom);
+	margin-bottom: 60px;
 	
 	&-title {
 		width: 100%;
@@ -12,7 +12,7 @@
 	&-slider {
 		position: relative;
 		z-index: 10;
-		padding-top: (35px*@zoom);
+		padding-top: 26px;
 		overflow: hidden;
 		box-shadow: @box-shadow__action--bottom;
 		
@@ -22,7 +22,7 @@
 	}
 
 	&-block {
-		padding: 20px (95px*@zoom) (27px*@zoom);
+		padding: 20px 70px;
 		box-shadow: @box-shadow__action--bottom;
 		
 		@media (max-width: 1199px) {
@@ -39,7 +39,7 @@
 	}
 	
 	&-image {
-		max-width: (706px*@zoom);
+		max-width: 527px;
 		box-shadow: @box-shadow__action;
 		overflow: hidden;
 		
@@ -76,7 +76,7 @@
 	
 	&-order {
 		position: relative;
-		padding-bottom: (135px*@zoom);
+		padding-bottom: 100px;
 		
 		@media (max-width: 1199px) {
 			padding-bottom: 80px;
@@ -110,7 +110,7 @@
 		&__item {
 			position: relative;
 			display: none;
-			padding: (1px*@zoom) (25px*@zoom);
+			padding: 0 18px;
 			background: @bg__action-order-item;
 			line-height: 1;
 			border: @border__action-order-item;
@@ -128,7 +128,7 @@
 			}
 			
 			&-title {
-				margin-top: (10px*@zoom);
+				margin-top: 7px;
 				color: @color__action-order-title;
 				font-size: @font-size__action-order-title;
 				
@@ -247,7 +247,7 @@
 				display: block;
 				margin-bottom: 0;
 				width: 100%;
-				height: (110px*@zoom);
+				height: 82px;
 				background-color: @bg__action-order-controls;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -286,8 +286,8 @@
 			position: absolute;
 			bottom: 0;
 			width: 100%;
-			height: (118px*@zoom);
-			padding-top: 2%;
+			height: 88px;
+			padding-top: 10px;
 			text-align: center;
 			line-height: 1;
 			border: @border__action-order-btn;
@@ -356,7 +356,7 @@
 				
 				&-bg {
 					display: block;
-					font-size: 110px*@zoom;
+					font-size: @font-size__action-order-btn;
 					font-family: @font-family-bold;
 					background-color: rgb(60, 0, 0);
 					color: transparent;
@@ -388,7 +388,7 @@
 	&-timer {
 		position: relative;
 		z-index: 5;
-		padding: (25px*@zoom) 15px;
+		padding: 18px 15px;
 		box-shadow: @box-shadow__action--bottom;
 		
 		&__text {
@@ -470,7 +470,7 @@
 	
 	&-controls {
 		width: 100%;
-		padding: 0 (12px*@zoom);
+		padding: 0 9px;
 		font-size: @font-size__action-controls;
 		color: @color__action-controls;
 		
@@ -480,7 +480,7 @@
 		
 		li {
 			width: (100% / 10);
-			padding: 0 (1px*@zoom);
+			padding: 0 1px;
 			
 			@media(max-width:600px) {
 				padding: 0;
@@ -512,7 +512,7 @@
 			
 			&--pict {
 				display: block;
-				height: (145px*@zoom);
+				height: 108px;
 				border-bottom: none;
 				
 				@media (max-width: 991px) {
@@ -535,10 +535,9 @@
 			
 			&--name {
 				display: block;
-				height: (70px*@zoom);
-				padding: (20px*@zoom) 0;
+				height: 52px;
+				padding: 15px 0;
 				background: @bg__action-controls-grad;
-				font-size: @font-size__action-controls;
 				color: @color__action-controls;
 				text-transform: uppercase;
 				border-image: @bg__action-controls-grad 1;

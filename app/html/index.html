@@ -14,6 +14,7 @@
     <script src="../scripts/libs/easy-pie-chart.js"></script>
   </head>
   <body>
+    <!--include ../helpers/svg-->
     <div class="toolbar__box toolbar__box--right">
           <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search"><img src="../images/toolbar/toolbar-icon_search.png" alt="Поиск"></a><a href="#" class="toolbar__item toolbar__item--cart"><img src="../images/toolbar/toolbar-icon_cart.png" alt="Корзина"></a><a href="#" class="toolbar__item toolbar__item--profile"><img src="../images/toolbar/toolbar-icon_profile.png" alt="Личный кабинет"></a>
           </div>
@@ -747,6 +748,9 @@
                       </li>
                     </ul>
                   </nav>
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#icon-search"></use>
+          </svg>
         </div>
         <div id="popular" class="popular">
           <h2 class="title-reg popular-title">Популярная продукция</h2>
@@ -874,29 +878,11 @@
           <div class="block-reg services-block">
             <div class="row">
                       <div class="col-xs-8"><a href="" class="services-item servises-item--calc"><span class="services-item__title">Калькулятор заказа</span><img src="../images/sprite/servises-calc.png" alt="Калькулятор заказа" class="services-item__img">
-                          <div class="services-item__text"><span>Посчитать!</span>
-                            <!--img(src='../images/sprite/servises-'+item.src+'-text.png', alt=item.text)-->
-                            
-                            
-                            
-                            
-                          </div></a></div>
+                          <div class="services-item__text"><span>Посчитать!</span></div></a></div>
                       <div class="col-xs-8"><a href="" class="services-item servises-item--maket"><span class="services-item__title">Проверка макета</span><img src="../images/sprite/servises-maket.png" alt="Проверка макета" class="services-item__img">
-                          <div class="services-item__text"><span>Загрузить!</span>
-                            <!--img(src='../images/sprite/servises-'+item.src+'-text.png', alt=item.text)-->
-                            
-                            
-                            
-                            
-                          </div></a></div>
+                          <div class="services-item__text"><span>Загрузить!</span></div></a></div>
                       <div class="col-xs-8"><a href="" class="services-item servises-item--deliver"><span class="services-item__title">Срочная доставка</span><img src="../images/sprite/servises-deliver.png" alt="Срочная доставка" class="services-item__img">
-                          <div class="services-item__text"><span>Заказать!</span>
-                            <!--img(src='../images/sprite/servises-'+item.src+'-text.png', alt=item.text)-->
-                            
-                            
-                            
-                            
-                          </div></a></div>
+                          <div class="services-item__text"><span>Заказать!</span></div></a></div>
             </div>
           </div>
         </div>

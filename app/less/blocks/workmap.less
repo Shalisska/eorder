@@ -1,8 +1,8 @@
 .workmap {
-	margin-bottom: (120px*@zoom);
+	margin-bottom: 90px;
 	
 	&-block {
-		padding: (20px*@zoom) (50px*@zoom);
+		padding: 15px 37px;
 	}
 	
 	&-item {
@@ -41,11 +41,12 @@
 		}
 		
 		&__img {
+			@w: 206px;
 			position: relative;
-			margin: 0 auto (20px*@zoom);
-			width: (275px*@zoom);
-			height: (275px*@zoom);
-			line-height: (275px*@zoom);
+			margin: 0 auto 15px;
+			width: @w;
+			height: @w;
+			line-height: @w;
 			text-align: center;
 			background: @bg__workmap-img;
 			border: @border__workmap-img;
@@ -73,12 +74,14 @@
 			&:after {
 				content: '';
 				position: absolute;
-				width: (33px*@zoom);
-				height: (48px*@zoom);
+				width: 25px;
+				height: 25px;
 				top: 50%;
-				margin-top: -(24px*@zoom);
-				right: -(70px*@zoom);
-				background: url(../images/common/workmap-arrow.png) no-repeat center center;
+				margin-top: -15px;
+				right: -45px;
+				background: linear-gradient(to right, transparent 24px, rgba(255, 255, 255, .9) 24px), linear-gradient(to right top, transparent 50%, #808080 50%);
+				transform: rotate(45deg);
+				box-shadow: 4px -1px 4px -2px rgba(0, 0, 0, 0.5);
 				
 				@media (max-width:1199px) {
 					right: -38px;
@@ -97,7 +100,7 @@
 		}
 		
 		&__text {
-			padding: 0 (5px*@zoom);
+			padding: 0 3px;
 			text-align: center;
 			font-size: @font-size__workmap;
 			color: @color__workmap;
