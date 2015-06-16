@@ -111,6 +111,9 @@ body {
   position: relative;
   font-family: 'MyriadPro', 'Arial', sans-serif;
 }
+.svg-container {
+  display: none;
+}
 @media (max-width: 479px) {
   header,
   main,
@@ -2707,7 +2710,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   transition: height 1s ease;
 }
 .toolbar__box--top:hover {
-  height: 80px;
+  height: 90px;
 }
 .toolbar__box--top:hover .toolbar--top {
   -webkit-transform: translate(0, 0);
@@ -2716,14 +2719,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .toolbar__item {
   display: inline-block;
   text-align: center;
+  fill: white;
 }
-.toolbar__item:hover img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.toolbar__item:active img {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+.toolbar__item svg {
+  width: 75%;
+  height: 80%;
 }
 .toolbar__item--cart {
   position: relative;
@@ -2778,6 +2778,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   width: 598px;
   height: 111px;
   background: url('../images/toolbar/toolbar-top.png');
+  background-size: contain;
   text-align: center;
   -webkit-transform: translate(0, -100%);
           transform: translate(0, -100%);
