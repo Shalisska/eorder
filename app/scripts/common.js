@@ -17,6 +17,9 @@ $(document).ready(function() {
 		} else if (doc_w > 767) {
 			img_class = 'popular-show-sm';
 			img_interval = 3;
+		} else {
+			img_class = 'popular-show-xs';
+			img_interval = 1;
 		}
 
 		var img_show = $('.' + img_class);

@@ -1,14 +1,14 @@
-<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+<svg width="220" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40">
  <g filter="url(#shadow)" fill="url('#toolbar-grad')">
   <title>Layer 1</title>
-  <path d="m0,0l200,0c-18.33334,10 -6.66666,25 -25,30l-150,0c-18.33334,-5 -6.66666,-20 -25,-30z"/>
+  <path d="m0,0l200,0c-18.33334,10 -6.66666,25 -25,30l-150,0c-18.33334,-5 -6.66666,-20 -25,-30z" transform="translate(10, 0)"/>
  </g>
 	
 	<filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0"
-              width="200" height="100">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+              width="300" height="300">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
         <feOffset in="blur" dx="0" dy="0" result="offsetBlr" />
-        <feFlood flood-color="rgba(0,0,0,.4)"/>
+        <feFlood flood-color="rgba(0,0,0,.5)"/>
         <feComposite operator="in" in2="offsetBlr" result="colBlur"/>
         <feMerge>
           <feMergeNode in="colBlur"/>

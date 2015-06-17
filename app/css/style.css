@@ -921,7 +921,7 @@ body {
 }
 @media (max-width: 991px) {
   .action-order__btn--text-bg {
-    padding-top: 5px;
+    margin-top: -5px;
     font-size: 60px;
   }
 }
@@ -1606,6 +1606,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     height: 513px;
   }
 }
+@media (max-width: 767px) {
+  .popular-slider__box {
+    height: auto;
+  }
+}
 .popular-slider__row {
   height: 100%;
 }
@@ -1625,6 +1630,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 991px) {
   .popular-slider__item {
     margin-bottom: 10%;
+  }
+}
+@media (max-width: 767px) {
+  .popular-slider__item {
+    margin: 0 auto 5%;
   }
 }
 .popular-slider__item img {
@@ -1663,12 +1673,33 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     font-size: 61.2px;
   }
 }
+@media (max-width: 767px) {
+  .popular-slider__item--all {
+    max-width: none;
+    width: 80%;
+    margin-bottom: 0;
+    padding: 10px 5px 5px;
+    font-size: 45px;
+  }
+}
+@media (max-width: 590px) {
+  .popular-slider__item--all {
+    max-width: 345px;
+    width: 100%;
+  }
+}
 .popular-slider__item--all-leveler {
   height: 45%;
 }
 @media (max-width: 991px) {
   .popular-slider__item--all-leveler {
     height: 46%;
+  }
+}
+@media (max-width: 767px) {
+  .popular-slider__item--all-leveler {
+    height: auto;
+    text-align: center;
   }
 }
 .popular-slider__item--all-bg {
@@ -1679,6 +1710,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 @media (max-width: 1199px) {
   .popular-slider__item--all-bg {
     font-size: 123.3px;
+  }
+}
+@media (max-width: 767px) {
+  .popular-slider__item--all-bg {
+    font-size: inherit;
   }
 }
 .popular-slider__item--all:hover {
@@ -1732,6 +1768,15 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .popular-show-sm {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@media (max-width: 767px) {
+  .popular-show-xs {
     display: block;
     -webkit-animation: show .9s;
             animation: show .9s;
@@ -2679,8 +2724,6 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .toolbar {
   position: fixed;
   z-index: 50;
-  background-repeat: no-repeat;
-  background-position: center;
   text-align: center;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
@@ -2690,7 +2733,6 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   top: 0;
   right: 0;
   z-index: 100;
-  overflow: hidden;
 }
 .toolbar__box--right {
   bottom: 0;
@@ -2737,10 +2779,14 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .toolbar--right {
   right: 0;
   top: 50%;
-  margin-top: -232px;
-  width: 77px;
-  height: 465px;
-  background-image: url(../images/toolbar/toolbar-right.png);
+  margin-top: -245px;
+  padding-left: 13px;
+  width: 85px;
+  height: 490px;
+  background-image: url(../images/toolbar/toolbar-right.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
   text-align: right;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -2750,10 +2796,10 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   height: 33.33333333%;
 }
 .toolbar--right .toolbar__item--search {
-  padding-top: 100%;
+  padding-top: 80%;
 }
 .toolbar--right .toolbar__item--cart {
-  padding-top: 75%;
+  padding-top: 40%;
 }
 .toolbar--right .toolbar__item--cart:before,
 .toolbar--right .toolbar__item--cart:after {
@@ -2767,25 +2813,23 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .toolbar--right .toolbar__item--cart:after {
   bottom: 0;
 }
-.toolbar--right .toolbar__item--profile {
-  padding-top: 50%;
-}
 .toolbar--top {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -299px;
-  width: 598px;
-  height: 111px;
-  background: url('../images/toolbar/toolbar-top.png');
-  background-size: contain;
+  margin-left: -250px;
+  width: 500px;
+  height: 85px;
+  background: url('../images/toolbar/toolbar.svg');
+  background-size: cover;
+  background-position: center top;
   text-align: center;
   -webkit-transform: translate(0, -100%);
           transform: translate(0, -100%);
 }
 .toolbar--top .toolbar__item {
   width: 35%;
-  height: 62%;
+  height: 80%;
   padding-top: 2%;
 }
 .toolbar--top .toolbar__item--search {

@@ -5,11 +5,18 @@ mixin popularSlider(items)
 				-var j = i+1
 				if (i < 5)
 					if (i < 3)
-						.col-md-8.col-sm-12.popular-show.popular-show-sm.popular-slider__col
-							block popularItem
-								a.popular-slider__item(href='' class=i)
-									img(src=item.src, alt=item.alt)
-									span.popular-slider__item-title=item.alt
+						if (i === 0)
+							.col-md-8.col-sm-12.popular-show.popular-show-sm.popular-show-xs.popular-slider__col
+								block popularItem
+									a.popular-slider__item(href='' class=i)
+										img(src=item.src, alt=item.alt)
+										span.popular-slider__item-title=item.alt
+						else
+							.col-md-8.col-sm-12.popular-show.popular-show-sm.popular-slider__col
+								block popularItem
+									a.popular-slider__item(href='' class=i)
+										img(src=item.src, alt=item.alt)
+										span.popular-slider__item-title=item.alt
 					else
 						.col-md-8.col-sm-12.popular-show.popular-slider__col
 							block popularItem
@@ -20,8 +27,7 @@ mixin popularSlider(items)
 							
 			.col-md-8.col-sm-12.popular-slider__item--all-leveler
 				a.popular-slider__item.popular-slider__item--all(href='')
-					| Смотреть
-					br
+					| Смотреть 
 					span.popular-slider__item--all-bg все
 
 
