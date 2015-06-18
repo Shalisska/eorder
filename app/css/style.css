@@ -107,9 +107,18 @@ body {
   margin: 0;
   padding: 0;
 }
-body {
+html {
   position: relative;
+  min-height: 100%;
+}
+body {
   font-family: 'MyriadPro', 'Arial', sans-serif;
+  margin-bottom: 450px;
+}
+.footer-wrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .svg-container {
   display: none;

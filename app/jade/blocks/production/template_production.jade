@@ -1,0 +1,44 @@
+include production_vars
+
+mixin productDesc (items)
+	each item in items
+		p.product-price__desc-item
+			span.product-price__desc--name=item.name
+			span.product-price__desc--value=item.value
+	span *бумагаб цветность
+
+
+
+.title-reg.title-low Каталог
+.block-reg.product-block.product-block--catalog
+	.row
+		.col-md-16
+			figure.product-img
+				img(src='/', alt='Каталог')
+		.col-md-8
+			.product-desc
+				.product-desc__title КАТАЛОГ, -а, м.
+				.product-desc__text
+					p 1. Составленный в определённом порядке перечень каких-нибудь однородных предметов (книг, экспонатов, товаров). Библиотечный каталог Издательский план-к.
+					p 2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.
+					p || прилагательное каталожный, -ая, -ое (к 1 значение).
+		
+		.col-xs-24
+			.product-price
+				.product-price__desc
+					+productDesc(productDescArr)
+				
+				.product-price__circulation
+					.product-price__title
+						| Тираж
+						span.product__text--small штук
+				
+				.product-price__price
+					.product-price__title
+						| Цена
+						span.product__text--small рублей
+						
+				.product-price__action
+					.product-price__title
+						| Акция
+		

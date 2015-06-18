@@ -17,4 +17,4 @@ function assert_s(value, desc) {
 		li.className = value ? 'pass' : 'fail';
 		li.appendChild(document.createTextNode(desc));
 		document.getElementById('results').appendChild(li);
-	};
+};
