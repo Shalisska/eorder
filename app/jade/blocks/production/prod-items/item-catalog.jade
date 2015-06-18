@@ -7,13 +7,13 @@ mixin productDesc01Obj(item)
 -var productDesc02 = {}
 mixin productDesc02Obj(item)
 	-item['name'] = 'обложка*'
-	-item['value'] = 'мел. 170 г/м2, 4+0'
+	-item['value'] = 'мел. 170 г/м², 4+0'
 +productDesc02Obj(productDesc02)
 
 -var productDesc03 = {}
 mixin productDesc03Obj(item)
 	-item['name'] = 'блок*'
-	-item['value'] = 'офсет. 80 г/м2, 1+1'
+	-item['value'] = 'офсет. 80 г/м², 1+1'
 +productDesc03Obj(productDesc03)
 
 -var productDesc04 = {}
@@ -61,19 +61,12 @@ mixin productsVal04Obj(item)
 
 
 -function productsVal(circulation, price, action) {
-  -this.circulation=circulation;
-  -this.price=price;
-  -this.action=action;
+	-this.circulation=circulation;
+	-this.price=price;
+	-this.action=action;
 -}
 
 -var arr = []
--arr.push(['100', '200', '350'])
--arr.push(['400', '800', '4660'])
+-arr.push(['100', '24700', '20100'])
+-arr.push(['500', '33200', '25200'])
 
-each item in arr
-  
-  
-  
-  -var desc = new productsVal(item)
-  
-  p=desc.price
