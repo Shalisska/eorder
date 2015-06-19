@@ -184,19 +184,6 @@ module.exports = function (grunt) {
 					flattern: true,
 					src: ['build/*.html']
 				}]
-			},
-			zoomscale: {
-				options: {
-					patterns: [{
-						match: /\((\d+px)\*@zoom\)/g,
-						replacement: '$1'
-					}]
-				},
-				files: [{
-					expand: true,
-					flattern: true,
-					src: ['app/less-bootstrap/**/*.less']
-				}]
 			}
 		}
 	});

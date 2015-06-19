@@ -2837,7 +2837,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
           transform: translate(0, -100%);
 }
 .toolbar--top .toolbar__item {
-  width: 35%;
+  width: 33%;
   height: 80%;
   padding-top: 2%;
 }

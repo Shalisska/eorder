@@ -1,72 +1,45 @@
--var productDesc01 = {}
-mixin productDesc01Obj(item)
-	-item['name'] = 'формат'
-	-item['value'] = 'А6 (105х148 мм)'
-+productDesc01Obj(productDesc01)
+//- -------item01---------
+-var productsDesc01 = []
+mixin productsDescCr01(arr)
+	-arr.push(['формат', 'А6 (105х148 мм)'])
+	-arr.push(['обложка*', 'мел. 170 г/м², 4+0'])
+	-arr.push(['блок*', 'офсет. 80 г/м², 1+1'])
+	-arr.push(['количество полос', '100'])
+	-arr.push(['скрепление', 'КБС'])
++productsDescCr01(productsDesc01)
 
--var productDesc02 = {}
-mixin productDesc02Obj(item)
-	-item['name'] = 'обложка*'
-	-item['value'] = 'мел. 170 г/м², 4+0'
-+productDesc02Obj(productDesc02)
-
--var productDesc03 = {}
-mixin productDesc03Obj(item)
-	-item['name'] = 'блок*'
-	-item['value'] = 'офсет. 80 г/м², 1+1'
-+productDesc03Obj(productDesc03)
-
--var productDesc04 = {}
-mixin productDesc04Obj(item)
-	-item['name'] = 'количество полос'
-	-item['value'] = '100'
-+productDesc04Obj(productDesc04)
-
--var productDesc05 = {}
-mixin productDesc05Obj(item)
-	-item['name'] = 'скрепление'
-	-item['value'] = 'КБС'
-+productDesc05Obj(productDesc05)
-
--var productDescArr = [productDesc01, productDesc02, productDesc03, productDesc04, productDesc05]
-
--var productsVal01 = {}
-mixin productsVal01Obj(item)
-	-item['circulation'] = '100'
-	-item['price'] = '24700'
-	-item['action'] = '20100'
-+productsVal01Obj(productsVal01)
-
--var productsVal02 = {}
-mixin productsVal02Obj(item)
-	-item['circulation'] = '500'
-	-item['price'] = '33200'
-	-item['action'] = '25200'
-+productsVal02Obj(productsVal02)
-
--var productsVal03 = {}
-mixin productsVal03Obj(item)
-	-item['circulation'] = '1000'
-	-item['price'] = '44100'
-	-item['action'] = '35300'
-+productsVal03Obj(productsVal03)
-
--var productsVal04 = {}
-mixin productsVal04Obj(item)
-	-item['circulation'] = '2000'
-	-item['price'] = '65500'
-	-item['action'] = '55400'
-+productsVal04Obj(productsVal04)
+-var productsVal01 = []
+mixin productsValCr01(arr)
+	-arr.push(['100', '24700', '20100'])
+	-arr.push(['500', '33200', '25200'])
+	-arr.push(['1000', '44100', '35300'])
+	-arr.push(['2000', '65500', '55400'])
+	-arr.push(['10000', '237800', '220600'])
+	-arr.push(['20000', '550000', '480800'])
+	-arr.push(['50000', '1000000', '900000'])
++productsValCr01(productsVal01)
 
 
+//- -------item02---------
+-var productsDesc02 = []
+mixin productsDescCr02(arr)
+	-arr.push(['формат', '145х297 мм'])
+	-arr.push(['обложка*', 'мел. 170 г/м², 4+0'])
+	-arr.push(['блок*', 'мел. 130 г/м², 4+4'])
+	-arr.push(['количество полос', '52'])
+	-arr.push(['скрепление', 'КБС'])
++productsDescCr02(productsDesc02)
 
--function productsVal(circulation, price, action) {
-	-this.circulation=circulation;
-	-this.price=price;
-	-this.action=action;
--}
+-var productsVal02 = []
+mixin productsValCr02(arr)
+	-arr.push(['100', '61900', '20100'])
+	-arr.push(['500', '74500', '25200'])
+	-arr.push(['1000', '90200', '35300'])
+	-arr.push(['2000', '121500', '55400'])
+	-arr.push(['10000', '372900', '220600'])
+	-arr.push(['20000', '900000', '480800'])
+	-arr.push(['50000', '1500000', '900000'])
++productsValCr02(productsVal02)
 
--var arr = []
--arr.push(['100', '24700', '20100'])
--arr.push(['500', '33200', '25200'])
-
+-var productsDescItems = [productsDesc01, productsDesc02]
+-var productsValItems = [productsVal01, productsVal02]

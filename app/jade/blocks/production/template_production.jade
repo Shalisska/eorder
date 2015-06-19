@@ -5,8 +5,29 @@ mixin productDesc (items)
 		p.product-price__desc-item
 			span.product-price__desc--name=item.name
 			span.product-price__desc--value=item.value
-	span *бумагаб цветность
+	span *бумага, цветность
 
+mixin productVal(items)
+	each item in items
+		.product-price__col(class='product-price__col--'+item.id)
+			.product-price__title=item.title
+				span.product__text--small=item.subtitle
+			.produc-price__vals
+				each val in item.vals
+					.produc-price__val=val
+			if(item.id == 'price')
+				a(href='') рассчитать заказ
+
+mixin productTable(descArr, valsArr)
+	-for(var i = 0; i < descArr.length; i++) {
+		-var desc = descArr[i];
+		-var vals = valsArr[i];
+		.col-xs-24
+			.product-price
+				.product-price__desc
+					+productDesc(desc)
+				+productVal(vals)
+	-}
 
 
 .title-reg.title-low Каталог
@@ -23,22 +44,6 @@ mixin productDesc (items)
 					p 2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.
 					p || прилагательное каталожный, -ая, -ое (к 1 значение).
 		
-		.col-xs-24
-			.product-price
-				.product-price__desc
-					+productDesc(productDescArr)
-				
-				.product-price__circulation
-					.product-price__title
-						| Тираж
-						span.product__text--small штук
-				
-				.product-price__price
-					.product-price__title
-						| Цена
-						span.product__text--small рублей
-						
-				.product-price__action
-					.product-price__title
-						| Акция
+		+productTable(productsDescArr, productValsArr)
+			
 		
