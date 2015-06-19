@@ -1,0 +1,7 @@
+.action-order__btn--text-bg,
+.action-timer__text,
+.services-item__text span{
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+}
