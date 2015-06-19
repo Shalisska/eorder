@@ -22,28 +22,28 @@ mixin productTable(descArr, valsArr)
 	-for(var i = 0; i < descArr.length; i++) {
 		-var desc = descArr[i];
 		-var vals = valsArr[i];
-		.col-xs-24
-			.product-price
-				.product-price__desc
-					+productDesc(desc)
-				+productVal(vals)
+		
+		.product-price
+			.product-price__desc
+				+productDesc(desc)
+			+productVal(vals)
 	-}
-
 
 .title-reg.title-low Каталог
 .block-reg.product-block.product-block--catalog
-	.row
-		.col-md-16
-			figure.product-img
-				img(src='/', alt='Каталог')
-		.col-md-8
-			.product-desc
-				.product-desc__title КАТАЛОГ, -а, м.
-				.product-desc__text
-					p 1. Составленный в определённом порядке перечень каких-нибудь однородных предметов (книг, экспонатов, товаров). Библиотечный каталог Издательский план-к.
-					p 2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.
-					p || прилагательное каталожный, -ая, -ое (к 1 значение).
+	.product-parts
+		.row
+			.col-md-15
+				figure.product__img
+					img(src='../images/products/products--catalog.jpg', alt='Каталог')
+			.col-md-9
+				.product-desc
+					.product-desc__title #[b КАТАЛОГ], -а, м.
+					.product-desc__text
+						p 1. Составленный в определённом порядке перечень каких-нибудь однородных предметов (книг, экспонатов, товаров). #[ i Библиотечный каталог Издательский план-к.]
+						p 2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. #[i Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.]
+						p || #[i прилагательное] #[b каталожный], -ая, -ое (к 1 значение).
 		
-		+productTable(productsDescArr, productValsArr)
+	+productTable(productsDescArr, productValsArr)
 			
 		

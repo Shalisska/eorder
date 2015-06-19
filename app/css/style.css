@@ -2862,6 +2862,38 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .toolbar--top .toolbar__item--profile {
   padding-right: 15%;
 }
+.title-low {
+  padding: 15px 7% 10px;
+  background: transparent;
+  border-top: none;
+  border-bottom: 1px solid #d1d1d1;
+  text-transform: none;
+}
+.product-parts {
+  padding: 14px 25px;
+  border-bottom: 1px solid #c9c9c7;
+}
+.product-img {
+  max-width: 670px;
+}
+.product-img img {
+  width: 100%;
+  height: auto;
+}
+.product-desc {
+  margin-left: -25px;
+  font-size: 23px;
+  color: #8b8987;
+}
+.product-desc b {
+  font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
+}
+.product-desc__text {
+  text-align: justify;
+}
+.product-desc__text p {
+  margin: 0;
+}
 .footer {
   margin-bottom: 7.5px;
   padding: 60px 0 0 0;
