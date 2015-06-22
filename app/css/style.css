@@ -919,8 +919,7 @@ body {
   display: block;
   font-size: 82px;
   font-family: 'MyriadPro-Bold', 'Arial', sans-serif;
-  background-color: #3c0000;
-  color: transparent;
+  color: #d50000;
   text-shadow: rgba(255, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.55) -2px -2px 1px, rgba(0, 0, 0, 0.5) 0px -2px 0px, rgba(0, 0, 0, 0.2) 1px 3px 3px;
 }
 @media (max-width: 1199px) {
@@ -1228,9 +1227,8 @@ input[id='action_order-flyer3']:checked ~ .action-order__item--3 {
 .action-timer__text {
   text-align: center;
   font-size: 67px;
-  background-color: rgba(0, 0, 0, 0.8);
   line-height: 1;
-  color: transparent;
+  color: #a6a6a6;
   text-shadow: rgba(255, 255, 255, 0.2) 3px 1px 0px, rgba(255, 255, 255, 0.5) 1px 3px 1px;
 }
 @media (max-width: 991px) {
@@ -2091,8 +2089,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .services-item__text span {
   font-size: 29px;
-  background-color: #0C3B4D;
-  color: transparent;
+  color: #1C7A8B;
   font-weight: bold;
   text-shadow: -1px -1px 0px rgba(17, 140, 189, 0.2), -2px -2px 1px rgba(255, 255, 255, 0.5);
 }
