@@ -2924,8 +2924,16 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .product {
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .product {
+    border-radius: 0;
+  }
+}
+.product-block {
+  padding-bottom: 25px;
+}
 .product__img {
-  max-width: 670px;
+  max-width: 672px;
 }
 @media (max-width: 991px) {
   .product__img {
@@ -2943,6 +2951,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 }
 @media (max-width: 1199px) {
   .product-desc {
+    margin-left: -10px;
     font-size: 20px;
   }
 }
@@ -2988,9 +2997,6 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   .product-price {
     padding: 40px 10px 45px;
   }
-}
-.product-price:last-of-type {
-  border-bottom: none;
 }
 .product-price__table {
   position: relative;
