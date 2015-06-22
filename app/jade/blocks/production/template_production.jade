@@ -5,33 +5,39 @@ mixin productDesc (items)
 		p.product-price__desc-item
 			span.product-price__desc--name=item.name
 			span.product-price__desc--value=item.value
-	span *бумага, цветность
+	span.product-price__desc--subtext *бумага, цветность
 
-mixin productVal(items)
+mixin productVal(items, action)
 	each item in items
-		.product-price__col(class='product-price__col--'+item.id)
-			.product-price__title=item.title
-				span.product__text--small=item.subtitle
-			.produc-price__vals
-				each val in item.vals
-					.produc-price__val=val
-			if(item.id == 'price')
-				a(href='') рассчитать заказ
+		if (action.action === 1 && item.id == 'action')
+			block productVals
+				.product-price__col(class='product-price__col--'+item.id)
+					.product-price__title(class='product-price__title--'+item.id)=item.title
+						span.product-price__title--small=item.subtitle
+					.product-price__vals
+						each val in item.vals
+							.product-price__val=val
+					if(item.id == 'price')
+						a.product-price__calculate(href='/') рассчитать заказ
+		else if (item.id != 'action')
+			block productVals
 
-mixin productTable(descArr, valsArr)
+mixin productTable(descArr, valsArr, actionArr)
 	-for(var i = 0; i < descArr.length; i++) {
 		-var desc = descArr[i];
 		-var vals = valsArr[i];
+		-var action = actionArr[i];
 		
 		.product-price
-			.product-price__desc
-				+productDesc(desc)
-			+productVal(vals)
+			.product-price__table.clearfix
+				.product-price__desc
+					+productDesc(desc)
+				+productVal(vals, action)
 	-}
 
 .title-reg.title-low Каталог
 .block-reg.product-block.product-block--catalog
-	.product-parts
+	.product-desc-part
 		.row
 			.col-md-15
 				figure.product__img
@@ -44,6 +50,6 @@ mixin productTable(descArr, valsArr)
 						p 2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. #[i Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.]
 						p || #[i прилагательное] #[b каталожный], -ая, -ое (к 1 значение).
 		
-	+productTable(productsDescArr, productValsArr)
+	+productTable(productsDescArr, productValsArr, productsActionItems)
 			
 		
