@@ -14,8 +14,9 @@ mixin newsItem(items)
 				each el in item.text
 					p=el
 
-.news#news
+.news.cont-reg#news
 	h2.title-reg.news-title Новости
+		a.to-top(href="#to-top") Наверх
 	.block-reg.news-block.clearfix
 		.row
 			.col-sm-15.col-xs-12

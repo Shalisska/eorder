@@ -11,12 +11,17 @@
 		z-index: 100;
 		
 		&--right {
+			z-index: 5;
 			bottom: 0;
 			width: 10px;
 			transition: width 1s ease;
 			
 			&:hover {
 				width: 80px;
+				
+				@media (max-width: 991px) {
+					width: 65px;
+				}
 				
 				.toolbar--right{
 					transform: translate(0, 0);
@@ -31,6 +36,10 @@
 			
 			&:hover {
 				height: 90px;
+				
+				@media(max-width: 991px) {
+					height: 70px;
+				}
 				
 				.toolbar--top{
 					transform: translate(0, 0);
@@ -83,9 +92,19 @@
 		text-align: right;
 		transform: translate(100%, 0);
 		
+		@media(max-width: 991px) {
+			width: 60px;
+			height: 350px;
+			margin-top: -(350px / 2);
+		}
+		
 		.toolbar__item {
 			width: 92%;
 			height: (100% / 3);
+			
+			@media(max-width: 991px) {
+				width: 100%;
+			}
 			
 			&--search {
 				padding-top: 80%;
@@ -124,6 +143,12 @@
 		background-position: center top;
 		text-align: center;
 		transform: translate(0, -100%);
+		
+		@media(max-width: 991px) {
+			width: 350px;
+			height: 60px;
+			margin-left: -(350px / 2);
+		}
 		
 		.toolbar__item {
 			width: 33%;

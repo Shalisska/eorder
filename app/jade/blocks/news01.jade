@@ -1,10 +1,20 @@
 mixin newsMenu(items)
 	each item, i in items
-		.col-md-8.col-sm-12
-			label.news-menu__item(for='news' + (i+1))
-				.news-menu__item-title: p=item.title
-				.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
-				
+		if (i === 0)
+			.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-show-xs
+				block newsItem
+					label.news-menu__item(for='news' + (i+1))
+						.news-menu__item-title: p=item.title
+						.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
+		else if (i < 2)
+			.col-md-8.col-sm-12.slide-show.slide-show-sm
+				block newsItem
+		else if(i < 3)
+			.col-md-8.col-sm-12.slide-show
+				block newsItem
+		else
+			.col-md-8.col-sm-12
+				block newsItem
 
 mixin newsItem(items)
 	each item, i in items
@@ -15,8 +25,9 @@ mixin newsItem(items)
 					p=el
 			a.news-item__link(href='') узнать подробнее
 
-.news#news
+.news.cont-reg#news
 	h2.title-reg.news-title Новости
+		a.to-top(href="#to-top") Наверх
 	.block-reg.news-block.clearfix
 		each item, i in ['1', '2', '3']
 			if (i === 0)

@@ -3,8 +3,9 @@ mixin clients(items)
 		.clients-item: img(src='../images/sprite/clients-' + item.src + '.png', alt=item.name)
 
 
-.clients
+.clients.cont-reg
 	h2.title-reg.clients-title Клиенты
+		a.to-top(href="#to-top") Наверх
 	.block-reg.clients-block
 		+clients([{
 			src: 'champion',

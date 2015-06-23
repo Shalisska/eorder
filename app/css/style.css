@@ -181,6 +181,7 @@ body {
   }
 }
 .title-reg {
+  position: relative;
   margin-bottom: 0;
   padding: 15px 5% 15px;
   background: linear-gradient(#f0efed, #e2e1df);
@@ -208,7 +209,35 @@ body {
 .block-footer {
   margin-bottom: 11.25px;
 }
+.to-top {
+  position: absolute;
+  right: 2%;
+  top: 10%;
+  bottom: 10%;
+  padding-top: 1%;
+  font-size: 25px;
+  color: inherit;
+  text-transform: none;
+  text-shadow: -1px 1px 0px rgba(255, 255, 255, 0.9);
+}
+.to-top:hover,
+.to-top:focus {
+  color: inherit;
+  outline: none;
+}
+.to-top:before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  border-bottom: 15px solid #8b8987;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  box-shadow: 0px 2px 1px 0px rgba(255, 255, 255, 0.9);
+}
 .header {
+  position: relative;
+  z-index: 10;
   margin-bottom: 67.5px;
   width: 100%;
   background: linear-gradient(#424242, #515151, #424242);
@@ -607,7 +636,7 @@ body {
 }
 .action-slider {
   position: relative;
-  z-index: 10;
+  z-index: 1;
   padding-top: 26px;
   overflow: hidden;
   box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.25);
@@ -2296,8 +2325,10 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   line-height: 1;
 }
 .news-menu__item-img {
+  width: 100%;
   height: 210px;
   line-height: 210px;
+  overflow: hidden;
 }
 @media (max-width: 1199px) {
   .news-menu__item-img {
@@ -2796,12 +2827,18 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   z-index: 100;
 }
 .toolbar__box--right {
+  z-index: 5;
   bottom: 0;
   width: 10px;
   transition: width 1s ease;
 }
 .toolbar__box--right:hover {
   width: 80px;
+}
+@media (max-width: 991px) {
+  .toolbar__box--right:hover {
+    width: 65px;
+  }
 }
 .toolbar__box--right:hover .toolbar--right {
   -webkit-transform: translate(0, 0);
@@ -2814,6 +2851,11 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 }
 .toolbar__box--top:hover {
   height: 90px;
+}
+@media (max-width: 991px) {
+  .toolbar__box--top:hover {
+    height: 70px;
+  }
 }
 .toolbar__box--top:hover .toolbar--top {
   -webkit-transform: translate(0, 0);
@@ -2852,9 +2894,21 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
 }
+@media (max-width: 991px) {
+  .toolbar--right {
+    width: 60px;
+    height: 350px;
+    margin-top: -175px;
+  }
+}
 .toolbar--right .toolbar__item {
   width: 92%;
   height: 33.33333333%;
+}
+@media (max-width: 991px) {
+  .toolbar--right .toolbar__item {
+    width: 100%;
+  }
 }
 .toolbar--right .toolbar__item--search {
   padding-top: 80%;
@@ -2887,6 +2941,13 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   text-align: center;
   -webkit-transform: translate(0, -100%);
           transform: translate(0, -100%);
+}
+@media (max-width: 991px) {
+  .toolbar--top {
+    width: 350px;
+    height: 60px;
+    margin-left: -175px;
+  }
 }
 .toolbar--top .toolbar__item {
   width: 33%;
@@ -3224,6 +3285,36 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .product-price__calculate:active {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
+}
+.slide-hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  .slide-show {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .slide-show-sm {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@media (max-width: 767px) {
+  .slide-show-xs {
+    display: block;
+    -webkit-animation: show .9s;
+            animation: show .9s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
 }
 .footer {
   margin-bottom: 7.5px;

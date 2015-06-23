@@ -53,43 +53,20 @@
         </g>
       </defs>
     </svg>
-    <!--mixin toolbarTop(items)-->
-    <!--	.toolbar.toolbar--top-->
-    <!--		each item in items-->
-    <!--			a.toolbar__item(class='toolbar__item--'+item.name href=item.href): img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-    <div class="toolbar__box toolbar__box--right">
-          <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 18 18">
-                <use xlink:href="#icon-search"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20 18">
-                <use xlink:href="#icon-cart"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20.5 18">
-                <use xlink:href="#icon-profile"></use>
-              </svg></a>
-          </div>
-    </div>
-    <div class="toolbar__box toolbar__box--top">
-          <div class="toolbar toolbar--top"><a href="#" class="toolbar__item toolbar__item--search">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 18 18">
-                <use xlink:href="#icon-search"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20 18">
-                <use xlink:href="#icon-cart"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20.5 18">
-                <use xlink:href="#icon-profile"></use>
-              </svg></a>
-          </div>
-    </div>
-    <header class="header">
+    <header id="to-top" class="header">
+      <div class="toolbar__box toolbar__box--top">
+              <div class="toolbar toolbar--top"><a href="#" class="toolbar__item toolbar__item--search">
+                  <svg viewBox="0 0 18 18">
+                    <use xlink:href="#icon-search"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+                  <svg viewBox="0 0 20 18">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+                  <svg viewBox="0 0 20.5 18">
+                    <use xlink:href="#icon-profile"></use>
+                  </svg></a>
+              </div>
+      </div>
       <div class="container-fluid header-container">
         <div class="row">
           <div class="col-md-8 col-sm-9 header-logo-box">
@@ -125,6 +102,19 @@
       </nav>
     </header>
     <main>
+      <div class="toolbar__box toolbar__box--right">
+              <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search">
+                  <svg viewBox="0 0 18 18">
+                    <use xlink:href="#icon-search"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+                  <svg viewBox="0 0 20 18">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+                  <svg viewBox="0 0 20.5 18">
+                    <use xlink:href="#icon-profile"></use>
+                  </svg></a>
+              </div>
+      </div>
       <div class="container container--main">
         <div id="action" class="action">
           <div class="action-title"><img src="../images/common/banner.png"></div>
@@ -815,8 +805,8 @@
                     </ul>
                   </nav>
         </div>
-        <div id="popular" class="popular">
-          <h2 class="title-reg popular-title">Популярная продукция</h2>
+        <div id="popular" class="popular cont-reg">
+          <h2 class="title-reg popular-title">Популярная продукция<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg popular-block">
             <div class="popular-slider">
                       <div class="popular-slider__box">
@@ -842,8 +832,8 @@
             </div>
           </div>
         </div>
-        <div id="features" class="features">
-          <h2 class="title-reg features-title">Почему выбирают нас</h2>
+        <div id="features" class="features cont-reg">
+          <h2 class="title-reg features-title">Почему выбирают нас<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg features-block">
             <div class="row">
                       <div class="col-sm-8 col-xs-24">
@@ -905,8 +895,8 @@
             </div>
           </div>
         </div>
-        <div id="workmap" class="workmap">
-          <h2 class="title-reg workmap-title">Как мы работаем</h2>
+        <div id="workmap" class="workmap cont-reg">
+          <h2 class="title-reg workmap-title">Как мы работаем<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg workmap-block">
             <div class="row">
                       <div class="workmap-item__box col-sm-6 col-xs-24">
@@ -936,8 +926,8 @@
             </div>
           </div>
         </div>
-        <div id="services" class="services">
-          <h2 class="title-reg services-title">Специальные сервисы</h2>
+        <div id="services" class="services cont-reg">
+          <h2 class="title-reg services-title">Специальные сервисы<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg services-block">
             <div class="row">
                       <div class="col-xs-8"><a href="" class="services-item servises-item--calc"><span class="services-item__title">Калькулятор заказа</span><img src="../images/sprite/servises-calc.png" alt="Калькулятор заказа" class="services-item__img">
@@ -949,8 +939,8 @@
             </div>
           </div>
         </div>
-        <div id="equipment" class="equipment">
-          <h2 class="title-reg equipment-title">Оборудование</h2>
+        <div id="equipment" class="equipment cont-reg">
+          <h2 class="title-reg equipment-title">Оборудование<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg equipment-block clearfix">
             <div class="row">
                       <div class="col-xs-8">
@@ -971,8 +961,8 @@
             </div>
           </div>
         </div>
-        <div class="clients">
-          <h2 class="title-reg clients-title">Клиенты</h2>
+        <div class="clients cont-reg">
+          <h2 class="title-reg clients-title">Клиенты<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg clients-block">
                     <div class="clients-item"><img src="../images/sprite/clients-champion.png" alt="Champion"></div>
                     <div class="clients-item"><img src="../images/sprite/clients-ashan.png" alt="Ашан"></div>
@@ -997,8 +987,8 @@
                     <div class="clients-item"><img src="../images/sprite/clients-rzhd.png" alt="РЖД"></div>
           </div>
         </div>
-        <div id="news" class="news">
-          <h2 class="title-reg news-title">Новости</h2>
+        <div id="news" class="news cont-reg">
+          <h2 class="title-reg news-title">Новости<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg news-block clearfix">
             <input id="news1" type="radio" name="news-controls" checked class="news-menu__controls--inp">
             <input id="news2" type="radio" name="news-controls" class="news-menu__controls--inp">
@@ -1008,7 +998,7 @@
                 <div class="news-menu__inner">
                   <div class="news-menu">
                     <div class="row">
-                              <div class="col-md-8 col-sm-12">
+                              <div class="col-md-8 col-sm-12 slide-show slide-show-sm slide-show-xs">
                                 <label for="news1" class="news-menu__item">
                                   <div class="news-menu__item-title">
                                     <p>I Новость</p>
@@ -1016,7 +1006,7 @@
                                   <div class="news-menu__item-img"><img src="../images/news-logo.png" alt="I Новость"></div>
                                 </label>
                               </div>
-                              <div class="col-md-8 col-sm-12">
+                              <div class="col-md-8 col-sm-12 slide-show slide-show-sm">
                                 <label for="news2" class="news-menu__item">
                                   <div class="news-menu__item-title">
                                     <p>II Новость в несколько много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста</p>
@@ -1024,7 +1014,7 @@
                                   <div class="news-menu__item-img"><img src="../images/news-newspaper.jpg" alt="II Новость в несколько много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста много текста"></div>
                                 </label>
                               </div>
-                              <div class="col-md-8 col-sm-12">
+                              <div class="col-md-8 col-sm-12 slide-show">
                                 <label for="news3" class="news-menu__item">
                                   <div class="news-menu__item-title">
                                     <p>III Новость</p>
@@ -1063,8 +1053,8 @@
             </div>
           </div>
         </div>
-        <div id="contacts" class="contacts">
-          <h2 class="title-reg contacts-title">Контакты</h2>
+        <div id="contacts" class="contacts cont-reg">
+          <h2 class="title-reg contacts-title">Контакты<a href="#to-top" class="to-top">Наверх</a></h2>
           <div class="block-reg contacts-block">
             <div class="row">
               <div class="col-lg-12 col-md-11 col-xs-22">

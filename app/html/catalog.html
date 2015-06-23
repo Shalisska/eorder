@@ -53,43 +53,20 @@
         </g>
       </defs>
     </svg>
-    <!--mixin toolbarTop(items)-->
-    <!--	.toolbar.toolbar--top-->
-    <!--		each item in items-->
-    <!--			a.toolbar__item(class='toolbar__item--'+item.name href=item.href): img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-    <div class="toolbar__box toolbar__box--right">
-          <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 18 18">
-                <use xlink:href="#icon-search"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20 18">
-                <use xlink:href="#icon-cart"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20.5 18">
-                <use xlink:href="#icon-profile"></use>
-              </svg></a>
-          </div>
-    </div>
-    <div class="toolbar__box toolbar__box--top">
-          <div class="toolbar toolbar--top"><a href="#" class="toolbar__item toolbar__item--search">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 18 18">
-                <use xlink:href="#icon-search"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20 18">
-                <use xlink:href="#icon-cart"></use>
-              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
-              <!--img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)-->
-              <svg viewBox="0 0 20.5 18">
-                <use xlink:href="#icon-profile"></use>
-              </svg></a>
-          </div>
-    </div>
-    <header class="header">
+    <header id="to-top" class="header">
+      <div class="toolbar__box toolbar__box--top">
+              <div class="toolbar toolbar--top"><a href="#" class="toolbar__item toolbar__item--search">
+                  <svg viewBox="0 0 18 18">
+                    <use xlink:href="#icon-search"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+                  <svg viewBox="0 0 20 18">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+                  <svg viewBox="0 0 20.5 18">
+                    <use xlink:href="#icon-profile"></use>
+                  </svg></a>
+              </div>
+      </div>
       <div class="container-fluid header-container">
         <div class="row">
           <div class="col-md-8 col-sm-9 header-logo-box">
@@ -125,6 +102,19 @@
       </nav>
     </header>
     <main>
+      <div class="toolbar__box toolbar__box--right">
+              <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search">
+                  <svg viewBox="0 0 18 18">
+                    <use xlink:href="#icon-search"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+                  <svg viewBox="0 0 20 18">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+                  <svg viewBox="0 0 20.5 18">
+                    <use xlink:href="#icon-profile"></use>
+                  </svg></a>
+              </div>
+      </div>
       <div class="container container--main product">
         <div class="title-reg title-low">Каталог</div>
         <div class="block-reg product-block product-block--catalog">

@@ -34,8 +34,9 @@ mixin popularSlider(items)
 
 
 
-.popular#popular
+.popular.cont-reg#popular
 	h2.title-reg.popular-title Популярная продукция
+		a.to-top(href="#to-top") Наверх
 	.block-reg.popular-block
 		.popular-slider
 			+popularSlider([{

@@ -23,4 +23,28 @@
 @import url('toolbar.less');
 @import url('production/production-item.less');
 
+.slide-hide {display: none;}
 
+.slide-show {
+	@media(min-width: 992px) {
+		display: block;
+		animation: show .9s;
+		animation-fill-mode: forwards;
+	}
+
+	&-sm {
+		@media (min-width: 768px) and (max-width: 991px) {
+			display: block;
+			animation: show .9s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&-xs {
+		@media (max-width: 767px) {
+			display: block;
+			animation: show .9s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
