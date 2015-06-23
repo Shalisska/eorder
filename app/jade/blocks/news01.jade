@@ -1,19 +1,19 @@
 mixin newsMenu(items)
 	each item, i in items
 		if (i === 0)
-			.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-show-xs
+			.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-show-xs.slide-hide
 				block newsItem
 					label.news-menu__item(for='news' + (i+1))
 						.news-menu__item-title: p=item.title
 						.news-menu__item-img: img(src='../images/news-' + item.src, alt=item.title)
 		else if (i < 2)
-			.col-md-8.col-sm-12.slide-show.slide-show-sm
+			.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-hide
 				block newsItem
 		else if(i < 3)
-			.col-md-8.col-sm-12.slide-show
+			.col-md-8.col-sm-12.slide-show.slide-hide
 				block newsItem
 		else
-			.col-md-8.col-sm-12
+			.col-md-8.col-sm-12.slide-hide
 				block newsItem
 
 mixin newsItem(items)

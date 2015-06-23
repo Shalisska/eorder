@@ -1705,9 +1705,6 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .popular-slider__row {
   height: 100%;
 }
-.popular-slider__col {
-  display: none;
-}
 .popular-slider__item {
   position: relative;
   display: block;
@@ -1847,33 +1844,6 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 .popular-slider__controls--right:active {
   right: -42px;
-}
-@media (min-width: 992px) {
-  .popular-show {
-    display: block;
-    -webkit-animation: show .9s;
-            animation: show .9s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .popular-show-sm {
-    display: block;
-    -webkit-animation: show .9s;
-            animation: show .9s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-}
-@media (max-width: 767px) {
-  .popular-show-xs {
-    display: block;
-    -webkit-animation: show .9s;
-            animation: show .9s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
 }
 .features {
   margin-bottom: 56px;
@@ -2016,12 +1986,12 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
     position: absolute;
     bottom: -20px;
     left: 50%;
-    margin-left: -16px;
+    margin-left: -9px;
     border-top: 20px solid gray;
     border-left: 20px solid transparent;
     -webkit-transform: rotate(136deg);
             transform: rotate(136deg);
-    box-shadow: 4px -2px 2px -2px #000000;
+    box-shadow: 4px -2px 2px -2px rgba(0, 0, 0, 0.7);
   }
 }
 .workmap-item__box:last-of-type .workmap-item:after {
@@ -2302,7 +2272,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   position: relative;
   display: block;
   max-width: none;
-  margin: 0 -10px 100%;
+  margin: 0 -10px;
   cursor: pointer;
 }
 .news-menu__item-title {
@@ -2317,6 +2287,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   vertical-align: middle;
   font-size: 27px;
   color: #5e5e5d;
+  overflow: hidden;
 }
 .news-menu__item-title p {
   display: inline-block;
