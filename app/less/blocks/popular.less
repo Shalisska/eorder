@@ -28,6 +28,22 @@
 			height: 100%;
 		}
 		
+		&__col {
+			@media(max-width: 767px) {
+				padding: 5px 0;
+				margin-bottom: 3%;
+				background-image: linear-gradient(to right, transparent 5%, rgba(128, 128, 128, 0.6), transparent 95%);
+				box-shadow: 0px 50px 15px -50px white, 0px -50px 15px -50px white;
+				
+				@media(max-width: 510px) {
+					padding: 0;
+					margin-bottom: 5%;
+					background-image: none;
+					box-shadow: none;
+				}
+			}
+		}
+		
 		&__item {
 			position: relative;
 			display: block;
@@ -43,7 +59,7 @@
 			}
 			
 			@media (max-width: 767px) {
-				margin: 0 auto 5%;
+				margin: 0 auto;
 			}
 			
 			img {
@@ -88,13 +104,13 @@
 				
 				@media (max-width: 767px) {
 					max-width: none;
-					width: 80%;
+					width: 90%;
 					margin-bottom: 0;
 					padding: 10px 5px 5px;
 					font-size: 45px;
 				}
 				
-				@media (max-width: 590px) {
+				@media (max-width: 510px) {
 					max-width: 345px;
 					width: 100%;
 				}
@@ -140,6 +156,11 @@
 			height: (284px*@zoom);
 			top: 50%;
 			margin-top: -((284px*@zoom) / 2);
+			
+			@media(max-width: 767px) {
+				top: 7%;
+				margin-top: 0;
+			}
 			
 			&:hover {
 				transform: scale(1.05);

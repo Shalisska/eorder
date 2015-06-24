@@ -2,11 +2,15 @@ mixin contactsInfo(items)
 	each item in items
 		a.contacts-info__item(class='contacts-info__item--' + item.name href=item.href): span=item.text
 
-mixin contactsSocials(items)
+//-mixin contactsSocials(items)
 	each item in items
 		a.contacts-socials__item(class='contacts-socials__item--' + item.class href=item.href)
 
-
+mixin contactsSocials(items)
+	each item in items
+		a.contacts-socials__item(class='contacts-socials__item--' + item.class href=item.href)
+			-var link = 'icon-' + item.class
+			+svg('0 0 30 30', link)
 
 .contacts.cont-reg#contacts
 	h2.title-reg.contacts-title Контакты

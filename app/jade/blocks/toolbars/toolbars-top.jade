@@ -8,7 +8,7 @@ mixin toolbarTop(items)
 		each item in items
 			a.toolbar__item(class='toolbar__item--'+item.name href=item.href)
 				//-img(src='../images/toolbar/toolbar-icon_'+item.name+'.png', alt=item.alt)
-				svg(viewBox=item.viewBox)
+				svg(viewBox=item.viewBox xmlns="http://www.w3.org/2000/svg")
 					use(xlink:href='#icon-'+item.name)
 
 .toolbar__box.toolbar__box--top

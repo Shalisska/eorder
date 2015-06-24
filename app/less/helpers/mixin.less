@@ -25,14 +25,23 @@
 		odnoklassniki,
 		google;
 	@social: extract(@socials, @i);
+	
+	@color-twitt: #28c3ff;
+	@grad-twitt: radial-gradient(#25b4eb, #1b84ad);
+	@color-vk: #6996c7;
+	@grad-vk: radial-gradient(#5981aa, #476687);
+	@color-fb: #496194;
+	@grad-fb: radial-gradient(#435988, #324264);
+	@color-odnoklassniki: #ff9c43;
+	@grad-odnoklassniki: radial-gradient(#eb903e, #ad6a2d);
+	@color-google: #ff6d4a;
+	@grad-google: radial-gradient(#eb6444, #ad4a32);
 
 	&--@{social} {
-		background-image: url('../images/sprite/contacts-@{social}.png');
+		background: ~"@{color-@{social}}";
 		
 		&:hover {
-		background-image:
-			@color_contacts-grad,
-			url('../images/sprite/contacts-@{social}.png');
+		background: ~"@{grad-@{social}}";
 		}
 	}
 	
@@ -113,25 +122,33 @@
 	@item: extract(@items, @i);
 
 	label[for=@{item}] {
-		background-image: url('../images/sprite/contacts-map-@{item}.png');
+		background-image: url('../images/contacts/contacts-map-@{item}.svg');
 	}
 
 	.generate-path(@n, (@i + 1));
 }
 
 
-
-
 .generate-footer-socials(@n, @i: 1) when (@i =< @n) {
 	@items:
 		fb,
-		inst,
+		lkd,
 		vk;
-	
 	@item: extract(@items, @i);
 	
+	@bg--fb: #696969;
+	@bg-hover--fb: #496194;
+	@bg--lkd: #5B5B5B;
+	@bg-hover--lkd: #007BB5;
+	@bg--vk: #777777;
+	@bg-hover--vk: #6996c7;
+	
 	&--@{item} {
-		background-image: url('../images/sprite/footer-@{item}.png');
+		background: ~"@{bg--@{item}}";
+		
+		&:hover {
+			background: ~"@{bg-hover--@{item}}";
+		}
 	}
 
 	.generate-footer-socials(@n, (@i + 1));

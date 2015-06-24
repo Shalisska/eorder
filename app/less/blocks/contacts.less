@@ -106,7 +106,7 @@
 				width: 26px;
 				height: 19px;
 				margin: 0 7px;
-				background: url(../images/sprite/contacts-map-metro.png) no-repeat center;
+				background: url(../images/contacts/contacts-map-metro.svg) no-repeat center;
 				background-size: contain;
 			}
 			
@@ -133,6 +133,7 @@
 				height: 45px;
 				text-align: center;
 				
+				.generate-path(3);
 				label {
 					@w: 45px;
 					margin-bottom: 0;
@@ -140,14 +141,13 @@
 					height: @w;
 					background-color: white;
 					background-repeat: no-repeat;
-					background-position: center;
+					background-position: center top;
+					background-size: 95%;
 					opacity: .6;
 					border-radius: 3px;
 					box-shadow: @box-shadow__contacts;
 					cursor: pointer;
 				}
-				
-				.generate-path(3);
 			}
 		}
 		
@@ -293,11 +293,18 @@
 			margin-bottom: 3px;
 			width: @w;
 			height: @w;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
+			line-height: @w;
+			text-align: center;
 			
 			.generate-socials(5);
+			
+			svg {
+				@w: 20px;
+				width: @w;
+				height: @w;
+				vertical-align: middle;
+				fill: white;
+			}
 		}
 	}
 }

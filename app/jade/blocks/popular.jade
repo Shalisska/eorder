@@ -6,20 +6,20 @@ mixin popularSlider(items)
 				if (i < 5)
 					if (i < 3)
 						if (i === 0)
-							.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-show-xs.slide-hide
+							.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-show-xs.slide-hide.popular-slider__col
 								block popularItem
 									a.popular-slider__item(href='' class=i)
 										img(src=item.src, alt=item.alt)
 										span.popular-slider__item-title=item.alt
 						else
-							.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-hide
+							.col-md-8.col-sm-12.slide-show.slide-show-sm.slide-hide.popular-slider__col
 								block popularItem
 					else
-						.col-md-8.col-sm-12.slide-show.slide-hide
+						.col-md-8.col-sm-12.slide-show.slide-hide.popular-slider__col
 							block popularItem
 
 				else
-					.col-md-8.col-sm-12.slide-hide
+					.col-md-8.col-sm-12.slide-hide.popular-slider__col
 						block popularItem
 							
 			.col-md-8.col-sm-12.popular-slider__item--all-leveler
