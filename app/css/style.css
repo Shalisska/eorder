@@ -309,17 +309,11 @@ body {
   width: 100%;
   height: auto;
 }
-.header-logo__slogan {
-  font-size: 18.75px;
-  color: #bfbfbf;
-  text-transform: uppercase;
-}
-@media (max-width: 1200px) {
-  .header-logo__slogan img {
-    padding-top: 3%;
-    width: 90%;
-    height: auto;
-  }
+.header-logo__slogan svg {
+  fill: #bfbfbf;
+  max-width: 377px;
+  -webkit-filter: drop-shadow(-3px 1px 3px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(-3px 1px 3px rgba(0, 0, 0, 0.5));
 }
 .header-presentation {
   padding: 5% 5% 0;
@@ -2505,34 +2499,37 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 .contacts-info__item:hover {
   text-decoration: none;
 }
+.contacts-info__item--phone:before {
+  background-image: url('../images/contacts/icon_phone.svg'), radial-gradient(#2093bf, #197295);
+}
+.contacts-info__item--mail:before {
+  background-image: url('../images/contacts/icon_mail.svg'), radial-gradient(#166381, #114c64);
+}
+.contacts-info__item--skype:before {
+  background-image: url('../images/contacts/icon_skype.svg'), radial-gradient(#39c7fe, #2c9bc5);
+}
+.contacts-info__item--adress:before {
+  background-image: url('../images/contacts/icon_adress.svg'), radial-gradient(#7cc576, #60985b);
+}
 .contacts-info__item:before {
   content: '';
   display: inline-block;
   margin-right: 15px;
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 70%, 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.61);
 }
 @media (max-width: 600px) {
   .contacts-info__item:before {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
-}
-.contacts-info__item--phone:before {
-  background-image: url(../images/sprite/contacts-phone.png);
-}
-.contacts-info__item--mail:before {
-  background-image: url(../images/sprite/contacts-mail.png);
-}
-.contacts-info__item--skype:before {
-  background-image: url(../images/sprite/contacts-skype.png);
-}
-.contacts-info__item--adress:before {
-  background-image: url(../images/sprite/contacts-adress.png);
 }
 .contacts-map {
   padding-top: 15px;
@@ -3379,14 +3376,12 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .footer-contacts__item {
   margin: 0;
 }
-.footer-contacts__item--skype:before {
-  content: '';
-  display: inline-block;
-  margin-right: 3.75px;
-  width: 14.25px;
-  height: 14.25px;
-  background: url(../images/sprite/footer-skype.png) no-repeat center;
-  vertical-align: middle;
+.footer-contacts__item--skype svg {
+  width: 15px;
+  height: 15px;
+  fill: #00aff0;
+  vertical-align: top;
+  margin-right: 5px;
 }
 .footer-contacts__sub-text {
   color: #e4e1dc;

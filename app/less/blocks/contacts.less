@@ -43,8 +43,10 @@
 				text-decoration: none;
 			}
 			
+			.generate-contacs__item(4);
+			
 			&:before {
-				@w: 65px;
+				@w: 50px;
 				content: '';
 				display: inline-block;
 				margin-right: (20px*@zoom);
@@ -53,29 +55,33 @@
 				vertical-align: middle;
 				background-repeat: no-repeat;
 				background-position: center;
-				background-size: contain;
+				background-size: 70%, 100%;
+				border-radius: 50%;
+				border: 2px solid white;
+				box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.61);
 				
 				@media (max-width: 600px) {
-					width: 40px;
-					height: 40px;
+					@w: 30px;
+					width: @w;
+					height: @w;
 				}
 			}
 			
-			&--phone:before {
-				background-image: url(../images/sprite/contacts-phone.png);
-			}
-			
-			&--mail:before {
-				background-image: url(../images/sprite/contacts-mail.png);
-			}
-			
-			&--skype:before {
-				background-image: url(../images/sprite/contacts-skype.png);
-			}
-			
-			&--adress:before {
-				background-image: url(../images/sprite/contacts-adress.png);
-			}
+//			&--phone:before {
+//				background-image: url(../images/sprite/contacts-phone.png);
+//			}
+//			
+//			&--mail:before {
+//				background-image: url(../images/sprite/contacts-mail.png);
+//			}
+//			
+//			&--skype:before {
+//				background-image: url(../images/sprite/contacts-skype.png);
+//			}
+//			
+//			&--adress:before {
+//				background-image: url(../images/sprite/contacts-adress.png);
+//			}
 		}
 		
 	}

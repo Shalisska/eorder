@@ -5,7 +5,9 @@ header.header#to-top
 				.header-logo
 					a.header-logo__link(href='#')
 						img(src="../images/logo-promo.png", alt="e-order")
-					.header-logo__slogan: img(src='../images/sprite/header-press.png', alt='Prepress-Press-Postpress')
+					.header-logo__slogan
+						//-img(src='../images/sprite/header-press.png', alt='Prepress-Press-Postpress')
+						+svg('0 0 154 22', 'prepress-press')
 			.col-md-8.col-sm-7.header-presentation-box
 				p.header-presentation.text-center Цифровая и офсетная печать любых тиражей в самые короткие сроки
 			.col-sm-8.header-calling

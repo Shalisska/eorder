@@ -17,6 +17,26 @@
     color: inherit;
 }
 
+.generate-contacs__item(@n, @i: 1) when (@i =< @n) {
+	@items:
+		phone,
+		mail,
+		skype,
+		adress;
+	@item: extract(@items, @i);
+	
+	@grad-phone: radial-gradient(#2093bf, #197295);
+	@grad-mail: radial-gradient(#166381, #114c64);
+	@grad-skype: radial-gradient(#39c7fe, #2c9bc5);
+	@grad-adress: radial-gradient(#7cc576, #60985b);
+
+	&--@{item}:before {
+		background-image: url('../images/contacts/icon_@{item}.svg'),~"@{grad-@{item}}";
+	}
+
+	.generate-contacs__item(@n, (@i + 1));
+}
+
 .generate-socials(@n, @i: 1) when (@i =< @n) {
 	@socials:
 		twitt,
