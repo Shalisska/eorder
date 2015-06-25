@@ -1,385 +1,366 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-svg">
-	<head>
-		<title>eorder</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="../css/bootstrap-style.css" rel="stylesheet">
-		<link href="../css/style.css" rel="stylesheet">
-		<link href="../css/clips.css" rel="stylesheet">
-		<script src="../scripts/libs/modernizr.custom.05259.js"></script>
-		<script src="../scripts/libs/jquery-1.11.3.min.js"></script>
-		<!--link(href="../scripts/libs/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet")-->
-		<!--script(src="../scripts/libs/fancybox/jquery.fancybox-1.3.4.js")-->
-		<script src="../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
-	</head>
-	<body>
-		<svg width="0" height="0" class="svg-container">
-			<defs>
-				<g id="icon-search">
-					<title>Search</title>
-					<path d="m17.67022,17.22041l-0.46181,0.46219c-0.38231,0.38263 -1.00222,0.38263 -1.38453,0l-3.41399,-3.41637c-1.2845,0.91634 -2.85303,1.46122 -4.55198,1.46122c-4.3394,0 -7.8579,-3.52096 -7.8579,-7.86395c0,-4.34254 3.51851,-7.8635 7.8579,-7.8635c4.34029,0 7.8588,3.52096 7.8588,7.8635c0,1.69902 -0.54488,3.26931 -1.46046,4.5553l3.41399,3.41637c0.38232,0.38263 0.38232,1.0026 0,1.38523l-0.00001,0.00001l0.00001,0l0,0l-0.00002,0zm-9.81233,-14.97382c-3.09957,0 -5.61227,2.51478 -5.61227,5.61691c0,3.10258 2.5127,5.61736 5.61227,5.61736c4.28223,0 5.61317,-3.94829 5.61317,-5.61736c0,-3.10213 -2.51271,-5.61691 -5.61317,-5.61691z">
-				</g>
-				<g id="icon-cart">
-					<title>Cart</title>
-					<path d="m18.40579,9.09802l-0.11288,0l-2.07581,7.797c-0.15729,0.66003 -0.85181,1.19403 -1.55139,1.19403l-9.69852,0c-0.69958,0 -1.3942,-0.534 -1.55148,-1.19403l-2.07571,-7.797l-0.11279,0c-0.6778,0 -1.2272,-0.54901 -1.2272,-1.22498c0,-0.67804 0.54941,-1.22705 1.2272,-1.22705l0.7598,0l15.65881,0l0.75998,0c0.67761,0 1.22711,0.54901 1.22711,1.22705c0,0.67596 -0.5495,1.22498 -1.22711,1.22498l-0.00001,0zm-7.7713,7.35699l3.27209,0c0.45181,0 0.81802,-0.36597 0.81802,-0.81702c0,-0.45197 -0.36621,-0.81799 -0.81802,-0.81799l-3.27209,0l0,1.63501zm0,-3.27002l4.09012,0c0.45178,0 0.81799,-0.36597 0.81799,-0.81696c0,-0.45099 -0.36621,-0.81799 -0.81799,-0.81799l-4.09012,0l0,1.63495zm-1.63599,-4.90399l-4.90829,0c-0.45172,0 -0.81802,0.36603 -0.81802,0.81702c0,0.45203 0.3663,0.81799 0.81802,0.81799l4.90829,0l0,-1.63501zm0,3.26904l-4.0903,0c-0.45169,0 -0.81799,0.367 -0.81799,0.81799c0,0.45099 0.3663,0.81696 0.81799,0.81696l4.0903,0l0,-1.63495zm0,3.26996l-3.27222,0c-0.45169,0 -0.81808,0.36603 -0.81808,0.81799c0,0.45105 0.36639,0.81702 0.81808,0.81702l3.27222,0l0,-1.63501zm6.5441,-6.539l-4.90811,0l0,1.63501l4.90811,0c0.4519,0 0.81799,-0.36597 0.81799,-0.81799c0,-0.45099 -0.36609,-0.81702 -0.81799,-0.81702zm-0.8652,-2.75195l-3.74219,-3.74005c-0.38742,-0.38696 -0.38742,-1.01495 0,-1.40198c0.3876,-0.38702 1.01578,-0.38702 1.40329,0l3.7421,3.73901c0.38751,0.388 0.38751,1.01501 0,1.40302c-0.38748,0.38696 -1.01569,0.38696 -1.4032,0zm-9.7218,0c-0.38748,0.38696 -1.01581,0.38696 -1.40329,0c-0.3876,-0.388 -0.3876,-1.01501 0,-1.40302l3.742,-3.73901c0.38757,-0.38702 1.01578,-0.38702 1.40329,0c0.3876,0.38702 0.3876,1.01501 0,1.40198l-3.742,3.74005z">
-				</g>
-				<g id="icon-profile">
-					<title>Profile</title>
-					<path d="m19.02271,17.672l-17.75461,0c-0.70038,0 -1.2681,-0.565 -1.2681,-1.26202l0,-12.62396c0,-0.69702 0.56772,-1.26105 1.2681,-1.26105l4.65002,0l0,-1.26398c0,-0.69702 0.56778,-1.26099 1.26828,-1.26099l5.91812,0c0.70038,0 1.2681,0.56396 1.2681,1.26099l0,1.26398l4.65009,0c0.70041,0 1.26822,0.56403 1.26822,1.26105l0,12.62396c0,0.69702 -0.56781,1.26202 -1.26822,1.26202zm-6.341,-15.98901l-5.0726,0l0,0.84198l5.0726,0l0,-0.84198zm5.07281,3.36603l-15.21811,0l0,10.099l15.21811,0l0,-10.099zm-10.14542,6.172c1.86771,0 3.38181,1.00397 3.38181,2.24298l-6.7637,0c0,-1.23901 1.5141,-2.24298 3.3819,-2.24298zm8.4545,-2.80603l-4.2272,0l0,-1.68298l4.2272,0l0,1.68298zm0,2.52399l-4.2272,0l0,-1.68201l4.2272,0l0,1.68201zm0,2.52502l-4.2272,0l0,-1.68201l4.2272,0l0,1.68201zm-8.4545,-2.24298c-0.9339,0 -1.69098,-1.005 -1.69098,-2.245c0,-1.23901 0.75708,-2.24402 1.69098,-2.24402c0.93381,0 1.69092,1.005 1.69092,2.24402c0,1.23999 -0.75711,2.245 -1.69092,2.245z">
-				</g>
-				<g id="toolbar" filter="url(#shadow)" fill="url('#toolbar-grad')">
-					<title>Toolbar</title>
-					<path d="m0,0l200,0c-18.33334,10 -6.66666,25 -25,30l-150,0c-18.33334,-5 -6.66666,-20 -25,-30z">
-				</g>
-				<linearGradient id="toolbar-grad" x1="0" y1="0" x2="0" y2="1">
-					<stop style="stop-color:#166584" offset="0%"></stop>
-					<stop style="stop-color:#2092bf" offset="100%"></stop>
-				</linearGradient>
-				<filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="100">
-					<feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"></feGaussianBlur>
-					<feOffset in="blur" dx="0" dy="1" result="offsetBlr"></feOffset>
-					<feFlood flood-color="rgba(0,0,0,.3)"></feFlood>
-					<feComposite operator="in" in2="offsetBlr" result="colBlur"></feComposite>
-					<feMerge>
-						<feMergeNode in="colBlur"></feMergeNode>
-						<feMergeNode in="SourceGraphic"></feMergeNode>
-					</feMerge>
-				</filter>
-				<g id="icon-twitt">
-					<title>Twitter</title>
-					<path d="M30,6.708C28.895,7.199,27.244,7.851,26,8c1.273-0.762,2.539-2.561,3-4c-0.971,0.577-2.087,1.355-3.227,1.773    L25,5c-1.121-1.197-2.23-2-4-2c-3.398,0-6,2.602-6,6c0,0.399,0.047,0.7,0.11,0.956L15,10C9,10,5.034,8.724,2,5    C1.469,5.908,1,6.872,1,8c0,2.136,1.348,3.894,3,5c-1.009-0.033-2.171-0.542-3-1c0,2.98,4.186,6.432,7,7c-1,1-4.623,0.074-5,0    c0.784,2.447,3.309,3.949,6,4c-2.105,1.648-4.647,2.51-7.531,2.51c-0.498,0-0.987-0.029-1.469-0.084C2.723,27.17,6.523,28,10,28    c11.322,0,17-8.867,17-17c0-0.268,0.008-0.736,0-1C28.201,9.132,29.172,7.942,30,6.708z"></path>
-				</g>
-				<g id="icon-vk">
-					<title>Vkontakte</title>
-					<path d="M16,24c1,0,1-1.441,1-2c0-1,1-2,2-2s2.715,1.715,4,3c1,1,1,1,2,1s3,0,3,0  s2-0.076,2-2c0-0.625-0.685-1.685-3-4c-2-2-3.026-0.967,0-5c1.843-2.456,3.184-4.681,2.954-5.323C29.734,7.064,24.608,6.088,24,7  c-2,3-2.367,3.735-3,5c-1,2-1.099,3-2,3c-0.909,0-1-1.941-1-3c0-3.306,0.479-5.644-1-6c0,0-2,0-3,0c-1.61,0-3,1-3,1  s-1.241,0.968-1,1c0.298,0.04,2-0.414,2,1c0,1,0,2,0,2s0.009,4-1,4c-1,0-3-4-5-7C5.215,6.823,5,7,4,7C2.928,7,2.001,7.042,1,7.042  C0,7.042-0.128,7.679,0,8c2,5,3.437,8.14,7.237,12.096C10.722,23.725,13.05,23.918,15,24C15.5,24.021,15,24,16,24z"></path>
-				</g>
-				<g id="icon-fb">
-					<title>Facebook</title>
-					<path d="M22,16l1-5l-5,0.001V7c0-1.544,0.784-2,3-2h2V0c0,0-2.05,0-4,0c-4.072,0-7,2.435-7,7v4l-5,0v5h5v14h6V16H22z"></path>
-				</g>
-				<g id="icon-odnoklassniki">
-					<title>Odnoklassniki</title>
-					<path d="M22,15c-1,0-3,2-7,2s-6-2-7-2c-1.104,0-2,0.896-2,2c0,1,0.568,1.481,1,1.734C8.185,19.427,12,21,12,21l-4.25,5.438  c0,0-0.75,0.935-0.75,1.562c0,1.104,0.896,2,2,2c1.021,0,1.484-0.656,1.484-0.656S14.993,23.993,15,24  c0.007-0.007,4.516,5.344,4.516,5.344S19.979,30,21,30c1.104,0,2-0.896,2-2c0-0.627-0.75-1.562-0.75-1.562L18,21  c0,0,3.815-1.573,5-2.266C23.432,18.481,24,18,24,17C24,15.896,23.104,15,22,15z"></path>
-					<path d="M15,0c-3.866,0-7,3.134-7,7s3.134,7,7,7c3.865,0,7-3.134,7-7S18.865,0,15,0z M15,10.5c-1.933,0-3.5-1.566-3.5-3.5  c0-1.933,1.567-3.5,3.5-3.5c1.932,0,3.5,1.567,3.5,3.5C18.5,8.934,16.932,10.5,15,10.5z"></path>
-				</g>
-				<g id="icon-google">
-					<title>Google-plus</title>
-					<polygon points="30,13 26,13 26,9 24,9 24,13 20,13 20,15 24,15 24,19 26,19 26,15 30,15"></polygon>
-					<path d="M15,17c0,0-2-1.15-2-2c0,0-0.499-1.828,1-3c1.537-1.2,3-3.035,3-5c0-2.336-1.046-5-3-6h3l2.387-1  c0,0-7.063,0-9.387,0C5.835,0,2,3.345,2,7c0,3.735,2.849,6.56,7.086,6.56c0.295,0,0.581-0.006,0.861-0.025  c-0.274,0.526-0.472,1.119-0.472,1.735c0,1.037,0.818,2.042,1.524,2.73c-0.533,0-1.438,0-2,0c-5.159,0-9,2.593-9,6  c0,3.355,4.872,6,10.031,6c5.882,0,9.97-3,9.97-7C20,20.311,17.455,18.736,15,17z M11,13c-2.395,0-5.587-2.857-6-6  C4.587,3.856,6.607,0.929,9,1c2.394,0.071,4.603,2.908,5.017,6.052C14.429,10.195,13,13,11,13z M10,28c-3.566,0-7-1.289-7-4  c0-2.658,3.434-5.038,7-5c0.832,0.009,2,0,2,0c1,0,2.88,0.881,4,2c1,1,1,2.674,1,3C17,27,15.014,28,10,28z"></path>
-				</g>
-				<g id="icon-fb--footer">
-					<title>Facebook</title>
-					<path id="icon-fb--footer_symb" d="M32.9,23.1l1.1-5.6l-5.6,0V13c0-1.7,0.9-2.2,3.4-2.2H34V5.1c0,0-2.3,0-4.5,0c-4.6,0-7.9,2.7-7.9,7.9v4.5H16v5.6h5.6 v15.8h6.8V23.1H32.9z"></path>
-				</g>
-				<g id="icon-lkd--footer">
-					<title>Linkedin</title>
-					<g id="icon-fb--footer_symb">
-						<path d="M15.3,14.6h5.9v2.9l0,0c0.8-1.5,2.9-2.9,5.9-2.9c6.2,0,6.9,3.6,6.9,8.8v10.8h-5.9v-9.8c0-2.3,0.2-4.9-2.9-4.9 c-3.9,0-3.9,2.4-3.9,4.9v9.8h-5.9V14.6z"></path>
-						<rect x="5.5" y="14.6" width="5.9" height="19.7"></rect>
-						<circle cx="8.4" cy="8.2" r="3.4"></circle>
-					</g>
-				</g>
-				<g id="icon-vk--footer">
-					<title>Vkontakte</title>
-					<path id="icon-fb--footer_symb" d="M20.5,27.5c0.9,0,0.9-1.3,0.9-1.8c0-0.9,0.9-1.8,1.9-1.8s2.5,1.5,3.7,2.7c0.9,0.9,0.9,0.9,1.9,0.9s2.8,0,2.8,0 s1.9-0.1,1.9-1.8c0-0.6-0.6-1.5-2.8-3.6c-1.9-1.8-2.8-0.9,0-4.4c1.7-2.2,3-4.2,2.8-4.7c-0.2-0.5-5-1.4-5.5-0.6 c-1.9,2.7-2.2,3.3-2.8,4.4c-0.9,1.8-1,2.7-1.9,2.7c-0.8,0-0.9-1.7-0.9-2.7c0-2.9,0.4-5-0.9-5.3c0,0-1.9,0-2.8,0 c-1.5,0-2.8,0.9-2.8,0.9s-1.2,0.9-0.9,0.9c0.3,0,1.9-0.4,1.9,0.9c0,0.9,0,1.8,0,1.8s0,3.6-0.9,3.6c-0.9,0-2.8-3.6-4.7-6.2 c-0.7-1-0.9-0.9-1.9-0.9c-1,0-1.9,0-2.8,0c-0.9,0-1.1,0.6-0.9,0.9c1.9,4.4,3.2,7.2,6.7,10.7c3.2,3.2,5.4,3.4,7.2,3.5 C20,27.5,19.5,27.5,20.5,27.5z"></path>
-				</g>
-				<g id="icon-skype">
-					<title>Skype</title>
-					<path d="M49.6,31.4c0.4-1.6,0.5-3.3,0.5-5.1c0-13.1-10.7-23.7-23.8-23.7c-1.4,0-2.8,0.1-4.1,0.3c-2.1-1.3-4.7-2.1-7.4-2.1 C7.2,0.8,1,6.9,1,14.5c0,2.5,0.7,4.9,1.9,7c-0.3,1.5-0.5,3.1-0.5,4.8C2.4,39.4,13.1,50,26.3,50c1.5,0,2.9-0.1,4.4-0.4 c1.9,1,4.2,1.6,6.5,1.6C44.8,51.2,51,45,51,37.4C51,35.3,50.5,33.2,49.6,31.4z M38.5,37.6c-1.1,1.6-2.7,2.8-4.8,3.7 c-2.1,0.9-4.6,1.3-7.5,1.3c-3.4,0-6.3-0.6-8.5-1.8c-1.6-0.9-2.9-2-3.9-3.5s-1.5-2.9-1.5-4.3c0-0.9,0.3-1.6,1-2.2s1.5-0.9,2.5-0.9 c0.8,0,1.5,0.2,2.1,0.7c0.5,0.5,1,1.2,1.4,2c0.4,1,0.9,1.8,1.4,2.4s1.1,1.1,2,1.5s2,0.6,3.5,0.6c2,0,3.6-0.4,4.8-1.2 c1.2-0.8,1.8-1.8,1.8-3c0-0.9-0.3-1.7-0.9-2.3c-0.7-0.6-1.5-1.1-2.5-1.4c-1.1-0.3-2.6-0.7-4.4-1.1c-2.5-0.5-4.6-1.2-6.3-1.9 c-1.7-0.7-3.1-1.7-4.1-3s-1.5-2.9-1.5-4.8c0-1.8,0.5-3.4,1.6-4.8c1.1-1.4,2.6-2.5,4.6-3.2s4.3-1.1,7-1.1c2.1,0,4,0.2,5.6,0.7 s2.9,1.1,3.9,2c1,0.8,1.8,1.7,2.3,2.6c0.5,0.9,0.7,1.8,0.7,2.7c0,0.8-0.3,1.6-1,2.3c-0.7,0.7-1.5,1-2.4,1s-1.6-0.2-2.1-0.6 c-0.4-0.4-0.9-1-1.4-1.9c-0.6-1.1-1.3-2-2.1-2.6s-2.1-0.9-4-0.9c-1.7,0-3.1,0.3-4.1,1c-1,0.6-1.5,1.4-1.5,2.3c0,0.5,0.2,1,0.5,1.4 s0.8,0.8,1.4,1.1c0.6,0.3,1.3,0.6,1.9,0.7c0.7,0.2,1.8,0.5,3.3,0.8c1.9,0.4,3.7,0.9,5.3,1.4s3,1.1,4.1,1.9c1.1,0.7,2,1.7,2.7,2.8 c0.6,1.1,1,2.5,1,4.2C40.2,34.3,39.6,36.1,38.5,37.6z"></path>
-				</g>
-				<g id="prepress-press">
-					<title>Prepress-Press-Postpress</title>
-					<path d="M1,7.4h0.9V4.7c0.2,0,0.4,0.1,0.7,0.1c0.9,0,1.6-0.2,2.1-0.7C5,3.7,5.1,3.3,5.1,2.7 c0-0.6-0.2-1.1-0.6-1.4C4.1,1,3.5,0.8,2.6,0.8C1.9,0.8,1.4,0.8,1,0.9V7.4z M1.8,1.5c0.2,0,0.4-0.1,0.8-0.1c1,0,1.6,0.4,1.6,1.3 c0,0.9-0.6,1.4-1.7,1.4C2.3,4.1,2,4.1,1.8,4V1.5z M7.7,7.4h0.9V4.5h0.8c0.8,0,1.2,0.4,1.4,1.3c0.2,0.8,0.3,1.4,0.5,1.6h0.9 c-0.1-0.3-0.3-0.9-0.5-1.8c-0.2-0.7-0.5-1.1-1-1.3v0c0.7-0.2,1.3-0.8,1.3-1.7c0-0.5-0.2-1-0.5-1.2c-0.4-0.4-1-0.5-2-0.5 c-0.6,0-1.2,0-1.7,0.1V7.4z M8.6,1.5c0.1,0,0.4-0.1,0.9-0.1c0.9,0,1.6,0.4,1.6,1.2c0,0.7-0.6,1.2-1.5,1.2H8.6V1.5z M18,3.6h-2.6V1.5 h2.8V0.8h-3.7v6.5h3.8V6.7h-2.9V4.3H18V3.6z M20.9,7.4h0.9V4.7c0.2,0,0.4,0.1,0.7,0.1c0.9,0,1.6-0.2,2.1-0.7 c0.3-0.3,0.5-0.8,0.5-1.4c0-0.6-0.2-1.1-0.6-1.4c-0.4-0.3-1-0.5-1.9-0.5c-0.7,0-1.3,0.1-1.7,0.1V7.4z M21.8,1.5 c0.2,0,0.4-0.1,0.8-0.1c1,0,1.6,0.4,1.6,1.3c0,0.9-0.6,1.4-1.7,1.4c-0.3,0-0.5,0-0.7-0.1V1.5z M27.6,7.4h0.9V4.5h0.8 c0.8,0,1.2,0.4,1.4,1.3c0.2,0.8,0.3,1.4,0.5,1.6h0.9c-0.1-0.3-0.3-0.9-0.5-1.8c-0.2-0.7-0.5-1.1-1-1.3v0c0.7-0.2,1.3-0.8,1.3-1.7 c0-0.5-0.2-1-0.5-1.2c-0.4-0.4-1-0.5-2-0.5c-0.6,0-1.2,0-1.7,0.1V7.4z M28.5,1.5c0.1,0,0.4-0.1,0.9-0.1c0.9,0,1.6,0.4,1.6,1.2 c0,0.7-0.6,1.2-1.5,1.2h-0.9V1.5z M38,3.6h-2.6V1.5h2.8V0.8h-3.7v6.5h3.8V6.7h-2.9V4.3H38V3.6z M40.5,7c0.4,0.2,1.1,0.4,1.7,0.4 c1.6,0,2.4-0.9,2.4-1.9c0-1-0.6-1.5-1.7-1.9c-0.9-0.3-1.4-0.7-1.4-1.3c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3L44.3,1 c-0.3-0.2-0.8-0.3-1.5-0.3c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9c0.9,0.3,1.3,0.7,1.3,1.3c0,0.7-0.5,1.1-1.4,1.1 c-0.6,0-1.2-0.2-1.6-0.4L40.5,7z M46.8,7c0.4,0.2,1.1,0.4,1.7,0.4c1.6,0,2.4-0.9,2.4-1.9c0-1-0.6-1.5-1.7-1.9 c-0.9-0.3-1.4-0.7-1.4-1.3c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3L50.7,1c-0.3-0.2-0.8-0.3-1.5-0.3c-1.3,0-2.2,0.8-2.2,1.8 c0,0.9,0.7,1.5,1.8,1.9C49.7,4.7,50,5,50,5.6c0,0.7-0.5,1.1-1.4,1.1c-0.6,0-1.2-0.2-1.6-0.4L46.8,7z M53.1,3.7v0.6h2.5V3.7H53.1z M58,7.4h0.9V4.7c0.2,0,0.4,0.1,0.7,0.1c0.9,0,1.6-0.2,2.1-0.7c0.3-0.3,0.5-0.8,0.5-1.4c0-0.6-0.2-1.1-0.6-1.4 c-0.4-0.3-1-0.5-1.9-0.5c-0.7,0-1.3,0.1-1.7,0.1V7.4z M58.9,1.5c0.2,0,0.4-0.1,0.8-0.1c1,0,1.6,0.4,1.6,1.3c0,0.9-0.6,1.4-1.7,1.4 c-0.3,0-0.5,0-0.7-0.1V1.5z M64.8,7.4h0.9V4.5h0.8c0.8,0,1.2,0.4,1.4,1.3c0.2,0.8,0.3,1.4,0.5,1.6h0.9c-0.1-0.3-0.3-0.9-0.5-1.8 c-0.2-0.7-0.5-1.1-1-1.3v0c0.7-0.2,1.3-0.8,1.3-1.7c0-0.5-0.2-1-0.5-1.2c-0.4-0.4-1-0.5-2-0.5c-0.6,0-1.2,0-1.7,0.1V7.4z M65.6,1.5 c0.1,0,0.4-0.1,0.9-0.1c0.9,0,1.6,0.4,1.6,1.2c0,0.7-0.6,1.2-1.5,1.2h-0.9V1.5z M75.1,3.6h-2.6V1.5h2.8V0.8h-3.7v6.5h3.8V6.7h-2.9 V4.3h2.6V3.6z M77.6,7c0.4,0.2,1.1,0.4,1.7,0.4c1.6,0,2.4-0.9,2.4-1.9c0-1-0.6-1.5-1.7-1.9C79,3.3,78.6,3,78.6,2.4 c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3L81.4,1c-0.3-0.2-0.8-0.3-1.5-0.3c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9 c0.9,0.3,1.3,0.7,1.3,1.3c0,0.7-0.5,1.1-1.4,1.1c-0.6,0-1.2-0.2-1.6-0.4L77.6,7z M83.9,7c0.4,0.2,1.1,0.4,1.7,0.4 c1.6,0,2.4-0.9,2.4-1.9c0-1-0.6-1.5-1.7-1.9C85.4,3.3,85,3,85,2.4c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3L87.8,1 c-0.3-0.2-0.8-0.3-1.5-0.3c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9c0.9,0.3,1.3,0.7,1.3,1.3c0,0.7-0.5,1.1-1.4,1.1 c-0.6,0-1.2-0.2-1.6-0.4L83.9,7z M90.2,3.7v0.6h2.5V3.7H90.2z M95.1,7.4H96V4.7c0.2,0,0.4,0.1,0.7,0.1c0.9,0,1.6-0.2,2.1-0.7 c0.3-0.3,0.5-0.8,0.5-1.4c0-0.6-0.2-1.1-0.6-1.4c-0.4-0.3-1-0.5-1.9-0.5c-0.7,0-1.3,0.1-1.7,0.1V7.4z M96,1.5c0.2,0,0.4-0.1,0.8-0.1 c1,0,1.6,0.4,1.6,1.3c0,0.9-0.6,1.4-1.7,1.4c-0.3,0-0.5,0-0.7-0.1V1.5z M104.6,0.7c-1.8,0-3.2,1.4-3.2,3.4c0,2,1.3,3.3,3.1,3.3 c1.7,0,3.2-1.2,3.2-3.4C107.7,2.1,106.5,0.7,104.6,0.7z M104.6,1.4c1.5,0,2.2,1.4,2.2,2.7c0,1.5-0.8,2.7-2.2,2.7 c-1.4,0-2.2-1.3-2.2-2.7C102.4,2.7,103.2,1.4,104.6,1.4z M109.9,7c0.4,0.2,1.1,0.4,1.7,0.4c1.6,0,2.4-0.9,2.4-1.9 c0-1-0.6-1.5-1.7-1.9c-0.9-0.3-1.4-0.7-1.4-1.3c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3l0.2-0.7c-0.3-0.2-0.8-0.3-1.5-0.3 c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9c0.9,0.3,1.3,0.7,1.3,1.3c0,0.7-0.5,1.1-1.4,1.1c-0.6,0-1.2-0.2-1.6-0.4L109.9,7z  M117.9,7.4h0.9V1.5h2.1V0.8h-5v0.7h2.1V7.4z M123,7.4h0.9V4.7c0.2,0,0.4,0.1,0.7,0.1c0.9,0,1.6-0.2,2.1-0.7 c0.3-0.3,0.5-0.8,0.5-1.4c0-0.6-0.2-1.1-0.6-1.4c-0.4-0.3-1-0.5-1.9-0.5c-0.7,0-1.3,0.1-1.7,0.1V7.4z M123.9,1.5 c0.2,0,0.4-0.1,0.8-0.1c1,0,1.6,0.4,1.6,1.3c0,0.9-0.6,1.4-1.7,1.4c-0.3,0-0.5,0-0.7-0.1V1.5z M129.7,7.4h0.9V4.5h0.8 c0.8,0,1.2,0.4,1.4,1.3c0.2,0.8,0.3,1.4,0.5,1.6h0.9c-0.1-0.3-0.3-0.9-0.5-1.8c-0.2-0.7-0.5-1.1-1-1.3v0c0.7-0.2,1.3-0.8,1.3-1.7 c0-0.5-0.2-1-0.5-1.2c-0.4-0.4-1-0.5-2-0.5c-0.6,0-1.2,0-1.7,0.1V7.4z M130.6,1.5c0.1,0,0.4-0.1,0.9-0.1c0.9,0,1.6,0.4,1.6,1.2 c0,0.7-0.6,1.2-1.5,1.2h-0.9V1.5z M140.1,3.6h-2.6V1.5h2.8V0.8h-3.7v6.5h3.8V6.7h-2.9V4.3h2.6V3.6z M142.6,7 c0.4,0.2,1.1,0.4,1.7,0.4c1.6,0,2.4-0.9,2.4-1.9c0-1-0.6-1.5-1.7-1.9c-0.9-0.3-1.4-0.7-1.4-1.3c0-0.4,0.4-1,1.3-1 c0.6,0,1.1,0.2,1.3,0.3l0.2-0.7c-0.3-0.2-0.8-0.3-1.5-0.3c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9c0.9,0.3,1.3,0.7,1.3,1.3 c0,0.7-0.5,1.1-1.4,1.1c-0.6,0-1.2-0.2-1.6-0.4L142.6,7z M148.9,7c0.4,0.2,1.1,0.4,1.7,0.4c1.6,0,2.4-0.9,2.4-1.9 c0-1-0.6-1.5-1.7-1.9C150.4,3.3,150,3,150,2.4c0-0.4,0.4-1,1.3-1c0.6,0,1.1,0.2,1.3,0.3l0.2-0.7c-0.3-0.2-0.8-0.3-1.5-0.3 c-1.3,0-2.2,0.8-2.2,1.8c0,0.9,0.7,1.5,1.8,1.9c0.9,0.3,1.3,0.7,1.3,1.3c0,0.7-0.5,1.1-1.4,1.1c-0.6,0-1.2-0.2-1.6-0.4L148.9,7z  M69.9,20.9v-0.7H67v0l0.5-0.5c1.4-1.3,2.3-2.2,2.3-3.4c0-0.9-0.6-1.8-2-1.8c-0.8,0-1.4,0.3-1.9,0.6l0.3,0.6 c0.3-0.2,0.8-0.5,1.4-0.5c1,0,1.3,0.6,1.3,1.2c0,1-0.8,1.8-2.4,3.3l-0.7,0.7v0.5H69.9z M75.9,20.9v-1.7h0.9v-0.7h-0.9v-3.9h-1 l-2.9,4v0.6h3v1.7H75.9z M72.9,18.5L72.9,18.5l1.6-2.2c0.2-0.3,0.3-0.6,0.5-0.9h0c0,0.3,0,0.7,0,1v2.1H72.9z M79.1,21.3l2.8-7h-0.7 l-2.8,7H79.1z M83.8,14.6v0.7H87v0l-2.8,5.6h0.9l2.9-5.8v-0.6H83.8z"></path>
-				</g>
-			</defs>
-		</svg>
-		<div class="toolbar__box toolbar__box--top">
-			<div class="toolbar toolbar--top">
-				<a href="#" class="toolbar__item toolbar__item--search">
-					<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-search"></use>
-					</svg>
-				</a>
-				<a href="#" class="toolbar__item toolbar__item--cart">
-					<svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-cart"></use>
-					</svg>
-				</a>
-				<a href="#" class="toolbar__item toolbar__item--profile">
-					<svg viewBox="0 0 20.5 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-profile"></use>
-					</svg>
-				</a>
-			</div>
-		</div>
-		<div class="toolbar__box toolbar__box--right">
-			<div class="toolbar toolbar--right">
-				<a href="#" class="toolbar__item toolbar__item--search">
-					<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-search"></use>
-					</svg>
-				</a>
-				<a href="#" class="toolbar__item toolbar__item--cart">
-					<svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-cart"></use>
-					</svg>
-				</a>
-				<a href="#" class="toolbar__item toolbar__item--profile">
-					<svg viewBox="0 0 20.5 18" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="#icon-profile"></use>
-					</svg>
-				</a>
-			</div>
-		</div>
-		<header id="to-top" class="header">
-			<div class="container-fluid header-container">
-				<div class="row">
-					<div class="col-md-8 col-sm-9 header-logo-box">
-						<div class="header-logo">
-							<a href="#" class="header-logo__link"><img src="../images/logo-promo.png" alt="e-order"></a>
-							<div class="header-logo__slogan">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 22">
-									<use xlink:href="#prepress-press"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-8 col-sm-7 header-presentation-box">
-						<p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
-					</div>
-					<div class="col-sm-8 header-calling">
-						<p class="header-phone">+7 495 <span class="header-phone--grand">223 9200</span></p><a href="tel:+74952239200" class="header-call"><span class="header-call__handset"></span><span class="header-call__text">Звонок за наш счет</span><span class="header-call__text header-call__text--tel">+7 495 223 9200</span></a>
-					</div>
-					<div class="navbar-header">
-						<button type="button" data-toggle="collapse" data-target="#header-menu" class="navbar-toggle"><span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-					</div>
-				</div>
-			</div>
-			<!--nav.header-menu-->
-			<nav class="header-menu">
-				<div id="header-menu" class="collapse navbar-collapse">
-					<ul role="navigation" class="nav nav-justified">
-						<li class="nav-item nav-item--special"><a href="#action" class="nav-item__name">Акции!</a></li>
-						<li class="nav-item"><a href="#popular" class="nav-item__name">Продукция</a></li>
-						<li class="nav-item"><a href="#features" class="nav-item__name">О нас</a></li>
-						<li class="nav-item"><a href="#workmap" class="nav-item__name">Как мы работаем</a></li>
-						<li class="nav-item"><a href="#services" class="nav-item__name">Сервисы</a></li>
-						<li class="nav-item"><a href="#equipment" class="nav-item__name">Оборудование</a></li>
-						<li class="nav-item"><a href="#news" class="nav-item__name">Новости</a></li>
-						<li class="nav-item"><a href="#contacts" class="nav-item__name">Контакты</a></li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-		<main>
-			<div class="container container--main product">
-				<div class="title-reg title-low">Каталог</div>
-				<div class="block-reg product-block product-block--catalog">
-					<div class="product-desc-part">
-						<div class="row">
-							<div class="col-md-15">
-								<figure class="product__img">
-									<picture>
-										<source media="(max-width: 513px)" srcset="../images/products/products--catalog-448.jpg 448w, ../images/products/products--catalog-672.jpg 672w, ../images/products/products--catalog-896.jpg 896w, ../images/products/products--catalog-1344.jpg 1344w"><img src="../images/products/products--catalog-672.jpg" width="672" srcset="../images/products/products--catalog-1008.jpg 1008w, ../images/products/products--catalog-1344.jpg 1344w, ../images/products/products--catalog-2016.jpg 2016w" alt="Каталог">
-									</picture>
-								</figure>
-							</div>
-							<div class="col-md-9">
-								<div class="product-desc">
-									<div class="product-desc__title"><b>КАТАЛОГ</b>, -а, м.</div>
-									<div class="product-desc__text">
-										<p>1. Составленный в определённом порядке перечень каких-нибудь однородных предметов (книг, экспонатов, товаров). i Библиотечный каталог Издательский план-к.</p>
-										<p>2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. <i>Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.</i></p>
-										<p>|| <i>прилагательное</i> <b>каталожный</b>, -ая, -ое (к 1 значение).</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="product-price">
-						<div class="product-price__table clearfix">
-							<div class="product-price__desc">
-								<p class="product-price__desc-item"><span class="product-price__desc--name">формат</span><span class="product-price__desc--value">А6 (105х148 мм)</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">обложка*</span><span class="product-price__desc--value">мел. 170 г/м², 4+0</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">блок*</span><span class="product-price__desc--value">офсет. 80 г/м², 1+1</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">количество полос</span><span class="product-price__desc--value">100</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">скрепление</span><span class="product-price__desc--value">КБС</span></p><span class="product-price__desc--subtext">*бумага, цветность</span>
-							</div>
-							<div class="product-price__col product-price__col--circulation">
-								<div class="product-price__title product-price__title--circulation">Тираж<span class="product-price__title--small">штук</span></div>
-								<div class="product-price__vals">
-									<div class="product-price__val">100</div>
-									<div class="product-price__val">500</div>
-									<div class="product-price__val">1000</div>
-									<div class="product-price__val">2000</div>
-									<div class="product-price__val">10000</div>
-									<div class="product-price__val">20000</div>
-									<div class="product-price__val">50000</div>
-								</div>
-							</div>
-							<div class="product-price__col product-price__col--price">
-								<div class="product-price__title product-price__title--price">Цена<span class="product-price__title--small">рублей</span></div>
-								<div class="product-price__vals">
-									<div class="product-price__val">24700</div>
-									<div class="product-price__val">33200</div>
-									<div class="product-price__val">44100</div>
-									<div class="product-price__val">65500</div>
-									<div class="product-price__val">237800</div>
-									<div class="product-price__val">550000</div>
-									<div class="product-price__val">1000000</div>
-								</div><a href="/" class="product-price__calculate">рассчитать заказ</a>
-							</div>
-							<div class="product-price__col product-price__col--action">
-								<div class="product-price__title product-price__title--action">Акция<span class="product-price__title--small"></span></div>
-								<div class="product-price__vals">
-									<div class="product-price__val">20100</div>
-									<div class="product-price__val">25200</div>
-									<div class="product-price__val">35300</div>
-									<div class="product-price__val">55400</div>
-									<div class="product-price__val">220600</div>
-									<div class="product-price__val">480800</div>
-									<div class="product-price__val">900000</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="product-price">
-						<div class="product-price__table clearfix">
-							<div class="product-price__desc">
-								<p class="product-price__desc-item"><span class="product-price__desc--name">формат</span><span class="product-price__desc--value">145х297 мм</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">обложка*</span><span class="product-price__desc--value">мел. 170 г/м², 4+0</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">блок*</span><span class="product-price__desc--value">мел. 130 г/м², 4+4</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">количество полос</span><span class="product-price__desc--value">52</span></p>
-								<p class="product-price__desc-item"><span class="product-price__desc--name">скрепление</span><span class="product-price__desc--value">КБС</span></p><span class="product-price__desc--subtext">*бумага, цветность</span>
-							</div>
-							<div class="product-price__col product-price__col--circulation">
-								<div class="product-price__title product-price__title--circulation">Тираж<span class="product-price__title--small">штук</span></div>
-								<div class="product-price__vals">
-									<div class="product-price__val">100</div>
-									<div class="product-price__val">500</div>
-									<div class="product-price__val">1000</div>
-									<div class="product-price__val">2000</div>
-									<div class="product-price__val">10000</div>
-									<div class="product-price__val">20000</div>
-									<div class="product-price__val">50000</div>
-								</div>
-							</div>
-							<div class="product-price__col product-price__col--price">
-								<div class="product-price__title product-price__title--price">Цена<span class="product-price__title--small">рублей</span></div>
-								<div class="product-price__vals">
-									<div class="product-price__val">61900</div>
-									<div class="product-price__val">74500</div>
-									<div class="product-price__val">90200</div>
-									<div class="product-price__val">121500</div>
-									<div class="product-price__val">372900</div>
-									<div class="product-price__val">900000</div>
-									<div class="product-price__val">1500000</div>
-								</div><a href="/" class="product-price__calculate">рассчитать заказ</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<div class="footer-wrapper">
-			<footer class="footer">
-				<div class="container-fluid">
-					<div class="container footer-container">
-						<div class="row footer--main">
-							<div class="footer-menu col-sm-3 col-xs-7">
-								<p class="title-footer footer-menu__title">Меню</p>
-								<div class="block-footer footer-menu__block">
-									<ul class="nav">
-										<li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
-										<li class="nav-item"><a href="/11" class="nav-item__name">F.A.Q.</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="footer-contacts col-sm-5 col-xs-11 col-sm-push-12">
-								<p class="title-footer footer-contacts__title">Контакты</p>
-								<div class="block-footer footer-contacts__block">
-									<p class="footer-contacts__item">Телефон: +7 (495) 223-9200</p>
-									<p class="footer-contacts__item">E-mail: sale@eorder.ru</p>
-									<p class="footer-contacts__item footer-contacts__item--skype">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-											<use xlink:href="#icon-skype"></use>
-										</svg>sale.eorder
-									</p>
-									<p class="footer-contacts__item">Адрес: Москва, 2-й Котляковский переулок, д.18</p>
-								</div><a class="footer-contacts__sub-text">Открыть карту</a>
-							</div>
-							<div class="col-sm-4 col-xs-6 col-sm-push-12">
-								<div class="footer-code"><img src="../images/footer-code.jpg" alt="Штрихкод"></div>
-							</div>
-							<div class="col-sm-12 col-sm-pull-9 col-xs-24">
-								<div class="row">
-									<div class="col-sm-10 col-xs-7">
-										<form action="" method="post" role="form" class="footer-promo form-promo">
-											<p class="title-footer form-promo__title">Ввести промо код</p>
-											<div class="block-footer form-promo__block">
-												<p class="form-promo__text">У Вас есть промо код?
-													<br>Отлично! Введите его здесь:</p>
-												<input type="text" placeholder="Промо код" class="form-promo__input form-control">
-												<button type="submit" class="form-promo__btn btn">Да!</button>
-											</div>
-											<p class="form-promo__sub-text">Участвуйте в акциях!</p>
-										</form>
-									</div>
-									<div class="col-sm-14 col-xs-17">
-										<form action="" method="post" role="form" class="footer-signup form-signup">
-											<p class="title-footer form-signup__title">Подписка на новости</p>
-											<div class="block-footer form-signup__block">
-												<p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
-												<input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
-												<input type="text" placeholder="Ваш email" class="form-signup__input form-control">
-												<button type="submit" class="form-signup__btn btn">Да!</button>
-											</div>
-											<p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row footer--second">
-							<div class="col-sm-8 col-xs-7 footer-logo-block">
-								<a href="#" class="footer-logo"><img src="../images/sprite/footer-logo-promo.png" alt="Eorder promo"></a>
-							</div>
-							<div class="col-sm-8 col-xs-10">
-								<div class="footer-press"><img src="../images/sprite/footer-press.png" alt="Prepress-Press-Postpress"></div>
-							</div>
-							<div class="col-sm-8 col-xs-7">
-								<p class="footer-socials"><span class="footer-socials__text">Мы в социальных сетях</span>
-									<a href="" class="footer-socials__links footer-socials__links--fb">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-											<use xlink:href="#icon-fb--footer"></use>
-										</svg>
-									</a>
-									<a href="" class="footer-socials__links footer-socials__links--lkd">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-											<use xlink:href="#icon-lkd--footer"></use>
-										</svg>
-									</a>
-									<a href="" class="footer-socials__links footer-socials__links--vk">
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-											<use xlink:href="#icon-vk--footer"></use>
-										</svg>
-									</a>
-								</p>
-							</div>
-						</div>
-						<p class="footer-copyright">&#169; 2014 <span class="footer-copyright--name">ЗАО "Новые печатные технологии". </span>Все права защищены.</p>
-					</div>
-				</div>
-			</footer>
-			<p class="footer-signature">Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00</p>
-		</div>
-	</body>
-	<script src="../scripts/libs/bootstrap.js"></script>
-	<script src="../scripts/common.js"></script>
+  <head>
+    <title>eorder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap-style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/clips.css" rel="stylesheet">
+    <script src="../scripts/libs/modernizr.custom.05259.js"></script>
+    <script src="../scripts/libs/jquery-1.11.3.min.js"></script>
+    <!--link(href="../scripts/libs/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet")-->
+    <!--script(src="../scripts/libs/fancybox/jquery.fancybox-1.3.4.js")-->
+    <script src="../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
+  </head>
+  <body>
+    <svg width="0" height="0" class="svg-container">
+      <defs>
+        <g id="icon-search">
+          <title>Search</title>
+          <path d="m17.67022,17.22041l-0.46181,0.46219c-0.38231,0.38263 -1.00222,0.38263 -1.38453,0l-3.41399,-3.41637c-1.2845,0.91634 -2.85303,1.46122 -4.55198,1.46122c-4.3394,0 -7.8579,-3.52096 -7.8579,-7.86395c0,-4.34254 3.51851,-7.8635 7.8579,-7.8635c4.34029,0 7.8588,3.52096 7.8588,7.8635c0,1.69902 -0.54488,3.26931 -1.46046,4.5553l3.41399,3.41637c0.38232,0.38263 0.38232,1.0026 0,1.38523l-0.00001,0.00001l0.00001,0l0,0l-0.00002,0zm-9.81233,-14.97382c-3.09957,0 -5.61227,2.51478 -5.61227,5.61691c0,3.10258 2.5127,5.61736 5.61227,5.61736c4.28223,0 5.61317,-3.94829 5.61317,-5.61736c0,-3.10213 -2.51271,-5.61691 -5.61317,-5.61691z">
+        </g>
+        <g id="icon-cart">
+          <title>Cart</title>
+          <path d="m18.40579,9.09802l-0.11288,0l-2.07581,7.797c-0.15729,0.66003 -0.85181,1.19403 -1.55139,1.19403l-9.69852,0c-0.69958,0 -1.3942,-0.534 -1.55148,-1.19403l-2.07571,-7.797l-0.11279,0c-0.6778,0 -1.2272,-0.54901 -1.2272,-1.22498c0,-0.67804 0.54941,-1.22705 1.2272,-1.22705l0.7598,0l15.65881,0l0.75998,0c0.67761,0 1.22711,0.54901 1.22711,1.22705c0,0.67596 -0.5495,1.22498 -1.22711,1.22498l-0.00001,0zm-7.7713,7.35699l3.27209,0c0.45181,0 0.81802,-0.36597 0.81802,-0.81702c0,-0.45197 -0.36621,-0.81799 -0.81802,-0.81799l-3.27209,0l0,1.63501zm0,-3.27002l4.09012,0c0.45178,0 0.81799,-0.36597 0.81799,-0.81696c0,-0.45099 -0.36621,-0.81799 -0.81799,-0.81799l-4.09012,0l0,1.63495zm-1.63599,-4.90399l-4.90829,0c-0.45172,0 -0.81802,0.36603 -0.81802,0.81702c0,0.45203 0.3663,0.81799 0.81802,0.81799l4.90829,0l0,-1.63501zm0,3.26904l-4.0903,0c-0.45169,0 -0.81799,0.367 -0.81799,0.81799c0,0.45099 0.3663,0.81696 0.81799,0.81696l4.0903,0l0,-1.63495zm0,3.26996l-3.27222,0c-0.45169,0 -0.81808,0.36603 -0.81808,0.81799c0,0.45105 0.36639,0.81702 0.81808,0.81702l3.27222,0l0,-1.63501zm6.5441,-6.539l-4.90811,0l0,1.63501l4.90811,0c0.4519,0 0.81799,-0.36597 0.81799,-0.81799c0,-0.45099 -0.36609,-0.81702 -0.81799,-0.81702zm-0.8652,-2.75195l-3.74219,-3.74005c-0.38742,-0.38696 -0.38742,-1.01495 0,-1.40198c0.3876,-0.38702 1.01578,-0.38702 1.40329,0l3.7421,3.73901c0.38751,0.388 0.38751,1.01501 0,1.40302c-0.38748,0.38696 -1.01569,0.38696 -1.4032,0zm-9.7218,0c-0.38748,0.38696 -1.01581,0.38696 -1.40329,0c-0.3876,-0.388 -0.3876,-1.01501 0,-1.40302l3.742,-3.73901c0.38757,-0.38702 1.01578,-0.38702 1.40329,0c0.3876,0.38702 0.3876,1.01501 0,1.40198l-3.742,3.74005z">
+        </g>
+        <g id="icon-profile">
+          <title>Profile</title>
+          <path d="m19.02271,17.672l-17.75461,0c-0.70038,0 -1.2681,-0.565 -1.2681,-1.26202l0,-12.62396c0,-0.69702 0.56772,-1.26105 1.2681,-1.26105l4.65002,0l0,-1.26398c0,-0.69702 0.56778,-1.26099 1.26828,-1.26099l5.91812,0c0.70038,0 1.2681,0.56396 1.2681,1.26099l0,1.26398l4.65009,0c0.70041,0 1.26822,0.56403 1.26822,1.26105l0,12.62396c0,0.69702 -0.56781,1.26202 -1.26822,1.26202zm-6.341,-15.98901l-5.0726,0l0,0.84198l5.0726,0l0,-0.84198zm5.07281,3.36603l-15.21811,0l0,10.099l15.21811,0l0,-10.099zm-10.14542,6.172c1.86771,0 3.38181,1.00397 3.38181,2.24298l-6.7637,0c0,-1.23901 1.5141,-2.24298 3.3819,-2.24298zm8.4545,-2.80603l-4.2272,0l0,-1.68298l4.2272,0l0,1.68298zm0,2.52399l-4.2272,0l0,-1.68201l4.2272,0l0,1.68201zm0,2.52502l-4.2272,0l0,-1.68201l4.2272,0l0,1.68201zm-8.4545,-2.24298c-0.9339,0 -1.69098,-1.005 -1.69098,-2.245c0,-1.23901 0.75708,-2.24402 1.69098,-2.24402c0.93381,0 1.69092,1.005 1.69092,2.24402c0,1.23999 -0.75711,2.245 -1.69092,2.245z">
+        </g>
+        <g id="toolbar" filter="url(#shadow)" fill="url('#toolbar-grad')">
+          <title>Toolbar</title>
+          <path d="m0,0l200,0c-18.33334,10 -6.66666,25 -25,30l-150,0c-18.33334,-5 -6.66666,-20 -25,-30z">
+        </g>
+        <linearGradient id="toolbar-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop style="stop-color:#166584" offset="0%"></stop>
+          <stop style="stop-color:#2092bf" offset="100%"></stop>
+        </linearGradient>
+        <filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="100">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"></feGaussianBlur>
+          <feOffset in="blur" dx="0" dy="1" result="offsetBlr"></feOffset>
+          <feFlood flood-color="rgba(0,0,0,.3)"></feFlood>
+          <feComposite operator="in" in2="offsetBlr" result="colBlur"></feComposite>
+          <feMerge>
+            <feMergeNode in="colBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+        <g id="icon-twitt">
+          <title>Twitter</title>
+          <path d="M30,6.708C28.895,7.199,27.244,7.851,26,8c1.273-0.762,2.539-2.561,3-4c-0.971,0.577-2.087,1.355-3.227,1.773    L25,5c-1.121-1.197-2.23-2-4-2c-3.398,0-6,2.602-6,6c0,0.399,0.047,0.7,0.11,0.956L15,10C9,10,5.034,8.724,2,5    C1.469,5.908,1,6.872,1,8c0,2.136,1.348,3.894,3,5c-1.009-0.033-2.171-0.542-3-1c0,2.98,4.186,6.432,7,7c-1,1-4.623,0.074-5,0    c0.784,2.447,3.309,3.949,6,4c-2.105,1.648-4.647,2.51-7.531,2.51c-0.498,0-0.987-0.029-1.469-0.084C2.723,27.17,6.523,28,10,28    c11.322,0,17-8.867,17-17c0-0.268,0.008-0.736,0-1C28.201,9.132,29.172,7.942,30,6.708z"></path>
+        </g>
+        <g id="icon-vk">
+          <title>Vkontakte</title>
+          <path d="M16,24c1,0,1-1.441,1-2c0-1,1-2,2-2s2.715,1.715,4,3c1,1,1,1,2,1s3,0,3,0  s2-0.076,2-2c0-0.625-0.685-1.685-3-4c-2-2-3.026-0.967,0-5c1.843-2.456,3.184-4.681,2.954-5.323C29.734,7.064,24.608,6.088,24,7  c-2,3-2.367,3.735-3,5c-1,2-1.099,3-2,3c-0.909,0-1-1.941-1-3c0-3.306,0.479-5.644-1-6c0,0-2,0-3,0c-1.61,0-3,1-3,1  s-1.241,0.968-1,1c0.298,0.04,2-0.414,2,1c0,1,0,2,0,2s0.009,4-1,4c-1,0-3-4-5-7C5.215,6.823,5,7,4,7C2.928,7,2.001,7.042,1,7.042  C0,7.042-0.128,7.679,0,8c2,5,3.437,8.14,7.237,12.096C10.722,23.725,13.05,23.918,15,24C15.5,24.021,15,24,16,24z"></path>
+        </g>
+        <g id="icon-fb">
+          <title>Facebook</title>
+          <path d="M22,16l1-5l-5,0.001V7c0-1.544,0.784-2,3-2h2V0c0,0-2.05,0-4,0c-4.072,0-7,2.435-7,7v4l-5,0v5h5v14h6V16H22z"></path>
+        </g>
+        <g id="icon-odnoklassniki">
+          <title>Odnoklassniki</title>
+          <path d="M22,15c-1,0-3,2-7,2s-6-2-7-2c-1.104,0-2,0.896-2,2c0,1,0.568,1.481,1,1.734C8.185,19.427,12,21,12,21l-4.25,5.438  c0,0-0.75,0.935-0.75,1.562c0,1.104,0.896,2,2,2c1.021,0,1.484-0.656,1.484-0.656S14.993,23.993,15,24  c0.007-0.007,4.516,5.344,4.516,5.344S19.979,30,21,30c1.104,0,2-0.896,2-2c0-0.627-0.75-1.562-0.75-1.562L18,21  c0,0,3.815-1.573,5-2.266C23.432,18.481,24,18,24,17C24,15.896,23.104,15,22,15z"></path>
+          <path d="M15,0c-3.866,0-7,3.134-7,7s3.134,7,7,7c3.865,0,7-3.134,7-7S18.865,0,15,0z M15,10.5c-1.933,0-3.5-1.566-3.5-3.5  c0-1.933,1.567-3.5,3.5-3.5c1.932,0,3.5,1.567,3.5,3.5C18.5,8.934,16.932,10.5,15,10.5z"></path>
+        </g>
+        <g id="icon-google">
+          <title>Google-plus</title>
+          <polygon points="30,13 26,13 26,9 24,9 24,13 20,13 20,15 24,15 24,19 26,19 26,15 30,15"></polygon>
+          <path d="M15,17c0,0-2-1.15-2-2c0,0-0.499-1.828,1-3c1.537-1.2,3-3.035,3-5c0-2.336-1.046-5-3-6h3l2.387-1  c0,0-7.063,0-9.387,0C5.835,0,2,3.345,2,7c0,3.735,2.849,6.56,7.086,6.56c0.295,0,0.581-0.006,0.861-0.025  c-0.274,0.526-0.472,1.119-0.472,1.735c0,1.037,0.818,2.042,1.524,2.73c-0.533,0-1.438,0-2,0c-5.159,0-9,2.593-9,6  c0,3.355,4.872,6,10.031,6c5.882,0,9.97-3,9.97-7C20,20.311,17.455,18.736,15,17z M11,13c-2.395,0-5.587-2.857-6-6  C4.587,3.856,6.607,0.929,9,1c2.394,0.071,4.603,2.908,5.017,6.052C14.429,10.195,13,13,11,13z M10,28c-3.566,0-7-1.289-7-4  c0-2.658,3.434-5.038,7-5c0.832,0.009,2,0,2,0c1,0,2.88,0.881,4,2c1,1,1,2.674,1,3C17,27,15.014,28,10,28z"></path>
+        </g>
+        <g id="icon-fb--footer">
+          <title>Facebook</title>
+          <path id="icon-fb--footer_symb" d="M32.9,23.1l1.1-5.6l-5.6,0V13c0-1.7,0.9-2.2,3.4-2.2H34V5.1c0,0-2.3,0-4.5,0c-4.6,0-7.9,2.7-7.9,7.9v4.5H16v5.6h5.6 v15.8h6.8V23.1H32.9z"></path>
+        </g>
+        <g id="icon-lkd--footer">
+          <title>Linkedin</title>
+          <g id="icon-fb--footer_symb">
+            <path d="M15.3,14.6h5.9v2.9l0,0c0.8-1.5,2.9-2.9,5.9-2.9c6.2,0,6.9,3.6,6.9,8.8v10.8h-5.9v-9.8c0-2.3,0.2-4.9-2.9-4.9 c-3.9,0-3.9,2.4-3.9,4.9v9.8h-5.9V14.6z"></path>
+            <rect x="5.5" y="14.6" width="5.9" height="19.7"></rect>
+            <circle cx="8.4" cy="8.2" r="3.4"></circle>
+          </g>
+        </g>
+        <g id="icon-vk--footer">
+          <title>Vkontakte</title>
+          <path id="icon-fb--footer_symb" d="M20.5,27.5c0.9,0,0.9-1.3,0.9-1.8c0-0.9,0.9-1.8,1.9-1.8s2.5,1.5,3.7,2.7c0.9,0.9,0.9,0.9,1.9,0.9s2.8,0,2.8,0 s1.9-0.1,1.9-1.8c0-0.6-0.6-1.5-2.8-3.6c-1.9-1.8-2.8-0.9,0-4.4c1.7-2.2,3-4.2,2.8-4.7c-0.2-0.5-5-1.4-5.5-0.6 c-1.9,2.7-2.2,3.3-2.8,4.4c-0.9,1.8-1,2.7-1.9,2.7c-0.8,0-0.9-1.7-0.9-2.7c0-2.9,0.4-5-0.9-5.3c0,0-1.9,0-2.8,0 c-1.5,0-2.8,0.9-2.8,0.9s-1.2,0.9-0.9,0.9c0.3,0,1.9-0.4,1.9,0.9c0,0.9,0,1.8,0,1.8s0,3.6-0.9,3.6c-0.9,0-2.8-3.6-4.7-6.2 c-0.7-1-0.9-0.9-1.9-0.9c-1,0-1.9,0-2.8,0c-0.9,0-1.1,0.6-0.9,0.9c1.9,4.4,3.2,7.2,6.7,10.7c3.2,3.2,5.4,3.4,7.2,3.5 C20,27.5,19.5,27.5,20.5,27.5z"></path>
+        </g>
+        <g id="icon-skype">
+          <title>Skype</title>
+          <path d="M49.6,31.4c0.4-1.6,0.5-3.3,0.5-5.1c0-13.1-10.7-23.7-23.8-23.7c-1.4,0-2.8,0.1-4.1,0.3c-2.1-1.3-4.7-2.1-7.4-2.1 C7.2,0.8,1,6.9,1,14.5c0,2.5,0.7,4.9,1.9,7c-0.3,1.5-0.5,3.1-0.5,4.8C2.4,39.4,13.1,50,26.3,50c1.5,0,2.9-0.1,4.4-0.4 c1.9,1,4.2,1.6,6.5,1.6C44.8,51.2,51,45,51,37.4C51,35.3,50.5,33.2,49.6,31.4z M38.5,37.6c-1.1,1.6-2.7,2.8-4.8,3.7 c-2.1,0.9-4.6,1.3-7.5,1.3c-3.4,0-6.3-0.6-8.5-1.8c-1.6-0.9-2.9-2-3.9-3.5s-1.5-2.9-1.5-4.3c0-0.9,0.3-1.6,1-2.2s1.5-0.9,2.5-0.9 c0.8,0,1.5,0.2,2.1,0.7c0.5,0.5,1,1.2,1.4,2c0.4,1,0.9,1.8,1.4,2.4s1.1,1.1,2,1.5s2,0.6,3.5,0.6c2,0,3.6-0.4,4.8-1.2 c1.2-0.8,1.8-1.8,1.8-3c0-0.9-0.3-1.7-0.9-2.3c-0.7-0.6-1.5-1.1-2.5-1.4c-1.1-0.3-2.6-0.7-4.4-1.1c-2.5-0.5-4.6-1.2-6.3-1.9 c-1.7-0.7-3.1-1.7-4.1-3s-1.5-2.9-1.5-4.8c0-1.8,0.5-3.4,1.6-4.8c1.1-1.4,2.6-2.5,4.6-3.2s4.3-1.1,7-1.1c2.1,0,4,0.2,5.6,0.7 s2.9,1.1,3.9,2c1,0.8,1.8,1.7,2.3,2.6c0.5,0.9,0.7,1.8,0.7,2.7c0,0.8-0.3,1.6-1,2.3c-0.7,0.7-1.5,1-2.4,1s-1.6-0.2-2.1-0.6 c-0.4-0.4-0.9-1-1.4-1.9c-0.6-1.1-1.3-2-2.1-2.6s-2.1-0.9-4-0.9c-1.7,0-3.1,0.3-4.1,1c-1,0.6-1.5,1.4-1.5,2.3c0,0.5,0.2,1,0.5,1.4 s0.8,0.8,1.4,1.1c0.6,0.3,1.3,0.6,1.9,0.7c0.7,0.2,1.8,0.5,3.3,0.8c1.9,0.4,3.7,0.9,5.3,1.4s3,1.1,4.1,1.9c1.1,0.7,2,1.7,2.7,2.8 c0.6,1.1,1,2.5,1,4.2C40.2,34.3,39.6,36.1,38.5,37.6z"></path>
+        </g>
+        <g id="prepress-press">
+          <title>Prepress-Press-Postpress</title>
+          <path d="M0,23.9h2.9v-8.7c0.7,0.2,1.5,0.2,2.3,0.2c2.8,0,5.3-0.8,6.9-2.4c1.1-1.1,1.7-2.7,1.7-4.6 c0-1.9-0.7-3.5-2-4.5c-1.3-1.2-3.4-1.8-6.3-1.8C3.2,2.1,1.4,2.3,0,2.5V23.9z M2.9,4.5c0.5-0.1,1.5-0.2,2.7-0.2 c3.2,0,5.3,1.4,5.3,4.2c0,3-2.1,4.6-5.6,4.6c-1,0-1.8-0.1-2.4-0.2V4.5z M22.4,23.9h2.9v-9.4H28c2.6,0.1,3.8,1.2,4.5,4.2 c0.6,2.7,1.1,4.6,1.5,5.2h3c-0.5-0.8-1-2.9-1.7-6c-0.5-2.3-1.6-3.8-3.3-4.4v-0.1c2.4-0.8,4.2-2.7,4.2-5.5c0-1.7-0.6-3.2-1.8-4.1 c-1.4-1.2-3.4-1.8-6.5-1.8c-2,0-4.1,0.2-5.6,0.5V23.9z M25.3,4.5c0.5-0.1,1.5-0.3,2.9-0.3c3.1,0,5.2,1.3,5.2,4.1 c0,2.5-2,4.1-5.1,4.1h-3V4.5z M56.6,11.5h-8.7V4.6h9.2V2.2H45v21.7h12.7v-2.3h-9.7v-7.8h8.7V11.5z M66,23.9h2.9v-8.7 c0.7,0.2,1.5,0.2,2.3,0.2c2.8,0,5.3-0.8,6.9-2.4c1.1-1.1,1.7-2.7,1.7-4.6c0-1.9-0.7-3.5-2-4.5c-1.3-1.2-3.4-1.8-6.3-1.8 c-2.3,0-4.2,0.2-5.6,0.4V23.9z M68.9,4.5c0.5-0.1,1.5-0.2,2.7-0.2c3.2,0,5.3,1.4,5.3,4.2c0,3-2.1,4.6-5.6,4.6c-1,0-1.8-0.1-2.4-0.2 V4.5z M88.4,23.9h2.9v-9.4H94c2.6,0.1,3.8,1.2,4.5,4.2c0.6,2.7,1.1,4.6,1.5,5.2h3c-0.5-0.8-1-2.9-1.7-6c-0.5-2.3-1.6-3.8-3.3-4.4 v-0.1c2.4-0.8,4.2-2.7,4.2-5.5c0-1.7-0.6-3.2-1.8-4.1c-1.4-1.2-3.4-1.8-6.5-1.8c-2,0-4.1,0.2-5.6,0.5V23.9z M91.3,4.5 c0.5-0.1,1.5-0.3,2.9-0.3c3.1,0,5.2,1.3,5.2,4.1c0,2.5-2,4.1-5.1,4.1h-3V4.5z M122.6,11.5h-8.7V4.6h9.2V2.2H111v21.7h12.7v-2.3h-9.7 v-7.8h8.7V11.5z M130.9,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2 c0-1.5,1.2-3.3,4.2-3.3c2,0,3.5,0.6,4.3,1l0.8-2.3c-1-0.5-2.7-1.1-5-1.1c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1 c3,1.1,4.2,2.3,4.2,4.3c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L130.9,22.9z M152,22.9c1.2,0.8,3.6,1.4,5.7,1.4 c5.3,0,7.9-2.9,7.9-6.2c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3c2,0,3.5,0.6,4.3,1l0.8-2.3 c-1-0.5-2.7-1.1-5-1.1c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3c0,2.2-1.7,3.7-4.7,3.7 c-2,0-3.9-0.6-5.2-1.4L152,22.9z M172.7,11.8v2.1h8.2v-2.1H172.7z M189.1,23.9h2.9v-8.7c0.7,0.2,1.5,0.2,2.3,0.2 c2.8,0,5.3-0.8,6.9-2.4c1.1-1.1,1.7-2.7,1.7-4.6c0-1.9-0.7-3.5-2-4.5c-1.3-1.2-3.4-1.8-6.3-1.8c-2.3,0-4.2,0.2-5.6,0.4V23.9z  M192,4.5c0.5-0.1,1.5-0.2,2.7-0.2c3.2,0,5.3,1.4,5.3,4.2c0,3-2.1,4.6-5.6,4.6c-1,0-1.8-0.1-2.4-0.2V4.5z M211.4,23.9h2.9v-9.4h2.7 c2.6,0.1,3.8,1.2,4.5,4.2c0.6,2.7,1.1,4.6,1.5,5.2h3c-0.5-0.8-1-2.9-1.7-6c-0.5-2.3-1.6-3.8-3.3-4.4v-0.1c2.4-0.8,4.2-2.7,4.2-5.5 c0-1.7-0.6-3.2-1.8-4.1c-1.4-1.2-3.4-1.8-6.5-1.8c-2,0-4.1,0.2-5.6,0.5V23.9z M214.4,4.5c0.5-0.1,1.5-0.3,2.9-0.3 c3.1,0,5.2,1.3,5.2,4.1c0,2.5-2,4.1-5.1,4.1h-3V4.5z M245.7,11.5h-8.7V4.6h9.2V2.2H234v21.7h12.7v-2.3h-9.7v-7.8h8.7V11.5z  M253.9,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3 c2,0,3.5,0.6,4.3,1l0.8-2.3c-1-0.5-2.7-1.1-5-1.1c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3 c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L253.9,22.9z M275,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2 c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3c2,0,3.5,0.6,4.3,1l0.8-2.3c-1-0.5-2.7-1.1-5-1.1 c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L275,22.9z  M295.7,11.8v2.1h8.2v-2.1H295.7z M312.1,23.9h2.9v-8.7c0.7,0.2,1.5,0.2,2.3,0.2c2.8,0,5.3-0.8,6.9-2.4c1.1-1.1,1.7-2.7,1.7-4.6 c0-1.9-0.7-3.5-2-4.5c-1.3-1.2-3.4-1.8-6.3-1.8c-2.3,0-4.2,0.2-5.6,0.4V23.9z M315,4.5c0.5-0.1,1.5-0.2,2.7-0.2 c3.2,0,5.3,1.4,5.3,4.2c0,3-2.1,4.6-5.6,4.6c-1,0-1.8-0.1-2.4-0.2V4.5z M343.6,1.9c-6,0-10.5,4.5-10.5,11.4c0,6.6,4.2,11,10.1,11 c5.7,0,10.5-4,10.5-11.4C353.7,6.4,349.7,1.9,343.6,1.9z M343.5,4.2c4.8,0,7.2,4.5,7.2,8.8c0,4.9-2.6,9-7.2,9 c-4.6,0-7.2-4.2-7.2-8.8C336.3,8.5,338.7,4.2,343.5,4.2z M361,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2 c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3c2,0,3.5,0.6,4.3,1l0.8-2.3c-1-0.5-2.7-1.1-5-1.1 c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L361,22.9z  M387.5,23.9h2.9V4.6h6.9V2.2h-16.7v2.4h6.8V23.9z M404.4,23.9h2.9v-8.7c0.7,0.2,1.5,0.2,2.3,0.2c2.8,0,5.3-0.8,6.9-2.4 c1.1-1.1,1.7-2.7,1.7-4.6c0-1.9-0.7-3.5-2-4.5c-1.3-1.2-3.4-1.8-6.3-1.8c-2.3,0-4.2,0.2-5.6,0.4V23.9z M407.3,4.5 c0.5-0.1,1.5-0.2,2.7-0.2c3.2,0,5.3,1.4,5.3,4.2c0,3-2.1,4.6-5.6,4.6c-1,0-1.8-0.1-2.4-0.2V4.5z M426.8,23.9h2.9v-9.4h2.7 c2.6,0.1,3.8,1.2,4.5,4.2c0.6,2.7,1.1,4.6,1.5,5.2h3c-0.5-0.8-1-2.9-1.7-6c-0.5-2.3-1.6-3.8-3.3-4.4v-0.1c2.4-0.8,4.2-2.7,4.2-5.5 c0-1.7-0.6-3.2-1.8-4.1c-1.4-1.2-3.4-1.8-6.5-1.8c-2,0-4.1,0.2-5.6,0.5V23.9z M429.7,4.5c0.5-0.1,1.5-0.3,2.9-0.3 c3.1,0,5.2,1.3,5.2,4.1c0,2.5-2,4.1-5.1,4.1h-3V4.5z M461,11.5h-8.7V4.6h9.2V2.2h-12.2v21.7H462v-2.3h-9.7v-7.8h8.7V11.5z  M469.3,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3 c2,0,3.5,0.6,4.3,1L482,3c-1-0.5-2.7-1.1-5-1.1c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3 c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L469.3,22.9z M490.4,22.9c1.2,0.8,3.6,1.4,5.7,1.4c5.3,0,7.9-2.9,7.9-6.2 c0-3.2-1.9-5-5.7-6.4c-3.1-1.2-4.5-2.2-4.5-4.2c0-1.5,1.2-3.3,4.2-3.3c2,0,3.5,0.6,4.3,1l0.8-2.3c-1-0.5-2.7-1.1-5-1.1 c-4.4,0-7.3,2.5-7.3,5.9c0,3.1,2.3,4.9,5.9,6.1c3,1.1,4.2,2.3,4.2,4.3c0,2.2-1.7,3.7-4.7,3.7c-2,0-3.9-0.6-5.2-1.4L490.4,22.9z  M228.5,68.8v-2.3h-9.7v-0.1l1.7-1.5c4.6-4.2,7.5-7.4,7.5-11.2c0-3-2-6.1-6.6-6.1c-2.5,0-4.6,0.9-6.1,2.1l0.9,2 c1-0.8,2.6-1.8,4.6-1.8c3.2,0,4.3,2,4.3,4.1c0,3.2-2.5,5.9-8.1,10.9l-2.3,2.2v1.7H228.5z M248.2,68.8v-5.7h3v-2.2h-3v-13H245 l-9.7,13.4v1.9h10.1v5.7H248.2z M238.3,60.9L238.3,60.9l5.3-7.2c0.6-1,1.1-1.9,1.8-3.1h0.1c-0.1,1.1-0.1,2.2-0.1,3.3v7H238.3z  M258.8,70.1l9.3-23.3h-2.3l-9.3,23.3H258.8z M274.6,47.9v2.3h10.6v0.1l-9.4,18.5h3l9.4-19.1v-1.9H274.6z"></path>
+        </g>
+      </defs>
+    </svg>
+    <div class="toolbar__box toolbar__box--top">
+          <div class="toolbar toolbar--top"><a href="#" class="toolbar__item toolbar__item--search">
+              <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-search"></use>
+              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-cart"></use>
+              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+              <svg viewBox="0 0 20.5 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-profile"></use>
+              </svg></a>
+          </div>
+    </div>
+    <div class="toolbar__box toolbar__box--right">
+          <div class="toolbar toolbar--right"><a href="#" class="toolbar__item toolbar__item--search">
+              <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-search"></use>
+              </svg></a><a href="#" class="toolbar__item toolbar__item--cart">
+              <svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-cart"></use>
+              </svg></a><a href="#" class="toolbar__item toolbar__item--profile">
+              <svg viewBox="0 0 20.5 18" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-profile"></use>
+              </svg></a>
+          </div>
+    </div>
+    <header id="to-top" class="header">
+      <div class="container-fluid header-container">
+        <div class="row">
+          <div class="col-md-8 col-sm-9 header-logo-box">
+            <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo-promo.png" alt="e-order"></a>
+              <div class="header-logo__slogan">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 72">
+                  <use xlink:href="#prepress-press"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-7 header-presentation-box">
+            <p class="header-presentation text-center">Цифровая и офсетная печать любых тиражей в самые короткие сроки</p>
+          </div>
+          <div class="col-sm-8 header-calling">
+            <p class="header-phone">+7 495 <span class="header-phone--grand">223 9200</span></p><a href="tel:+74952239200" class="header-call"><span class="header-call__handset"></span><span class="header-call__text">Звонок за наш счет</span><span class="header-call__text header-call__text--tel">+7 495 223 9200</span></a>
+          </div>
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#header-menu" class="navbar-toggle"><span class="sr-only">Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          </div>
+        </div>
+      </div>
+      <!--nav.header-menu-->
+      <nav class="header-menu">
+        <div id="header-menu" class="collapse navbar-collapse">
+          <ul role="navigation" class="nav nav-justified">
+            <li class="nav-item nav-item--special"><a href="#action" class="nav-item__name">Акции!</a></li>
+            <li class="nav-item"><a href="#popular" class="nav-item__name">Продукция</a></li>
+            <li class="nav-item"><a href="#features" class="nav-item__name">О нас</a></li>
+            <li class="nav-item"><a href="#workmap" class="nav-item__name">Как мы работаем</a></li>
+            <li class="nav-item"><a href="#services" class="nav-item__name">Сервисы</a></li>
+            <li class="nav-item"><a href="#equipment" class="nav-item__name">Оборудование</a></li>
+            <li class="nav-item"><a href="#news" class="nav-item__name">Новости</a></li>
+            <li class="nav-item"><a href="#contacts" class="nav-item__name">Контакты</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container container--main product">
+        <div class="title-reg title-low">Каталог</div>
+        <div class="block-reg product-block product-block--catalog">
+          <div class="product-desc-part">
+            <div class="row">
+              <div class="col-md-15">
+                <figure class="product__img">
+                  <picture>
+                    <source media="(max-width: 513px)" srcset="../images/products/products--catalog-448.jpg 448w, ../images/products/products--catalog-672.jpg 672w, ../images/products/products--catalog-896.jpg 896w, ../images/products/products--catalog-1344.jpg 1344w"><img src="../images/products/products--catalog-672.jpg" width="672" srcset="../images/products/products--catalog-1008.jpg 1008w, ../images/products/products--catalog-1344.jpg 1344w, ../images/products/products--catalog-2016.jpg 2016w" alt="Каталог">
+                  </picture>
+                </figure>
+              </div>
+              <div class="col-md-9">
+                <div class="product-desc">
+                  <div class="product-desc__title"><b>КАТАЛОГ</b>, -а, м.</div>
+                  <div class="product-desc__text">
+                    <p>1. Составленный в определённом порядке перечень каких-нибудь однородных предметов (книг, экспонатов, товаров). i Библиотечный каталог Издательский план-к.</p>
+                    <p>2. Вообще перечень, список, исчисляющий какие-нибудь предметы, явления. <i>Каталог ледников. Каталог тайфунов. Звёздный каталог Строительные детали унифицированного каталога.</i></p>
+                    <p>|| <i>прилагательное</i> <b>каталожный</b>, -ая, -ое (к 1 значение).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="product-price">
+                    <div class="product-price__table clearfix">
+                      <div class="product-price__desc">
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">формат</span><span class="product-price__desc--value">А6 (105х148 мм)</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">обложка*</span><span class="product-price__desc--value">мел. 170 г/м², 4+0</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">блок*</span><span class="product-price__desc--value">офсет. 80 г/м², 1+1</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">количество полос</span><span class="product-price__desc--value">100</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">скрепление</span><span class="product-price__desc--value">КБС</span></p><span class="product-price__desc--subtext">*бумага, цветность</span>
+                      </div>
+                              <div class="product-price__col product-price__col--circulation">
+                                <div class="product-price__title product-price__title--circulation">Тираж<span class="product-price__title--small">штук</span></div>
+                                <div class="product-price__vals">
+                                  <div class="product-price__val">100</div>
+                                  <div class="product-price__val">500</div>
+                                  <div class="product-price__val">1000</div>
+                                  <div class="product-price__val">2000</div>
+                                  <div class="product-price__val">10000</div>
+                                  <div class="product-price__val">20000</div>
+                                  <div class="product-price__val">50000</div>
+                                </div>
+                              </div>
+                              <div class="product-price__col product-price__col--price">
+                                <div class="product-price__title product-price__title--price">Цена<span class="product-price__title--small">рублей</span></div>
+                                <div class="product-price__vals">
+                                  <div class="product-price__val">24700</div>
+                                  <div class="product-price__val">33200</div>
+                                  <div class="product-price__val">44100</div>
+                                  <div class="product-price__val">65500</div>
+                                  <div class="product-price__val">237800</div>
+                                  <div class="product-price__val">550000</div>
+                                  <div class="product-price__val">1000000</div>
+                                </div><a href="/" class="product-price__calculate">рассчитать заказ</a>
+                              </div>
+                              <div class="product-price__col product-price__col--action">
+                                <div class="product-price__title product-price__title--action">Акция<span class="product-price__title--small"></span></div>
+                                <div class="product-price__vals">
+                                  <div class="product-price__val">20100</div>
+                                  <div class="product-price__val">25200</div>
+                                  <div class="product-price__val">35300</div>
+                                  <div class="product-price__val">55400</div>
+                                  <div class="product-price__val">220600</div>
+                                  <div class="product-price__val">480800</div>
+                                  <div class="product-price__val">900000</div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                  <div class="product-price">
+                    <div class="product-price__table clearfix">
+                      <div class="product-price__desc">
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">формат</span><span class="product-price__desc--value">145х297 мм</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">обложка*</span><span class="product-price__desc--value">мел. 170 г/м², 4+0</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">блок*</span><span class="product-price__desc--value">мел. 130 г/м², 4+4</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">количество полос</span><span class="product-price__desc--value">52</span></p>
+                                <p class="product-price__desc-item"><span class="product-price__desc--name">скрепление</span><span class="product-price__desc--value">КБС</span></p><span class="product-price__desc--subtext">*бумага, цветность</span>
+                      </div>
+                              <div class="product-price__col product-price__col--circulation">
+                                <div class="product-price__title product-price__title--circulation">Тираж<span class="product-price__title--small">штук</span></div>
+                                <div class="product-price__vals">
+                                  <div class="product-price__val">100</div>
+                                  <div class="product-price__val">500</div>
+                                  <div class="product-price__val">1000</div>
+                                  <div class="product-price__val">2000</div>
+                                  <div class="product-price__val">10000</div>
+                                  <div class="product-price__val">20000</div>
+                                  <div class="product-price__val">50000</div>
+                                </div>
+                              </div>
+                              <div class="product-price__col product-price__col--price">
+                                <div class="product-price__title product-price__title--price">Цена<span class="product-price__title--small">рублей</span></div>
+                                <div class="product-price__vals">
+                                  <div class="product-price__val">61900</div>
+                                  <div class="product-price__val">74500</div>
+                                  <div class="product-price__val">90200</div>
+                                  <div class="product-price__val">121500</div>
+                                  <div class="product-price__val">372900</div>
+                                  <div class="product-price__val">900000</div>
+                                  <div class="product-price__val">1500000</div>
+                                </div><a href="/" class="product-price__calculate">рассчитать заказ</a>
+                              </div>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </main>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="container footer-container">
+            <div class="row footer--main">
+              <div class="footer-menu col-sm-3 col-xs-7">
+                <p class="title-footer footer-menu__title">Меню</p>
+                <div class="block-footer footer-menu__block">
+                  <ul class="nav">
+                    <li class="nav-item"><a href="/" class="nav-item__name">Акции!</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">Продукция</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">О нас</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">Сервисы</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">Оборудование</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">Новости</a></li>
+                    <li class="nav-item"><a href="/11" class="nav-item__name">F.A.Q.</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-contacts col-sm-5 col-xs-11 col-sm-push-12">
+                <p class="title-footer footer-contacts__title">Контакты</p>
+                <div class="block-footer footer-contacts__block">
+                  <p class="footer-contacts__item">Телефон: +7 (495) 223-9200</p>
+                  <p class="footer-contacts__item">E-mail: sale@eorder.ru</p>
+                  <p class="footer-contacts__item footer-contacts__item--skype">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                      <use xlink:href="#icon-skype"></use>
+                    </svg>sale.eorder
+                  </p>
+                  <p class="footer-contacts__item">Адрес: Москва, 2-й Котляковский переулок, д.18</p>
+                </div><a class="footer-contacts__sub-text">Открыть карту</a>
+              </div>
+              <div class="col-sm-4 col-xs-6 col-sm-push-12">
+                <div class="footer-code"><img src="../images/footer-code.jpg" alt="Штрихкод"></div>
+              </div>
+              <div class="col-sm-12 col-sm-pull-9 col-xs-24">
+                <div class="row">
+                  <div class="col-sm-10 col-xs-7">
+                    <form action="" method="post" role="form" class="footer-promo form-promo">
+                      <p class="title-footer form-promo__title">Ввести промо код</p>
+                      <div class="block-footer form-promo__block">
+                        <p class="form-promo__text">У Вас есть промо код?<br>Отлично! Введите его здесь:</p>
+                        <input type="text" placeholder="Промо код" class="form-promo__input form-control">
+                        <button type="submit" class="form-promo__btn btn">Да!</button>
+                      </div>
+                      <p class="form-promo__sub-text">Участвуйте в акциях!</p>
+                    </form>
+                  </div>
+                  <div class="col-sm-14 col-xs-17">
+                    <form action="" method="post" role="form" class="footer-signup form-signup">
+                      <p class="title-footer form-signup__title">Подписка на новости</p>
+                      <div class="block-footer form-signup__block">
+                        <p class="form-signup__text">Подписавшись на нашу рассылку, Вы будете получать наши новости о предложениях, новинках. Хотите?</p>
+                        <input type="text" placeholder="Ваше имя" class="form-signup__input form-control">
+                        <input type="text" placeholder="Ваш email" class="form-signup__input form-control">
+                        <button type="submit" class="form-signup__btn btn">Да!</button>
+                      </div>
+                      <p class="form-signup__sub-text">Мы никогда не отправляем спам!</p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row footer--second">
+              <div class="col-sm-8 col-xs-7 footer-logo-block"><a href="#" class="footer-logo"><img src="../images/sprite/footer-logo-promo.png" alt="Eorder promo"></a></div>
+              <div class="col-sm-8 col-xs-10">
+                <div class="footer-press">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 72">
+                    <use xlink:href="#prepress-press"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="col-sm-8 col-xs-7">
+                <p class="footer-socials"><span class="footer-socials__text">Мы в социальных сетях</span><a href="" class="footer-socials__links footer-socials__links--fb">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                      <use xlink:href="#icon-fb--footer"></use>
+                    </svg></a><a href="" class="footer-socials__links footer-socials__links--lkd">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                      <use xlink:href="#icon-lkd--footer"></use>
+                    </svg></a><a href="" class="footer-socials__links footer-socials__links--vk">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+                      <use xlink:href="#icon-vk--footer"></use>
+                    </svg></a></p>
+              </div>
+            </div>
+            <p class="footer-copyright">&#169; 2014 <span class="footer-copyright--name">ЗАО "Новые печатные технологии". </span>Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+      <p class="footer-signature">Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00</p>
+    </div>
+  </body>
+  <script src="../scripts/libs/bootstrap.js"></script>
+  <script src="../scripts/common.js"></script>
 </html>

@@ -92,10 +92,12 @@ module.exports = function (grunt) {
 			build: {
 				files: [{
 					expand: true,
+					cwd: 'app/',
 					src: [
-						'app/css/**',
-						'app/images/**',
-						'app/scripts/**'
+						'css/**',
+						'images/**',
+						'scripts/**',
+						'fonts/**'
 					],
 					dest: 'build'
 				}]
@@ -177,6 +179,9 @@ module.exports = function (grunt) {
 					}, {
 						match: /href="..\//g,
 						replacement: 'href="'
+					}, {
+						match: /..\/images/g,
+						replacement: 'images'
 					}]
 				},
 				files: [{

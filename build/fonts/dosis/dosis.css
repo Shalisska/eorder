@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'dosisbold';
+    src: url('dosis-bold.eot');
+    src: url('dosis-bold.eot?#iefix') format('embedded-opentype'),
+         url('dosis-bold.woff') format('woff'),
+         url('dosis-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosisextrabold';
+    src: url('dosis-extrabold.eot');
+    src: url('dosis-extrabold.eot?#iefix') format('embedded-opentype'),
+         url('dosis-extrabold.woff') format('woff'),
+         url('dosis-extrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosisextralight';
+    src: url('dosis-extralight.eot');
+    src: url('dosis-extralight.eot?#iefix') format('embedded-opentype'),
+         url('dosis-extralight.woff') format('woff'),
+         url('dosis-extralight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosislight';
+    src: url('dosis-light.eot');
+    src: url('dosis-light.eot?#iefix') format('embedded-opentype'),
+         url('dosis-light.woff') format('woff'),
+         url('dosis-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosismedium';
+    src: url('dosis-medium.eot');
+    src: url('dosis-medium.eot?#iefix') format('embedded-opentype'),
+         url('dosis-medium.woff') format('woff'),
+         url('dosis-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosisregular';
+    src: url('dosis-regular.eot');
+    src: url('dosis-regular.eot?#iefix') format('embedded-opentype'),
+         url('dosis-regular.woff') format('woff'),
+         url('dosis-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosissemibold';
+    src: url('dosis-semibold.eot');
+    src: url('dosis-semibold.eot?#iefix') format('embedded-opentype'),
+         url('dosis-semibold.woff') format('woff'),
+         url('dosis-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

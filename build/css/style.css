@@ -315,6 +315,13 @@ body {
   -webkit-filter: drop-shadow(-3px 1px 3px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(-3px 1px 3px rgba(0, 0, 0, 0.5));
 }
+@media (max-width: 1200px) {
+  .header-logo__slogan svg {
+    padding-top: 3%;
+    width: 90%;
+    height: auto;
+  }
+}
 .header-presentation {
   padding: 5% 5% 0;
   font-size: 27px;
