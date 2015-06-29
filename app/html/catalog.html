@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+
+<!--mixin picture1(info, items)
+picture
+	each item, i in items
+		if (i>0)
+			-var res = []
+			each pict in item.img
+				-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
+			-var med = '(' + item.val + '-width: ' + item.width + 'px)'
+			-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
+			source(media=med srcset=resourse)
+	-var item = items[0]
+	-var res = []
+	each pict, j in item.img
+		if (j === 0)
+			-res.push(info.adress + pict + '.' + info.ext)
+		else
+			-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
+	-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
+	img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
+
+--><!DOCTYPE html>
 <html lang="ru" class="no-svg">
   <head>
     <title>eorder</title>
@@ -202,7 +223,12 @@
       <div class="container-fluid header-container">
         <div class="row">
           <div class="col-md-8 col-sm-9 header-logo-box">
-            <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo.png" alt="e-order"></a>
+            <div class="header-logo"><a href="#" class="header-logo__link">
+                <!--img(src="../images/logo-promo.png", alt="e-order")-->
+                <picture>
+                  <source media="(max-width: 991px)" srcset="../images/logo/logo@280.png 280w, ../images/logo/logo@420.png 420w, ../images/logo/logo@570.png 570w, ../images/logo/logo@840.png 840w"/>
+                  <source media="(max-width: 767px)" srcset="../images/logo/logo@118.png 118w, ../images/logo/logo@177.png 177w, ../images/logo/logo@236.png 236w, ../images/logo/logo@354.png 354w"/><img src="../images/logo/logo@380.png" width="380" srcset="../images/logo/logo@570.png 570w, ../images/logo/logo@760.png 760w, ../images/logo/logo@1140.png 1140w" alt="e-order"/>
+                </picture></a>
               <div class="header-logo__slogan">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 72">
                   <use xlink:href="#prepress-press"></use>
@@ -246,7 +272,7 @@
               <div class="col-md-15">
                 <figure class="product__img">
                   <picture>
-                    <source media="(max-width: 513px)" srcset="../images/products/products--catalog-448.jpg 448w, ../images/products/products--catalog-672.jpg 672w, ../images/products/products--catalog-896.jpg 896w, ../images/products/products--catalog-1344.jpg 1344w"><img src="../images/products/products--catalog-672.jpg" width="672" srcset="../images/products/products--catalog-1008.jpg 1008w, ../images/products/products--catalog-1344.jpg 1344w, ../images/products/products--catalog-2016.jpg 2016w" alt="Каталог">
+                    <source media="(max-width: 513px)" srcset="../images/products/products--catalog-448.jpg 448w, ../images/products/products--catalog-672.jpg 672w, ../images/products/products--catalog-896.jpg 896w, ../images/products/products--catalog-1344.jpg 1344w"/><img src="../images/products/products--catalog-672.jpg" width="672" srcset="../images/products/products--catalog-1008.jpg 1008w, ../images/products/products--catalog-1344.jpg 1344w, ../images/products/products--catalog-2016.jpg 2016w" alt="Каталог"/>
                   </picture>
                 </figure>
               </div>

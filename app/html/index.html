@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+
+<!--mixin picture1(info, items)
+picture
+	each item, i in items
+		if (i>0)
+			-var res = []
+			each pict in item.img
+				-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
+			-var med = '(' + item.val + '-width: ' + item.width + 'px)'
+			-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
+			source(media=med srcset=resourse)
+	-var item = items[0]
+	-var res = []
+	each pict, j in item.img
+		if (j === 0)
+			-res.push(info.adress + pict + '.' + info.ext)
+		else
+			-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
+	-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
+	img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
+
+--><!DOCTYPE html>
 <html lang="ru" class="no-svg">
   <head>
     <title>eorder</title>
@@ -202,7 +223,12 @@
       <div class="container-fluid header-container">
         <div class="row">
           <div class="col-md-8 col-sm-9 header-logo-box">
-            <div class="header-logo"><a href="#" class="header-logo__link"><img src="../images/logo.png" alt="e-order"></a>
+            <div class="header-logo"><a href="#" class="header-logo__link">
+                <!--img(src="../images/logo-promo.png", alt="e-order")-->
+                <picture>
+                  <source media="(max-width: 991px)" srcset="../images/logo/logo@280.png 280w, ../images/logo/logo@420.png 420w, ../images/logo/logo@570.png 570w, ../images/logo/logo@840.png 840w"/>
+                  <source media="(max-width: 767px)" srcset="../images/logo/logo@118.png 118w, ../images/logo/logo@177.png 177w, ../images/logo/logo@236.png 236w, ../images/logo/logo@354.png 354w"/><img src="../images/logo/logo@380.png" width="380" srcset="../images/logo/logo@570.png 570w, ../images/logo/logo@760.png 760w, ../images/logo/logo@1140.png 1140w" alt="e-order"/>
+                </picture></a>
               <div class="header-logo__slogan">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 72">
                   <use xlink:href="#prepress-press"></use>
@@ -256,7 +282,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-brochure.jpg" alt="Брошюры"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-brochure@180.jpg 180w, ../images/action/slider/action-pict-brochure@270.jpg 270w, ../images/action/slider/action-pict-brochure@360.jpg 360w, ../images/action/slider/action-pict-brochure@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-brochure@360.jpg 360w, ../images/action/slider/action-pict-brochure@540.jpg 540w, ../images/action/slider/action-pict-brochure@810.jpg 810w, ../images/action/slider/action-pict-brochure@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-brochure@540.jpg" width="540" srcset="../images/action/slider/action-pict-brochure@810.jpg 810w, ../images/action/slider/action-pict-brochure@1080.jpg 1080w, ../images/action/slider/action-pict-brochure@1620.jpg 1620w" alt="Брошюры"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -320,7 +352,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-booklet.jpg" alt="Буклеты"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-booklet@180.jpg 180w, ../images/action/slider/action-pict-booklet@270.jpg 270w, ../images/action/slider/action-pict-booklet@360.jpg 360w, ../images/action/slider/action-pict-booklet@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-booklet@360.jpg 360w, ../images/action/slider/action-pict-booklet@540.jpg 540w, ../images/action/slider/action-pict-booklet@810.jpg 810w, ../images/action/slider/action-pict-booklet@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-booklet@540.jpg" width="540" srcset="../images/action/slider/action-pict-booklet@810.jpg 810w, ../images/action/slider/action-pict-booklet@1080.jpg 1080w, ../images/action/slider/action-pict-booklet@1620.jpg 1620w" alt="Буклеты"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -384,7 +422,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-catalog.jpg" alt="Каталоги"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-catalog@180.jpg 180w, ../images/action/slider/action-pict-catalog@270.jpg 270w, ../images/action/slider/action-pict-catalog@360.jpg 360w, ../images/action/slider/action-pict-catalog@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-catalog@360.jpg 360w, ../images/action/slider/action-pict-catalog@540.jpg 540w, ../images/action/slider/action-pict-catalog@810.jpg 810w, ../images/action/slider/action-pict-catalog@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-catalog@540.jpg" width="540" srcset="../images/action/slider/action-pict-catalog@810.jpg 810w, ../images/action/slider/action-pict-catalog@1080.jpg 1080w, ../images/action/slider/action-pict-catalog@1620.jpg 1620w" alt="Каталоги"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -448,7 +492,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-file.jpg" alt="Папки"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-file@180.jpg 180w, ../images/action/slider/action-pict-file@270.jpg 270w, ../images/action/slider/action-pict-file@360.jpg 360w, ../images/action/slider/action-pict-file@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-file@360.jpg 360w, ../images/action/slider/action-pict-file@540.jpg 540w, ../images/action/slider/action-pict-file@810.jpg 810w, ../images/action/slider/action-pict-file@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-file@540.jpg" width="540" srcset="../images/action/slider/action-pict-file@810.jpg 810w, ../images/action/slider/action-pict-file@1080.jpg 1080w, ../images/action/slider/action-pict-file@1620.jpg 1620w" alt="Папки"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -512,7 +562,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-notepad.jpg" alt="Блокноты"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-notepad@180.jpg 180w, ../images/action/slider/action-pict-notepad@270.jpg 270w, ../images/action/slider/action-pict-notepad@360.jpg 360w, ../images/action/slider/action-pict-notepad@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-notepad@360.jpg 360w, ../images/action/slider/action-pict-notepad@540.jpg 540w, ../images/action/slider/action-pict-notepad@810.jpg 810w, ../images/action/slider/action-pict-notepad@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-notepad@540.jpg" width="540" srcset="../images/action/slider/action-pict-notepad@810.jpg 810w, ../images/action/slider/action-pict-notepad@1080.jpg 1080w, ../images/action/slider/action-pict-notepad@1620.jpg 1620w" alt="Блокноты"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -576,7 +632,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-blank.jpg" alt="Бланки"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-blank@180.jpg 180w, ../images/action/slider/action-pict-blank@270.jpg 270w, ../images/action/slider/action-pict-blank@360.jpg 360w, ../images/action/slider/action-pict-blank@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-blank@360.jpg 360w, ../images/action/slider/action-pict-blank@540.jpg 540w, ../images/action/slider/action-pict-blank@810.jpg 810w, ../images/action/slider/action-pict-blank@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-blank@540.jpg" width="540" srcset="../images/action/slider/action-pict-blank@810.jpg 810w, ../images/action/slider/action-pict-blank@1080.jpg 1080w, ../images/action/slider/action-pict-blank@1620.jpg 1620w" alt="Бланки"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -640,7 +702,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-calendar.jpg" alt="Календари"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-calendar@180.jpg 180w, ../images/action/slider/action-pict-calendar@270.jpg 270w, ../images/action/slider/action-pict-calendar@360.jpg 360w, ../images/action/slider/action-pict-calendar@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-calendar@360.jpg 360w, ../images/action/slider/action-pict-calendar@540.jpg 540w, ../images/action/slider/action-pict-calendar@810.jpg 810w, ../images/action/slider/action-pict-calendar@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-calendar@540.jpg" width="540" srcset="../images/action/slider/action-pict-calendar@810.jpg 810w, ../images/action/slider/action-pict-calendar@1080.jpg 1080w, ../images/action/slider/action-pict-calendar@1620.jpg 1620w" alt="Календари"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -704,7 +772,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-envelop.jpg" alt="Конверты"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-envelop@180.jpg 180w, ../images/action/slider/action-pict-envelop@270.jpg 270w, ../images/action/slider/action-pict-envelop@360.jpg 360w, ../images/action/slider/action-pict-envelop@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-envelop@360.jpg 360w, ../images/action/slider/action-pict-envelop@540.jpg 540w, ../images/action/slider/action-pict-envelop@810.jpg 810w, ../images/action/slider/action-pict-envelop@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-envelop@540.jpg" width="540" srcset="../images/action/slider/action-pict-envelop@810.jpg 810w, ../images/action/slider/action-pict-envelop@1080.jpg 1080w, ../images/action/slider/action-pict-envelop@1620.jpg 1620w" alt="Конверты"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -768,7 +842,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-card.jpg" alt="Визитки"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-card@180.jpg 180w, ../images/action/slider/action-pict-card@270.jpg 270w, ../images/action/slider/action-pict-card@360.jpg 360w, ../images/action/slider/action-pict-card@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-card@360.jpg 360w, ../images/action/slider/action-pict-card@540.jpg 540w, ../images/action/slider/action-pict-card@810.jpg 810w, ../images/action/slider/action-pict-card@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-card@540.jpg" width="540" srcset="../images/action/slider/action-pict-card@810.jpg 810w, ../images/action/slider/action-pict-card@1080.jpg 1080w, ../images/action/slider/action-pict-card@1620.jpg 1620w" alt="Визитки"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
@@ -832,7 +912,13 @@
                       <div class="action-block">
                         <div class="row">
                           <div class="col-sm-13 action-image-box">
-                            <div class="action-image"><img src="../images/action/slider/action-pict-flyer.jpg" alt="Флаеры"></div>
+                            <div class="action-image">
+                              <!--img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)-->
+                              <picture>
+                                <source media="(max-width: 550px)" srcset="../images/action/slider/action-pict-flyer@180.jpg 180w, ../images/action/slider/action-pict-flyer@270.jpg 270w, ../images/action/slider/action-pict-flyer@360.jpg 360w, ../images/action/slider/action-pict-flyer@540.jpg 540w"/>
+                                <source media="(min-width: 767px)" srcset="../images/action/slider/action-pict-flyer@360.jpg 360w, ../images/action/slider/action-pict-flyer@540.jpg 540w, ../images/action/slider/action-pict-flyer@810.jpg 810w, ../images/action/slider/action-pict-flyer@1080.jpg 1080w"/><img src="../images/action/slider/action-pict-flyer@540.jpg" width="540" srcset="../images/action/slider/action-pict-flyer@810.jpg 810w, ../images/action/slider/action-pict-flyer@1080.jpg 1080w, ../images/action/slider/action-pict-flyer@1620.jpg 1620w" alt="Флаеры"/>
+                              </picture>
+                            </div>
                           </div>
                           <div class="col-sm-11 action-order-box">
                             <div class="action-order">
