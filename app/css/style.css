@@ -2100,7 +2100,12 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
 }
 @media (max-width: 1199px) {
   .workmap-item__img:after {
-    right: -38px;
+    right: -15%;
+  }
+}
+@media (max-width: 991px) {
+  .workmap-item__img:after {
+    right: -23%;
   }
 }
 @media (max-width: 767px) {

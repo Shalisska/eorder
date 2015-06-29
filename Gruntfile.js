@@ -190,6 +190,85 @@ module.exports = function (grunt) {
 					src: ['build/*.html']
 				}]
 			}
+		},
+		sprite: {
+			normal: {
+				src: 'images/sprite/sprite/*.png',
+				destImg: 'images/spritesheet.png',
+				destCSS: 'less/spritestyles.less',
+				padding: 2,
+				cssTemplate: function (params) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}';
+					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
+						result += '.sprite_icon-' + params.items[i].name + '{' +
+							'background-position: ' + params.items[i].px.offset_x + ' ' + params.items[i].px.offset_y + ';' +
+							'width: ' + params.items[i].px.width + ';' +
+							'height: ' + params.items[i].px.height + ';' +
+							'}\n'
+					}
+					return result;
+				}
+			},
+			large15: {
+				src: 'images/sprite/sprite@1.5x/*.png',
+				destImg: 'images/spritesheet@1.5x.png',
+				destCSS: 'less/spritestyles@1.5x.less',
+				padding: 3,
+				cssTemplate: function (params) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@1.5x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {\n';
+					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
+						result += '.sprite_icon-' + params.items[i].name + '{' +
+							'background-position: ' + params.items[i].offset_x/1.5 + 'px ' + params.items[i].offset_y/1.5 + 'px;' +
+							'background-size: ' + params.items[i].total_width/1.5 + 'px ' + params.items[i].total_height/1.5 + 'px;' +
+							'width: ' + params.items[i].width/1.5 + 'px;' +
+							'height: ' + params.items[i].height/1.5 + 'px;' +
+							'}\n'
+					}
+					result += '}';
+					return result;
+				}
+			},
+			large2: {
+				src: 'images/sprite/sprite@2x/*.png',
+				destImg: 'images/spritesheet@2x.png',
+				destCSS: 'less/spritestyles@2x.less',
+				padding: 4,
+				cssTemplate: function (params) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@2x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {\n';
+					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
+						result += '.sprite_icon-' + params.items[i].name + '{' +
+							'background-position: ' + params.items[i].offset_x/2 + 'px ' + params.items[i].offset_y/2 + 'px;' +
+							'background-size: ' + params.items[i].total_width/2 + 'px ' + params.items[i].total_height/2 + 'px;' +
+							'width: ' + params.items[i].width/2 + 'px;' +
+							'height: ' + params.items[i].height/2 + 'px;' +
+							'}\n'
+					}
+					result += '}';
+					return result;
+				}
+			},
+			large3: {
+				src: 'images/sprite/sprite@3x/*.png',
+				destImg: 'images/spritesheet@3x.png',
+				destCSS: 'less/spritestyles@3x.less',
+				padding: 6,
+				cssTemplate: function (params) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@3x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {\n';
+					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
+						result += '.sprite_icon-' + params.items[i].name + '{' +
+							'background-position: ' + params.items[i].offset_x/3 + 'px ' + params.items[i].offset_y/3 + 'px;' +
+							'background-size: ' + params.items[i].total_width/3 + 'px ' + params.items[i].total_height/3 + 'px;' +
+							'width: ' + params.items[i].width/3 + 'px;' +
+							'height: ' + params.items[i].height/3 + 'px;' +
+							'}\n'
+					}
+					result += '}';
+					return result;
+				}
+			}
 		}
 	});
 	
