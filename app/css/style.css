@@ -1730,6 +1730,11 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   height: 100%;
 }
 @media (max-width: 767px) {
+  .popular-slider__row {
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
   .popular-slider__col {
     padding: 5px 0;
     margin-bottom: 3%;
@@ -1805,6 +1810,7 @@ input[id='action-flyer']:checked ~ .action-slider .action-slider__item--flyer {
   .popular-slider__item--all {
     max-width: none;
     width: 90%;
+    height: auto;
     margin-bottom: 0;
     padding: 10px 5px 5px;
     font-size: 45px;
@@ -2800,7 +2806,6 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
   margin-bottom: 3px;
   width: 42px;
   height: 42px;
-  line-height: 42px;
   text-align: center;
 }
 .contacts-socials__item--twitt {
@@ -2835,8 +2840,7 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 }
 .contacts-socials__item svg {
   width: 20px;
-  height: 20px;
-  vertical-align: middle;
+  height: 100%;
   fill: white;
 }
 .toolbar {

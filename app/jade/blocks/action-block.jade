@@ -51,7 +51,24 @@ mixin actionItem(items)
 		ul.action-controls.nav.nav-tabs
 			each item in items
 				li: label.action-controls__item(for='action-'+item.id)
-					span.action-controls__item--pict: img(src='../images/action/action-' + item.id+'.png', alt=item.name)
+					span.action-controls__item--pict
+						//-img(src='../images/action/action-' + item.id+'.png', alt=item.name)
+						-var adr = '../images/action/' + item.id + '//action-'+item.id + '@'
+						+picture({
+							name: item.name,
+							adress: adr,
+							ext: 'png'
+							}, {
+								main: {
+									width: '112',
+									img: ['112', '168', '224', '336']
+								},
+								other: [{
+									val: 'max',
+									width: '555',
+									img: ['50', '75', '100', '150']
+								}]
+							})
 					span.action-controls__item--name=item.name
 
 

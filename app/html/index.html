@@ -132,65 +132,7 @@ picture
             <feMergeNode in="SourceGraphic"></feMergeNode>
           </feMerge>
         </filter>
-        <!--filter#inset-shadow--red-->
-        <!--	feOffset(dx='0' dy='0')-->
-        <!--	feGaussianBlur(stdDeviation='3' result='offset-blur')-->
-        <!--	feComposite(operator='out' in='SourceGraphic' in2='offset-blur' result='inverse')-->
-        <!--	feFlood(flood-color='#ff9999' flood-opacity='.6' result='color')-->
-        <!--	feComposite(operator='in' in='color' in2='inverse' result='shadow')-->
-        <!--	feComposite(operator='over' in='shadow' in2='SourceGraphic')-->
-        <!---->
-        <!--filter#inset-shadow--red_text-->
-        <!--	feOffset(dx='0' dy='0')-->
-        <!--	feGaussianBlur(stdDeviation='1' result='offset-blur')-->
-        <!--	feComposite(operator='out' in='SourceGraphic' in2='offset-blur' result='inverse')-->
-        <!--	feFlood(flood-color='#ff9999' flood-opacity='.8' result='color')-->
-        <!--	feComposite(operator='in' in='color' in2='inverse' result='shadow')-->
-        <!--	feComposite(operator='over' in='shadow' in2='SourceGraphic')-->
-        <!---->
-        <!--filter#inset-shadow--blue-->
-        <!--	feOffset(dx='0' dy='0')-->
-        <!--	feGaussianBlur(stdDeviation='5' result='offset-blur')-->
-        <!--	feComposite(operator='out' in='SourceGraphic' in2='offset-blur' result='inverse')-->
-        <!--	feFlood(flood-color='#99ccff' flood-opacity='.6' result='color')-->
-        <!--	feComposite(operator='in' in='color' in2='inverse' result='shadow')-->
-        <!--	feComposite(operator='over' in='shadow' in2='SourceGraphic')-->
-        <!---->
-        <!--filter#inset-shadow--blue_text-->
-        <!--	feOffset(dx='0' dy='0')-->
-        <!--	feGaussianBlur(stdDeviation='2' result='offset-blur')-->
-        <!--	feComposite(operator='out' in='SourceGraphic' in2='offset-blur' result='inverse')-->
-        <!--	feFlood(flood-color='#99ccff' flood-opacity='.8' result='color')-->
-        <!--	feComposite(operator='in' in='color' in2='inverse' result='shadow')-->
-        <!--	feComposite(operator='over' in='shadow' in2='SourceGraphic')-->
-        <!---->
-        <!--filter#shadow--logo(filterUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%")-->
-        <!--	feGaussianBlur(in="SourceAlpha" stdDeviation="1" result="blur")-->
-        <!--	feOffset(in="blur" dx="0" dy="1" result="offsetBlr")-->
-        <!--	feFlood(flood-color="rgba(0,0,0,.5)")-->
-        <!--	feComposite(operator="in" in2="offsetBlr" result="colBlur")-->
-        <!--	feMerge-->
-        <!--		feMergeNode(in="colBlur")-->
-        <!--		feMergeNode(in="SourceGraphic")-->
-        <!---->
-        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4.7997" y1="81.9438" x2="121.1742" y2="81.9438">
-          <stop offset="0%" style="stop-color:#2E6C90"></stop>
-          <stop offset="100%" style="stop-color:#407EA7"></stop>
-        </linearGradient>
-        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="104.7667" y1="71.4159" x2="130.1089" y2="59.5987">
-          <stop offset="0" style="stop-color:#4487B3;stop-opacity:0"></stop>
-          <stop offset="1" style="stop-color:#4487B3"></stop>
-        </linearGradient>
-        <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="8.5829" y1="56.0939" x2="112.6887" y2="-4.1752">
-          <stop offset="0" style="stop-color:#8D352B"></stop>
-          <stop offset="0.4605" style="stop-color:#933933"></stop>
-          <stop offset="0.7319" style="stop-color:#A1423C"></stop>
-          <stop offset="1" style="stop-color:#AA4841"></stop>
-        </linearGradient>
-        <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="61.1429" y1="64.5739" x2="38.4331" y2="40.1765">
-          <stop offset="0" style="stop-color:#8A3934"></stop>
-          <stop offset="1" style="stop-color:#8A3934;stop-opacity:0"></stop>
-        </linearGradient>
+        <!--include svg_parts/svg_filters/logo_filters-->
       </defs>
     </svg>
     <div class="toolbar__box toolbar__box--top">
@@ -266,7 +208,13 @@ picture
     <main>
       <div class="container container--main">
         <div id="action" class="action">
-          <div class="action-title"><img src="../images/common/banner.png"></div>
+          <div class="action-title">
+            <picture>
+              <source media="(max-width: 991px)" srcset="../images/action/header/action-header@750.png 750w, ../images/action/header/action-header@1125.png 1125w, ../images/action/header/action-header@1500.png 1500w, ../images/action/header/action-header@2340.png 2340w"/>
+              <source media="(max-width: 615px)" srcset="../images/action/header/action-header@600.png 600w, ../images/action/header/action-header@900.png 900w, ../images/action/header/action-header@1200.png 1200w, ../images/action/header/action-header@1800.png 1800w"/>
+              <source media="(max-width: 515px)" srcset="../images/action/header/action-header@500.png 500w, ../images/action/header/action-header@750.png 750w, ../images/action/header/action-header@1000.png 1000w, ../images/action/header/action-header@1500.png 1500w"/><img src="../images/action/header/action-header@1200.png" width="1170" srcset="../images/action/header/action-header@1800.png 1800w, ../images/action/header/action-header@2340.png 2340w, ../images/action/header/action-header@3510.png 3510w" alt="Акция"/>
+            </picture>
+          </div>
                   <input type="radio" id="action-brochure" name="action_item" checked>
                   <input type="radio" id="action-booklet" name="action_item">
                   <input type="radio" id="action-catalog" name="action_item">
@@ -982,34 +930,64 @@ picture
                   <nav class="action-controls-box">
                     <ul class="action-controls nav nav-tabs">
                       <li>
-                        <label for="action-brochure" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-brochure.png" alt="Брошюры"></span><span class="action-controls__item--name">Брошюры</span></label>
+                        <label for="action-brochure" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/brochure//action-brochure@50.png 50w, ../images/action/brochure//action-brochure@75.png 75w, ../images/action/brochure//action-brochure@100.png 100w, ../images/action/brochure//action-brochure@150.png 150w"/><img src="../images/action/brochure//action-brochure@112.png" width="112" srcset="../images/action/brochure//action-brochure@168.png 168w, ../images/action/brochure//action-brochure@224.png 224w, ../images/action/brochure//action-brochure@336.png 336w" alt="Брошюры"/>
+                            </picture></span><span class="action-controls__item--name">Брошюры</span></label>
                       </li>
                       <li>
-                        <label for="action-booklet" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-booklet.png" alt="Буклеты"></span><span class="action-controls__item--name">Буклеты</span></label>
+                        <label for="action-booklet" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/booklet//action-booklet@50.png 50w, ../images/action/booklet//action-booklet@75.png 75w, ../images/action/booklet//action-booklet@100.png 100w, ../images/action/booklet//action-booklet@150.png 150w"/><img src="../images/action/booklet//action-booklet@112.png" width="112" srcset="../images/action/booklet//action-booklet@168.png 168w, ../images/action/booklet//action-booklet@224.png 224w, ../images/action/booklet//action-booklet@336.png 336w" alt="Буклеты"/>
+                            </picture></span><span class="action-controls__item--name">Буклеты</span></label>
                       </li>
                       <li>
-                        <label for="action-catalog" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-catalog.png" alt="Каталоги"></span><span class="action-controls__item--name">Каталоги</span></label>
+                        <label for="action-catalog" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/catalog//action-catalog@50.png 50w, ../images/action/catalog//action-catalog@75.png 75w, ../images/action/catalog//action-catalog@100.png 100w, ../images/action/catalog//action-catalog@150.png 150w"/><img src="../images/action/catalog//action-catalog@112.png" width="112" srcset="../images/action/catalog//action-catalog@168.png 168w, ../images/action/catalog//action-catalog@224.png 224w, ../images/action/catalog//action-catalog@336.png 336w" alt="Каталоги"/>
+                            </picture></span><span class="action-controls__item--name">Каталоги</span></label>
                       </li>
                       <li>
-                        <label for="action-file" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-file.png" alt="Папки"></span><span class="action-controls__item--name">Папки</span></label>
+                        <label for="action-file" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/file//action-file@50.png 50w, ../images/action/file//action-file@75.png 75w, ../images/action/file//action-file@100.png 100w, ../images/action/file//action-file@150.png 150w"/><img src="../images/action/file//action-file@112.png" width="112" srcset="../images/action/file//action-file@168.png 168w, ../images/action/file//action-file@224.png 224w, ../images/action/file//action-file@336.png 336w" alt="Папки"/>
+                            </picture></span><span class="action-controls__item--name">Папки</span></label>
                       </li>
                       <li>
-                        <label for="action-notepad" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-notepad.png" alt="Блокноты"></span><span class="action-controls__item--name">Блокноты</span></label>
+                        <label for="action-notepad" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/notepad//action-notepad@50.png 50w, ../images/action/notepad//action-notepad@75.png 75w, ../images/action/notepad//action-notepad@100.png 100w, ../images/action/notepad//action-notepad@150.png 150w"/><img src="../images/action/notepad//action-notepad@112.png" width="112" srcset="../images/action/notepad//action-notepad@168.png 168w, ../images/action/notepad//action-notepad@224.png 224w, ../images/action/notepad//action-notepad@336.png 336w" alt="Блокноты"/>
+                            </picture></span><span class="action-controls__item--name">Блокноты</span></label>
                       </li>
                       <li>
-                        <label for="action-blank" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-blank.png" alt="Бланки"></span><span class="action-controls__item--name">Бланки</span></label>
+                        <label for="action-blank" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/blank//action-blank@50.png 50w, ../images/action/blank//action-blank@75.png 75w, ../images/action/blank//action-blank@100.png 100w, ../images/action/blank//action-blank@150.png 150w"/><img src="../images/action/blank//action-blank@112.png" width="112" srcset="../images/action/blank//action-blank@168.png 168w, ../images/action/blank//action-blank@224.png 224w, ../images/action/blank//action-blank@336.png 336w" alt="Бланки"/>
+                            </picture></span><span class="action-controls__item--name">Бланки</span></label>
                       </li>
                       <li>
-                        <label for="action-calendar" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-calendar.png" alt="Календари"></span><span class="action-controls__item--name">Календари</span></label>
+                        <label for="action-calendar" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/calendar//action-calendar@50.png 50w, ../images/action/calendar//action-calendar@75.png 75w, ../images/action/calendar//action-calendar@100.png 100w, ../images/action/calendar//action-calendar@150.png 150w"/><img src="../images/action/calendar//action-calendar@112.png" width="112" srcset="../images/action/calendar//action-calendar@168.png 168w, ../images/action/calendar//action-calendar@224.png 224w, ../images/action/calendar//action-calendar@336.png 336w" alt="Календари"/>
+                            </picture></span><span class="action-controls__item--name">Календари</span></label>
                       </li>
                       <li>
-                        <label for="action-envelop" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-envelop.png" alt="Конверты"></span><span class="action-controls__item--name">Конверты</span></label>
+                        <label for="action-envelop" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/envelop//action-envelop@50.png 50w, ../images/action/envelop//action-envelop@75.png 75w, ../images/action/envelop//action-envelop@100.png 100w, ../images/action/envelop//action-envelop@150.png 150w"/><img src="../images/action/envelop//action-envelop@112.png" width="112" srcset="../images/action/envelop//action-envelop@168.png 168w, ../images/action/envelop//action-envelop@224.png 224w, ../images/action/envelop//action-envelop@336.png 336w" alt="Конверты"/>
+                            </picture></span><span class="action-controls__item--name">Конверты</span></label>
                       </li>
                       <li>
-                        <label for="action-card" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-card.png" alt="Визитки"></span><span class="action-controls__item--name">Визитки</span></label>
+                        <label for="action-card" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/card//action-card@50.png 50w, ../images/action/card//action-card@75.png 75w, ../images/action/card//action-card@100.png 100w, ../images/action/card//action-card@150.png 150w"/><img src="../images/action/card//action-card@112.png" width="112" srcset="../images/action/card//action-card@168.png 168w, ../images/action/card//action-card@224.png 224w, ../images/action/card//action-card@336.png 336w" alt="Визитки"/>
+                            </picture></span><span class="action-controls__item--name">Визитки</span></label>
                       </li>
                       <li>
-                        <label for="action-flyer" class="action-controls__item"><span class="action-controls__item--pict"><img src="../images/action/action-flyer.png" alt="Флаеры"></span><span class="action-controls__item--name">Флаеры</span></label>
+                        <label for="action-flyer" class="action-controls__item"><span class="action-controls__item--pict">
+                            <picture>
+                              <source media="(max-width: 555px)" srcset="../images/action/flyer//action-flyer@50.png 50w, ../images/action/flyer//action-flyer@75.png 75w, ../images/action/flyer//action-flyer@100.png 100w, ../images/action/flyer//action-flyer@150.png 150w"/><img src="../images/action/flyer//action-flyer@112.png" width="112" srcset="../images/action/flyer//action-flyer@168.png 168w, ../images/action/flyer//action-flyer@224.png 224w, ../images/action/flyer//action-flyer@336.png 336w" alt="Флаеры"/>
+                            </picture></span><span class="action-controls__item--name">Флаеры</span></label>
                       </li>
                     </ul>
                   </nav>
