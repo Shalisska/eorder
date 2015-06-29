@@ -11,7 +11,26 @@ mixin actionItem(items)
 				.action-block
 					.row
 						.col-sm-13.action-image-box
-							.action-image: img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)
+							.action-image
+								//img(src='../images/action/slider/action-pict-'+item.id+'.jpg', alt=item.name)
+								-var adr = '../images/action/slider/action-pict-'+item.id + '@'
+								+picture({
+									name: item.name,
+									adress: adr,
+									ext: 'jpg'
+								}, [{
+									val: 'max',
+									width: '540',
+									img: ['540', '810', '1080', '1620']
+								}, {
+									val: 'max',
+									width: '550',
+									img: ['180', '270', '360', '540']
+								}, {
+									val: 'min',
+									width: '767',
+									img: ['360', '540', '810', '1080']
+								}])
 
 						.col-sm-11.action-order-box
 							.action-order
