@@ -43,13 +43,14 @@ mixin actionDescText(items)
 
 mixin picture(info, items)
 	picture
-		each item in items.other
-			-var res = []
-			each pict in item.img
-				-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
-			-var med = '(' + item.val + '-width: ' + item.width + 'px)'
-			-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
-			source(media=med srcset=resourse)
+		if (items.other)
+			each item in items.other
+				-var res = []
+				each pict in item.img
+					-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
+				-var med = '(' + item.val + '-width: ' + item.width + 'px)'
+				-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
+				source(media=med srcset=resourse)
 		
 		-var item = items.main
 		-var res = []

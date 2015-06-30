@@ -1,3 +1,81 @@
+var sprite_arr = [];
+function sprite_create() {
+
+var sprite_creates = [];
+
+var workmap = {
+	img_dir: 'workmap',
+	dest: [{
+		width: ['1200'],
+		retina: { x1: '202', x15: '303', x2: '404', x3: '606'}
+	}, {
+		width: ['991'],
+		retina: { x1: '126', x15: '189', x2: '252', x3: '378'}
+	}, {
+		width: ['767'],
+		retina: { x1: '86', x15: '129', x2: '172', x3: '258'}
+	}]
+};
+	
+var action_controls = {
+	img_dir: 'sprite/action-order-controls',
+	dest: [{
+		width: ['1200', '991', '767'],
+		retina: { x1: '202', x15: '303', x2: '404', x3: '606'}
+	}]
+};
+	
+var sprite_create = {};
+
+function obj_create(items) {
+	var paths = []
+	
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		paths.push(item.img_dir + '/**/*@' + item.dest.retina.x1);
+	}
+};
+
+var sprite_create_1 = {
+	sprite_path: ['workmap/**/*@202.png',
+						'sprite/action-order-controls/**/*@150.png'],
+	sprite_dest: {
+		sprite_width: '',
+		sprite_retina: '1'
+	}
+};
+var sprite_create_15 = {
+	sprite_path: ['workmap/**/*@303.png',
+						'sprite/action-order-controls/**/*@225.png'],
+	sprite_dest: {
+		sprite_width: '',
+		sprite_retina: '1.5'
+	}
+};
+
+var sprite_creates = [sprite_create_1, sprite_create_15];
+
+function sprite_arr_create(arr, sprites) {
+	for (var i = 0; i < sprites.length; i++) {
+		var sprite_create = sprites[i];
+		var sprite_obj = {
+						expand: true,
+						cwd: 'app/images/',
+						src: sprite_create.sprite_path,
+						dest: 'spec/sprite' + sprite_create.sprite_dest.sprite_width + '/sprite@' + sprite_create.sprite_dest.sprite_retina,
+						flatten: true
+				};
+		arr.push(sprite_obj);
+	}
+	return arr;
+};
+
+sprite_arr_create(sprite_arr, sprite_creates);
+return sprite_arr;
+};
+sprite_create();
+	
+
 module.exports = function (grunt) {
 	
 	require('load-grunt-tasks')(grunt);
@@ -85,31 +163,35 @@ module.exports = function (grunt) {
 		},
 		//очистка папки проекта
 		clean: {
-			build: ['build']
+			//build: ['build']
+			build_sprite: ['spec']
 		},
 		//копирование файлов в папку проекта
 		copy: {
-			build: {
-				files: [{
-					expand: true,
-					cwd: 'app/',
-					src: [
-						'css/**',
-						'images/**',
-						'scripts/**',
-						'fonts/**'
-					],
-					dest: 'build'
-				}]
-			},
+//			build: {
+//				files: [{
+//					expand: true,
+//					cwd: 'app/',
+//					src: [
+//						'css/**',
+//						'images/**',
+//						'scripts/**',
+//						'fonts/**'
+//					],
+//					dest: 'build'
+//				}]
+//			},
 			//копирование только нужных html-файлов
-			build_html: {
-				files: [{
-					expand: true,
-					cwd: 'app/html/',
-					src:['*.html'],
-					dest: 'build'
-				}]
+//			build_html: {
+//				files: [{
+//					expand: true,
+//					cwd: 'app/html/',
+//					src:['*.html'],
+//					dest: 'build'
+//				}]
+//			}
+			build_sprite: {
+				files: sprite_arr
 			}
 		},
 		//работа с jade-файлами
@@ -193,7 +275,7 @@ module.exports = function (grunt) {
 		},
 		sprite: {
 			normal: {
-				src: 'images/sprite/sprite/*.png',
+				src: 'images/sprite/sprite@1/*.png',
 				destImg: 'images/spritesheet.png',
 				destCSS: 'less/spritestyles.less',
 				padding: 2,
@@ -291,5 +373,10 @@ module.exports = function (grunt) {
 	grunt.registerTask('bootstrapLess', [
 		'less:bootstrapLess',
 		'autoprefixer:bootstr'
+	]);
+	
+	grunt.registerTask('replacing', [
+		'clean',
+		'copy'
 	]);
 };

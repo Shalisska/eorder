@@ -3448,10 +3448,17 @@ input#kash:checked ~ .contacts-map__slider input#bus:checked ~ .contacts-map__ma
 .footer-press {
   position: relative;
   text-align: center;
+  margin-top: 3%;
 }
 @media (max-width: 950px) {
   .footer-press {
+    margin-top: 2%;
     padding-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-press {
+    margin-top: 0;
   }
 }
 .footer-press:before,
