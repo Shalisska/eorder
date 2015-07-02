@@ -39,18 +39,14 @@ function obj_create(items) {
 var sprite_create_1 = {
 	sprite_path: ['workmap/**/*@202.png',
 						'sprite/action-order-controls/**/*@150.png'],
-	sprite_dest: {
-		sprite_width: '',
-		sprite_retina: '1'
-	}
+	sprite_width: '',
+	sprite_retina: '1'
 };
 var sprite_create_15 = {
 	sprite_path: ['workmap/**/*@303.png',
 						'sprite/action-order-controls/**/*@225.png'],
-	sprite_dest: {
-		sprite_width: '',
-		sprite_retina: '1.5'
-	}
+	sprite_width: '',
+	sprite_retina: '1.5'
 };
 
 var sprite_creates = [sprite_create_1, sprite_create_15];
@@ -62,7 +58,7 @@ function sprite_arr_create(arr, sprites) {
 						expand: true,
 						cwd: 'app/images/',
 						src: sprite_create.sprite_path,
-						dest: 'spec/sprite' + sprite_create.sprite_dest.sprite_width + '/sprite@' + sprite_create.sprite_dest.sprite_retina,
+						dest: 'spec/sprite' + sprite_create.sprite_width + '/sprite@' + sprite_create.sprite_retina,
 						flatten: true
 				};
 		arr.push(sprite_obj);
