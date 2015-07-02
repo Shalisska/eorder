@@ -1,6 +1,36 @@
 .workmap {
 	margin-bottom: 90px;
 	
+	&.animation {
+		.workmap-item {
+			&:after {
+				opacity: 0;
+				animation: show 0.5s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1.7s;
+			}
+			
+			&__img {
+				animation: vertical_rotate 1.5s ease;
+				animation-fill-mode: forwards;
+				
+				&:after {
+					opacity: 0;
+					animation: show 0.5s ease;
+					animation-fill-mode: forwards;
+					animation-delay: 1.7s;
+				}
+			}
+			
+			&__text {
+				opacity: 0;
+				animation: show 0.7s ease, to_down .8s ease;
+				animation-fill-mode: forwards;
+				animation-delay: 1s;
+			}
+		}
+	}
+	
 	&-block {
 		padding: 15px 37px;
 	}

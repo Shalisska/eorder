@@ -1,6 +1,6 @@
 mixin equipment(items)
 	each item in items
-		.col-xs-8
+		.col-xs-8.equipment__col
 			.equipment-item
 				p.equipment-item__title=item.name
 				a.equipment-item__img(href=''): img(src='../images/equipment/equipment-' + item.src, alt=item.name)

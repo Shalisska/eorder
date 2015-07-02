@@ -1,6 +1,23 @@
 .popular {
 	margin-bottom: 105px;
 	
+	&.animation {
+		.popular-slider {
+			transform: scale(0) rotate(0deg);
+			animation: rotating 2s linear;
+			animation-fill-mode: forwards;
+			
+			&__controls {
+				opacity: 0;
+				animation: show 1s;
+				animation-fill-mode: forwards;
+				animation-delay: 2s;
+			}
+		}
+		
+		
+	}
+	
 	&-block {
 		padding: 22px 41px;
 	}

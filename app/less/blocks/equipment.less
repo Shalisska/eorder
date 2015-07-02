@@ -1,4 +1,33 @@
 .equipment {
+	&.animation {
+		.equipment__col {
+			position: relative;
+			
+			.equipment-item__img, .equipment-item__title {
+				transform: translate(-100%);
+				opacity: 0;
+				animation: slide_to_right 1s ease;
+				animation-fill-mode: forwards;
+			}
+			
+			&:first-of-type {
+				z-index: 2;
+				
+				.equipment-item__img, .equipment-item__title {transform: translate(0);}
+			}
+			
+			&:nth-of-type(2) {
+				z-index: 1;
+				
+				.equipment-item__img, .equipment-item__title {animation-delay: 0.9s;}
+			}
+			
+			&:nth-of-type(3) {
+				.equipment-item__img, .equipment-item__title {animation-delay: 1.8s;}
+			}
+		}
+	}
+	
 	&-block {
 		margin-bottom: 45px;
 		padding: 45px 37px 22px;
