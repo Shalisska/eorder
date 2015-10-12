@@ -162,8 +162,6 @@ function get_timer() {
   }
   
   
-  
-  
   //Функция для красивого отображения времени.
   function animation(vibor,param) {
     vibor.html(param)
@@ -455,7 +453,7 @@ function get_timer() {
 //  
 //  
 //});
-
+//
 //$(document).ready(function () {
 //    var date = new Date();
 //    var item;
